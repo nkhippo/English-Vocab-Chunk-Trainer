@@ -1,0 +1,278 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/nkhipko/vocab-chunk-trainer/schema/v1",
+  "title": "Vocab & Chunk Trainer Data Schema",
+  "description": "Authoritative schema for LearningItem and Insight. All data in the app conforms to this schema.",
+  "version": "1.0.0",
+  "definitions": {
+    "cefrLevel": {
+      "type": "string",
+      "enum": ["A1", "A2", "B1", "B2", "C1", "C2"]
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "word",
+        "collocation",
+        "phrasal_verb",
+        "idiom",
+        "binomial",
+        "compound",
+        "institutionalized",
+        "other"
+      ]
+    },
+    "register": {
+      "type": "string",
+      "enum": ["formal", "neutral", "casual"]
+    },
+    "skillFocus": {
+      "type": "string",
+      "enum": ["receptive_only", "receptive_and_productive"]
+    },
+    "collocationPattern": {
+      "type": ["string", "null"],
+      "enum": ["V+N", "Adj+N", "Adv+V", "Adv+Adj", "V+Prep", "N+of+N", null]
+    },
+    "exampleSentence": {
+      "type": "object",
+      "required": ["en", "ja", "register", "surrounding_cefr_ceiling"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "ja": { "type": "string", "minLength": 1 },
+        "register": { "$ref": "#/definitions/register" },
+        "surrounding_cefr_ceiling": { "$ref": "#/definitions/cefrLevel" }
+      }
+    },
+    "synonymEntry": {
+      "type": "object",
+      "required": ["item", "difference_ja"],
+      "properties": {
+        "item": { "type": "string" },
+        "difference_ja": { "type": "string" },
+        "difference_en": { "type": "string" },
+        "register": { "$ref": "#/definitions/register" }
+      }
+    },
+    "antonymEntry": {
+      "type": "object",
+      "required": ["item", "difference_ja"],
+      "properties": {
+        "item": { "type": "string" },
+        "difference_ja": { "type": "string" }
+      }
+    },
+    "confusableEntry": {
+      "type": "object",
+      "required": ["item", "similarity_ja", "key_difference_ja"],
+      "properties": {
+        "item": { "type": "string" },
+        "similarity_ja": { "type": "string" },
+        "key_difference_ja": { "type": "string" },
+        "correct_usage_ja": { "type": "string" },
+        "example_en": { "type": "string" }
+      }
+    },
+    "relatedUseEntry": {
+      "type": "object",
+      "required": ["form", "meaning_ja", "type"],
+      "properties": {
+        "form": { "type": "string" },
+        "meaning_ja": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["phrasal_verb", "metaphor", "collocation", "compound", "other"]
+        },
+        "metaphor_ja": { "type": "string" }
+      }
+    },
+    "commonError": {
+      "type": "object",
+      "required": ["incorrect", "correct", "why_ja"],
+      "properties": {
+        "incorrect": { "type": "string" },
+        "correct": { "type": "string" },
+        "why_ja": { "type": "string" }
+      }
+    },
+    "srsState": {
+      "type": "object",
+      "properties": {
+        "ease_factor": { "type": "number", "minimum": 1.3 },
+        "next_review_at": { "type": "string", "format": "date-time" },
+        "correct_streak": { "type": "integer", "minimum": 0 },
+        "last_reviewed_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "bookAlignment": {
+      "type": "object",
+      "properties": {
+        "basic_2400_units": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 1 }
+        },
+        "daily_1500_units": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 1 }
+        }
+      }
+    },
+    "learningItem": {
+      "type": "object",
+      "required": [
+        "id",
+        "surface",
+        "category",
+        "cefr_level",
+        "frequency_rank_in_level",
+        "translations_ja",
+        "example_sentences",
+        "semantic_field",
+        "register",
+        "skill_focus",
+        "ipa_careful"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$",
+          "description": "snake_case unique identifier"
+        },
+        "surface": {
+          "type": "string",
+          "description": "The learning item as displayed"
+        },
+        "category": { "$ref": "#/definitions/category" },
+        "cefr_level": { "$ref": "#/definitions/cefrLevel" },
+        "frequency_rank_in_level": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Rank within its CEFR level; lower = more frequent"
+        },
+        "translations_ja": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "definition_en": { "type": "string" },
+        "example_sentences": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/exampleSentence" },
+          "minItems": 1,
+          "maxItems": 5,
+          "description": "Minimum 1, target 3 across register variants; register set depends on item"
+        },
+        "semantic_field": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "register": { "$ref": "#/definitions/register" },
+        "collocation_pattern": { "$ref": "#/definitions/collocationPattern" },
+        "function_tag": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Only for institutionalized expressions; e.g., ['greeting', 'conversation_opener']"
+        },
+        "skill_focus": { "$ref": "#/definitions/skillFocus" },
+        "ipa_careful": { "type": "string" },
+        "ipa_connected": {
+          "type": "string",
+          "description": "For phrases only; single-word items may omit this"
+        },
+        "audio_ref": { "type": "string" },
+        "book_alignment": { "$ref": "#/definitions/bookAlignment" },
+        "insight_id": { "type": ["string", "null"] },
+        "synonyms": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/synonymEntry" },
+          "maxItems": 5
+        },
+        "antonyms": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/antonymEntry" },
+          "maxItems": 5
+        },
+        "hypernyms": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "hyponyms": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "confusables": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/confusableEntry" },
+          "maxItems": 5
+        },
+        "related_uses": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/relatedUseEntry" },
+          "maxItems": 8
+        },
+        "common_errors_ja": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/commonError" },
+          "maxItems": 5
+        },
+        "srs_state": { "$ref": "#/definitions/srsState" },
+        "meta": {
+          "type": "object",
+          "properties": {
+            "schema_version": { "type": "string" },
+            "created_at": { "type": "string", "format": "date-time" },
+            "updated_at": { "type": "string", "format": "date-time" },
+            "validated_by_user": { "type": "boolean" },
+            "source": {
+              "type": "string",
+              "enum": ["ngsl", "nawl", "phave", "afl", "evp_ref", "claude_generated"]
+            }
+          }
+        }
+      }
+    },
+    "insight": {
+      "type": "object",
+      "required": ["id", "target_id", "type", "content_ja"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^insight_[a-z0-9_]+$" },
+        "target_id": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["morphology", "metaphor", "cultural", "cognate", "core_image"]
+        },
+        "content_ja": { "type": "string", "minLength": 1 },
+        "content_en": { "type": "string" },
+        "related_items": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "claude_generated": { "type": "boolean" },
+        "validated_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "dataset": {
+      "type": "object",
+      "required": ["schema_version", "items"],
+      "properties": {
+        "schema_version": { "type": "string" },
+        "generated_at": { "type": "string", "format": "date-time" },
+        "cefr_levels_included": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/cefrLevel" }
+        },
+        "total_items": { "type": "integer" },
+        "items": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/learningItem" }
+        },
+        "insights": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/insight" }
+        }
+      }
+    }
+  },
+  "$ref": "#/definitions/dataset"
+}

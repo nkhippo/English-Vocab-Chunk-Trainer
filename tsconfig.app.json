@@ -18,9 +18,11 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
     "baseUrl": ".",
+    "resolveJsonModule": true,
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@data/*": ["data/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "data/current/**/*.json"]
 }

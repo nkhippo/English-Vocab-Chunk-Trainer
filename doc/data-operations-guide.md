@@ -3,10 +3,16 @@
 `english-vocab-chunk-trainer`（GitHub: `nkhippo/English-Vocab-Chunk-Trainer`）のデータベースを段階的に拡張・保守する運用手順を記述する。データが A2 → B1 → B2 → C1 と拡張されるたび、Basic 2400 の学習が進行するたびに、本手順に沿って更新を行う。
 
 **GAS エンドポイント（Phase 1）**:  
-`https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec`  
+`https://script.google.com/macros/s/AKfycbz_gk2WigbcJKX7DH-pq14Mp-O5v5f9f1_MfwvooGZGnwTGrMylQVhFgkFWIxB4ZVbX/exec`  
 （ローカルは `.env` の `GAS_ENDPOINT_URL`。詳細は `gas/README.md`）
 
 スキーマ正本: `doc/learning-data-schema.json`（旧称 `data-schema.json`）。
+
+### データの置き場（一本化）
+
+- **正本**: `data/current/`（Git 管理）。CLI（seed / merge / validate）もここを読む。
+- **PWA**: `src/lib/db` が `@data/current/items.json` を import（`vite.config.ts` の alias）。`src/data/current` へのコピーは置かない。
+- merge 後は `pnpm run validate` を実行し、コミット対象は `data/current/` のみでよい。
 
 ---
 

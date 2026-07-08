@@ -20,7 +20,7 @@
 稼働中 GAS Web App:
 
 ```
-https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec
+https://script.google.com/macros/s/AKfycbz_gk2WigbcJKX7DH-pq14Mp-O5v5f9f1_MfwvooGZGnwTGrMylQVhFgkFWIxB4ZVbX/exec
 ```
 
 ## スタック
@@ -54,7 +54,7 @@ pnpm run validate
 ## データ運用時の注意
 
 - `data/staging/` は `.gitignore`（生成物）
-- `data/current/` は Git 管理
+- `data/current/` は Git 管理の**学習データ正本**（PWA は `@data/current` を直接バンドル。`src/data/current` は置かない）
 - SemVer・チェックリストは `doc/data-operations-guide.md` に従う
 - Claude 呼び出しはすべて `GAS_ENDPOINT_URL` 経由
 

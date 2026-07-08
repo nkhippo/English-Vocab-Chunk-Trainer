@@ -52,6 +52,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
+      // 学習データの正本は data/current（src/data に複製しない）
+      '@data': path.resolve(__dirname, 'data'),
     },
   },
 })

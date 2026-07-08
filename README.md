@@ -49,13 +49,19 @@ pnpm dev
 現行 Web App:
 
 ```
-https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec
+https://script.google.com/macros/s/AKfycbz_gk2WigbcJKX7DH-pq14Mp-O5v5f9f1_MfwvooGZGnwTGrMylQVhFgkFWIxB4ZVbX/exec
 ```
 
 ## GitHub Pages
 
 `main` への push で Actions が `dist/` を Pages にデプロイする。  
-Settings → Pages → Source: GitHub Actions を有効化すること。
+Settings → Pages → Source: **GitHub Actions**（「Deploy from a branch」ではない）。
+
+公開 URL: https://nkhippo.github.io/English-Vocab-Chunk-Trainer/
+
+ブランチ直出しだと未ビルドの `index.html`（`/src/app/main.tsx` 参照）が配信され空白になる。Actions の Deploy GitHub Pages が緑になることを確認してからハードリロードする。
+
+学習データの正本は `data/current/`。アプリはそのままバンドルする（`src/data/current` へのコピーは不要）。
 
 想定 URL: `https://nkhippo.github.io/English-Vocab-Chunk-Trainer/`
 

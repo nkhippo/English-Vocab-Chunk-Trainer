@@ -2,6 +2,7 @@
 
 対象リポジトリ: [`nkhippo/English-Vocab-Chunk-Trainer`](https://github.com/nkhippo/English-Vocab-Chunk-Trainer)  
 作成日: 2026-07-08  
+最終更新: 2026-07-09（Pages Actions 配信修正・data 一本化・clasp 紐付け・GAS URL 更新）  
 目的: Claude / 他エージェントへの作業共有（実装内容・指示書からの差分・残課題）
 
 仕様の唯一のソース: `doc/app-specification.md`  
@@ -41,16 +42,19 @@ Phase 1 指示書: `doc/cursor-instruction-phase1.md`
 1. Apps Script API 未有効のため `clasp create` は失敗 → Drive 手動デプロイ手順と結合 `Code.gs` を用意
 2. Naoya がスタンドアロン GAS + Script Properties（`ANTHROPIC_API_KEY`）を設定
 3. Web App URL を `.env`（gitignore）/ `.env.example` / `.env.production` / `gas/README.md` に反映
-4. **再デプロイ後の現行 URL**（GET health で二重ラップ解消を確認）:
+4. **現行 Web App URL**（2026-07-09 clasp push 後の新バージョン。GET health OK）:
 
 ```
-https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec
+https://script.google.com/macros/s/AKfycbz_gk2WigbcJKX7DH-pq14Mp-O5v5f9f1_MfwvooGZGnwTGrMylQVhFgkFWIxB4ZVbX/exec
 ```
+
+（旧 URL `...AKfycbxKVKogM8d...` は無効扱い。`.env*` / docs は新 URL に更新済み）
 
 5. 疎通確認
-   - GET health: `{ ok: true, data: { service, paths } }`
-   - POST `generate-seed`: 成功（キャッシュヒット含む）
-   - POST `validate-cefr`: 成功
+   - GET health: `{ ok: true, data: { service, paths } }`（新 URL でも再確認済み）
+   - POST `generate-seed`: 成功（キャッシュヒット含む・旧デプロイ時）
+   - POST `validate-cefr`: 成功（旧デプロイ時）
+6. **clasp 紐付け**（2026-07-09）: Apps Script API ON → `.clasp.json`（gitignore）→ `clasp push` 成功。手順は `gas/README.md`
 
 ### 1.4 モデル ID 点検（存在しないモデル事故の予防）
 
@@ -68,7 +72,8 @@ https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t
 | `d99bff8` | 設計 docs リネーム + 構成表 |
 | `976fbdb` | Phase 1 PWA / pipeline / GAS ソース |
 | `ec1c58b` | 初回 Web App URL 配線 |
-| （本レポート投入コミット） | 新 URL・doc 更新・本ハンドオフ |
+| `6f39353` | 再デプロイ URL・doc・本ハンドオフ初版 |
+| （2026-07-09） | Pages Actions 修正・data `@data` 一本化・clasp・現行 GAS URL |
 
 ---
 
@@ -130,15 +135,15 @@ https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t
 ### P0 — Phase 1 クローズに必要
 
 1. **A2 seed 本生成 → `/review` で検証 → enrich / examples → merge**（目標 100 件以上）
-2. GitHub **Pages を Actions ソースで有効化**し、デプロイ URL で PWA / オフラインを確認
+2. ~~GitHub Pages を Actions ソースで有効化・workflow 修正~~ → **完了**（ブランチ直出し→Actions、pnpm version 衝突解消）。**push 後**に公開 URL で表示・オフラインを再確認する。
 3. iPhone Safari でホーム画面追加の実機確認
 
 ### P1 — 運用・品質
 
-4. Apps Script API を ON にし、`gas/.clasp.json` で **clasp push** できるようにする（手動貼り付けからの卒業）
+4. ~~Apps Script API + clasp push~~ → **完了**（2026-07-09）。以後は `clasp push` → エディタで新バージョンデプロイ。手順は `gas/README.md`
 5. Build モデルを **`claude-opus-4-8` に上げるか**方針決定（現状 `opus-4-6` で問題なし）
 6. GAS CORS / 許可オリジンを本番 Pages ドメインに限定（設計書どおりの締め）
-7. `data/current` と `src/data/current` の二重管理を、ビルド時コピー等で一本化
+7. ~~`data/current` と `src/data/current` の二重管理~~ → **完了**: 正本は `data/current/` のみ（`@data` alias）
 
 ### P2 — Phase 2（指示書どおり前倒ししない）
 

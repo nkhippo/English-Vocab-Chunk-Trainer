@@ -2,7 +2,7 @@
 
 English Vocab Chunk Trainer の長期運用を見据えたフォルダ・ファイル構成の正本。
 
-最終更新: 2026-07-08（Phase 1 + GAS Web App 稼働）
+最終更新: 2026-07-09（Pages Actions 配信・data 一本化）
 
 ---
 
@@ -39,23 +39,29 @@ english-vocab-chunk-trainer/
 │   ├── content/guide/
 │   ├── features/                      # home, train, browse, review, settings
 │   ├── lib/                           # db, gas-client, i18n, stores
-│   ├── data/                          # バンドル用サンプル + current コピー
+│   ├── data/                          # 開発用サンプルのみ（sample-seeds.json）
 │   ├── styles/
 │   └── types/
 ├── data/
-│   ├── current/                       # Git 管理の現行データ
+│   ├── current/                       # 【正本】Git 管理の現行データ（Vite がバンドル）
 │   └── staging/                       # 生成物（gitignore）
 ├── scripts/                           # seed / enrich / examples / merge / validate
-└── gas/                               # Claude API プロキシ（Drive デプロイ + drive-paste）
+├── .clasp.json                        # clasp 紐付け（gitignore）
+├── .claspignore                       # gas/ 内の除外（drive-paste 等）
+└── gas/                               # Claude API プロキシ（clasp push + drive-paste フォールバック）
     ├── README.md
     ├── main.js / cache.js / claude.js / handlers.js
     └── drive-paste/Code.gs            # エディタ貼り付け用結合ファイル
 ```
 
+学習データの正本は `data/current/` のみ。アプリは `@data/current/items.json`（`vite.config.ts` / `tsconfig` の alias）から直接 import し、`src/data/current` への複製は置かない。
+
+GAS は clasp 紐付け済み。Web App URL 変更時は `.env.example` / `.env.production` / `gas/README.md`（および関連 doc）を揃えて更新する。
+
 ### 稼働中 GAS
 
 ```
-https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec
+https://script.google.com/macros/s/AKfycbz_gk2WigbcJKX7DH-pq14Mp-O5v5f9f1_MfwvooGZGnwTGrMylQVhFgkFWIxB4ZVbX/exec
 ```
 
 ### 指示書パスとの対応
@@ -75,7 +81,7 @@ https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t
 |---|---|---|
 | `doc/` | 仕様・スキーマ・運用・指示書の正本 | — |
 | `src/` | PWA 本体 | `app-specification.md` |
-| `data/` | 学習データ（current は Git、staging はローカル） | `learning-data-schema.json` |
+| `data/` | 学習データ正本（current は Git・PWA バンドル元、staging はローカル） | `learning-data-schema.json` |
 | `scripts/` | データ生成・検証 CLI（GAS 経由） | `data-operations-guide.md` |
 | `gas/` | Claude API プロキシ・キャッシュ | `claude-api-gas-design.md` |
 

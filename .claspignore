@@ -1,0 +1,5 @@
+# clasp: patterns relative to rootDir (gas/)
+drive-paste/**
+prompts/**
+**/*.md
+.claspignore

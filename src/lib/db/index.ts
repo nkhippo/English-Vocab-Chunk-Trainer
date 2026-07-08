@@ -1,6 +1,6 @@
 import Dexie, { type Table } from 'dexie'
 import type { Dataset, LearningItem, Insight } from '@/types/learning'
-import bundledDataset from '@/data/current/items.json'
+import bundledDataset from '@data/current/items.json'
 
 export class VocabDatabase extends Dexie {
   items!: Table<LearningItem, string>

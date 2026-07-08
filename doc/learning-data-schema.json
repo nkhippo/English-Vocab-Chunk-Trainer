@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/nkhipko/vocab-chunk-trainer/schema/v1",
+  "$id": "https://github.com/nkhippo/English-Vocab-Chunk-Trainer/schema/v1",
   "title": "Vocab & Chunk Trainer Data Schema",
   "description": "Authoritative schema for LearningItem and Insight. All data in the app conforms to this schema.",
   "version": "1.0.0",

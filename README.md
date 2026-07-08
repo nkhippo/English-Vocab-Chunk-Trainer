@@ -6,6 +6,7 @@ CEFR に沿った語彙・チャンク訓練用 PWA。Basic 2400 完走後に IE
 - 仕様の正本: [`doc/app-specification.md`](doc/app-specification.md)
 - Phase 1 指示書: [`doc/cursor-instruction-phase1.md`](doc/cursor-instruction-phase1.md)
 - 構成表: [`doc/repository-structure.md`](doc/repository-structure.md)
+- Phase 1 作業報告（差分・残課題）: [`doc/phase1-handoff-report.md`](doc/phase1-handoff-report.md)
 
 ## Phase 1 の範囲
 
@@ -43,7 +44,13 @@ pnpm dev
 
 ## GAS
 
-手順は [`gas/README.md`](gas/README.md)。Script Properties に `ANTHROPIC_API_KEY` を設定する。
+手順と稼働 URL は [`gas/README.md`](gas/README.md)。Script Properties に `ANTHROPIC_API_KEY` を設定する（設定済み）。
+
+現行 Web App:
+
+```
+https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec
+```
 
 ## GitHub Pages
 

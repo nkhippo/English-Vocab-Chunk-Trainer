@@ -1,6 +1,12 @@
 # データ運用手順書 (Data Operations Guide)
 
-`vocab-chunk-trainer` のデータベースを段階的に拡張・保守する運用手順を記述する。データが A2 → B1 → B2 → C1 と拡張されるたび、Basic 2400 の学習が進行するたびに、本手順に沿って更新を行う。
+`english-vocab-chunk-trainer`（GitHub: `nkhippo/English-Vocab-Chunk-Trainer`）のデータベースを段階的に拡張・保守する運用手順を記述する。データが A2 → B1 → B2 → C1 と拡張されるたび、Basic 2400 の学習が進行するたびに、本手順に沿って更新を行う。
+
+**GAS エンドポイント（Phase 1）**:  
+`https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec`  
+（ローカルは `.env` の `GAS_ENDPOINT_URL`。詳細は `gas/README.md`）
+
+スキーマ正本: `doc/learning-data-schema.json`（旧称 `data-schema.json`）。
 
 ---
 

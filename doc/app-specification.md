@@ -460,7 +460,8 @@ v2 の 12,800 件に、A1 レベルのフレーズを追加した最終見立て
 - **データストレージ**: IndexedDB(13,000 件 + メタデータで数十 MB を想定)
 - **音声**: 貴殿の GAS TTS + Google Drive キャッシュ資産を利用
 - **AI 添削**: Claude API(Mode C 実行時のみ、`claude-haiku-4-5-20251001` 想定)
-- **リポジトリ**: 新規リポジトリ(仮称 `vocab-chunk-trainer`)、`nkhipko` 配下
+- **リポジトリ**: `nkhippo/English-Vocab-Chunk-Trainer`（GitHub Pages base: `/English-Vocab-Chunk-Trainer/`）
+- **Claude API**: GAS Web App 経由（URL・モデル一覧は `doc/claude-api-gas-design.md` §実装ステータス）
 
 ### 8.2 ライブラリ選定候補
 
@@ -518,7 +519,7 @@ v2 の 12,800 件に、A1 レベルのフレーズを追加した最終見立て
 ## 11. 次のアクション
 
 1. **本仕様のレビュー**: 誤解・抜けの確認
-2. **リポジトリ作成**: `nkhipko/vocab-chunk-trainer`
+2. **リポジトリ作成**: `nkhippo/English-Vocab-Chunk-Trainer`（完了）
 3. **データベーススキーマ(JSON Schema)の詳細設計**: 本仕様の §3 を実装レベルまで落とす
 4. **Cursor 指示書 v1 の作成**: Phase 1(データ構築)の workflow を Cursor に渡せる形にする
 5. **A1 + A2 seed リストの生成試行**: Claude API で 100 件生成し、貴殿の検証コストを実測

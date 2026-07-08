@@ -7,12 +7,13 @@ Implements the endpoints described in `doc/claude-api-gas-design.md`.
 ## Deployed endpoint (Phase 1)
 
 ```
-https://script.google.com/macros/s/AKfycbydkQc4jRLe2N4rr56my_0xRgYHKqwFnCCxQ10ABy09-9GUOGpP9JBHC86WGG8CaoId/exec
+https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec
 ```
 
 - Script Properties: `ANTHROPIC_API_KEY`（設定済み）
 - Local: `.env` / `.env.example` の `GAS_ENDPOINT_URL`
 - Pages build: `.env.production` の `VITE_GAS_ENDPOINT_URL`
+- Health GET 応答は `{ ok: true, data: { service, paths } }`（二重ラップなし）
 
 Health check:
 
@@ -20,6 +21,15 @@ Health check:
 curl -sL "$GAS_ENDPOINT_URL"
 # → {"ok":true,"data":{"service":"vocab-chunk-trainer-gas","paths":[...]}}
 ```
+
+### Models in use (verified 2026-07-08)
+
+| Endpoint group | Model ID | Status |
+|---|---|---|
+| generate-seed / enrich-item / generate-examples / generate-insight | `claude-opus-4-6` | Valid (legacy, still available) |
+| validate-cefr | `claude-haiku-4-5-20251001` | Valid (current Haiku) |
+
+Optional later upgrade for Build quality: `claude-opus-4-8`.
 
 ---
 
@@ -47,7 +57,7 @@ clasp push
 1. https://script.google.com/home/start → 新しいプロジェクト
 2. `Code.gs` を上書き保存
 3. プロジェクトの設定 → スクリプト プロパティ → `ANTHROPIC_API_KEY`
-4. デプロイ → ウェブアプリ（実行: 自分 / アクセス: 全員）
+4. デプロイ → ウェブアプリ（実行: 自分 / アクセス: 全員）→ **新バージョン**
 
 ---
 

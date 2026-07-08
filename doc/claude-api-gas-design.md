@@ -2,6 +2,20 @@
 
 `vocab-chunk-trainer` から Claude API を呼び出す際は、貴殿の既存 GAS 資産(IPA Trainer / Structure Trainer のパターン)に倣い、必ず **GAS(Google Apps Script)を経由**する。API キーをフロントエンドに露出させず、レート制御・キャッシュ・課金管理を一元化する。
 
+## 実装ステータス（2026-07-08）
+
+| 項目 | 状態 |
+|---|---|
+| Web App URL | `https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec` |
+| Script Properties `ANTHROPIC_API_KEY` | 設定済み |
+| Phase 1 エンドポイント 5 つ | 稼働確認済み（GET health + POST generate-seed / validate-cefr） |
+| キャッシュ | Drive フォルダ `vocab-chunk-trainer-cache`（SHA-256） |
+| リポジトリ側ソース | `gas/*.js` + 貼り付け用 `gas/drive-paste/Code.gs` |
+| Build モデル | `claude-opus-4-6`（公式上は legacy だが有効。最新は `claude-opus-4-8`） |
+| Runtime / 判定モデル | `claude-haiku-4-5-20251001`（現行 Haiku 正式 ID） |
+
+運用コマンド・env の詳細は `gas/README.md`。作業差分の全体像は `doc/phase1-handoff-report.md`。
+
 ---
 
 ## 1. アーキテクチャ

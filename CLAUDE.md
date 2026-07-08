@@ -13,8 +13,15 @@
 - `doc/claude-api-gas-design.md` — GAS + Claude
 - `doc/cursor-instruction-phase1.md` — Phase 1 作業指示
 - `doc/repository-structure.md` — フォルダ構成の正本
+- `doc/phase1-handoff-report.md` — Cursor 作業結果・指示書差分・残課題（共有用）
 
 **指示書と仕様書が矛盾する場合は仕様書を優先し、実装を止めて報告する。**
+
+稼働中 GAS Web App:
+
+```
+https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec
+```
 
 ## スタック
 

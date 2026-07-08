@@ -9,17 +9,14 @@
 
 function doGet(e) {
   return jsonResponse({
-    ok: true,
-    data: {
-      service: 'vocab-chunk-trainer-gas',
-      paths: [
-        'generate-seed',
-        'enrich-item',
-        'generate-examples',
-        'generate-insight',
-        'validate-cefr',
-      ],
-    },
+    service: 'vocab-chunk-trainer-gas',
+    paths: [
+      'generate-seed',
+      'enrich-item',
+      'generate-examples',
+      'generate-insight',
+      'validate-cefr',
+    ],
   })
 }
 

@@ -2,19 +2,54 @@
 
 Implements the endpoints described in `doc/claude-api-gas-design.md`.
 
-## Setup
+**推奨**: スタンドアロン GAS（Google Drive 上のスクリプト）+ 本リポジトリの `gas/` をソース正本にする。
 
-1. Install [clasp](https://github.com/google/clasp): `npm i -g @google/clasp`
-2. `clasp login`
-3. Create a standalone Apps Script project: `clasp create --type standalone --title "vocab-chunk-trainer-gas" --rootDir gas`
-   - Or link an existing project by adding `.clasp.json` with the scriptId
-4. `clasp push`
-5. In the Apps Script UI → Project Settings → Script properties:
-   - `ANTHROPIC_API_KEY` = your Anthropic key
-6. Deploy → New deployment → Web app
-   - Execute as: Me
-   - Who has access: Anyone (or Anyone with Google account during testing)
-7. Copy the Web App URL into `.env` as `GAS_ENDPOINT_URL` and into `.env` / GitHub Pages env as `VITE_GAS_ENDPOINT_URL` when needed
+## Deployed endpoint (Phase 1)
+
+```
+https://script.google.com/macros/s/AKfycbydkQc4jRLe2N4rr56my_0xRgYHKqwFnCCxQ10ABy09-9GUOGpP9JBHC86WGG8CaoId/exec
+```
+
+- Script Properties: `ANTHROPIC_API_KEY`（設定済み）
+- Local: `.env` / `.env.example` の `GAS_ENDPOINT_URL`
+- Pages build: `.env.production` の `VITE_GAS_ENDPOINT_URL`
+
+Health check:
+
+```bash
+curl -sL "$GAS_ENDPOINT_URL"
+# → {"ok":true,"data":{"service":"vocab-chunk-trainer-gas","paths":[...]}}
+```
+
+---
+
+## clasp sync（任意）
+
+Apps Script API を ON にしたうえで、既存プロジェクトに紐付ける場合:
+
+1. https://script.google.com/home/usersettings で Google Apps Script API を有効化
+2. エディタ URL の `/d/{SCRIPT_ID}/edit` から SCRIPT_ID を控える
+3. リポジトリルートで:
+
+```bash
+echo '{"scriptId":"SCRIPT_ID","rootDir":"gas"}' > gas/.clasp.json
+clasp push
+```
+
+`gas/.clasp.json` は gitignore 済み。
+
+---
+
+## Drive 手動デプロイ
+
+貼り付け用の結合ファイル: [`drive-paste/Code.gs`](./drive-paste/Code.gs)
+
+1. https://script.google.com/home/start → 新しいプロジェクト
+2. `Code.gs` を上書き保存
+3. プロジェクトの設定 → スクリプト プロパティ → `ANTHROPIC_API_KEY`
+4. デプロイ → ウェブアプリ（実行: 自分 / アクセス: 全員）
+
+---
 
 ## Call convention
 
@@ -24,7 +59,7 @@ Content-Type: text/plain;charset=utf-8
 Body: JSON
 ```
 
-Response shape:
+Response:
 
 ```json
 { "ok": true, "data": { }, "cached": false }

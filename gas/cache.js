@@ -1,12 +1,13 @@
 function computeCacheKey(path, body) {
   var raw = path + '::' + JSON.stringify(body)
   var digest = Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, raw)
-  return digest
-    .map(function (b) {
-      var v = (b < 0 ? b + 256 : b).toString(16)
-      return v.length === 1 ? '0' + v : v
-    })
-    .join('')
+  var hex = []
+  for (var i = 0; i < digest.length; i++) {
+    var b = digest[i]
+    var v = (b < 0 ? b + 256 : b).toString(16)
+    hex.push(v.length === 1 ? '0' + v : v)
+  }
+  return hex.join('')
 }
 
 function getCacheFolder_() {

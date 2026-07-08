@@ -73,7 +73,7 @@ https://script.google.com/macros/s/AKfycbz_gk2WigbcJKX7DH-pq14Mp-O5v5f9f1_Mfwvoo
 | `976fbdb` | Phase 1 PWA / pipeline / GAS ソース |
 | `ec1c58b` | 初回 Web App URL 配線 |
 | `6f39353` | 再デプロイ URL・doc・本ハンドオフ初版 |
-| （2026-07-09） | Pages Actions 修正・data `@data` 一本化・clasp・現行 GAS URL |
+| `edfe096` | Pages Actions 修正・data `@data` 一本化・clasp・現行 GAS URL |
 
 ---
 
@@ -135,7 +135,7 @@ https://script.google.com/macros/s/AKfycbz_gk2WigbcJKX7DH-pq14Mp-O5v5f9f1_Mfwvoo
 ### P0 — Phase 1 クローズに必要
 
 1. **A2 seed 本生成 → `/review` で検証 → enrich / examples → merge**（目標 100 件以上）
-2. ~~GitHub Pages を Actions ソースで有効化・workflow 修正~~ → **完了**（ブランチ直出し→Actions、pnpm version 衝突解消）。**push 後**に公開 URL で表示・オフラインを再確認する。
+2. ~~GitHub Pages を Actions ソースで有効化・workflow 修正~~ → **完了**（`edfe096`。公開 URL でビルド成果物配信を確認済み）。オフライン動作の最終確認はユーザー側。
 3. iPhone Safari でホーム画面追加の実機確認
 
 ### P1 — 運用・品質

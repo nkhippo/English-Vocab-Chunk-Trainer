@@ -1,0 +1,75 @@
+{
+  "app": {
+    "name": "Vocab & Chunk Trainer",
+    "tagline": "CEFR に沿った語彙・チャンク訓練"
+  },
+  "nav": {
+    "home": "ホーム",
+    "train": "学習",
+    "browse": "単語帳",
+    "review": "検証",
+    "settings": "設定",
+    "help": "ヘルプ",
+    "menu": "メニュー",
+    "close": "閉じる"
+  },
+  "home": {
+    "title": "ようこそ",
+    "body": "Phase 1 では PWA 骨格、日英 UI、ガイド、データパイプライン、検証 UI を用意しています。Mode A/B/C の学習画面は Phase 2 で実装します。",
+    "ctaTrain": "学習モード（準備中）",
+    "ctaBrowse": "CEFR 単語帳を見る",
+    "ctaReview": "検証 UI を開く"
+  },
+  "train": {
+    "title": "学習モード",
+    "placeholder": "Mode A（識別）/ Mode B（想起）/ Mode C（運用）は Phase 2 で実装予定です。"
+  },
+  "browse": {
+    "title": "CEFR 単語帳",
+    "subtitle": "レベル別の件数確認（検索・詳細は Phase 2）",
+    "empty": "まだデータがありません。data/current/items.json を投入してください。",
+    "count": "{{count}} 件",
+    "searchHint": "検索は Phase 2 で実装します"
+  },
+  "review": {
+    "title": "検証 UI",
+    "subtitle": "生成 seed を高速に採用 / 却下する",
+    "loadHint": "staging JSON を選択するか、開発時はサンプルを読み込んでください。",
+    "loadSample": "サンプルを読み込む",
+    "loadFile": "JSON ファイルを開く",
+    "progress": "{{current}} / {{total}}（{{percent}}%）",
+    "accepted": "採用",
+    "rejected": "却下",
+    "pending": "未判定",
+    "shortcuts": "ショートカット: Y 採用 / N 却下 / 1–6 CEFR / E 訳編集 / ←→ 移動",
+    "saveNote": "判定はブラウザ LocalStorage に保存されます。完了後に *_validated.json をエクスポートしてください。",
+    "export": "validated JSON を書き出す",
+    "completeTitle": "検証完了",
+    "completeBody": "採用 {{accepted}} / 却下 {{rejected}} / 合計 {{total}}",
+    "editTranslations": "訳の編集",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "noItems": "表示する項目がありません。",
+    "resume": "前回の検証を再開"
+  },
+  "settings": {
+    "title": "設定",
+    "language": "表示言語",
+    "languageJa": "日本語",
+    "languageEn": "English",
+    "guide": "ガイドを再度表示",
+    "about": "このアプリについて",
+    "aboutBody": "仕様書は doc/app-specification.md を唯一の参照ソースとします。"
+  },
+  "guide": {
+    "skip": "スキップ",
+    "prev": "前へ",
+    "next": "次へ",
+    "done": "完了",
+    "pageOf": "{{current}} / {{total}}"
+  },
+  "common": {
+    "comingSoon": "準備中",
+    "phase2": "Phase 2"
+  }
+}

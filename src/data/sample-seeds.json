@@ -1,0 +1,48 @@
+[
+  {
+    "id": "take_a_break",
+    "surface": "take a break",
+    "category": "collocation",
+    "cefr_level": "A2",
+    "translations_ja": ["休憩する"],
+    "collocation_pattern": "V+N",
+    "register": "neutral",
+    "frequency_hint": "high"
+  },
+  {
+    "id": "catch_up_with",
+    "surface": "catch up with",
+    "category": "phrasal_verb",
+    "cefr_level": "A2",
+    "translations_ja": ["追いつく", "近況を話し合う"],
+    "register": "neutral",
+    "frequency_hint": "high"
+  },
+  {
+    "id": "piece_of_cake",
+    "surface": "piece of cake",
+    "category": "idiom",
+    "cefr_level": "B1",
+    "translations_ja": ["楽勝", "簡単すぎること"],
+    "register": "casual",
+    "frequency_hint": "medium"
+  },
+  {
+    "id": "black_and_white",
+    "surface": "black and white",
+    "category": "binomial",
+    "cefr_level": "A2",
+    "translations_ja": ["白黒の", "はっきりした"],
+    "register": "neutral",
+    "frequency_hint": "medium"
+  },
+  {
+    "id": "hows_it_going",
+    "surface": "How's it going?",
+    "category": "institutionalized",
+    "cefr_level": "A1",
+    "translations_ja": ["調子どう？"],
+    "register": "casual",
+    "frequency_hint": "high"
+  }
+]

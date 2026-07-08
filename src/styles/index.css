@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Source Serif 4", "Noto Serif JP", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-ink: #0f172a;
+  --color-ink-muted: #475569;
+  --color-paper: #f8fafc;
+  --color-paper-elevated: #ffffff;
+  --color-line: #e2e8f0;
+  --color-brand: #0f766e;
+  --color-brand-soft: #ccfbf1;
+  --color-brand-strong: #115e59;
+  --color-accent: #c2410c;
+  --color-danger: #b91c1c;
+  --color-success: #15803d;
+  --color-warning: #a16207;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background:
+      radial-gradient(circle at top left, color-mix(in oklab, var(--color-brand-soft) 70%, white), transparent 40%),
+      linear-gradient(180deg, #f1f5f9 0%, var(--color-paper) 40%, #eef2ff 100%);
+    background-attachment: fixed;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@layer utilities {
+  .ipa {
+    font-family: var(--font-mono);
+    letter-spacing: 0.02em;
+  }
+}

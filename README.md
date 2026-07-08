@@ -1,0 +1,57 @@
+# Vocab & Chunk Trainer
+
+CEFR に沿った語彙・チャンク訓練用 PWA。Basic 2400 完走後に IELTS 7.0（C1 下位）相当の語彙・チャンク運用力を段階的に構築する。
+
+- リポジトリ: https://github.com/nkhippo/English-Vocab-Chunk-Trainer
+- 仕様の正本: [`doc/app-specification.md`](doc/app-specification.md)
+- Phase 1 指示書: [`doc/cursor-instruction-phase1.md`](doc/cursor-instruction-phase1.md)
+- 構成表: [`doc/repository-structure.md`](doc/repository-structure.md)
+
+## Phase 1 の範囲
+
+- Vite + React + TypeScript + Tailwind PWA 骨格
+- 日英 UI・ガイドモーダル・レイアウト
+- `/browse` 骨格・`/review` 検証 UI
+- `scripts/` データパイプライン（GAS 経由 Claude）
+- `gas/` Claude API プロキシ
+
+**未実装（Phase 2）**: Mode A/B/C 学習画面、SRS、単語帳検索・詳細、`/review-writing`
+
+## セットアップ
+
+```bash
+pnpm install
+cp .env.example .env
+# GAS Web App URL を GAS_ENDPOINT_URL / VITE_GAS_ENDPOINT_URL に設定
+pnpm dev
+```
+
+開発サーバ: http://localhost:5173/English-Vocab-Chunk-Trainer/
+
+## 開発コマンド
+
+| コマンド | 説明 |
+|---|---|
+| `pnpm dev` | 開発サーバ |
+| `pnpm build` | 本番ビルド |
+| `pnpm preview` | ビルド結果のプレビュー |
+| `pnpm run generate:seed -- --cefr=A2 --category=collocation --batch=30` | seed 生成 |
+| `pnpm run generate:enrichment -- --input=data/staging/A2_validated.json` | enrichment |
+| `pnpm run generate:examples -- --input=data/staging/..._enriched.json` | 例文生成 |
+| `pnpm run merge -- --new=data/staging/A2_final.json --into=data/current/items.json` | マージ |
+| `pnpm run validate` | スキーマ検証 |
+
+## GAS
+
+手順は [`gas/README.md`](gas/README.md)。Script Properties に `ANTHROPIC_API_KEY` を設定する。
+
+## GitHub Pages
+
+`main` への push で Actions が `dist/` を Pages にデプロイする。  
+Settings → Pages → Source: GitHub Actions を有効化すること。
+
+想定 URL: `https://nkhippo.github.io/English-Vocab-Chunk-Trainer/`
+
+## ライセンス
+
+TBD

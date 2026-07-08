@@ -9,3 +9,9 @@ dist/
 *.local
 .idea/
 .vscode/
+data/staging/**
+!data/staging/
+!data/staging/.gitkeep
+*.tsbuildinfo
+.clasp.json
+gas/.clasp.json

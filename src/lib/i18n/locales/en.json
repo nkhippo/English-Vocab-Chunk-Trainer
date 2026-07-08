@@ -1,0 +1,75 @@
+{
+  "app": {
+    "name": "Vocab & Chunk Trainer",
+    "tagline": "CEFR-aligned vocabulary & chunk practice"
+  },
+  "nav": {
+    "home": "Home",
+    "train": "Train",
+    "browse": "Browse",
+    "review": "Review",
+    "settings": "Settings",
+    "help": "Help",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "home": {
+    "title": "Welcome",
+    "body": "Phase 1 ships the PWA shell, JA/EN UI, guide modal, data pipeline scripts, and review UI. Learning Modes A/B/C arrive in Phase 2.",
+    "ctaTrain": "Training (coming soon)",
+    "ctaBrowse": "Open CEFR wordbook",
+    "ctaReview": "Open review UI"
+  },
+  "train": {
+    "title": "Training modes",
+    "placeholder": "Mode A (recognize) / Mode B (recall) / Mode C (produce) will be implemented in Phase 2."
+  },
+  "browse": {
+    "title": "CEFR wordbook",
+    "subtitle": "Per-level counts for now (search/detail in Phase 2)",
+    "empty": "No data yet. Add data/current/items.json.",
+    "count": "{{count}} items",
+    "searchHint": "Search lands in Phase 2"
+  },
+  "review": {
+    "title": "Review UI",
+    "subtitle": "Accept or reject generated seeds quickly",
+    "loadHint": "Pick a staging JSON file, or load the sample in development.",
+    "loadSample": "Load sample",
+    "loadFile": "Open JSON file",
+    "progress": "{{current}} / {{total}} ({{percent}}%)",
+    "accepted": "Accept",
+    "rejected": "Reject",
+    "pending": "Pending",
+    "shortcuts": "Shortcuts: Y accept / N reject / 1–6 CEFR / E edit / ←→ navigate",
+    "saveNote": "Decisions are saved in LocalStorage. Export *_validated.json when finished.",
+    "export": "Export validated JSON",
+    "completeTitle": "Review complete",
+    "completeBody": "Accepted {{accepted}} / Rejected {{rejected}} / Total {{total}}",
+    "editTranslations": "Edit translations",
+    "save": "Save",
+    "cancel": "Cancel",
+    "noItems": "No items to show.",
+    "resume": "Resume previous session"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "languageJa": "日本語",
+    "languageEn": "English",
+    "guide": "Show guide again",
+    "about": "About",
+    "aboutBody": "doc/app-specification.md is the single source of truth for product behavior."
+  },
+  "guide": {
+    "skip": "Skip",
+    "prev": "Back",
+    "next": "Next",
+    "done": "Done",
+    "pageOf": "{{current}} / {{total}}"
+  },
+  "common": {
+    "comingSoon": "Coming soon",
+    "phase2": "Phase 2"
+  }
+}

@@ -11,7 +11,7 @@ const root = path.resolve(__dirname, '..')
 const gasDir = path.join(root, 'gas')
 const outPath = path.join(gasDir, 'drive-paste', 'Code.gs')
 
-const parts = ['main.js', 'cache.js', 'claude.js', 'handlers.js']
+const parts = ['main.js', 'cache.js', 'claude.js', 'scene-config.js', 'handlers.js']
 
 const footer = `
 /**

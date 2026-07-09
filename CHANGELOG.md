@@ -38,10 +38,23 @@
 - `gas/handlers.js`: validateCefr プロンプト厳格化（false negative 優先）
 - `generate-examples.ts`: `validator_version: v3` / `schema_version: 1.1.1`
 
+### Changed (pilot v4)
+
+- `gas/scene-config.js`: register 別シーン候補の一元管理
+- `gas/handlers.js`: generateExamples 禁止語表 + シーン多様化 / validateCefr 明示リスト照合
+- `generate-examples.ts`: `validator_version: v4` / `schema_version: 1.1.2`
+- `doc/ops/claude-api-gas-design.md`: §2.3.1 / §2.3.2 / §2.5.1
+- GAS URL 暫定フォールバック @18（@19 404）
+
+### Added (pilot v4)
+
+- `doc/handoff/pilot-v4-handoff-report.md`
+
 ### Pending (Naoya)
 
-- **validate-cefr Opus 化 or generateExamples 制約強化**（v3 DoD 未達 — `pilot-v3-handoff-report.md`）
-- **A2 本生成 GO**（`pnpm run batch:a2-seeds`、2,430 件）
+- **GAS 手動デプロイ**（v4 ソース反映・@19 復旧 or 新 URL）
+- **Anthropic クレジット補充**後のパイロット v4 再実行
+- **A2 本生成 GO**（DoD 達成後）
 - iPhone Safari ホーム画面追加（任意）
 - `/review` UI の情報設計・レイアウト改善（Phase 2 以降）
 

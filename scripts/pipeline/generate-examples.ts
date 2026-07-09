@@ -52,7 +52,7 @@ async function main() {
     for (let attempt = 1; attempt <= 3; attempt++) {
       await sleep(1000)
       const gen = await callGasScript<{ example_sentences?: unknown[] }>('generate-examples', {
-        schema_version: '1.1.1',
+        schema_version: '1.1.2',
         item: {
           id: item.id,
           surface: item.surface,
@@ -72,7 +72,7 @@ async function main() {
       await sleep(1000)
       const validation = await callGasScript<{ ok?: boolean; violations?: unknown[] }>('validate-cefr', {
         schema_version: '1.1.0',
-        validator_version: 'v3',
+        validator_version: 'v4',
         item_id: item.id,
         cefr_level: item.cefr_level,
         example_sentences: candidate,

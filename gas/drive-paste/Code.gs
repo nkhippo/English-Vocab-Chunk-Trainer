@@ -201,6 +201,85 @@ function loadPrompt_(name) {
 
 var PROMPTS = {}
 
+// --- scene-config.js ---
+/**
+ * gas/scene-config.js
+ *
+ * `/generate-examples` エンドポイントが例文生成時に参照する
+ * register 別シーン候補の設定ファイル。
+ *
+ * ## 目的
+ * - Opus が formal 例文を「ホテル・オフィス系」に collapse するのを防ぐ
+ * - register 別に多様なシーンを候補として提示する
+ * - シーン一覧を単一ファイルで管理し、後日のアップデートを容易にする
+ *
+ * ## 更新方針
+ * - シーンを追加: 新しいドメイン(医療・スポーツ・芸術など)を扱いたくなったとき
+ * - シーンを削除: そのシーンが対象語との不自然なペアリングを生む頻度が高いとき
+ * - 目安の件数: 各 register 7〜12 個
+ *   (少なすぎるとまた collapse、多すぎると Opus が選びきれず希薄化)
+ * - formal はビジネス・機関の書き言葉に限定、informal は本当にくだけた会話に限定
+ *
+ * ## 変更ログ
+ * - v1.0 (2026-07-09): 初版。formal 10 / neutral 7 / informal 7。
+ *   v3 パイロットで発覚した「ホテル・オフィス collapse」対策として導入。
+ *
+ * @see doc/ops/claude-api-gas-design.md §2.3
+ * @see doc/handoff/pilot-v3-handoff-report.md
+ */
+
+var SCENE_CANDIDATES = {
+  formal: [
+    'ビジネスメール・業務連絡',
+    '公共施設・交通機関の公式アナウンス',
+    '学校・教育機関の規則説明',
+    '医療機関・薬局の案内',
+    '行政・公文書',
+    '業務マニュアル・作業指示',
+    '学術・研究の説明',
+    '会議・プレゼンテーション',
+    '契約書・利用規約',
+    'ホテル・接客サービス案内',
+  ],
+  neutral: [
+    '日常会話(家族・同僚間)',
+    '一般記事・ブログ・エッセイ',
+    '教科書調の説明文',
+    'ニュース・レポート',
+    '習慣・日課の描写',
+    '個人的な計画・予定',
+    '客観的な状況説明',
+  ],
+  informal: [
+    '友人との雑談',
+    'SNS・チャット・メッセージ',
+    '家族とのカジュアル会話',
+    '感情表現(喜び・不満・驚き)',
+    '週末・休暇の計画会話',
+    '軽い依頼・提案',
+    'ちょっとした愚痴・つぶやき',
+  ],
+}
+
+/**
+ * SCENE_CANDIDATES を register 別に整形して返すヘルパー。
+ * handlers.js の generateExamples プロンプト構築で使用。
+ *
+ * @param {string} register  'formal' | 'neutral' | 'informal'
+ * @returns {string}         Markdown 箇条書き形式のシーン一覧
+ */
+function formatSceneCandidates(register) {
+  var scenes = SCENE_CANDIDATES[register] || []
+  return scenes
+    .map(function (s) {
+      return '- ' + s
+    })
+    .join('\n')
+}
+
+// GAS の同一 script project 内では他ファイルからグローバル参照可能。
+// 明示 export は不要。
+
 // --- handlers.js ---
 function generateSeed(body) {
   var category = body.category
@@ -341,6 +420,10 @@ function generateExamples(body) {
   var category = item.category || 'collocation'
   var surface = item.surface || ''
 
+  var formalScenes = formatSceneCandidates('formal')
+  var neutralScenes = formatSceneCandidates('neutral')
+  var informalScenes = formatSceneCandidates('informal')
+
   var prompt = [
     'あなたは英語教材の例文作成者です。以下の学習項目について、register 別の例文を作成してください。',
     '',
@@ -353,12 +436,13 @@ function generateExamples(body) {
       collocation_pattern: item.collocation_pattern,
     }),
     '',
-    '## 判断順序（必ずこの順序で判断すること。逆順は禁止）',
+    '## 判断順序(必ずこの順序で判断すること。逆順は禁止)',
     '1. 対象語/チャンクの意味・用法・pattern を確定する',
-    '2. その語が自然に使われる register の集合を特定する（下記の register 判定基準を参照）',
-    '3. 特定された各 register で、対象語の学習に最適な例文を1つずつ作成する',
+    '2. その語が自然に使われる register の集合を特定する(下記の register 判定基準を参照)',
+    '3. 各 register で、下記のシーン候補から対象語に自然なものを1つ選ぶ',
+    '4. 選んだシーンで、対象語の学習に最適な例文を1つ作成する',
     '',
-    '**シーンや register を先に決めてから対象語を無理に嵌める順序は禁止。**対象語が浮くような不自然な文脈での使用は、学習者に誤った用法を刷り込むため。',
+    '**制約A(重要): シーンや register を先に決めてから対象語を無理に嵌める順序は禁止。**対象語が浮くような不自然な文脈での使用は、学習者に誤った用法を刷り込むため。',
     '',
     '## register 判定基準',
     '- **formal**: ビジネス・学術・公式文書で使われる書き言葉的表現',
@@ -366,46 +450,72 @@ function generateExamples(body) {
     '- **informal**: 日常会話・SNS・友人との会話などのくだけた表現',
     '',
     '対象語が自然に使われうる register にのみ例文を作成すること。例外規定:',
-    '- 慣習表現で register が固有な場合: 該当する register のみ（例: What\'s up? → informal のみ、How do you do? → formal のみ）',
+    '- 慣習表現で register が固有な場合: 該当する register のみ',
     '- 学術・専門用語で informal 使用が不自然な場合: formal + neutral のみ',
     '- 口語イディオムで formal 使用が不自然な場合: neutral + informal のみ',
     '',
-    '**日常コロケーション・句動詞は原則 formal + neutral + informal の 3 例文を出力すること。**該当項目 (' + category + ') は特別な事情がない限り 3 register 全てを埋めること。',
+    '**日常コロケーション・句動詞 (' + category + ') は原則 formal + neutral + informal の 3 例文を出力すること。**',
     '',
-    '## 制約',
-    '- **周辺語彙 CEFR 上限**: 例文中の対象語（' + surface + '）以外のすべての語が CEFR ' + cefr + ' 以下であること。B1 以上の語彙は使用禁止。',
-    '- 対象語の使い方は **典型的なもの** を選ぶ（例外的用法は避ける）',
-    '- 日本語訳は自然な日本語で（直訳調を避ける）',
+    '## シーン候補',
+    '各 register で使うシーンは以下から選ぶ。ただし対象語(' + surface + ')に自然でない場合は無理に選ばず、リスト外を判断で使ってよい(制約A 優先)。',
+    '',
+    '### formal のシーン候補',
+    formalScenes,
+    '',
+    '### neutral のシーン候補',
+    neutralScenes,
+    '',
+    '### informal のシーン候補',
+    informalScenes,
+    '',
+    '**シーン選択の重要指針**: 過去のパイロットで formal 例文が「Guests may... / Students are... 」等のホテル・オフィス系に collapse する傾向があった。**対象語に自然な範囲で、シーンの多様性を意識すること**。同じような文型・シーンばかりにしない。',
+    '',
+    '## A2 学習者未習語(使用禁止・最重要)',
+    '',
+    '以下は A2 学習者には未習の B1 以上の語。**対象語(' + surface + ')の外側では使用禁止**。formal を作るときに特に混入しやすいので細心の注意を払うこと。',
+    '',
+    '| 禁止語 | 代わりに使う表現 |',
+    '| --- | --- |',
+    '| kindly, respectfully | please, thank you |',
+    '| expected, is/are expected to | must, need to |',
+    '| required, is/are required to | must, need to |',
+    '| generally, typically | usually(A2) |',
+    '| appreciate, appreciated | thank you |',
+    '| provide, provided | give |',
+    '| consider, considering | think about |',
+    '| prefer, would prefer | like better |',
+    '| request(名詞・動詞とも) | ask |',
+    '| available, unavailable | free, open |',
+    '| accommodate | have room, help |',
+    '| premises | building, place |',
+    '| lounge | living room, hall, room |',
+    '| refrain from | do not (don\'t) |',
+    '| schedule(動詞) | plan |',
+    '| opportunity | chance |',
+    '| particular / particularly | special / specially |',
+    '| specific / specifically | certain |',
+    '| ensure | make sure |',
+    '',
+    'その他、A1〜' + cefr + ' レベルを超える語は使わない。対象語のニュアンス上どうしても B1 以上の語が必要な場合は、より簡単な代替表現を優先する。',
+    '',
+    '## その他の制約',
+    '- 対象語の使い方は **典型的なもの** を選ぶ(例外的用法は避ける)',
+    '- 日本語訳は自然な日本語で(直訳調を避ける)',
+    '- register の値は "formal" / "neutral" / "informal" の 3 種のみ("casual" は使わない)',
+    '- surrounding_cefr_ceiling はすべて "' + cefr + '"',
     '',
     '## 出力形式',
     '',
     '```json',
     '{',
     '  "example_sentences": [',
-    '    {',
-    '      "en": "対象語を含む英文",',
-    '      "ja": "自然な日本語訳",',
-    '      "register": "formal",',
-    '      "surrounding_cefr_ceiling": "' + cefr + '"',
-    '    },',
-    '    {',
-    '      "en": "...",',
-    '      "ja": "...",',
-    '      "register": "neutral",',
-    '      "surrounding_cefr_ceiling": "' + cefr + '"',
-    '    },',
-    '    {',
-    '      "en": "...",',
-    '      "ja": "...",',
-    '      "register": "informal",',
-    '      "surrounding_cefr_ceiling": "' + cefr + '"',
-    '    }',
+    '    {"en": "...", "ja": "...", "register": "formal", "surrounding_cefr_ceiling": "' + cefr + '"},',
+    '    {"en": "...", "ja": "...", "register": "neutral", "surrounding_cefr_ceiling": "' + cefr + '"},',
+    '    {"en": "...", "ja": "...", "register": "informal", "surrounding_cefr_ceiling": "' + cefr + '"}',
     '  ]',
     '}',
     '```',
     '',
-    '**register の値は "formal" / "neutral" / "informal" の 3 種のみ**（"casual" は使わない）。',
-    '**すべての surrounding_cefr_ceiling は "' + cefr + '" とする。**',
     'JSON オブジェクトのみ出力。マークダウンコードブロック不要、前置き・説明も不要。',
   ].join('\n')
 
@@ -430,7 +540,7 @@ function validateCefr(body) {
   var examples = body.example_sentences || []
 
   var prompt = [
-    'あなたは英語語彙 CEFR 判定の専門家です。以下の例文群において、指定された CEFR 上限を超える語が使われていないか判定してください。',
+    'あなたは英語語彙 CEFR 判定の補助ツールです。以下の例文群を、A2 学習者禁止語リストと照合して違反を検出してください。',
     '',
     '## 判定対象',
     '- Item ID: ' + item_id,
@@ -439,49 +549,58 @@ function validateCefr(body) {
     JSON.stringify(examples, null, 2),
     '',
     '## 判定の基本方針',
-    '- 例文中の**すべての内容語**(名詞・動詞・形容詞・副詞)を1語ずつ確認する',
-    '- CEFR レベルが上限(' + cefr + ')を超える語があれば必ず violations に列挙する',
-    '- 迷った場合は違反として列挙する(**false negative を避けることを最優先**。false positive はリトライで解決できるが、false negative は本番データに残る)',
     '',
-    '## 判定対象外(除外してよい語)',
-    '以下の**真の機能語のみ**が判定対象外。それ以外の語はすべて内容語として判定する:',
-    '- 冠詞: a, an, the',
-    '- 代名詞: I, you, he, she, it, we, they, this, that, these, those, my, your, his, her, its, our, their',
-    '- be 動詞: am, is, are, was, were, be, been, being',
-    '- 基本助動詞: do, does, did, can, could, will, would, may, might, must, should, shall, have (完了形), had (完了形)',
-    '- 基本前置詞: at, in, on, of, to, for, with, from, by, about',
-    '- 基本接続詞: and, but, or, so, if, when, that (接続詞用法)',
-    '- 疑問詞: what, when, where, who, why, how',
+    'この検証は **明示リストベースの照合** です。以下の「検出対象語リスト」に該当する語を例文中で探し、該当があれば violations に列挙してください。**リストにない語について「これは B1 かも」と推測して列挙しないでください**(false positive を避ける)。',
     '',
-    '## 特に見逃されやすい B1 以上の語(参考)',
-    '以下は formal 例文で頻出するが A2 学習者には未習の語。これらが例文に含まれていたら必ず違反として列挙する:',
-    '- **kindly** (B1、副詞): "kindly ask" のような受動態の中にあっても違反',
-    '- **expected** (B1、形容詞/動詞過去分詞): "are expected to" のような表現でも違反',
-    '- **lounge** (B2、名詞)',
-    '- **guests** / **visitors** (A2 圏内、これは違反ではない)',
-    '- **generally / typically / usually** (usually は A2、generally / typically は B1)',
-    '- **prefer** (B1、動詞): "would prefer" 等',
-    '- **request** (B1、動詞/名詞): "kindly request" 等',
-    '- **appreciate** (B1、動詞)',
-    '- **available** (B1、形容詞)',
-    '- **provide** (B1、動詞)',
-    '- **consider** (B1、動詞)',
-    '- **require** (B1、動詞): "are required to"',
+    'この検証はあくまで補助であり、主たる品質管理は generateExamples 側のプロンプトで行われています。したがって明示リストの語を確実に拾うことが唯一の役割です。',
     '',
-    'これは網羅リストではない。上記に該当しなくても、A2 学習者にとって未習だと判断できる語は違反として列挙すること。',
+    '## 検出対象語リスト(A2 学習者に未習の B1 以上の語)',
+    '',
+    '例文中に以下の語(または語形変化)が対象語の外側で使われていれば、必ず violations に列挙する:',
+    '',
+    '- kindly, respectfully',
+    '- expected, expects (be expected to の受動構文も含む)',
+    '- required, requires (be required to の受動構文も含む)',
+    '- generally, typically',
+    '- appreciate, appreciated, appreciation',
+    '- provide, provided, provides',
+    '- consider, considering, considered, consideration',
+    '- prefer, preferred, prefers, preference',
+    '- request, requested, requests(名詞・動詞とも)',
+    '- available, unavailable, availability',
+    '- accommodate, accommodating, accommodation',
+    '- premises',
+    '- lounge',
+    '- refrain (from)',
+    '- schedule(動詞: 「予定を組む」), scheduled',
+    '- opportunity, opportunities',
+    '- particular, particularly',
+    '- specific, specifically',
+    '- ensure, ensures, ensured',
+    '',
+    '## 検出対象外(A2 圏内・列挙しないこと)',
+    '',
+    '以下のような語は A2 学習者にも既習の場合が多く、たとえ formal な文脈でも列挙しないでください:',
+    '',
+    '- 職業・立場を表す名詞: Employees, Visitors, Guests, Students, Staff, Members, Passengers, Customers',
+    '- 複合語・借用語: check-in, check-out, WiFi, email, online, coffee',
+    '- 場所名詞: office, hall, library, hospital, station, restaurant, museum',
+    '- 感情形容詞: happy, sad, tired, angry, excited',
+    '- 基本副詞: usually, often, sometimes, always, never',
     '',
     '## 判定手順',
-    '1. 各例文について、単語を 1 つずつ順に確認する',
-    '2. 上記「判定対象外」の機能語をスキップ',
-    '3. 対象語(item の surface)に含まれる語をスキップ',
-    '4. 残った内容語について、' + cefr + ' レベルを超えるかを判定',
-    '5. 超える語があれば violations に列挙',
+    '',
+    '1. 各例文について、上記「検出対象語リスト」の語を1つずつ確認する',
+    '2. 対象語(item.surface)の一部として含まれる語はスキップ',
+    '3. 該当語が見つかったら violations に列挙',
+    '4. 検出対象語リストにない語は、たとえ B1 以上に感じても列挙しない',
     '',
     '## 出力形式(JSON のみ、前置き不要)',
+    '',
     '違反なし: { "ok": true, "violations": [] }',
     '違反あり: { "ok": false, "violations": [{"word": "...", "cefr": "B1", "example_index": 0, "reason": "..."}] }',
     '',
-    'reason には「B1 の副詞。A2 学習者には未習」など簡潔な根拠を書く。',
+    'reason には「検出リストの expected を検出」など、リスト照合の結果として簡潔に書く。',
   ].join('\n')
 
   var text = callClaude(prompt, 'claude-haiku-4-5-20251001', 0.1, 1500)

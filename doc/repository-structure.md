@@ -117,6 +117,7 @@ english-vocab-chunk-trainer/
 │   ├── ops/                           # 運用手順・インフラ設計
 │   │   ├── data-operations-guide.md   #   データ生成・SemVer・チェックリスト
 │   │   ├── ux-smoke-test-checklist.md #   5分 UX スモークテスト（初見向け）
+│   │   ├── i18n-strategy.md           #   多言語 UI 方針（3層モデル）
 │   │   └── claude-api-gas-design.md   #   GAS エンドポイント・プロンプト設計
 │   ├── instructions/                  # Cursor / 作業指示書
 │   │   └── cursor-instruction-phase1.md

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { CEFR_HOTKEYS, useAppStore } from '@/lib/stores/app-store'
 import type { CefrLevel, ReviewStateItem, SeedItem } from '@/types/learning'
 import sampleSeeds from '@/data/sample-seeds.json'
+import { labelCategory, labelFrequencyHint, labelRegister } from '@/lib/i18n/labels'
 
 function normalizeItems(raw: unknown, sourceFile: string) {
   const list = Array.isArray(raw)
@@ -189,7 +190,9 @@ export function ReviewPage() {
             <article className="rounded-3xl border border-line bg-paper-elevated p-6 shadow-sm">
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div>
-                  <p className="text-sm uppercase tracking-wide text-ink-muted">{item.category}</p>
+                  <p className="text-sm uppercase tracking-wide text-ink-muted">
+                    {labelCategory(t, item.category)}
+                  </p>
                   <h2 className="mt-1 font-display text-3xl font-bold">{item.surface}</h2>
                   <p className="mt-1 font-mono text-sm text-brand">@{item.id}</p>
                 </div>
@@ -208,25 +211,25 @@ export function ReviewPage() {
 
               <dl className="mt-6 grid gap-3 sm:grid-cols-2">
                 <div>
-                  <dt className="text-xs text-ink-muted">CEFR</dt>
+                  <dt className="text-xs text-ink-muted">{t('review.fields.cefr')}</dt>
                   <dd className="font-semibold">{item.cefr_override ?? item.cefr_level}</dd>
                 </div>
                 <div>
-                  <dt className="text-xs text-ink-muted">register</dt>
-                  <dd className="font-semibold">{String(item.register ?? '—')}</dd>
+                  <dt className="text-xs text-ink-muted">{t('review.fields.register')}</dt>
+                  <dd className="font-semibold">{labelRegister(t, item.register)}</dd>
                 </div>
                 <div>
-                  <dt className="text-xs text-ink-muted">collocation_pattern</dt>
+                  <dt className="text-xs text-ink-muted">{t('review.fields.collocationPattern')}</dt>
                   <dd className="font-semibold">{String(item.collocation_pattern ?? '—')}</dd>
                 </div>
                 <div>
-                  <dt className="text-xs text-ink-muted">frequency_hint</dt>
-                  <dd className="font-semibold">{String(item.frequency_hint ?? '—')}</dd>
+                  <dt className="text-xs text-ink-muted">{t('review.fields.frequencyHint')}</dt>
+                  <dd className="font-semibold">{labelFrequencyHint(t, item.frequency_hint)}</dd>
                 </div>
               </dl>
 
               <div className="mt-5">
-                <p className="text-xs text-ink-muted">translations_ja</p>
+                <p className="text-xs text-ink-muted">{t('review.fields.translationsJa')}</p>
                 <ul className="mt-1 list-disc pl-5 text-ink">
                   {(item.translations_override ?? item.translations_ja).map((tr) => (
                     <li key={tr}>{tr}</li>

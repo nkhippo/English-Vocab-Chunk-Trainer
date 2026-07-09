@@ -41,6 +41,13 @@
     "accepted": "Accept",
     "rejected": "Reject",
     "pending": "Pending",
+    "fields": {
+      "cefr": "CEFR",
+      "register": "Register",
+      "collocationPattern": "Collocation pattern",
+      "frequencyHint": "Frequency",
+      "translationsJa": "Japanese translation"
+    },
     "shortcuts": "Shortcuts: Y accept / N reject / 1–6 CEFR / E edit / ←→ navigate",
     "saveNote": "Decisions are saved in LocalStorage. Export *_validated.json when finished.",
     "export": "Export validated JSON",
@@ -70,6 +77,29 @@
   },
   "common": {
     "comingSoon": "Coming soon",
+    "phase1": "Phase 1",
     "phase2": "Phase 2"
+  },
+  "enum": {
+    "category": {
+      "word": "Word",
+      "collocation": "Collocation",
+      "phrasal_verb": "Phrasal verb",
+      "idiom": "Idiom",
+      "binomial": "Binomial",
+      "compound": "Compound",
+      "institutionalized": "Institutionalized expression",
+      "other": "Other"
+    },
+    "register": {
+      "formal": "Formal",
+      "neutral": "Neutral",
+      "informal": "Informal"
+    },
+    "frequency": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    }
   }
 }

@@ -41,6 +41,13 @@
     "accepted": "採用",
     "rejected": "却下",
     "pending": "未判定",
+    "fields": {
+      "cefr": "CEFR",
+      "register": "レジスター",
+      "collocationPattern": "コロケーションパターン",
+      "frequencyHint": "頻度",
+      "translationsJa": "日本語訳"
+    },
     "shortcuts": "ショートカット: Y 採用 / N 却下 / 1–6 CEFR / E 訳編集 / ←→ 移動",
     "saveNote": "判定はブラウザ LocalStorage に保存されます。完了後に *_validated.json をエクスポートしてください。",
     "export": "validated JSON を書き出す",
@@ -70,6 +77,29 @@
   },
   "common": {
     "comingSoon": "準備中",
+    "phase1": "Phase 1",
     "phase2": "Phase 2"
+  },
+  "enum": {
+    "category": {
+      "word": "単語",
+      "collocation": "コロケーション",
+      "phrasal_verb": "句動詞",
+      "idiom": "イディオム",
+      "binomial": "二項表現",
+      "compound": "複合語",
+      "institutionalized": "慣習表現",
+      "other": "その他"
+    },
+    "register": {
+      "formal": "フォーマル",
+      "neutral": "ニュートラル",
+      "informal": "インフォーマル"
+    },
+    "frequency": {
+      "high": "高",
+      "medium": "中",
+      "low": "低"
+    }
   }
 }

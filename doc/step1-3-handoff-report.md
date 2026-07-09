@@ -1,7 +1,7 @@
 # Step 1〜3 作業ハンドオフレポート
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  
-作成日: 2026-07-09  
+最終更新: 2026-07-09（GAS 新デプロイ・CORS/Opus 4.7 本番反映確認済み）  
 指示書: `cursor_instruction_step1-3.md`（Downloads）  
 前提: `doc/phase1-handoff-report.md`（Phase 1 骨格完了後）
 
@@ -11,14 +11,14 @@
 
 | Step | リポジトリ実装 | 本番 GAS 反映 | 備考 |
 |---|---|---|---|
-| 1 CORS 限定 | **完了** | **要デプロイ** | コードは `gas/main.js`。稼働中は v2（CORS 未適用） |
-| 2 Opus 4.7 | **完了** | **要デプロイ** | `temperature` 削除済み。稼働中は v2（Opus 4.6） |
+| 1 CORS 限定 | **完了** | **完了** | 許可外 origin → `403 origin_forbidden` 確認済み |
+| 2 Opus 4.7 | **完了** | **完了** | 新デプロイ URL で seed 疎通確認済み |
 | 3 A2 本生成 | **準備完了** | Naoya 作業待ち | seed CLI・batch 追加。検証 UI は人力 |
 
 **次のアクション（Naoya）**
 
-1. `clasp push` 済みコードを GAS エディタで確認 → **デプロイ → 新バージョン**
-2. `curl` / `pnpm run generate:seed` で Opus 4.7・CORS を確認
+1. ~~GAS 新バージョンデプロイ~~ → **完了**（下記 URL）
+2. ~~CORS / Opus 4.7 疎通確認~~ → **完了**
 3. `pnpm run batch:a2-seeds` → `/review` で全件検証 → enrich / examples / merge
 
 ---
@@ -35,16 +35,16 @@
 ### テスト（コード反映後に実施）
 
 ```bash
-U="https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec"
+U="https://script.google.com/macros/s/AKfycbz_94XYG6UzI4v5Na6VF-_yxnG5VWmit3KceNhHJiFZjGvbJKp6m-RnEYXdaV4hnlIH/exec"
 curl -sL "$U"                                    # OK
 curl -sL "${U}?origin=https://nkhippo.github.io" # OK
 curl -sL "${U}?origin=https://evil.example.com"  # 403 origin_forbidden
 ```
 
-### 本番状態（2026-07-09 時点）
+### 本番状態（2026-07-09 午後）
 
-- Web App デプロイは **バージョン 2** に固定（`clasp deploy -i AKfycbx... -V 2`）
-- v2 は CORS 未適用の旧コード。`clasp push` で HEAD は更新済みだが、新バージョンの公開はエディタ操作が確実
+- Naoya が GAS エディタから **新 Web App デプロイ**（下記 URL）
+- GET health / 許可 origin / 許可外 origin（403）を **curl で確認済み**
 
 ---
 
@@ -60,13 +60,12 @@ curl -sL "${U}?origin=https://evil.example.com"  # 403 origin_forbidden
 
 変更ファイル: `gas/claude.js`, `gas/handlers.js`, `scripts/generate-examples.ts`
 
-### テスト（新バージョンデプロイ後）
+### テスト結果（2026-07-09 新デプロイ後）
 
 ```bash
-pnpm run generate:seed -- --cefr=A2 --category=word --batch=10
+pnpm run generate:seed -- --cefr=A2 --category=word --batch=3
+# → 3 件生成成功（Opus 4.7・新 URL）
 ```
-
-2026-07-09: 稼働 v2（Opus 4.6）で `word` 5 件 seed 成功（パイプライン疎通）。Opus 4.7 は新デプロイ後に再実行。
 
 ---
 
@@ -104,20 +103,20 @@ pnpm run generate:seed -- --cefr=A2 --category=word --batch=10
 
 ### 推奨手順（Naoya）
 
-1. GAS 新バージョンデプロイ後 `pnpm run batch:a2-seeds`（長時間・API 課金あり）
+1. `pnpm run batch:a2-seeds`（長時間・API 課金あり）
 2. カテゴリ順に `/review` → validated JSON エクスポート
 3. enrich → examples → merge（指示書ループ）
 4. `pnpm run validate` → `data/releases/v1.0.0/` スナップショット
 
 ---
 
-## GAS URL 更新
-
-旧 URL（`AKfycbz...`）はデプロイ不整合で 404。**稼働 URL に統一**:
+## GAS URL（現行）
 
 ```
-https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec
+https://script.google.com/macros/s/AKfycbz_94XYG6UzI4v5Na6VF-_yxnG5VWmit3KceNhHJiFZjGvbJKp6m-RnEYXdaV4hnlIH/exec
 ```
+
+（2026-07-09 Naoya 手動デプロイ。旧 `AKfycbx...` / `AKfycbz_gk2...` は使用しない）
 
 更新済み: `.env.example`, `.env.production`, `CLAUDE.md`, `gas/README.md`, 関連 `doc/*`
 
@@ -133,7 +132,7 @@ https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t
 ## Phase 2 / 残 P1 への申し送り
 
 - Step 3 完了（≥2,000 件 merge）後に Phase 2 着手
-- GAS CORS は本番デプロイ反映後、Pages からの `callGas` を実機確認
+- Pages からの `callGas` を実機確認（CORS + 新 URL は本番反映済み）
 - `needs_manual_review.json` は全カテゴリ後に Naoya が一括判断
 
 ---

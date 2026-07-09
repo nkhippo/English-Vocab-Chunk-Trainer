@@ -42,25 +42,23 @@ Phase 1 指示書: `doc/cursor-instruction-phase1.md`
 1. Apps Script API 未有効のため `clasp create` は失敗 → Drive 手動デプロイ手順と結合 `Code.gs` を用意
 2. Naoya がスタンドアロン GAS + Script Properties（`ANTHROPIC_API_KEY`）を設定
 3. Web App URL を `.env`（gitignore）/ `.env.example` / `.env.production` / `gas/README.md` に反映
-4. **現行 Web App URL**（2026-07-09 clasp push 後の新バージョン。GET health OK）:
+4. **現行 Web App URL**（2026-07-09 Step 1〜2 反映デプロイ。CORS + Opus 4.7）:
 
 ```
-https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec
+https://script.google.com/macros/s/AKfycbz_94XYG6UzI4v5Na6VF-_yxnG5VWmit3KceNhHJiFZjGvbJKp6m-RnEYXdaV4hnlIH/exec
 ```
 
-（旧 URL `...AKfycbxKVKogM8d...` は無効扱い。`.env*` / docs は新 URL に更新済み）
-
-5. 疎通確認
-   - GET health: `{ ok: true, data: { service, paths } }`（新 URL でも再確認済み）
-   - POST `generate-seed`: 成功（キャッシュヒット含む・旧デプロイ時）
-   - POST `validate-cefr`: 成功（旧デプロイ時）
-6. **clasp 紐付け**（2026-07-09）: Apps Script API ON → `.clasp.json`（gitignore）→ `clasp push` 成功。手順は `gas/README.md`
+5. 疎通確認（新 URL）
+   - GET health: OK
+   - `?origin=https://evil.example.com`: `403 origin_forbidden`
+   - POST `generate-seed`（Opus 4.7）: OK（word 3 件）
+6. **clasp 紐付け**（2026-07-09）: Apps Script API ON → `.clasp.json` → `clasp push`。本番公開はエディタ「新バージョン」デプロイ
 
 ### 1.4 モデル ID 点検（存在しないモデル事故の予防）
 
 | 用途 | コード上の ID | 公式（2026-07-08） | 実呼び出し |
 |---|---|---|---|
-| Build 系 | `claude-opus-4-6` | Legacy だが **現役** | generate-seed OK |
+| Build 系 | `claude-opus-4-7` | 現行 Build（2026-07-09 移行） | generate-seed OK（新デプロイ） |
 | 判定系 | `claude-haiku-4-5-20251001` | **現行 Haiku 正式 ID** | validate-cefr OK |
 
 **結論**: 存在しないモデル ID はない。任意で Build を `claude-opus-4-8` に上げる余地はあるが必須ではない。
@@ -73,7 +71,7 @@ https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t
 | `976fbdb` | Phase 1 PWA / pipeline / GAS ソース |
 | `ec1c58b` | 初回 Web App URL 配線 |
 | `6f39353` | 再デプロイ URL・doc・本ハンドオフ初版 |
-| `edfe096` | Pages Actions 修正・data `@data` 一本化・clasp・現行 GAS URL |
+| `1935f90` | Step 1〜3: CORS / Opus 4.7 / A2 seed ツール |
 
 ---
 
@@ -142,7 +140,7 @@ https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t
 
 4. ~~Apps Script API + clasp push~~ → **完了**（2026-07-09）。以後は `clasp push` → エディタで新バージョンデプロイ。手順は `gas/README.md`
 5. Build モデルを **`claude-opus-4-8` に上げるか**方針決定（現状 `opus-4-6` で問題なし）
-| P1-6 GAS CORS | コード完了・**GAS 新バージョンデプロイ待ち**（`doc/step1-3-handoff-report.md`） |
+| P1-6 GAS CORS | **完了**（新デプロイ URL・`doc/step1-3-handoff-report.md`） |
 7. ~~`data/current` と `src/data/current` の二重管理~~ → **完了**: 正本は `data/current/` のみ（`@data` alias）
 
 ### P2 — Phase 2（指示書どおり前倒ししない）

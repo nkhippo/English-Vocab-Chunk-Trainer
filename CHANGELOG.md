@@ -13,10 +13,9 @@
 
 ### Changed
 
-- GAS Web App URL を稼働デプロイに統一（`AKfycbx...`）
+- GAS Web App URL を Step 1〜2 反映デプロイに更新（`AKfycbz_94XY...`）
 - `generate:examples` から `temperature` パラメータ送信を削除
 
 ### Pending (Naoya)
 
-- GAS: `clasp push` 後の **新バージョンデプロイ**（本番は v2 / Opus 4.6 のまま）
 - Step 3: `/review` で全カテゴリ検証 → enrich → examples → merge（目標 2,430 件）

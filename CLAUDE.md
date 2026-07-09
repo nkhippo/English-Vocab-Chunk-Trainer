@@ -18,13 +18,11 @@
 
 **指示書と仕様書が矛盾する場合は仕様書を優先し、実装を止めて報告する。**
 
-稼働中 GAS Web App（暫定・@18。v4 反映後に本番 URL を再同期）:
+稼働中 GAS Web App（**v22**・手動デプロイ 2026-07-10）:
 
 ```
-https://script.google.com/macros/s/AKfycbymECuc_1QayB_u3Zhf07Ls5HYzkASEXdYz4kDYi7vzvutwP5ZLvGWIwyQuRLye3954/exec
+https://script.google.com/macros/s/AKfycbzTyWCkXyjXic6JcpLJPf-ltV8mlJrGQ8Ip1bkg8A_Sx5cX_crY3zWGcwPCQW-bur7I/exec
 ```
-
-本番 @19（`AKfycbzXBNFU...`）は `clasp deploy -i` 後に 404。復旧はエディタ手動デプロイ（`doc/handoff/pilot-v4-handoff-report.md` 参照）。
 
 ## スタック
 

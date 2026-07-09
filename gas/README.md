@@ -38,7 +38,7 @@ clasp push                            pnpm run build:gas-paste
 ## Deployed endpoint (Phase 1)
 
 ```
-https://script.google.com/macros/s/AKfycbymECuc_1QayB_u3Zhf07Ls5HYzkASEXdYz4kDYi7vzvutwP5ZLvGWIwyQuRLye3954/exec
+https://script.google.com/macros/s/AKfycbzTyWCkXyjXic6JcpLJPf-ltV8mlJrGQ8Ip1bkg8A_Sx5cX_crY3zWGcwPCQW-bur7I/exec
 ```
 
 - Script Properties: `ANTHROPIC_API_KEY`（設定済み）

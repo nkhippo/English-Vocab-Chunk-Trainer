@@ -40,6 +40,7 @@
 
 ### Changed (2026-07-10)
 
+- GAS 本番 URL → **v22** 手動デプロイ（`AKfycbzTyWCk...`）
 - GAS Build モデル: `claude-opus-4-7` → **`claude-sonnet-4-6`**（トークンコスト最適化）
 - `gas/claude.js`: `BUILD_MODEL` 定数、Sonnet は `temperature` 送信可
 - パイプラインキャッシュキー: `generate-examples` `schema_version: 1.1.3` / `enrich-items` `1.1.1`

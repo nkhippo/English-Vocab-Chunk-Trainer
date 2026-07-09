@@ -3,7 +3,7 @@
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  
 最終更新: 2026-07-09（GAS 新デプロイ・CORS/Opus 4.7 本番反映確認済み）  
 指示書: `cursor_instruction_step1-3.md`（Downloads）  
-前提: `doc/phase1-handoff-report.md`（Phase 1 骨格完了後）
+前提: `doc/handoff/phase1-handoff-report.md`（Phase 1 骨格完了後）
 
 ---
 
@@ -58,7 +58,7 @@ curl -sL "${U}?origin=https://evil.example.com"  # 403 origin_forbidden
 | `thinking.budget_tokens` | — | 未使用のため影響なし |
 | モデル ID | `claude-opus-4-6` | `claude-opus-4-7` |
 
-変更ファイル: `gas/claude.js`, `gas/handlers.js`, `scripts/generate-examples.ts`
+変更ファイル: `gas/claude.js`, `gas/handlers.js`, `scripts/pipeline/generate-examples.ts`
 
 ### テスト結果（2026-07-09 新デプロイ後）
 

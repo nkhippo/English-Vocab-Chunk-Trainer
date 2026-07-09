@@ -1,11 +1,11 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { parseArgs, readJson } from './lib/utils.ts'
-import type { Dataset } from '../src/types/learning.ts'
-import { validateDataset } from './lib/validate.ts'
+import { parseArgs, readJson } from '../lib/utils.ts'
+import type { Dataset } from '../../src/types/learning.ts'
+import { validateDataset } from '../lib/validate.ts'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const root = path.resolve(__dirname, '..')
+const root = path.resolve(__dirname, '../..')
 
 async function main() {
   const args = parseArgs(process.argv.slice(2))

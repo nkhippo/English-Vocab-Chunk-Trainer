@@ -2,23 +2,23 @@
 
 対象リポジトリ: `nkhippo/English-Vocab-Chunk-Trainer`（指示書原文の `nkhipko/vocab-chunk-trainer` から実リポジトリ名に置換）
 
-> **実装結果・指示書からの差分・残課題**は `doc/phase1-handoff-report.md` を参照（2026-07-08）。  
+> **実装結果・指示書からの差分・残課題**は `doc/handoff/phase1-handoff-report.md` を参照（2026-07-08）。  
 > **稼働 GAS**: `https://script.google.com/macros/s/AKfycbz_94XYG6UzI4v5Na6VF-_yxnG5VWmit3KceNhHJiFZjGvbJKp6m-RnEYXdaV4hnlIH/exec`
 
 > **パス注記（本リポジトリ）**  
 > 指示書の `docs/` は既存の `doc/` を使用する。  
-> - `docs/spec.md` → `doc/app-specification.md`  
-> - `docs/data-schema.json` → `doc/learning-data-schema.json`  
+> - `docs/spec.md` → `doc/spec/app-specification.md`  
+> - `docs/data-schema.json` → `doc/spec/learning-data-schema.json`  
 > - GitHub Pages base → `/English-Vocab-Chunk-Trainer/`
 
 ## 参照ドキュメント(必読)
 
 以下を `doc/` 配下に配置してから本作業を開始する:
 
-- `doc/app-specification.md` = 仕様の唯一の参照ソース
-- `doc/learning-data-schema.json`(データベーススキーマ)
-- `doc/data-operations-guide.md`(運用手順)
-- `doc/claude-api-gas-design.md`(GAS 経由 Claude API 設計)
+- `doc/spec/app-specification.md` = 仕様の唯一の参照ソース
+- `doc/spec/learning-data-schema.json`(データベーススキーマ)
+- `doc/ops/data-operations-guide.md`(運用手順)
+- `doc/ops/claude-api-gas-design.md`(GAS 経由 Claude API 設計)
 
 **本指示書と仕様書の内容に矛盾がある場合は仕様書が優先**。矛盾を検出した場合は実装を止めて Naoya に報告すること。
 
@@ -42,6 +42,8 @@ Phase 1 は以下を成し遂げる:
 ---
 
 ## リポジトリ構造(推奨)
+
+> **本リポジトリの実配置**は `doc/repository-structure.md` を正とする（`doc/spec/` `doc/ops/` `doc/instructions/` `doc/handoff/`、`scripts/pipeline/` 等）。以下は指示書原文の推奨ツリー。
 
 ```
 vocab-chunk-trainer/
@@ -176,7 +178,7 @@ vocab-chunk-trainer/
 
 `scripts/` 配下に Node.js(TypeScript)スクリプトを作成。全て GAS エンドポイント経由で Claude API を呼ぶ(直接 Anthropic API を叩かない)。
 
-#### 5.1 `scripts/generate-seed.ts`
+#### 5.1 `scripts/pipeline/generate-seed.ts`
 
 ```
 pnpm run generate:seed --cefr=A2 --category=collocation --batch=30
@@ -188,7 +190,7 @@ pnpm run generate:seed --cefr=A2 --category=collocation --batch=30
 - 出力: `data/staging/{cefr}_{category}_seeds.json`
 - レート制御: リクエスト間 1 秒
 
-#### 5.2 `scripts/enrich-items.ts`
+#### 5.2 `scripts/pipeline/enrich-items.ts`
 
 ```
 pnpm run generate:enrichment --input=data/staging/A2_validated.json
@@ -199,14 +201,14 @@ pnpm run generate:enrichment --input=data/staging/A2_validated.json
 - 出力: `data/staging/{同じファイル名}_enriched.json`
 - 途中失敗時のレジューム対応(処理済み ID を記録)
 
-#### 5.3 `scripts/generate-examples.ts`
+#### 5.3 `scripts/pipeline/generate-examples.ts`
 
 - 各項目に対し `POST /generate-examples` を叩く
 - 生成後、`POST /validate-cefr` で自動チェック
 - 違反があれば `/generate-examples` を temperature 0.3 で再試行(最大 3 回)
 - 3 回失敗時は `data/staging/needs_manual_review.json` に隔離
 
-#### 5.4 `scripts/merge-data.ts`
+#### 5.4 `scripts/pipeline/merge-data.ts`
 
 ```
 pnpm run merge --new=data/staging/A2_final.json --into=data/current/items.json
@@ -216,9 +218,9 @@ pnpm run merge --new=data/staging/A2_final.json --into=data/current/items.json
 - 重複 ID があれば警告、`--overwrite` 指定で上書き
 - マージ後スキーマ検証を自動実行
 
-#### 5.5 `scripts/validate-schema.ts`
+#### 5.5 `scripts/pipeline/validate-schema.ts`
 
-- `data/current/items.json` を `data/data-schema.json` で検証(ajv)
+- `data/current/items.json` を `doc/spec/learning-data-schema.json` で検証(ajv)
 - 参照整合性チェック
 - 周辺語彙 CEFR 上限違反の検出
 - register 網羅性チェック
@@ -257,7 +259,7 @@ Naoya が seed 生成結果を高速に採用/却下判定するための Web UI
 
 ### Task 7: GAS 側の実装(別リポジトリ or `gas/` サブディレクトリ)
 
-`docs/claude-api-gas-design.md` を実装する。
+`doc/ops/claude-api-gas-design.md`（指示書原文: `docs/claude-api-gas-design.md`）を実装する。
 
 **Definition of Done**:
 - [ ] 5 つのエンドポイント全て実装(Phase 1 では `/review-writing` は不要)

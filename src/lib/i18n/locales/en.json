@@ -59,7 +59,7 @@
     "languageEn": "English",
     "guide": "Show guide again",
     "about": "About",
-    "aboutBody": "doc/app-specification.md is the single source of truth for product behavior."
+    "aboutBody": "doc/spec/app-specification.md is the single source of truth for product behavior."
   },
   "guide": {
     "skip": "Skip",

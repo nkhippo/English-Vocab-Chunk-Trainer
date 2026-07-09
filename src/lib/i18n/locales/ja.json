@@ -59,7 +59,7 @@
     "languageEn": "English",
     "guide": "ガイドを再度表示",
     "about": "このアプリについて",
-    "aboutBody": "仕様書は doc/app-specification.md を唯一の参照ソースとします。"
+    "aboutBody": "仕様書は doc/spec/app-specification.md を唯一の参照ソースとします。"
   },
   "guide": {
     "skip": "スキップ",

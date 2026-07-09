@@ -1,6 +1,6 @@
 # Prompt templates for GAS + Claude
 
-These mirror `doc/claude-api-gas-design.md`.
+These mirror `doc/ops/claude-api-gas-design.md`.
 In Apps Script they are currently inlined in `handlers.js` for clasp simplicity.
 When prompts grow, move each endpoint into a Drive HTML file or Script Property and load by name.
 

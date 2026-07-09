@@ -8,13 +8,13 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "lint": "oxlint",
-    "generate:seed": "tsx scripts/generate-seed.ts",
-    "generate:enrichment": "tsx scripts/enrich-items.ts",
-    "generate:examples": "tsx scripts/generate-examples.ts",
-    "merge": "tsx scripts/merge-data.ts",
-    "validate": "tsx scripts/validate-schema.ts",
-    "build:gas-paste": "tsx scripts/build-gas-paste.ts",
-    "batch:a2-seeds": "tsx scripts/batch-a2-seeds.ts"
+    "generate:seed": "tsx scripts/pipeline/generate-seed.ts",
+    "generate:enrichment": "tsx scripts/pipeline/enrich-items.ts",
+    "generate:examples": "tsx scripts/pipeline/generate-examples.ts",
+    "merge": "tsx scripts/pipeline/merge-data.ts",
+    "validate": "tsx scripts/pipeline/validate-schema.ts",
+    "build:gas-paste": "tsx scripts/gas/build-gas-paste.ts",
+    "batch:a2-seeds": "tsx scripts/pipeline/batch-a2-seeds.ts"
   },
   "dependencies": {
     "ajv": "^8.17.1",

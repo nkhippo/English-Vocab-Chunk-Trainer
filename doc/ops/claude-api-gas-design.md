@@ -14,7 +14,7 @@
 | Build モデル | `claude-opus-4-7`（2026-07-09 移行。`temperature` は Opus 4.7 で送信しない） |
 | Runtime / 判定モデル | `claude-haiku-4-5-20251001`（現行 Haiku 正式 ID） |
 
-運用コマンド・env の詳細は `gas/README.md`。作業差分の全体像は `doc/phase1-handoff-report.md`。
+運用コマンド・env の詳細は `gas/README.md`。作業差分の全体像は `doc/handoff/phase1-handoff-report.md`。
 
 ---
 

@@ -244,12 +244,41 @@ function generateSeed(body) {
 
 function enrichItem(body) {
   var item = body.item || body
+  var surface = item.surface || ''
+  var isPhrase = String(surface).indexOf(' ') >= 0
   var prompt = [
-    '次の学習項目の enrichment フィールドを JSON で生成してください。',
-    JSON.stringify(item),
+    'あなたは英語教材の意味関係データを作成します。以下の学習項目について、指定されたフィールドを埋めてください。',
     '',
-    '含めるフィールド: synonyms, antonyms, hypernyms, hyponyms, confusables, related_uses, common_errors_ja, definition_en, semantic_field, skill_focus, ipa_careful',
-    'JSON オブジェクトのみ出力。',
+    '## 対象',
+    '- Surface: ' + surface,
+    '- CEFR: ' + (item.cefr_level || 'A2'),
+    '- Category: ' + (item.category || 'collocation'),
+    '- 日本語訳: ' + JSON.stringify(item.translations_ja || []),
+    '',
+    '## 生成するフィールド（JSON Schema に準拠したオブジェクト配列）',
+    '',
+    '### synonyms (最大5) — 各要素は {"item":"類義語","difference_ja":"ニュアンス差"}',
+    '### antonyms (最大5) — 各要素は {"item":"反意語","difference_ja":"違い"}',
+    '### hypernyms / hyponyms — 文字列の配列（該当なしは []）',
+    '### confusables (最大5) — {"item","similarity_ja","key_difference_ja","correct_usage_ja","example_en"(任意)}',
+    '### related_uses (最大5) — {"form","meaning_ja","type":"collocation|phrasal_verb|metaphor|compound|other","metaphor_ja"(任意)}',
+    '### common_errors_ja (最大5) — {"incorrect","correct","why_ja"}',
+    '### definition_en — 英語の簡潔な定義（1文）',
+    '### semantic_field — 文字列の配列（例: ["daily routine"]）',
+    '### skill_focus — "receptive_only" または "receptive_and_productive" のいずれか1つ',
+    '### ipa_careful — IPA（慎重発音）',
+    isPhrase
+      ? '### ipa_connected — 句の連結発音 IPA（必須）'
+      : '### ipa_connected — 単語のみの場合は省略可',
+    '### frequency_rank_in_level — 整数（1以上。パイロットでは暫定で 500 でも可）',
+    '',
+    '## 制約',
+    '- 説明は ' + (item.cefr_level || 'A2') + ' 学習者向けの簡潔な日本語',
+    '- 該当なしは空配列 []',
+    '- 文字列の配列で synonyms/antonyms/confusables を返さない（必ずオブジェクト）',
+    '',
+    '## 出力',
+    'JSON オブジェクトのみ。前置き不要。',
   ].join('\n')
 
   var text = callClaude(prompt, 'claude-opus-4-7', 0.3, 4000)
@@ -258,15 +287,39 @@ function enrichItem(body) {
 
 function generateExamples(body) {
   var item = body.item || body
+  var cefr = item.cefr_level || 'A2'
   var temperature = body.temperature == null ? 0.5 : body.temperature
   var prompt = [
-    '対象語/チャンクの例文を register 別に生成してください。',
-    JSON.stringify(item),
+    'あなたは英語教材の例文作成者です。以下の学習項目について、register 別の例文を作成してください。',
     '',
-    '制約:',
-    '- 周辺語彙の CEFR は item.cefr_level を超えない',
-    '- 最低 1、目標 3 文',
-    '- 出力: {"example_sentences":[{"en":"...","ja":"...","register":"neutral","surrounding_cefr_ceiling":"A2"}]}',
+    '## 対象語/チャンク',
+    JSON.stringify({
+      surface: item.surface,
+      cefr_level: cefr,
+      category: item.category,
+      translations_ja: item.translations_ja,
+      collocation_pattern: item.collocation_pattern,
+    }),
+    '',
+    '## 判断順序（必ず守る）',
+    '1. 対象語/チャンクの意味・用法・pattern を確定',
+    '2. その語が自然に使われる register の可能集合を特定',
+    '3. 各 register で、対象語の学習に最適な例文を作成',
+    'シーンや register を先に決めて対象語を無理に嵌めることは禁止。',
+    '',
+    '## register 別例文',
+    '原則 **formal・neutral・casual の3文**（各 register 最低1文）。',
+    '日常コロケーションでは3 register すべてを満たすこと。',
+    '',
+    '## 制約',
+    '- 周辺語彙 CEFR 上限: 対象語以外はすべて CEFR ' + cefr + ' 以下（簡単な語のみ）',
+    '- surrounding_cefr_ceiling は "' + cefr + '" を設定',
+    '- 日本語訳は自然な日本語',
+    '',
+    '## 出力形式',
+    '{"example_sentences":[{"en":"...","ja":"...","register":"formal|neutral|casual","surrounding_cefr_ceiling":"' +
+      cefr +
+      '"}]}',
     'JSON のみ。',
   ].join('\n')
 

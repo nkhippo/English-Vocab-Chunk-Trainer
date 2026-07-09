@@ -5,8 +5,8 @@
 最終更新: 2026-07-09（Pages Actions 配信修正・data 一本化・clasp 紐付け・GAS URL 更新）  
 目的: Claude / 他エージェントへの作業共有（実装内容・指示書からの差分・残課題）
 
-仕様の唯一のソース: `doc/app-specification.md`  
-Phase 1 指示書: `doc/cursor-instruction-phase1.md`  
+仕様の唯一のソース: `doc/spec/app-specification.md`  
+Phase 1 指示書: `doc/instructions/cursor-instruction-phase1.md`  
 構成の正本: `doc/repository-structure.md`
 
 ---
@@ -20,7 +20,7 @@ Phase 1 指示書: `doc/cursor-instruction-phase1.md`
   - `vocab_app_spec_v3_final.md` → `app-specification.md`
   - `data-schema.json` → `learning-data-schema.json`
 - `doc/repository-structure.md`（構成表）を新規作成
-- Cursor Phase 1 指示書を `doc/cursor-instruction-phase1.md` として格納（パス注記付き）
+- Cursor Phase 1 指示書を `doc/instructions/cursor-instruction-phase1.md` として格納（パス注記付き）
 
 ### 1.2 Phase 1 実装（Task 1〜10 相当）
 
@@ -33,7 +33,7 @@ Phase 1 指示書: `doc/cursor-instruction-phase1.md`
 | ガイドモーダル | 6 ページステッパー（`src/content/guide/pages.ts`） |
 | browse | CEFR タブ + IndexedDB（Dexie）件数表示（検索・詳細は未） |
 | 検証 UI `/review` | Y/N/1–6/E/←→、LocalStorage レジューム、validated JSON エクスポート |
-| データ CLI | `scripts/generate-seed.ts` ほか enrich / examples / merge / validate-schema |
+| データ CLI | `scripts/pipeline/generate-seed.ts` ほか enrich / examples / merge / validate-schema |
 | GAS | `gas/*.js` + Drive 貼り付け用 `gas/drive-paste/Code.gs` |
 | ドキュメント | `README.md` / `CLAUDE.md` |
 
@@ -82,8 +82,8 @@ https://script.google.com/macros/s/AKfycbz_94XYG6UzI4v5Na6VF-_yxnG5VWmit3KceNhHJ
 | # | 指示書 | 実装 | 理由 |
 |---|---|---|---|
 | 1 | ドキュメントを `docs/` 配下に配置 | 既存の **`doc/`** を継続使用 | 既にリネーム済みの設計書群があり、二重管理を避ける |
-| 2 | `docs/spec.md` | `doc/app-specification.md` | 内容が分かる命名を維持 |
-| 3 | `docs/data-schema.json` | `doc/learning-data-schema.json` | 同上。検証スクリプトもこのパスを参照 |
+| 2 | `docs/spec.md` | `doc/spec/app-specification.md` | 内容が分かる命名を維持 |
+| 3 | `docs/data-schema.json` | `doc/spec/learning-data-schema.json` | 同上。検証スクリプトもこのパスを参照 |
 | 4 | GitHub Pages base `/vocab-chunk-trainer/` | **`/English-Vocab-Chunk-Trainer/`** | 実リポジトリ名に合わせないと Pages が 404 になる |
 | 5 | 対象 repo `nkhipko/vocab-chunk-trainer` | **`nkhippo/English-Vocab-Chunk-Trainer`** | ユーザー指定の実リポジトリ |
 | 6 | GAS を clasp で作成・push（必須寄り） | **Drive 手動 + `drive-paste/Code.gs`**（clasp は任意） | Apps Script API が未有効で `clasp create` が失敗。既存トレーナーと同様の手動 Web App デプロイで先行 |
@@ -140,7 +140,7 @@ https://script.google.com/macros/s/AKfycbz_94XYG6UzI4v5Na6VF-_yxnG5VWmit3KceNhHJ
 
 4. ~~Apps Script API + clasp push~~ → **完了**（2026-07-09）。以後は `clasp push` → エディタで新バージョンデプロイ。手順は `gas/README.md`
 5. Build モデルを **`claude-opus-4-8` に上げるか**方針決定（現状 `opus-4-6` で問題なし）
-| P1-6 GAS CORS | **完了**（新デプロイ URL・`doc/step1-3-handoff-report.md`） |
+| P1-6 GAS CORS | **完了**（新デプロイ URL・`doc/handoff/step1-3-handoff-report.md`） |
 7. ~~`data/current` と `src/data/current` の二重管理~~ → **完了**: 正本は `data/current/` のみ（`@data` alias）
 
 ### P2 — Phase 2（指示書どおり前倒ししない）
@@ -155,12 +155,12 @@ https://script.google.com/macros/s/AKfycbz_94XYG6UzI4v5Na6VF-_yxnG5VWmit3KceNhHJ
 
 ## 5. Claude への申し送り（作業再開時）
 
-1. **仕様書 `doc/app-specification.md` を唯一のソース**とし、指示書と矛盾したら Naoya に報告して止める。
+1. **仕様書 `doc/spec/app-specification.md` を唯一のソース**とし、指示書と矛盾したら Naoya に報告して止める。
 2. パスは **`doc/`**、base は **`/English-Vocab-Chunk-Trainer/`**、スキーマは **`learning-data-schema.json`** を正とする（本レポート §2）。
 3. Claude API は **必ず GAS 経由**。キーは Script Properties のみ。フロントに置かない。
 4. 現行 GAS URL は `gas/README.md` / `.env.production` を参照。URL が変わったら三箇すべてを更新する。
 5. Phase 2 機能を「ついで」で実装しない。
-6. データ増加時は `doc/data-operations-guide.md` と本構成表を更新する。
+6. データ増加時は `doc/ops/data-operations-guide.md` と本構成表を更新する。
 
 ---
 

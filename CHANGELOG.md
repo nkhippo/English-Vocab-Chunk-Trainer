@@ -7,9 +7,9 @@
 - GAS: CORS 許可オリジンゲート（`nkhippo.github.io` / `localhost:5173`）
 - GAS: Build モデル `claude-opus-4-7`（`temperature` 非送信）
 - `src/lib/gas-client`: リクエストに `?origin=` を付与
-- `scripts/batch-a2-seeds.ts` / `pnpm run batch:a2-seeds`（8 カテゴリ一括 seed）
+- `scripts/pipeline/batch-a2-seeds.ts` / `pnpm run batch:a2-seeds`（8 カテゴリ一括 seed）
 - `generate:seed --append`（staging 結合用）
-- `scripts/build-gas-paste.ts`（`drive-paste/Code.gs` 自動生成）
+- `scripts/gas/build-gas-paste.ts`（`drive-paste/Code.gs` 自動生成）
 
 ### Changed
 

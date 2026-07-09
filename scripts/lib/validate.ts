@@ -7,7 +7,7 @@ import type { Dataset, LearningItem } from '../../src/types/learning.ts'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(__dirname, '../..')
-const schemaPath = path.join(root, 'doc/learning-data-schema.json')
+const schemaPath = path.join(root, 'doc/spec/learning-data-schema.json')
 
 const CEFR_ORDER = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const
 

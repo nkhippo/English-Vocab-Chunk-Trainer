@@ -4,16 +4,17 @@
 
 英単語・チャンクの CEFR 段階学習 PWA。仕様の唯一のソースは:
 
-- `doc/app-specification.md`
+- `doc/spec/app-specification.md`
 
 関連:
 
-- `doc/learning-data-schema.json` — LearningItem / Insight スキーマ
-- `doc/data-operations-guide.md` — データ運用
-- `doc/claude-api-gas-design.md` — GAS + Claude
-- `doc/cursor-instruction-phase1.md` — Phase 1 作業指示
+- `doc/spec/learning-data-schema.json` — LearningItem / Insight スキーマ
+- `doc/ops/data-operations-guide.md` — データ運用
+- `doc/ops/claude-api-gas-design.md` — GAS + Claude
+- `doc/instructions/cursor-instruction-phase1.md` — Phase 1 作業指示
 - `doc/repository-structure.md` — フォルダ構成の正本
-- `doc/phase1-handoff-report.md` — Cursor 作業結果・指示書差分・残課題（共有用）
+- `doc/handoff/phase1-handoff-report.md` — Cursor 作業結果・指示書差分・残課題（共有用）
+- `doc/handoff/pilot-test-handoff-report.md` — A2 collocation 8 件パイロット結果
 
 **指示書と仕様書が矛盾する場合は仕様書を優先し、実装を止めて報告する。**
 
@@ -35,6 +36,7 @@ https://script.google.com/macros/s/AKfycbz_94XYG6UzI4v5Na6VF-_yxnG5VWmit3KceNhHJ
 ## パス方針
 
 指示書の `docs/` は本リポジトリでは既存の `doc/` を使用する。  
+`doc/` は役割別サブフォルダ（`spec/` `ops/` `instructions/` `handoff/`）に整理。入口は `doc/repository-structure.md`。  
 スキーマファイル名は `learning-data-schema.json`（旧 `data-schema.json`）。  
 GitHub Pages base: `/English-Vocab-Chunk-Trainer/`（実リポジトリ名に合わせた。指示書の `/vocab-chunk-trainer/` とは異なる）。
 
@@ -55,14 +57,14 @@ pnpm run validate
 
 - `data/staging/` は `.gitignore`（生成物）
 - `data/current/` は Git 管理の**学習データ正本**（PWA は `@data/current` を直接バンドル。`src/data/current` は置かない）
-- SemVer・チェックリストは `doc/data-operations-guide.md` に従う
+- SemVer・チェックリストは `doc/ops/data-operations-guide.md` に従う
 - Claude 呼び出しはすべて `GAS_ENDPOINT_URL` 経由
 
 ## Cursor 作業時の三大品質基準
 
-1. **上流ドキュメント品質**: 仕様書 v3（`doc/app-specification.md`）を唯一のソースとする
+1. **上流ドキュメント品質**: 仕様書 v3（`doc/spec/app-specification.md`）を唯一のソースとする
 2. **Cursor 指示書品質**: 変更時は理由を PR / コミットメッセージに記述する
-3. **運用ドキュメント更新**: データ増加・スキーマ変更時は `doc/data-operations-guide.md` と `doc/repository-structure.md` を更新する
+3. **運用ドキュメント更新**: データ増加・スキーマ変更時は `doc/ops/data-operations-guide.md` と `doc/repository-structure.md` を更新する
 
 ## Phase 境界
 

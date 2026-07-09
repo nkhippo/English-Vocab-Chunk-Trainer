@@ -3,11 +3,11 @@
 CEFR に沿った語彙・チャンク訓練用 PWA。Basic 2400 完走後に IELTS 7.0（C1 下位）相当の語彙・チャンク運用力を段階的に構築する。
 
 - リポジトリ: https://github.com/nkhippo/English-Vocab-Chunk-Trainer
-- 仕様の正本: [`doc/app-specification.md`](doc/app-specification.md)
-- Phase 1 指示書: [`doc/cursor-instruction-phase1.md`](doc/cursor-instruction-phase1.md)
+- 仕様の正本: [`doc/spec/app-specification.md`](doc/spec/app-specification.md)
+- Phase 1 指示書: [`doc/instructions/cursor-instruction-phase1.md`](doc/instructions/cursor-instruction-phase1.md)
 - 構成表: [`doc/repository-structure.md`](doc/repository-structure.md)
-- Phase 1 作業報告（差分・残課題）: [`doc/phase1-handoff-report.md`](doc/phase1-handoff-report.md)
-- Step 1〜3 作業報告: [`doc/step1-3-handoff-report.md`](doc/step1-3-handoff-report.md)
+- Phase 1 作業報告（差分・残課題）: [`doc/handoff/phase1-handoff-report.md`](doc/handoff/phase1-handoff-report.md)
+- Step 1〜3 作業報告: [`doc/handoff/step1-3-handoff-report.md`](doc/handoff/step1-3-handoff-report.md)
 
 ## Phase 1 の範囲
 

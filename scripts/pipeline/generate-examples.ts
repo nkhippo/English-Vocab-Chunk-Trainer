@@ -1,10 +1,10 @@
 import 'dotenv/config'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { callGasScript, parseArgs, sleep, readJson, writeJson, ensureDir } from './lib/utils.ts'
+import { callGasScript, parseArgs, sleep, readJson, writeJson, ensureDir } from '../lib/utils.ts'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const root = path.resolve(__dirname, '..')
+const root = path.resolve(__dirname, '../..')
 
 interface ExampleItem {
   id: string

@@ -203,7 +203,7 @@ LearningItem {
 
 これは **理解可能なインプット仮説**(Krashen, i+1)を例文単位で担保するため。学習者が例文を読んで「対象語だけがわからない、他は既知」状態を作ることで、対象語の意味と使い方に集中できる。
 
-技術的には、Claude API での生成時にプロンプトで明示 → 生成後に語彙レベルチェッカーで検証、を行う。詳細は Claude API 設計書(`doc/claude-api-gas-design.md`)を参照。
+技術的には、Claude API での生成時にプロンプトで明示 → 生成後に語彙レベルチェッカーで検証、を行う。詳細は Claude API 設計書(`doc/ops/claude-api-gas-design.md`)を参照。
 
 ### 3.2 Insight カード(語源・由来)スキーマ
 
@@ -461,7 +461,7 @@ v2 の 12,800 件に、A1 レベルのフレーズを追加した最終見立て
 - **音声**: 貴殿の GAS TTS + Google Drive キャッシュ資産を利用
 - **AI 添削**: Claude API(Mode C 実行時のみ、`claude-haiku-4-5-20251001` 想定)
 - **リポジトリ**: `nkhippo/English-Vocab-Chunk-Trainer`（GitHub Pages base: `/English-Vocab-Chunk-Trainer/`）
-- **Claude API**: GAS Web App 経由（URL・モデル一覧は `doc/claude-api-gas-design.md` §実装ステータス）
+- **Claude API**: GAS Web App 経由（URL・モデル一覧は `doc/ops/claude-api-gas-design.md` §実装ステータス）
 
 ### 8.2 ライブラリ選定候補
 

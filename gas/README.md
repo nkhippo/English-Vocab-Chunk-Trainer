@@ -1,6 +1,6 @@
 # Google Apps Script (Claude API proxy)
 
-Implements the endpoints described in `doc/claude-api-gas-design.md`.
+Implements the endpoints described in `doc/ops/claude-api-gas-design.md`.
 
 **推奨**: スタンドアロン GAS（Google Drive 上のスクリプト）+ 本リポジトリの `gas/` をソース正本にする。
 

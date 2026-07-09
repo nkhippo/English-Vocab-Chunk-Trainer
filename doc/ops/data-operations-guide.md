@@ -6,7 +6,7 @@
 `https://script.google.com/macros/s/AKfycbz_94XYG6UzI4v5Na6VF-_yxnG5VWmit3KceNhHJiFZjGvbJKp6m-RnEYXdaV4hnlIH/exec`  
 （ローカルは `.env` の `GAS_ENDPOINT_URL`。詳細は `gas/README.md`）
 
-スキーマ正本: `doc/learning-data-schema.json`（旧称 `data-schema.json`）。
+スキーマ正本: `doc/spec/learning-data-schema.json`（旧称 `data-schema.json`）。
 
 ### データの置き場（一本化）
 
@@ -58,7 +58,7 @@ data/
 
 ### 2.2 実行手順
 
-1. **seed 生成**: `scripts/generate-seed.ts` を新レベル指定で実行
+1. **seed 生成**: `scripts/pipeline/generate-seed.ts` を新レベル指定で実行
    ```bash
    pnpm run generate:seed --cefr=B2 --category=all
    ```
@@ -233,7 +233,7 @@ pnpm run sync:ipa --from=<IPA_TRAINER_JSON_URL>
 ## 8. トラブルシューティング
 
 ### 8.1 Claude API が期待通りの出力を返さない
-- プロンプトの `doc/claude-api-gas-design.md` を確認
+- プロンプトの `doc/ops/claude-api-gas-design.md` を確認
 - temperature を下げる(0.3 → 0.1)
 - 出力形式を JSON Schema で明示
 

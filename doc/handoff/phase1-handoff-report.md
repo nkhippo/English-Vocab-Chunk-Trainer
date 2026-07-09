@@ -2,7 +2,7 @@
 
 対象リポジトリ: [`nkhippo/English-Vocab-Chunk-Trainer`](https://github.com/nkhippo/English-Vocab-Chunk-Trainer)  
 作成日: 2026-07-08  
-最終更新: 2026-07-09（doc/scripts 再構成・パイロットテスト・GAS 本番 URL 更新）  
+最終更新: 2026-07-09（パイロット v2・GAS v19・UX テスト合格）  
 目的: Claude / 他エージェントへの作業共有（実装内容・指示書からの差分・残課題）
 
 仕様の唯一のソース: `doc/spec/app-specification.md`  
@@ -56,14 +56,15 @@ https://script.google.com/macros/s/AKfycbzXBNFUfmG6dTbHhw4xNI-n_gB0QYNL-dYpddSHE
    - POST `generate-seed`（Opus 4.7）: OK
 6. **clasp 紐付け**（2026-07-09）: Apps Script API ON → `.clasp.json` → `clasp push` 済み。本番公開は **エディタ「新バージョン」デプロイを優先**（`clasp deploy -i <本番ID> -V <N>` は 404 を誘発しやすい）
 
-### 1.4 doc / scripts 再構成・パイロットテスト（2026-07-09 追記）
+### 1.4 doc / scripts 再構成・パイロット（2026-07-09 追記）
 
 - `doc/` を `spec/` `ops/` `instructions/` `handoff/` に整理。入口は `doc/repository-structure.md`
-- `scripts/` を `pipeline/` `gas/` `lib/` に整理（`package.json` のコマンドパスも更新）
-- A2 collocation **8 件パイロット**実施（seed → enrich → examples）。詳細は `doc/handoff/pilot-test-handoff-report.md`
-  - 初回実行: examples **6/8**、スキーマ非準拠多数 → `gas/handlers.js` プロンプトを設計書準拠に修正
-  - `data/current` マージは **未実施**（再パイロット待ち）
-- 旧 GAS URL `AKfycbz_94XY...` は `clasp deploy` 後 404 → 現行 URL へ手動移行済み
+- `scripts/` を `pipeline/` + `lib/` + `build-gas-paste.ts` に整理
+- **パイロット v1**（8 件）: NG → `pilot-test-handoff-report.md`
+- **パイロット v2**（8 件）: 全 DoD OK → `data/current` **11 件** → `pilot-retry-handoff-report.md`
+- **GAS**: clasp 運用 + 手動デプロイ **v19**（`AKfycbzXBNFU...`）
+- **UX**: スモークテスト合格（`doc/ops/ux-smoke-test-checklist.md`）
+- **i18n**: `doc/ops/i18n-strategy.md`（3 層モデル）
 
 ### 1.5 モデル ID 点検（存在しないモデル事故の予防）
 
@@ -85,6 +86,8 @@ https://script.google.com/macros/s/AKfycbzXBNFUfmG6dTbHhw4xNI-n_gB0QYNL-dYpddSHE
 | `1935f90` | Step 1〜3: CORS / Opus 4.7 / A2 seed ツール |
 | `7f5531d` | doc/scripts 再構成・パイロット・GAS プロンプト修正 |
 | `7f16c69` | GAS 本番 URL 更新（手動デプロイ反映） |
+| `a1fba80` | スキーマ v1.1 パイロット v2・11 件マージ |
+| `720ef4c` | i18n 方針 + `/review` ラベル多言語化 |
 
 ---
 
@@ -99,11 +102,11 @@ https://script.google.com/macros/s/AKfycbzXBNFUfmG6dTbHhw4xNI-n_gB0QYNL-dYpddSHE
 | 3 | `docs/data-schema.json` | `doc/spec/learning-data-schema.json` | 同上。検証スクリプトもこのパスを参照 |
 | 4 | GitHub Pages base `/vocab-chunk-trainer/` | **`/English-Vocab-Chunk-Trainer/`** | 実リポジトリ名に合わせないと Pages が 404 になる |
 | 5 | 対象 repo `nkhipko/vocab-chunk-trainer` | **`nkhippo/English-Vocab-Chunk-Trainer`** | ユーザー指定の実リポジトリ |
-| 6 | GAS を clasp で作成・push（必須寄り） | **Drive 手動 + `drive-paste/Code.gs`**（clasp は任意） | Apps Script API が未有効で `clasp create` が失敗。既存トレーナーと同様の手動 Web App デプロイで先行 |
+| 6 | GAS を clasp で作成・push（必須寄り） | **clasp push + 手動デプロイ v19**（推奨運用に移行） | Phase 1 は Drive 手動で開始。2026-07-09 に clasp 分割ファイル運用へ |
 | 7 | `pnpm-workspace.yaml` で monorepo 前提に見えるが、指示構造は単一 app | ルート単一パッケージ。`pnpm-workspace.yaml` は **esbuild onlyBuiltDependencies** 用でワークスペース分割はない | pnpm v10 の build script 許可のため |
 | 8 | 検証 UI が `data/staging/*.json` を直接読み書き | ブラウザからは **ファイル選択 + LocalStorage + JSON ダウンロード** | ブラウザがローカル `data/staging/` に直接書けないため。CLI で staging に配置する運用と併用 |
 | 9 | `scripts/validate-cefr.ts` を別ファイル | CEFR 再試行は **`generate-examples.ts` 内**、スキーマ検証は `validate-schema.ts` | 指示の「validate-cefr 呼び出し」は満たしつつファイル分割を簡略化 |
-| 10 | Phase 1 DoD: A2 データ 100 件以上を `data/current` | 現状は **サンプル 3 件** | パイロット 8 件は staging のみ。本生成前に再パイロット要（`pilot-test-handoff-report.md`） |
+| 10 | Phase 1 DoD: A2 データ 100 件以上を `data/current` | 現状 **11 件**（パイロット 8 + サンプル 3）。本生成は GO 待ち | パイロット v2 OK。`batch:a2-seeds` は Naoya GO 後 |
 
 矛盾として止めた事項はなし（仕様書と指示書の致命的衝突は検出していない）。
 
@@ -130,14 +133,14 @@ https://script.google.com/macros/s/AKfycbzXBNFUfmG6dTbHhw4xNI-n_gB0QYNL-dYpddSHE
 
 | 項目 | 状態 |
 |---|---|
-| Pages で PWA 稼働・iPhone ホーム追加 | **Pages 配信は確認済み**（`7f16c69` 時点）。iPhone ホーム追加は未確認 |
-| 日英切替 | 完了 |
+| Pages で PWA 稼働・iPhone ホーム追加 | **Pages 配信・UX スモークテスト合格**。iPhone ホーム追加は未確認 |
+| 日英切替 | 完了（方針: `doc/ops/i18n-strategy.md`） |
 | ガイド 6 ページ | 完了 |
-| GAS 5 エンドポイント + キャッシュ | **稼働確認済み** |
-| `generate:seed` コマンド動作 | GAS 疎通済み。CLI 一式は実装済み |
-| 検証 UI で 100 件処理 | **未**（サンプルのみ） |
-| `data/current` に A2 ≥100 件 | **未**（3 件サンプル） |
-| スキーマ検証自動化 | 完了（`pnpm run validate`） |
+| GAS 5 エンドポイント + キャッシュ | **v19 稼働確認済み** |
+| `generate:seed` コマンド動作 | GAS 疎通済み |
+| 検証 UI で 100 件処理 | **未**（サンプル・パイロット規模のみ） |
+| `data/current` に A2 ≥100 件 | **未**（11 件。本生成 GO 待ち） |
+| スキーマ検証自動化 | 完了（`pnpm run validate`・v1.1.0） |
 
 ---
 
@@ -145,17 +148,18 @@ https://script.google.com/macros/s/AKfycbzXBNFUfmG6dTbHhw4xNI-n_gB0QYNL-dYpddSHE
 
 ### P0 — Phase 1 クローズに必要
 
-1. **パイロット再テスト**（A2 collocation 8 件）→ DoD OK 後に merge → **本生成**（`batch:a2-seeds` → `/review` → enrich / examples / merge）
-2. ~~GitHub Pages を Actions ソースで有効化・workflow 修正~~ → **完了**（公開 URL でビルド成果物配信を確認済み）
-3. iPhone Safari でホーム画面追加の実機確認
+1. ~~**パイロット再テスト**~~ → **完了**（v2・11 件マージ）
+2. **A2 本生成 GO** → `batch:a2-seeds` → `/review` → enrich / examples / merge（2,430 件）
+3. iPhone Safari でホーム画面追加の実機確認（任意）
 
 ### P1 — 運用・品質
 
-4. ~~Apps Script API + clasp push~~ → **完了**（2026-07-09）
-5. Build モデルを **`claude-opus-4-8` に上げるか**方針決定（現状 `claude-opus-4-7` で問題なし）
-6. ~~GAS CORS~~ → **完了**（`doc/handoff/step1-3-handoff-report.md`）
-7. ~~`data/current` と `src/data/current` の二重管理~~ → **完了**: 正本は `data/current/` のみ（`@data` alias）
-8. **register 表記**（`informal` vs `casual`）の仕様・スキーマ統一（Naoya 判断待ち）
+4. ~~Apps Script API + clasp push~~ → **完了**
+5. Build モデルを **`claude-opus-4-8` に上げるか**方針決定（現状 4.7 で問題なし）
+6. ~~GAS CORS~~ → **完了**
+7. ~~`data/current` 二重管理~~ → **完了**
+8. ~~register `informal` vs `casual`~~ → **決定済み**（`informal` 統一・スキーマ v1.1）
+9. `/review` UI 情報設計の改善 → **Phase 2 以降**（UX テストでレイアウト改善は保留と合意）
 
 ### P2 — Phase 2（指示書どおり前倒ししない）
 
@@ -175,7 +179,8 @@ https://script.google.com/macros/s/AKfycbzXBNFUfmG6dTbHhw4xNI-n_gB0QYNL-dYpddSHE
 4. 現行 GAS URL は `gas/README.md` / `.env.production` を参照。URL が変わったら三箇すべてを更新する。
 5. Phase 2 機能を「ついで」で実装しない。
 6. データ増加時は `doc/ops/data-operations-guide.md` と本構成表を更新する。
-7. パイロット・本生成の進捗は `doc/handoff/pilot-test-handoff-report.md` を参照。
+7. パイロット・本生成の進捗は `doc/handoff/pilot-retry-handoff-report.md` を参照。
+8. i18n 方針は `doc/ops/i18n-strategy.md`。UX テストは `doc/ops/ux-smoke-test-checklist.md`。
 
 ---
 

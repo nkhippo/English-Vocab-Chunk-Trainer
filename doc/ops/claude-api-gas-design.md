@@ -2,7 +2,7 @@
 
 `vocab-chunk-trainer` から Claude API を呼び出す際は、貴殿の既存 GAS 資産(IPA Trainer / Structure Trainer のパターン)に倣い、必ず **GAS(Google Apps Script)を経由**する。API キーをフロントエンドに露出させず、レート制御・キャッシュ・課金管理を一元化する。
 
-## 実装ステータス（2026-07-08）
+## 実装ステータス（2026-07-09）
 
 | 項目 | 状態 |
 |---|---|
@@ -10,7 +10,7 @@
 | Script Properties `ANTHROPIC_API_KEY` | 設定済み |
 | Phase 1 エンドポイント 5 つ | 稼働確認済み（GET health + POST generate-seed / validate-cefr） |
 | キャッシュ | Drive フォルダ `vocab-chunk-trainer-cache`（SHA-256） |
-| リポジトリ側ソース | `gas/*.js` + 貼り付け用 `gas/drive-paste/Code.gs` |
+| リポジトリ側ソース | `gas/*.js`（**clasp push 正本**）+ フォールバック `gas/drive-paste/Code.gs` |
 | Build モデル | `claude-opus-4-7`（2026-07-09 移行。`temperature` は Opus 4.7 で送信しない） |
 | Runtime / 判定モデル | `claude-haiku-4-5-20251001`（現行 Haiku 正式 ID） |
 
@@ -172,7 +172,7 @@ JSON オブジェクトのみ。前置き不要。
 
 ### 2.3 `/generate-examples`
 
-**目的**: register 別(neutral/formal/casual)の例文を生成。**制約 A/B/C を厳守**。
+**目的**: register 別(neutral/formal/informal)の例文を生成。**制約 A/B/C を厳守**。
 
 **モデル**: `claude-opus-4-7`  
 **Temperature**: `0.5`(例文の自然さのため、やや高め)  
@@ -207,12 +207,12 @@ JSON オブジェクトのみ。前置き不要。
 以下の 3 register で最低 1 文ずつ作成:
 - **formal**: ビジネス、学術、公式文書
 - **neutral**: 一般的な書き言葉、標準
-- **casual**: 日常会話、SNS、友人との会話
+- **informal**: 日常会話、SNS、友人との会話
 
 ただし対象語の性質上、以下は例外:
 - 慣習表現で register が固有な場合: 該当 register のみ
 - 学術・専門用語: formal + neutral のみ
-- 口語イディオム: neutral + casual のみ
+- 口語イディオム: neutral + informal のみ
 
 ## 制約(必ず守る)
 - **周辺語彙 CEFR 上限**: 例文中の対象語以外の全語が CEFR {cefr_level} 以下であること。B2 以上の語は使用禁止(対象が {cefr_level} = B1 なら A1〜B1 のみ)
@@ -225,7 +225,7 @@ JSON 配列のみ:
   {
     "en": "...",
     "ja": "...",
-    "register": "formal|neutral|casual",
+    "register": "formal|neutral|informal",
     "surrounding_cefr_ceiling": "{cefr_level}"
   }
 ]

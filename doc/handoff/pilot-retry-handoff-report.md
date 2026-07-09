@@ -129,7 +129,7 @@ https://script.google.com/macros/s/AKfycbzXBNFUfmG6dTbHhw4xNI-n_gB0QYNL-dYpddSHE
 
 1. **本生成（2,430 件）**: パイロット v2 は全 DoD OK。**`pnpm run batch:a2-seeds` 着手は Naoya の明示 GO 待ち**（指示書どおり）。
 2. **既存サンプル 3 件**: 例文 register が 1 種のみのため validator warnings あり（パイロット範囲外。必要なら別途 enrich/examples 再生成）。
-3. **`doc/ops/claude-api-gas-design.md`**: 本文に `casual` 表記が残存（次回ドキュメント整備時に informal へ統一推奨）。
+3. **`doc/ops/claude-api-gas-design.md`**: プロンプト節の `informal` 表記を v1.1 に同期済み（2026-07-09）
 4. **GAS デプロイ**: 以後も `clasp push` 後はエディタ手動デプロイを優先。
 
 ---
@@ -139,4 +139,5 @@ https://script.google.com/macros/s/AKfycbzXBNFUfmG6dTbHhw4xNI-n_gB0QYNL-dYpddSHE
 - パイロット 8 件は **全 DoD OK**、`data/current` は **11 件**（`pnpm validate` OK）。
 - 前回隔離の 2 件（`get_up_early` / `listen_to_music`）は **今回通過**。
 - register は **`informal` に統一**（スキーマ・仕様・パイプライン反映済み）。
+- **UX スモークテスト合格**（`doc/ops/ux-smoke-test-checklist.md`）。検証 UI レイアウト改善は Phase 2 以降。
 - **本生成 GO の判断**をお願いします。初回はカテゴリ単位の部分実行も可。

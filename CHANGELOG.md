@@ -1,29 +1,44 @@
 # Changelog
 
-## [Unreleased] — 2026-07-09
+## [Unreleased] — 2026-07-09（夕方更新）
 
 ### Added
 
+- スキーマ **v1.1.0**（`informal` 統一・`item.register` 配列・`collocation_pattern` 拡張）
+- `doc/handoff/pilot-retry-handoff-report.md`（パイロット v2・全 DoD OK）
+- `doc/ops/ux-smoke-test-checklist.md`（5 分 UX スモークテスト）
+- `doc/ops/i18n-strategy.md`（UI 3 層モデル・多言語方針）
+- `src/lib/i18n/labels.ts`（カテゴリ・register・頻度の表示ヘルパー）
+- `.env.development`（Vite dev 用 GAS URL・コミット可）
+- `scripts/lib/load-env.ts` / `pnpm run env:sync`（`.env` 不要化）
+- `scripts/build-gas-paste.ts`（旧 `scripts/gas/` から移動）
 - GAS: CORS 許可オリジンゲート（`nkhippo.github.io` / `localhost:5173`）
 - GAS: Build モデル `claude-opus-4-7`（`temperature` 非送信）
-- `src/lib/gas-client`: リクエストに `?origin=` を付与
-- `doc/` 役割別サブフォルダ（`spec/` `ops/` `instructions/` `handoff/`）
-- `scripts/pipeline/` + `scripts/gas/` パイプライン配置
 - `scripts/pipeline/batch-a2-seeds.ts` / `pnpm run batch:a2-seeds`
-- `generate:seed --append`（staging 結合用）
-- `scripts/gas/build-gas-paste.ts`（`drive-paste/Code.gs` 自動生成）
-- `doc/handoff/pilot-test-handoff-report.md`（A2 collocation 8 件パイロット）
+- `doc/handoff/pilot-test-handoff-report.md`（初回パイロット・履歴）
 
 ### Changed
 
-- GAS Web App URL を clasp 手動デプロイ v19 に更新（`AKfycbzXBNFU...`、health + validate-cefr 確認済み）
-- 環境変数: `.env` 不要化（`.env.example` / `.env.development` フォールバック、`pnpm run env:sync`）
-- `gas/handlers.js`: enrich / generate-examples プロンプトを設計書 §2.2 / §2.3 準拠に強化
-- `generate:examples` から `temperature` パラメータ送信を削除
-- `doc/repository-structure.md`: AI 入口・現状サマリ・handoff 一覧を拡充
+- **GAS**: clasp 運用 + 手動デプロイ **v19**（`AKfycbzXBNFU...`、health + validate-cefr 確認済み）
+- **`data/current/items.json`**: 11 件（サンプル 3 + パイロット 8・スキーマ v1.1.0）
+- `gas/handlers.js`: enrich / generate-examples テンプレート化（v1.1 準拠）
+- `scripts/pipeline/generate-examples.ts`: `casual`→`informal` 正規化・`schema_version` キャッシュ回避
+- `/review` UI: フィールドラベルを i18n 化（スキーマキー直書き廃止）
+- 環境変数: `.env` 任意化（`.env.example` フォールバック）
+- `doc/spec/app-specification.md` → **v3.1**
+- `doc/repository-structure.md` / handoff 一式を現状に同期
+
+### Verified (Naoya)
+
+- UX スモークテスト（5 分版）: **合格**（単語帳・検証・設定）
+- clasp 分割ファイル（`main.gs` / `handlers.gs` 等）+ デプロイ v19
 
 ### Pending (Naoya)
 
-- パイロット再テスト（8 件 collocation）→ DoD OK
-- Step 3: `/review` で全カテゴリ検証 → enrich → examples → merge（目標 2,430 件）
-- register 表記（`informal` vs `casual`）の仕様・スキーマ統一
+- **A2 本生成 GO**（`pnpm run batch:a2-seeds`、2,430 件）— パイロット v2 OK 済み
+- iPhone Safari ホーム画面追加（任意）
+- `/review` UI の情報設計・レイアウト改善（Phase 2 以降）
+
+### Historical
+
+- 初回パイロット（v1）: 6/8 examples・スキーマ非準拠 → **v2 で解消**（`pilot-test-handoff-report.md` 参照）

@@ -4,7 +4,7 @@
 
 **GAS エンドポイント（Phase 1）**:  
 `https://script.google.com/macros/s/AKfycbzXBNFUfmG6dTbHhw4xNI-n_gB0QYNL-dYpddSHEK9Pe4a-4hp-CmhjL4c8iTPcPqsU/exec`  
-（ローカルは `.env` の `GAS_ENDPOINT_URL`。詳細は `gas/README.md`）
+（ローカル CLI は `.env` 任意 — 未設定時は `.env.example` を `scripts/lib/load-env.ts` が参照。詳細は `gas/README.md`）
 
 スキーマ正本: `doc/spec/learning-data-schema.json`（旧称 `data-schema.json`）。
 
@@ -182,7 +182,7 @@ data/
 - 例文本文の語を CEFR 判定し、上限を超える語がないか
 
 ### 5.4 register 網羅性
-- 対象 item に neutral / formal / casual の例文が仕様通り揃っているか(item 種類による例外規定を含む)
+- 対象 item に neutral / formal / informal の例文が仕様通り揃っているか(item 種類による例外規定を含む)
 
 ### 5.5 重複検出
 - 同じ `surface` + `category` の重複がないか

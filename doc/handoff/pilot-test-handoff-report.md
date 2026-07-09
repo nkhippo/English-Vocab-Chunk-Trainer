@@ -2,11 +2,11 @@
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  
 指示書: `cursor_instruction_pilot_test.md`（Downloads）  
-最終更新: 2026-07-09（GAS 本番 URL 更新・手動デプロイ反映確認済み）  
+最終更新: 2026-07-09（**履歴ドキュメント** — 現行結果は `pilot-retry-handoff-report.md` を参照）  
 前提: Step 1〜3 完了後（`doc/handoff/step1-3-handoff-report.md`）  
 関連: `doc/handoff/phase1-handoff-report.md`（Phase 1 全体）
 
----
+> **注意**: 本ファイルは初回パイロット（v1・NG）の記録。**現行の合格結果・11 件マージは `doc/handoff/pilot-retry-handoff-report.md`**。
 
 ## 1. 実施した作業
 

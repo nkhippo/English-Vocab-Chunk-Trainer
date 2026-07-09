@@ -17,6 +17,13 @@ v1/v2 を統合し、以下の追加要件を反映した最終仕様:
 - item.register を配列型に変更（複数 register 対応 item のブラウズビュー絞り込み対応）
 - collocation_pattern enum を実データに基づき拡張（`V+Ving` / `V+Prep+N` / `V+Adv` を追加）
 
+**実装ステータス (2026-07-09 夜)**:
+- Phase 1 PWA 骨格・ガイド・`/review`・`/browse` 件数表示: **稼働中**（GitHub Pages）
+- `data/current`: **11 件**（スキーマ v1.1.0）
+- 日英 UI: 設定トグル + ガイド二言語。**実装方針**は `doc/ops/i18n-strategy.md`（3 層モデル）
+- Mode A/B/C・SRS・browse 検索詳細: **Phase 2**
+- UX スモークテスト: **合格**（`doc/ops/ux-smoke-test-checklist.md`）
+
 ---
 
 ## 1. アプリ概要
@@ -411,6 +418,8 @@ Insight {
 - 初期デフォルトは日本語、CEFR B1 到達を検出した段階で英語 UI への切り替えを提案
 
 **設計意図**: 貴殿の言語学習理論(A1〜B1 は L1 介在、B1 以降は英英移行)に沿った段階的移行。他言語(韓国語・中国語・タガログ語等)の追加は将来の需要次第。
+
+**実装メモ (Phase 1)**: UI クロームは `src/lib/i18n/locales/{ja,en}.json`、ガイドは `src/content/guide/pages.ts` の `{ ja, en }`、学習データ本文はスキーマフィールドのまま表示。スキーマキー名を UI に直書きしない（`doc/ops/i18n-strategy.md`）。英語 UI で `definition_en` 優先は Phase 2 の browse/train で適用。
 
 ### 6.2 ガイドモーダル
 

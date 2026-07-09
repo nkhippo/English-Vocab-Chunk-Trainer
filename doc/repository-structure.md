@@ -3,7 +3,7 @@
 English Vocab Chunk Trainer のフォルダ・ファイル配置の**正本**。  
 AI エージェントは本ファイルを最初に読み、役割ごとのサブツリーへ進む。
 
-最終更新: 2026-07-09（スキーマ v1.1・パイロット v2 完了・11 件マージ）
+最終更新: 2026-07-09（GAS フォルダ構成の整理・build-gas-paste 移動）
 
 ---
 
@@ -147,8 +147,7 @@ english-vocab-chunk-trainer/
 │   │   ├── merge-data.ts              #   current へのマージ
 │   │   ├── validate-schema.ts         #   スキーマ検証
 │   │   └── batch-a2-seeds.ts          #   A2 全カテゴリ一括 seed
-│   ├── gas/
-│   │   └── build-gas-paste.ts         #   drive-paste/Code.gs 結合
+│   ├── build-gas-paste.ts             #   gas/drive-paste/Code.gs 結合（Node 用・GAS 本体ではない）
 │   └── lib/                           # 共有ユーティリティ
 │       ├── utils.ts                   #   GAS 呼び出し・JSON I/O
 │       └── validate.ts                #   Ajv 検証（doc/spec/learning-data-schema.json）
@@ -221,13 +220,24 @@ batch-a2-seeds ──► generate-seed ──► [人手 /review] ──► enri
 | サブフォルダ | 責務 |
 |---|---|
 | `pipeline/` | データライフサイクル CLI（`package.json` の `generate:*` / `merge` / `validate` / `batch:a2-seeds`） |
-| `gas/` | GAS 関連のビルド補助（`build:gas-paste`） |
+| `build-gas-paste.ts` | `gas/*.js` → `gas/drive-paste/Code.gs` 結合（手動 GAS デプロイ用・**GAS ソースではない**） |
 | `lib/` | `utils.ts`（GAS 呼び出し）、`validate.ts`（Ajv） |
 
-### `gas/` — サーバーレス API
+### `gas/` — サーバーレス API（ソース正本）
 
-clasp の `rootDir` は `gas/`。`pnpm run build:gas-paste` で `drive-paste/Code.gs` を再生成できる。  
-本番デプロイは **エディタ手動デプロイを優先** — URL 変更時は env と doc を同期。
+**GAS の実体はルートの `gas/` のみ。** `scripts/` 配下に同名フォルダは置かない（旧 `scripts/gas/` は `scripts/build-gas-paste.ts` へ統合済み）。
+
+| ファイル | 役割 |
+|---|---|
+| `main.js` | `doGet` / `doPost`、CORS origin ゲート |
+| `handlers.js` | ビルド系エンドポイント・プロンプト（**主にここを編集**） |
+| `claude.js` | Claude API 呼び出し（Opus 4.7、temperature 除外） |
+| `cache.js` | Drive キャッシュ |
+| `drive-paste/Code.gs` | **生成物** — `pnpm run build:gas-paste` の出力。手動貼り付け用 |
+| `prompts/` | プロンプト参照用（clasp push 対象外） |
+
+clasp の `rootDir` は `gas/`。デプロイは **clasp push + エディタ新バージョン**（推奨）または **build:gas-paste → Code.gs 貼り付け**（フォールバック）。  
+エディタに `Code.gs` 1 ファイルだけ見える場合は手動デプロイ経路の名残 — 中身が古い可能性あり。詳細は `gas/README.md`。
 
 ---
 

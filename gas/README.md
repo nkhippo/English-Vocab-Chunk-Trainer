@@ -2,7 +2,38 @@
 
 Implements the endpoints described in `doc/ops/claude-api-gas-design.md`.
 
-**推奨**: スタンドアロン GAS（Google Drive 上のスクリプト）+ 本リポジトリの `gas/` をソース正本にする。
+**推奨**: スタンドアロン GAS（Google Drive 上のスクリプト）+ 本リポジトリの **`gas/`（ルート）** をソース正本にする。
+
+## ソース正本と「2 つの gas」について
+
+リポジトリには **GAS 本体は `gas/` フォルダ 1 つだけ** です（ルート直下）。
+
+| パス | 正体 | 編集する？ |
+|---|---|---|
+| **`gas/`**（ルート） | GAS のソース正本（`main.js` / `handlers.js` 等） | **はい — ここを編集** |
+| `gas/drive-paste/Code.gs` | 上記を結合した **生成物**（手動貼り付け用） | 直接編集しない（`pnpm run build:gas-paste` で再生成） |
+| ~~`scripts/gas/`~~ | （旧）結合スクリプト置き場 → **`scripts/build-gas-paste.ts` に移動済み** | Node 用ビルドスクリプト（GAS ではない） |
+
+### GAS エディタに `Code.gs` だけ見える場合
+
+Phase 1 初期は **Drive 手動デプロイ**（`Code.gs` 1 ファイル貼り付け）でした。  
+エディタに `Code.gs` のみ表示されるのはその名残です。**中身が古い Opus 4.6 版のまま**になっていることがあります。
+
+**更新の 2 経路（どちらか一方）:**
+
+```
+【A】clasp（推奨）                    【B】手動貼り付け（フォールバック）
+gas/*.js を編集                       gas/*.js を編集
+    ↓                                     ↓
+clasp push                            pnpm run build:gas-paste
+    ↓                                     ↓
+エディタに main.js 等が表示           gas/drive-paste/Code.gs を全選択コピー
+    ↓                                     ↓
+デプロイ → 新バージョン               エディタの Code.gs を上書き → 新バージョン
+```
+
+- **正本は常に `gas/*.js`**。`Code.gs` は B 経路の出力コピーであり、単体でメンテしない。
+- A 経路に移行済みなら、エディタは `main.js` / `handlers.js` 等の **複数ファイル** になる。
 
 ## Deployed endpoint (Phase 1)
 

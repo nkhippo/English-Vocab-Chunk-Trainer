@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1.0",
-  "generated_at": "2026-07-09T07:59:10.777Z",
+  "generated_at": "2026-07-09T15:25:56.719Z",
   "cefr_levels_included": [
     "A1",
     "A2"
@@ -248,20 +248,20 @@
       "frequency_rank_in_level": 120,
       "example_sentences": [
         {
-          "en": "Visitors are kindly asked not to take a picture inside the museum.",
-          "ja": "来館者の方は館内で写真を撮らないようお願いいたします。",
+          "en": "Please do not take pictures inside the museum.",
+          "ja": "博物館の中では写真を撮らないでください。",
           "register": "formal",
           "surrounding_cefr_ceiling": "A2"
         },
         {
-          "en": "Could you take a picture of us in front of the station?",
-          "ja": "駅の前で私たちの写真を撮ってもらえますか。",
+          "en": "She takes a picture of her food before she eats.",
+          "ja": "彼女は食べる前に食べ物の写真を撮る。",
           "register": "neutral",
           "surrounding_cefr_ceiling": "A2"
         },
         {
-          "en": "Hey, let's take a picture together!",
-          "ja": "ねえ、一緒に写真撮ろうよ！",
+          "en": "Can you take a picture of us? We want one together!",
+          "ja": "私たちの写真を撮ってくれる？一緒に撮りたいんだ！",
           "register": "informal",
           "surrounding_cefr_ceiling": "A2"
         }
@@ -389,20 +389,20 @@
       "frequency_rank_in_level": 45,
       "example_sentences": [
         {
-          "en": "Guests may have breakfast in the dining room between seven and ten.",
-          "ja": "お客様は7時から10時の間に食堂で朝食を召し上がれます。",
+          "en": "Please come to the dining room to have breakfast before 9:00 a.m.",
+          "ja": "午前9時までに食堂へお越しいただき、朝食をお召し上がりください。",
           "register": "formal",
           "surrounding_cefr_ceiling": "A2"
         },
         {
-          "en": "I usually have breakfast at seven in the morning.",
-          "ja": "私はたいてい朝7時に朝食を食べます。",
+          "en": "She always has breakfast at seven o'clock before she goes to work.",
+          "ja": "彼女はいつも仕事に行く前に7時に朝食を食べる。",
           "register": "neutral",
           "surrounding_cefr_ceiling": "A2"
         },
         {
-          "en": "Let's have breakfast together tomorrow!",
-          "ja": "明日一緒に朝ごはん食べようよ！",
+          "en": "I didn't have breakfast this morning, so I'm really hungry now!",
+          "ja": "今朝は朝ごはん食べなかったから、めちゃくちゃお腹すいてる！",
           "register": "informal",
           "surrounding_cefr_ceiling": "A2"
         }
@@ -546,20 +546,20 @@
       "frequency_rank_in_level": 120,
       "example_sentences": [
         {
-          "en": "Students are expected to do their homework before each class.",
-          "ja": "生徒は毎回の授業の前に宿題をすることが求められています。",
+          "en": "Students must do homework before each class.",
+          "ja": "生徒は毎回の授業の前に宿題をしなければなりません。",
           "register": "formal",
           "surrounding_cefr_ceiling": "A2"
         },
         {
-          "en": "I always do my homework after dinner.",
-          "ja": "私はいつも夕食の後に宿題をします。",
+          "en": "She usually does her homework at the kitchen table after dinner.",
+          "ja": "彼女はいつも夕食の後、台所のテーブルで宿題をします。",
           "register": "neutral",
           "surrounding_cefr_ceiling": "A2"
         },
         {
-          "en": "Hey, did you do your homework yet?",
-          "ja": "ねえ、もう宿題やった?",
+          "en": "I can't go out yet — I still have to do my homework.",
+          "ja": "まだ出かけられないよ。宿題が残ってるんだ。",
           "register": "informal",
           "surrounding_cefr_ceiling": "A2"
         }
@@ -708,20 +708,20 @@
       "frequency_rank_in_level": 120,
       "example_sentences": [
         {
-          "en": "If you do not wear a coat, you may catch a cold.",
-          "ja": "コートを着ないと、風邪をひくかもしれません。",
+          "en": "Please wash your hands often so you do not catch a cold this winter.",
+          "ja": "今年の冬に風邪をひかないよう、こまめに手を洗ってください。",
           "register": "formal",
           "surrounding_cefr_ceiling": "A2"
         },
         {
-          "en": "I often catch a cold in winter.",
-          "ja": "私は冬によく風邪をひきます。",
+          "en": "Many people catch a cold in winter because the air is dry.",
+          "ja": "空気が乾燥しているため、冬に風邪をひく人が多い。",
           "register": "neutral",
           "surrounding_cefr_ceiling": "A2"
         },
         {
-          "en": "Be careful, or you'll catch a cold!",
-          "ja": "気をつけて、風邪ひくよ！",
+          "en": "I think I caught a cold — my throat really hurts.",
+          "ja": "風邪ひいたかも。喉がすごく痛い。",
           "register": "informal",
           "surrounding_cefr_ceiling": "A2"
         }
@@ -858,20 +858,20 @@
       "frequency_rank_in_level": 120,
       "example_sentences": [
         {
-          "en": "Guests are kindly asked to take a shower before using the pool.",
-          "ja": "お客様はプールをご利用の前にシャワーを浴びていただきますようお願いいたします。",
+          "en": "All players must take a shower before entering the pool.",
+          "ja": "プールに入る前に、選手全員がシャワーを浴びなければなりません。",
           "register": "formal",
           "surrounding_cefr_ceiling": "A2"
         },
         {
-          "en": "I take a shower every morning before breakfast.",
-          "ja": "私は毎朝、朝食の前にシャワーを浴びます。",
+          "en": "I usually take a shower in the morning before breakfast.",
+          "ja": "私はたいてい、朝食の前にシャワーを浴びます。",
           "register": "neutral",
           "surrounding_cefr_ceiling": "A2"
         },
         {
-          "en": "I'm gonna take a shower real quick, okay?",
-          "ja": "ちょっとシャワー浴びてくるね。",
+          "en": "I need to take a shower — I'm so sweaty!",
+          "ja": "シャワー浴びなきゃ。汗だくだよ！",
           "register": "informal",
           "surrounding_cefr_ceiling": "A2"
         }
@@ -998,20 +998,20 @@
       "frequency_rank_in_level": 120,
       "example_sentences": [
         {
-          "en": "I would like to go shopping for a new suit this weekend.",
-          "ja": "今週末、新しいスーツを買いに行きたいと思っております。",
+          "en": "On Saturdays, staff members may go shopping during their lunch break.",
+          "ja": "土曜日は、スタッフはランチ休憩中に買い物に行くことができます。",
           "register": "formal",
           "surrounding_cefr_ceiling": "A2"
         },
         {
-          "en": "My mother and I go shopping every Saturday morning.",
-          "ja": "母と私は毎週土曜日の朝に買い物に行きます。",
+          "en": "She usually goes shopping on Sunday mornings.",
+          "ja": "彼女はたいてい日曜日の朝に買い物に行く。",
           "register": "neutral",
           "surrounding_cefr_ceiling": "A2"
         },
         {
-          "en": "Hey, let's go shopping after lunch!",
-          "ja": "ねえ、お昼のあと買い物に行こうよ！",
+          "en": "Hey, do you want to go shopping with me after school?",
+          "ja": "ねえ、放課後一緒に買い物に行かない？",
           "register": "informal",
           "surrounding_cefr_ceiling": "A2"
         }
@@ -1155,20 +1155,20 @@
       "frequency_rank_in_level": 120,
       "example_sentences": [
         {
-          "en": "I must get up early tomorrow to catch the first train to the meeting.",
-          "ja": "明日は会議に向かう始発電車に乗るため、早く起きなければなりません。",
+          "en": "Students must get up early on the day of the school trip.",
+          "ja": "遠足の日は、生徒は早く起きなければなりません。",
           "register": "formal",
           "surrounding_cefr_ceiling": "A2"
         },
         {
-          "en": "I usually get up early on weekdays to go to work.",
-          "ja": "平日は仕事に行くためにたいてい早く起きます。",
+          "en": "She gets up early every morning to go for a walk.",
+          "ja": "彼女は毎朝早く起きて散歩に行きます。",
           "register": "neutral",
           "surrounding_cefr_ceiling": "A2"
         },
         {
-          "en": "I hate getting up early on Mondays!",
-          "ja": "月曜に早く起きるのって本当にイヤ！",
+          "en": "I have to get up early tomorrow, so I'm going to bed now.",
+          "ja": "明日は早く起きなきゃいけないから、もう寝るね。",
           "register": "informal",
           "surrounding_cefr_ceiling": "A2"
         }
@@ -1294,20 +1294,20 @@
       "frequency_rank_in_level": 120,
       "example_sentences": [
         {
-          "en": "Guests may listen to music in the lounge after dinner.",
-          "ja": "お客様は夕食後、ラウンジで音楽を聴くことができます。",
+          "en": "You must not listen to music during the test.",
+          "ja": "テスト中は音楽を聴いてはいけません。",
           "register": "formal",
           "surrounding_cefr_ceiling": "A2"
         },
         {
-          "en": "I often listen to music when I study at home.",
-          "ja": "家で勉強するとき、私はよく音楽を聴きます。",
+          "en": "Many people listen to music on the way to work.",
+          "ja": "多くの人が通勤中に音楽を聴きます。",
           "register": "neutral",
           "surrounding_cefr_ceiling": "A2"
         },
         {
-          "en": "Let's listen to music in my room!",
-          "ja": "私の部屋で音楽を聴こうよ！",
+          "en": "I always listen to music when I clean my room.",
+          "ja": "部屋を掃除するときはいつも音楽を聴くんだ。",
           "register": "informal",
           "surrounding_cefr_ceiling": "A2"
         }

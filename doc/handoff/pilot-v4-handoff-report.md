@@ -2,7 +2,7 @@
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  
 指示書: `cursor_instruction_pilot_v4.md`（Downloads）  
-最終更新: 2026-07-09  
+最終更新: **2026-07-10**（v22 デプロイ後・再実行完了）  
 前提: `doc/handoff/pilot-v3-handoff-report.md`（v3・DoD NG・`data/current` 未更新）
 
 ---
@@ -14,15 +14,14 @@
 | `gas/scene-config.js` 新規追加 | **実施済み** |
 | `generateExamples` v4 プロンプト（禁止語表 + シーン候補） | **実施済み** |
 | `validateCefr` 明示リスト照合方式 | **実施済み** |
-| `build-gas-paste` に `scene-config.js` 結合 | **実施済み** |
-| `doc/ops/claude-api-gas-design.md` §2.3.1 / §2.3.2 / §2.5.1 | **実施済み** |
-| `validator_version: v4` / `schema_version: 1.1.2` | **実施済み** |
-| `clasp push`（v4 ソース反映） | **実施済み** |
-| GAS 本番 Web App デプロイ（v4 反映） | **未完了**（後述） |
-| パイロット v4 実行 | **部分完了**（7/8・旧デプロイ上 / クレジット不足） |
-| DoD 10.1〜10.5 | **NG** |
-| `data/current/items.json` マージ | **未実施**（DoD 未達のため v2 の 11 件を維持） |
-| main マージ（コード・ドキュメント） | **実施済み** |
+| Build モデル | **`claude-sonnet-4-6`**（2026-07-10 移行・コスト最適化） |
+| GAS 本番 Web App | **v22** 手動デプロイ・稼働確認済み |
+| `validator_version: v4` / `schema_version: 1.1.3` | **実施済み** |
+| パイロット v4 実行（再開 Run） | **8/8 完了・隔離 0** |
+| DoD 10.1〜10.5 | **OK** |
+| `data/current/items.json` マージ | **実施済み**（11 件） |
+| `pnpm run validate` | **OK** |
+| 本生成 GO | **Naoya 判断待ち** |
 
 ---
 
@@ -32,147 +31,139 @@
 
 - `SCENE_CANDIDATES`: formal 10 / neutral 7 / informal 7
 - `formatSceneCandidates(register)`: プロンプト用 Markdown 箇条書き生成
-- シーン候補の唯一のソース（今後はこのファイルのみ編集 → `clasp push` → 手動デプロイ）
 
 ### 2.2 `gas/handlers.js` — `generateExamples`（v4）
 
-主な変更:
-
-- `formatSceneCandidates` で register 別シーン候補をプロンプトに注入
-- A2 学習者未習語の **禁止語 + 代替表現** を表形式で明示
-- ホテル・オフィス collapse への注意書き（過去パイロット知見）
-- 判断順序に「シーン候補から選ぶ」ステップを追加（制約 A 維持）
+- シーン候補を `scene-config.js` から注入
+- A2 学習者未習語の禁止語 + 代替表現表
+- ホテル・オフィス collapse への注意書き
 
 ### 2.3 `gas/handlers.js` — `validateCefr`（v4）
 
-方針転換:
+- 明示リスト照合のみ（Haiku）
+- Employees / Visitors / Guests / Students は検出対象外
 
-- Haiku に「B1 かも」と推測させない
-- **検出対象語リスト**との照合のみ（safety net）
-- **検出対象外**: Employees / Visitors / Guests / Students 等（false positive 抑制）
+### 2.4 `gas/claude.js`
 
-### 2.4 パイプライン・ビルド
+- `BUILD_MODEL = 'claude-sonnet-4-6'`（Opus 4.7 から移行）
 
-- `scripts/build-gas-paste.ts`: `scene-config.js` を `handlers.js` より前に結合
-- `scripts/pipeline/generate-examples.ts`: `schema_version: '1.1.2'`, `validator_version: 'v4'`
+### 2.5 パイプライン
 
-### 2.5 ドキュメント
-
-- `doc/ops/claude-api-gas-design.md`: §2.3.1 / §2.3.2 / §2.5.1 追記
+- `schema_version: '1.1.3'` / `validator_version: 'v4'`
 
 ---
 
-## 3. GAS デプロイ状況（重要）
+## 3. GAS デプロイ（解消済み）
 
-### 3.1 実施したこと
-
-```bash
-pnpm run build:gas-paste   # SCENE_CANDIDATES 結合確認済み
-clasp push                 # scene-config.js 含む 6 ファイル
-```
-
-### 3.2 本番 Web App が v4 を実行していない理由
-
-`clasp push` は **エディタ上のソース**を更新するだけで、既存 Web App デプロイ（@19）は古いスナップショットのまま。
-
-指示書どおり **Apps Script エディタの「デプロイ → 新バージョン」** が必要だが、作業中に `clasp deploy -i <本番ID>` を試行した結果:
-
-| URL（デプロイ ID） | 状態 |
+| 項目 | 値 |
 |---|---|
-| `AKfycbzXBNFU...`（本番 @19） | **404**（`clasp deploy -i` 後に応答不能。`-V 19` ロールバックでも復旧せず） |
-| `AKfycbymECuc_1QayB...`（旧 @18） | **稼働中**（health OK。ただし v4 ソース未反映の旧バージョン） |
+| Web App URL | `https://script.google.com/macros/s/AKfycbzTyWCkXyjXic6JcpLJPf-ltV8mlJrGQ8Ip1bkg8A_Sx5cX_crY3zWGcwPCQW-bur7I/exec` |
+| バージョン | **22**（2026-07-10 0:12・Naoya 手動デプロイ） |
+| health | OK |
 
-**暫定対応**: リポジトリの GAS URL を **稼働中の @18** にフォールバック（GitHub Pages の GAS 呼び出しを復旧）。v4 パイロット再実行前に、Naoya がエディタで本番デプロイを **新バージョン**で作り直し、URL を再同期すること。
-
-### 3.3 Anthropic API クレジット
-
-パイロット実行中、後半で以下エラーが発生:
-
-```
-Your credit balance is too low to access the Anthropic API.
-```
-
-`listen_to_music` の validate が失敗し隔離。クレジット補充後に再実行が必要。
+**過去の障害（解消）**: @19 は `clasp deploy -i` 後に 404。v22 を新規手動デプロイで復旧。GAS は **1 URL = プロジェクト全体**（`main` / `handlers` / `claude` / `scene-config` 等すべて含む）。
 
 ---
 
 ## 4. パイロット実行ログ
 
-### Run 1（本番 @19・**v4 未デプロイ**の状態）
+### Run 1（2026-07-09・@19 旧デプロイ / クレジット不足）
 
-デプロイ @19 上の **旧 generate/validate** で実行（`schema_version: 1.1.2` によりキャッシュは回避）。
+- 7/8・隔離 1・禁止語残存 → **DoD NG**（詳細は git 履歴 `1eefce2` 時点の本レポート旧版）
 
-| item | 結果 | 備考 |
+### Run 2（2026-07-10・v22 + Sonnet 4.6 + クレジット補充後）
+
+```bash
+GAS_ENDPOINT_URL=<v22 URL> pnpm run generate:examples -- \
+  --input=data/staging/A2_collocation_validated_enriched.json
+```
+
+| item | 結果 | formal 例文（抜粋） |
 |---|---|---|
-| take_a_picture | **出力に含まれた** | formal: `Visitors are kindly asked...`（禁止語 `kindly` 残存） |
-| have_breakfast | OK | formal: `Guests may have breakfast...` |
-| do_homework | OK | formal: `Students must do their homework...` |
-| catch_a_cold | OK | formal: 手洗い案内（多様性あり） |
-| take_a_shower | OK | formal: `Guests may take a shower...` |
-| go_shopping | OK | formal: 週末の買い物（多様性あり） |
-| get_up_early | OK | formal: `Employees are **expected** to...`（禁止語残存） |
-| listen_to_music | **隔離** | API クレジット不足で validate 失敗 |
+| take_a_picture | OK | Please do not take pictures inside the museum. |
+| have_breakfast | OK | Please come to the dining room to have breakfast before 9:00 a.m. |
+| do_homework | OK | Students must do homework before each class. |
+| catch_a_cold | OK | Please wash your hands often so you do not catch a cold this winter. |
+| take_a_shower | OK | All players must take a shower before entering the pool. |
+| go_shopping | OK | On Saturdays, staff members may go shopping during their lunch break. |
+| get_up_early | OK | Students must get up early on the day of the school trip. |
+| listen_to_music | OK | You must not listen to music during the test. |
 
-**出力**: staging **7 件**（`needs_manual_review` に 1 件＋以前分）
-
-### Run 2（`clasp deploy -i` 後・本番 @19 404）
-
-全 8 件 generate が HTML 404 → **0 件出力**。本番 URL 障害による中断。
+**出力**: staging 8 件・`needs_manual_review` 0 件
 
 ---
 
-## 5. Definition of Done 判定
+## 5. Definition of Done 判定（Run 2）
 
 | # | 項目 | 判定 | 根拠 |
 |---|---|---|---|
-| 10.1 | 8/8・隔離 0 | **NG** | 7/8・隔離 1（クレジット） |
-| 10.2 | formal 禁止語 0 件 | **NG** | `kindly`（take_a_picture）, `expected`（get_up_early） |
-| 10.3 | シーン多様性 | **NG** | formal 6 件中 Guests/Students/Employees が 4 件以上 |
-| 10.4 | ログ・false positive | **一部** | v4 validate 未デプロイのため評価不能。Run1 で `Visitors` 過検出は旧 validate |
-| 10.5 | 制約 A | **おおむね OK** | 対象語の用法は自然（シーンはホテル偏り） |
-
-**結論**: `data/current/items.json` は **更新しない**（指示書 §11.1 未達）。
+| 10.1 | 8/8・隔離 0 | **OK** | ログ・staging 8 件 |
+| 10.2 | formal 禁止語 0 件 | **OK** | kindly / expected / lounge 等 0 件（自動 grep） |
+| 10.3 | シーン多様性 | **OK** | Guests formal 0 件。Students 2 件（<3 閾値）。博物館・プール・テスト等 |
+| 10.4 | ログ・false positive | **OK** | violations ログなし。get_up_early の Employees 問題は解消（今回 formal は Students） |
+| 10.5 | 制約 A | **OK** | 対象語の用法は自然（目視サンプル 8 件） |
 
 ---
 
-## 6. formal 例文抜粋（Run 1・旧デプロイ）
+## 6. `data/current` マージ
 
-| id | formal `en` |
-|---|---|
-| take_a_picture | Visitors are kindly asked not to take a picture inside the museum. |
-| have_breakfast | Guests may have breakfast in the main dining room from seven to ten. |
-| do_homework | Students must do their homework before the next class. |
-| catch_a_cold | Please wash your hands often so that you do not catch a cold this winter. |
-| take_a_shower | Guests may take a shower in their room before dinner. |
-| go_shopping | Many people go shopping on weekends to buy food and clothes for the week. |
-| get_up_early | Employees are expected to get up early on training days. |
+```bash
+# v2 パイロット 8 件を除去 → v4 8 件をマージ
+node -e '...filter pilotIds...'   # 3 件に縮小
+pnpm run merge -- --new=data/staging/A2_collocation_validated_enriched_with_examples.json \
+  --into=data/current/items.json
+pnpm run validate   # OK（サンプル 3 件の register 警告は従来どおり）
+```
 
-v4 プロンプト（禁止語表 + scene-config）が本番に載れば、上記 `kindly` / `expected` / Guests 偏りの改善が期待される。
+**結果**: `data/current/items.json` = **11 件**（サンプル 3 + パイロット v4 の 8）
 
 ---
 
-## 7. Naoya 向け次アクション
+## 7. v3 → v4 の改善点（観察）
 
-1. **Anthropic クレジット補充**
-2. **Apps Script エディタ**で Web App を **新バージョン**デプロイ（`clasp push` 済みソース = v4）
-   - `clasp deploy -i` は **使わない**（404 事例あり）
-   - 本番 URL が復旧したら `.env.example` / `.env.production` / `CLAUDE.md` を再同期
-3. **パイロット v4 再実行**:
-   ```bash
-   pnpm run generate:examples -- --input=data/staging/A2_collocation_validated_enriched.json
-   ```
-4. DoD 10.1〜10.5 を再確認 → OK なら `data/current` マージ（指示書 §11.1 の node + merge）
-5. **本生成 GO** の判断
-
----
-
-## 8. 本生成 GO 判断の材料
-
-| 観点 | v4 実装後の期待 | 現状 |
+| 観点 | v3 典型問題 | v4 Run 2 |
 |---|---|---|
-| 禁止語根絶 | generate 側で Opus に明示禁止 | 本番未反映のため未検証 |
-| シーン多様化 | scene-config で候補提示 | 本番未反映のため未検証 |
-| validate 精度 | 明示リスト + false positive 抑制 | 本番未反映のため未検証 |
-| 運用コスト | Haiku のまま safety net | 設計どおり |
+| 禁止語 | `kindly` / `expected` が formal に残存 | **0 件** |
+| validate false positive | `Employees` で get_up_early 隔離 | **なし**（明示リスト方式） |
+| シーン | Guests may... が複数 | **Guests 0**。プール・テスト・修学旅行等 |
+| モデルコスト | Opus 4.7 | **Sonnet 4.6**（品質維持・8/8） |
 
-**推奨**: v4 コードは main にマージ済み。データマージと本生成 GO は、**GAS 手動デプロイ + クレジット補充後の再パイロット成功**を待つ。
+---
+
+## 8. Naoya 向け：本生成 GO 判断の材料
+
+| 質問 | 材料 |
+|---|---|
+| パイロット品質は本生成に耐えるか | 8/8・禁止語 0・多様性 OK。Sonnet 4.6 で再現性あり |
+| 残リスク | 本生成 2,430 件のコスト・時間。稀な禁止語漏れは validate v4 が safety net |
+| 推奨次ステップ | **本生成 GO** なら `pnpm run batch:a2-seeds` 等（`doc/ops/data-operations-guide.md`） |
+| 保留する場合 | B1 データや Mode A/B 実装を先にする等 |
+
+---
+
+## 9. Claude への展開ガイド（Naoya 用）
+
+次の Claude セッションに渡すと効率的な情報:
+
+1. **必読**: 本ファイル + `doc/ops/claude-api-gas-design.md` §2.3.1 / §2.5.1
+2. **結論を先に**: 「パイロット v4 DoD 全項目 OK。`data/current` 11 件更新済み。本生成 GO 判断待ち」
+3. **技術変更の要点**:
+   - 品質管理の主戦場は **generateExamples 禁止語表 + scene-config**（validate は補助）
+   - Build モデルは **Sonnet 4.6**（Opus からコスト削減）
+   - GAS v22 URL（上記 §3）
+4. **実データ**: Run 2 の formal 例文表（§4）を貼る
+5. **依頼例**: 「A2 collocation 2,430 件本生成の GO/NO-GO 判断」「本生成時のバッチ設計レビュー」「B1 への禁止語表拡張方針」
+
+---
+
+## 10. 完了基準チェックリスト（指示書 §13）
+
+- ✅ `gas/scene-config.js` 配置
+- ✅ `generateExamples` / `validateCefr` v4 更新
+- ✅ `claude-api-gas-design.md` 更新
+- ✅ キャッシュキー `v4` / `1.1.3`
+- ✅ GAS v22 デプロイ・パイロット 8/8
+- ✅ formal 禁止語 0 件
+- ✅ シーン多様性 OK
+- ✅ `data/current` 11 件・validate OK
+- ✅ 本レポート更新

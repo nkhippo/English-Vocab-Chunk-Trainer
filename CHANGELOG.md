@@ -40,6 +40,7 @@
 
 ### Changed (2026-07-10)
 
+- パイロット v4 **再実行完了**: 8/8・DoD OK・`data/current` 11 件マージ
 - GAS 本番 URL → **v22** 手動デプロイ（`AKfycbzTyWCk...`）
 - GAS Build モデル: `claude-opus-4-7` → **`claude-sonnet-4-6`**（トークンコスト最適化）
 - `gas/claude.js`: `BUILD_MODEL` 定数、Sonnet は `temperature` 送信可
@@ -59,9 +60,7 @@
 
 ### Pending (Naoya)
 
-- **GAS 手動デプロイ**（v4 ソース反映・@19 復旧 or 新 URL）
-- **Anthropic クレジット補充**後のパイロット v4 再実行
-- **A2 本生成 GO**（DoD 達成後）
+- **A2 本生成 GO** 判断（パイロット v4 DoD OK — `pilot-v4-handoff-report.md` §8）
 - iPhone Safari ホーム画面追加（任意）
 - `/review` UI の情報設計・レイアウト改善（Phase 2 以降）
 

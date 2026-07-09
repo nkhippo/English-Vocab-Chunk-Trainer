@@ -33,9 +33,15 @@
 - UX スモークテスト（5 分版）: **合格**（単語帳・検証・設定）
 - clasp 分割ファイル（`main.gs` / `handlers.gs` 等）+ デプロイ v19
 
+### Changed (pilot v3)
+
+- `gas/handlers.js`: validateCefr プロンプト厳格化（false negative 優先）
+- `generate-examples.ts`: `validator_version: v3` / `schema_version: 1.1.1`
+
 ### Pending (Naoya)
 
-- **A2 本生成 GO**（`pnpm run batch:a2-seeds`、2,430 件）— パイロット v2 OK 済み
+- **validate-cefr Opus 化 or generateExamples 制約強化**（v3 DoD 未達 — `pilot-v3-handoff-report.md`）
+- **A2 本生成 GO**（`pnpm run batch:a2-seeds`、2,430 件）
 - iPhone Safari ホーム画面追加（任意）
 - `/review` UI の情報設計・レイアウト改善（Phase 2 以降）
 

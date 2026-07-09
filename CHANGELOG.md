@@ -16,7 +16,7 @@
 
 ### Changed
 
-- GAS Web App URL を手動デプロイ本番に更新（`AKfycbymECuc_...`、CORS 確認済み）
+- GAS Web App URL を clasp 手動デプロイ v19 に更新（`AKfycbzXBNFU...`、health + validate-cefr 確認済み）
 - `gas/handlers.js`: enrich / generate-examples プロンプトを設計書 §2.2 / §2.3 準拠に強化
 - `generate:examples` から `temperature` パラメータ送信を削除
 - `doc/repository-structure.md`: AI 入口・現状サマリ・handoff 一覧を拡充

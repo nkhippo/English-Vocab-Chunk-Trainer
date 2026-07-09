@@ -46,7 +46,7 @@ Phase 1 指示書: `doc/instructions/cursor-instruction-phase1.md`
 4. **現行 Web App URL**（2026-07-09 Naoya 手動デプロイ。CORS + Opus 4.7 + プロンプト修正反映）:
 
 ```
-https://script.google.com/macros/s/AKfycbymECuc_1QayB_u3Zhf07Ls5HYzkASEXdYz4kDYi7vzvutwP5ZLvGWIwyQuRLye3954/exec
+https://script.google.com/macros/s/AKfycbzXBNFUfmG6dTbHhw4xNI-n_gB0QYNL-dYpddSHEK9Pe4a-4hp-CmhjL4c8iTPcPqsU/exec
 ```
 
 5. 疎通確認（現行 URL）

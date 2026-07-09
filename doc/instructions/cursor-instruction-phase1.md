@@ -3,7 +3,7 @@
 対象リポジトリ: `nkhippo/English-Vocab-Chunk-Trainer`（指示書原文の `nkhipko/vocab-chunk-trainer` から実リポジトリ名に置換）
 
 > **実装結果・指示書からの差分・残課題**は `doc/handoff/phase1-handoff-report.md` を参照（2026-07-08）。  
-> **稼働 GAS**: `https://script.google.com/macros/s/AKfycbymECuc_1QayB_u3Zhf07Ls5HYzkASEXdYz4kDYi7vzvutwP5ZLvGWIwyQuRLye3954/exec`
+> **稼働 GAS**: `https://script.google.com/macros/s/AKfycbzXBNFUfmG6dTbHhw4xNI-n_gB0QYNL-dYpddSHEK9Pe4a-4hp-CmhjL4c8iTPcPqsU/exec`
 
 > **パス注記（本リポジトリ）**  
 > 指示書の `docs/` は既存の `doc/` を使用する。  

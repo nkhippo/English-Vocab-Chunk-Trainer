@@ -24,13 +24,13 @@
 ### 稼働中 GAS Web App（本番）
 
 ```
-https://script.google.com/macros/s/AKfycbymECuc_1QayB_u3Zhf07Ls5HYzkASEXdYz4kDYi7vzvutwP5ZLvGWIwyQuRLye3954/exec
+https://script.google.com/macros/s/AKfycbzXBNFUfmG6dTbHhw4xNI-n_gB0QYNL-dYpddSHEK9Pe4a-4hp-CmhjL4c8iTPcPqsU/exec
 ```
 
 **2026-07-09 確認**（Cursor 実施）:
 
 ```bash
-U="https://script.google.com/macros/s/AKfycbymECuc_1QayB_u3Zhf07Ls5HYzkASEXdYz4kDYi7vzvutwP5ZLvGWIwyQuRLye3954/exec"
+U="https://script.google.com/macros/s/AKfycbzXBNFUfmG6dTbHhw4xNI-n_gB0QYNL-dYpddSHEK9Pe4a-4hp-CmhjL4c8iTPcPqsU/exec"
 curl -sL "${U}?path=health&origin=https://nkhippo.github.io"
 # → {"ok":true,"data":{"service":"vocab-chunk-trainer-gas",...}}
 

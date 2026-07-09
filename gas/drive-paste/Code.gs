@@ -146,21 +146,26 @@ function saveCachedResponse(cacheKey, data) {
 }
 
 // --- claude.js ---
+/** Build パイプライン（seed / enrich / examples / insight）の既定モデル */
+var BUILD_MODEL = 'claude-sonnet-4-6'
+
 function callClaude(prompt, model, temperature, maxTokens) {
   var apiKey = PropertiesService.getScriptProperties().getProperty('ANTHROPIC_API_KEY')
   if (!apiKey) {
     throw new Error('ANTHROPIC_API_KEY is not set in Script Properties')
   }
 
-  var resolvedModel = model || 'claude-opus-4-7'
+  var resolvedModel = model || BUILD_MODEL
   var payload = {
     model: resolvedModel,
     max_tokens: maxTokens || 4000,
     messages: [{ role: 'user', content: prompt }],
   }
 
-  // Opus 4.7 rejects non-default temperature / top_p / top_k (HTTP 400).
-  if (resolvedModel.indexOf('claude-opus-4-7') !== 0) {
+  // Opus 4.7+ rejects non-default temperature / top_p / top_k (HTTP 400).
+  var isOpusNoTemp =
+    resolvedModel.indexOf('claude-opus-4-7') === 0 || resolvedModel.indexOf('claude-opus-4-8') === 0
+  if (!isOpusNoTemp) {
     payload.temperature = temperature == null ? 0.4 : temperature
   }
 
@@ -317,7 +322,7 @@ function generateSeed(body) {
     ']',
   ].join('\n')
 
-  var text = callClaude(prompt, 'claude-opus-4-7', 0.4, 4000)
+  var text = callClaude(prompt, BUILD_MODEL, 0.4, 4000)
   return { items: extractJson(text) }
 }
 
@@ -409,7 +414,7 @@ function enrichItem(body) {
     '上記テンプレートに準拠した JSON オブジェクトのみ。マークダウンコードブロックの ``` は不要。前置き・説明も不要。',
   ].join('\n')
 
-  var text = callClaude(prompt, 'claude-opus-4-7', 0.3, 4000)
+  var text = callClaude(prompt, BUILD_MODEL, 0.3, 4000)
   return extractJson(text)
 }
 
@@ -519,7 +524,7 @@ function generateExamples(body) {
     'JSON オブジェクトのみ出力。マークダウンコードブロック不要、前置き・説明も不要。',
   ].join('\n')
 
-  var text = callClaude(prompt, 'claude-opus-4-7', temperature, 2500)
+  var text = callClaude(prompt, BUILD_MODEL, temperature, 2500)
   return extractJson(text)
 }
 
@@ -530,7 +535,7 @@ function generateInsight(body) {
     JSON.stringify(item),
     '形式: {"id":"insight_<id>","target_id":"<id>","type":"core_image","content_ja":"...","content_en":"..."}',
   ].join('\n')
-  var text = callClaude(prompt, 'claude-opus-4-7', 0.4, 1500)
+  var text = callClaude(prompt, BUILD_MODEL, 0.4, 1500)
   return extractJson(text)
 }
 

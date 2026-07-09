@@ -168,7 +168,7 @@ english-vocab-chunk-trainer/
 │   ├── README.md
 │   ├── main.js                        #   doGet/doPost・CORS origin ゲート
 │   ├── cache.js
-│   ├── claude.js                      #   Claude API（Opus 4.7、temperature 除外）
+│   ├── claude.js                      #   Claude API（Sonnet 4.6 Build、Haiku 判定）
 │   ├── handlers.js                    #   ビルド系エンドポイント・プロンプト
 │   ├── prompts/                       #   プロンプト参照用（doc/ops と対応）
 │   └── drive-paste/Code.gs            #   手動デプロイ用結合ファイル（build:gas-paste）
@@ -243,7 +243,7 @@ batch-a2-seeds ──► generate-seed ──► [人手 /review] ──► enri
 |---|---|
 | `main.js` | `doGet` / `doPost`、CORS origin ゲート |
 | `handlers.js` | ビルド系エンドポイント・プロンプト（**主にここを編集**） |
-| `claude.js` | Claude API 呼び出し（Opus 4.7、temperature 除外） |
+| `claude.js` | Claude API 呼び出し（Build: Sonnet 4.6、Haiku 判定） |
 | `cache.js` | Drive キャッシュ |
 | `drive-paste/Code.gs` | **生成物** — `pnpm run build:gas-paste` の出力。手動貼り付け用 |
 | `prompts/` | プロンプト参照用（clasp push 対象外） |

@@ -52,7 +52,7 @@ async function main() {
     for (let attempt = 1; attempt <= 3; attempt++) {
       await sleep(1000)
       const gen = await callGasScript<{ example_sentences?: unknown[] }>('generate-examples', {
-        schema_version: '1.1.2',
+        schema_version: '1.1.3',
         item: {
           id: item.id,
           surface: item.surface,

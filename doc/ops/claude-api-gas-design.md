@@ -11,7 +11,7 @@
 | Phase 1 エンドポイント 5 つ | 稼働確認済み（GET health + POST generate-seed / validate-cefr） |
 | キャッシュ | Drive フォルダ `vocab-chunk-trainer-cache`（SHA-256） |
 | リポジトリ側ソース | `gas/*.js`（**clasp push 正本**）+ フォールバック `gas/drive-paste/Code.gs` |
-| Build モデル | `claude-opus-4-7`（2026-07-09 移行。`temperature` は Opus 4.7 で送信しない） |
+| Build モデル | `claude-sonnet-4-6`（2026-07-10 移行。コスト最適化。`temperature` 送信可） |
 | Runtime / 判定モデル | `claude-haiku-4-5-20251001`（現行 Haiku 正式 ID） |
 
 運用コマンド・env の詳細は `gas/README.md`。作業差分の全体像は `doc/handoff/phase1-handoff-report.md`。
@@ -55,7 +55,7 @@
 
 **目的**: カテゴリ × CEFR レベルの学習項目候補を生成する。
 
-**モデル**: `claude-opus-4-7`  
+**モデル**: `claude-sonnet-4-6`  
 **Temperature**: `0.4`(多様性は要るが品質もほしい)  
 **max_tokens**: `4000`
 
@@ -108,7 +108,7 @@ JSON 配列のみを出力。前置きや説明は不要。
 
 **目的**: seed 生成で確定した 1 項目に対し、意味関係・混同語・派生用法・典型誤用を生成する。
 
-**モデル**: `claude-opus-4-7`  
+**モデル**: `claude-sonnet-4-6`  
 **Temperature**: `0.3`  
 **max_tokens**: `3000`
 
@@ -174,7 +174,7 @@ JSON オブジェクトのみ。前置き不要。
 
 **目的**: register 別(neutral/formal/informal)の例文を生成。**制約 A/B/C を厳守**。
 
-**モデル**: `claude-opus-4-7`  
+**モデル**: `claude-sonnet-4-6`  
 **Temperature**: `0.5`(例文の自然さのため、やや高め)  
 **max_tokens**: `2000`
 
@@ -255,7 +255,7 @@ Opus が formal 例文で B1 語彙(expected, kindly, lounge 等)を混入させ
 
 **目的**: 語源・メタファー・文化背景など Insight カードのコンテンツを生成する。
 
-**モデル**: `claude-opus-4-7`  
+**モデル**: `claude-sonnet-4-6`  
 **Temperature**: `0.3`  
 **max_tokens**: `1000`
 
@@ -289,7 +289,7 @@ v4 では方針を変更し、`/validate-cefr` は **明示リストベースの
 - `/validate-cefr` は明示リストに該当する語のみを検出する safety net
 - 「これは B1 かも」という推測判定はさせない
 
-この構成により、Haiku の判定精度に依存せず、Opus 側の生成品質を担保しやすくなる。
+この構成により、Haiku の判定精度に依存せず、Build モデル（Sonnet）側の生成品質を担保しやすくなる。
 
 ---
 

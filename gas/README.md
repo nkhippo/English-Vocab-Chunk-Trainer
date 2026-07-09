@@ -58,7 +58,7 @@ curl -sL "$GAS_ENDPOINT_URL"
 
 | Endpoint group | Model ID | Notes |
 |---|---|---|
-| generate-seed / enrich-item / generate-examples / generate-insight | `claude-opus-4-7` | `temperature` は送信しない（4.7 仕様） |
+| generate-seed / enrich-item / generate-examples / generate-insight | `claude-sonnet-4-6` | `temperature` 送信可（エンドポイント別に 0.3〜0.5） |
 | validate-cefr | `claude-haiku-4-5-20251001` | 判定系 Haiku |
 
 **本番 Web App**: `clasp push` 後、エディタで **デプロイ → 新バージョン** を推奨。`clasp deploy -i <DEPLOYMENT_ID> -V <N>` は本番 URL が 404 になる事例あり（`doc/handoff/pilot-test-handoff-report.md`）。現行本番 URL はファイル先頭を参照。

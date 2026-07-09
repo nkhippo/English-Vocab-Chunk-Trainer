@@ -1,4 +1,4 @@
-import 'dotenv/config'
+import '../lib/load-env.ts'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { callGasScript, parseArgs, sleep, readJson, writeJson, ensureDir } from '../lib/utils.ts'

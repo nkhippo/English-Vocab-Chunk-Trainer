@@ -42,7 +42,8 @@ https://script.google.com/macros/s/AKfycbzXBNFUfmG6dTbHhw4xNI-n_gB0QYNL-dYpddSHE
 ```
 
 - Script Properties: `ANTHROPIC_API_KEY`（設定済み）
-- Local: `.env` / `.env.example` の `GAS_ENDPOINT_URL`
+- Local pipeline: `.env`（任意）→ 未設定時は `.env.example` の `GAS_ENDPOINT_URL`
+- Local dev (`pnpm dev`): `.env.development` の `VITE_GAS_ENDPOINT_URL`
 - Pages build: `.env.production` の `VITE_GAS_ENDPOINT_URL`
 - Health GET 応答は `{ ok: true, data: { service, paths } }`（二重ラップなし）
 

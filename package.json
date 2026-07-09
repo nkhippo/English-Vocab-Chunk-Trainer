@@ -14,6 +14,7 @@
     "merge": "tsx scripts/pipeline/merge-data.ts",
     "validate": "tsx scripts/pipeline/validate-schema.ts",
     "build:gas-paste": "tsx scripts/build-gas-paste.ts",
+    "env:sync": "tsx scripts/sync-env.ts",
     "batch:a2-seeds": "tsx scripts/pipeline/batch-a2-seeds.ts"
   },
   "dependencies": {

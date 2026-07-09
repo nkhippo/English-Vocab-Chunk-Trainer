@@ -62,7 +62,7 @@ export async function callGasScript<T>(gasPath: GasPath, body: unknown): Promise
       ok: false,
       error: {
         code: 'missing_env',
-        message: 'GAS_ENDPOINT_URL is not set in .env',
+        message: 'GAS_ENDPOINT_URL is not set (.env optional — defaults from .env.example)',
       },
     }
   }

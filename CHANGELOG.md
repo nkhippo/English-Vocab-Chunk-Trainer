@@ -17,6 +17,7 @@
 ### Changed
 
 - GAS Web App URL を clasp 手動デプロイ v19 に更新（`AKfycbzXBNFU...`、health + validate-cefr 確認済み）
+- 環境変数: `.env` 不要化（`.env.example` / `.env.development` フォールバック、`pnpm run env:sync`）
 - `gas/handlers.js`: enrich / generate-examples プロンプトを設計書 §2.2 / §2.3 準拠に強化
 - `generate:examples` から `temperature` パラメータ送信を削除
 - `doc/repository-structure.md`: AI 入口・現状サマリ・handoff 一覧を拡充

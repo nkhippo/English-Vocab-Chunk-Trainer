@@ -24,9 +24,16 @@ CEFR に沿った語彙・チャンク訓練用 PWA。Basic 2400 完走後に IE
 
 ```bash
 pnpm install
-cp .env.example .env
-# GAS Web App URL を GAS_ENDPOINT_URL / VITE_GAS_ENDPOINT_URL に設定
 pnpm dev
+```
+
+**`.env` は不要です。** GAS Web App URL は Git 管理の `.env.example` / `.env.development` / `.env.production` に入っています（公開 URL のためコミット可）。  
+パイプライン CLI は `.env` がなくても `.env.example` を自動参照します。
+
+任意: ローカルだけ上書きしたい場合は `cp .env.example .env`。GAS URL 変更後に `.env` を同期するには:
+
+```bash
+pnpm run env:sync
 ```
 
 開発サーバ: http://localhost:5173/English-Vocab-Chunk-Trainer/
@@ -43,6 +50,7 @@ pnpm dev
 | `pnpm run generate:examples -- --input=data/staging/..._enriched.json` | 例文生成 |
 | `pnpm run merge -- --new=data/staging/A2_final.json --into=data/current/items.json` | マージ |
 | `pnpm run validate` | スキーマ検証 |
+| `pnpm run env:sync` | ローカル `.env` の GAS URL を `.env.example` に合わせる（任意） |
 
 ## GAS
 

@@ -3,7 +3,8 @@
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  
 指示書: `cursor_instruction_pilot_test.md`（Downloads）  
 最終更新: 2026-07-09（GAS 本番 URL 更新・手動デプロイ反映確認済み）  
-前提: Step 1〜3 完了後（`doc/handoff/step1-3-handoff-report.md`）
+前提: Step 1〜3 完了後（`doc/handoff/step1-3-handoff-report.md`）  
+関連: `doc/handoff/phase1-handoff-report.md`（Phase 1 全体）
 
 ---
 
@@ -45,7 +46,9 @@ curl -sL "${U}?path=health&origin=https://evil.example.com"
 
 ---
 
-## 2. Definition of Done チェックリスト
+## 2. Definition of Done チェックリスト（初回パイロット実行時）
+
+> 以下は **プロンプト修正前** の GAS 上で実行した初回結果。`gas/handlers.js` 修正・本番手動デプロイ後に **同一 8 件で再テスト** し、本節を上書き更新すること。
 
 対象ファイル: `data/staging/A2_collocation_validated_enriched_with_examples.json`（6 件）+ `needs_manual_review.json`（2 件）
 

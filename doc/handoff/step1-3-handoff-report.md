@@ -1,9 +1,10 @@
 # Step 1〜3 作業ハンドオフレポート
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  
-最終更新: 2026-07-09（GAS 新デプロイ・CORS/Opus 4.7 本番反映確認済み）  
+最終更新: 2026-07-09（GAS 本番 URL 更新・パイロットテスト実施）  
 指示書: `cursor_instruction_step1-3.md`（Downloads）  
-前提: `doc/handoff/phase1-handoff-report.md`（Phase 1 骨格完了後）
+前提: `doc/handoff/phase1-handoff-report.md`（Phase 1 骨格完了後）  
+関連: `doc/handoff/pilot-test-handoff-report.md`（本生成前の 8 件パイロット）
 
 ---
 
@@ -12,14 +13,16 @@
 | Step | リポジトリ実装 | 本番 GAS 反映 | 備考 |
 |---|---|---|---|
 | 1 CORS 限定 | **完了** | **完了** | 許可外 origin → `403 origin_forbidden` 確認済み |
-| 2 Opus 4.7 | **完了** | **完了** | 新デプロイ URL で seed 疎通確認済み |
-| 3 A2 本生成 | **準備完了** | Naoya 作業待ち | seed CLI・batch 追加。検証 UI は人力 |
+| 2 Opus 4.7 | **完了** | **完了** | 現行 URL で seed 疎通確認済み |
+| 3 A2 本生成 | **準備完了** | **パイロット待ち** | seed CLI・batch 追加。先に 8 件パイロット再テスト |
+| パイロット（8 件） | **初回実施済み** | **再テスト待ち** | 詳細は `pilot-test-handoff-report.md` |
 
 **次のアクション（Naoya）**
 
 1. ~~GAS 新バージョンデプロイ~~ → **完了**（下記 URL）
 2. ~~CORS / Opus 4.7 疎通確認~~ → **完了**
-3. `pnpm run batch:a2-seeds` → `/review` で全件検証 → enrich / examples / merge
+3. **パイロット再テスト**（A2 collocation 8 件）→ DoD OK を確認
+4. `pnpm run batch:a2-seeds` → `/review` で全件検証 → enrich / examples / merge
 
 ---
 
@@ -98,15 +101,16 @@ pnpm run generate:seed -- --cefr=A2 --category=word --batch=3
 ### 現状
 
 - `data/current/items.json`: **3 件**（サンプルのまま）
-- `data/staging/A2_word_seeds.json`: **5 件**（疎通テスト生成・gitignore）
-- **未完了**: Naoya による全カテゴリ `/review` 検証（想定 12〜15 時間）
+- `data/staging/`: パイロット生成物あり（gitignore。collocation 8 件 seed / enrich / examples 6 件）
+- **未完了**: パイロット再テスト → 本生成 `batch:a2-seeds` → 全カテゴリ `/review`（想定 12〜15 時間）
 
 ### 推奨手順（Naoya）
 
-1. `pnpm run batch:a2-seeds`（長時間・API 課金あり）
-2. カテゴリ順に `/review` → validated JSON エクスポート
-3. enrich → examples → merge（指示書ループ）
-4. `pnpm run validate` → `data/releases/v1.0.0/` スナップショット
+1. **パイロット再テスト**（`cursor_instruction_pilot_test.md` 参照。8 件 collocation）
+2. `pnpm run batch:a2-seeds`（長時間・API 課金あり）
+3. カテゴリ順に `/review` → validated JSON エクスポート
+4. enrich → examples → merge（指示書ループ）
+5. `pnpm run validate` → `data/releases/v1.0.0/` スナップショット
 
 ---
 
@@ -116,7 +120,7 @@ pnpm run generate:seed -- --cefr=A2 --category=word --batch=3
 https://script.google.com/macros/s/AKfycbymECuc_1QayB_u3Zhf07Ls5HYzkASEXdYz4kDYi7vzvutwP5ZLvGWIwyQuRLye3954/exec
 ```
 
-（2026-07-09 Naoya 手動デプロイ。旧 `AKfycbx...` / `AKfycbz_gk2...` は使用しない）
+（2026-07-09 Naoya 手動デプロイ。旧 `AKfycbz_94XY...` / `AKfycbx...` / `AKfycbz_gk2...` は使用しない）
 
 更新済み: `.env.example`, `.env.production`, `CLAUDE.md`, `gas/README.md`, 関連 `doc/*`
 
@@ -131,9 +135,9 @@ https://script.google.com/macros/s/AKfycbymECuc_1QayB_u3Zhf07Ls5HYzkASEXdYz4kDYi
 
 ## Phase 2 / 残 P1 への申し送り
 
-- Step 3 完了（≥2,000 件 merge）後に Phase 2 着手
-- Pages からの `callGas` を実機確認（CORS + 新 URL は本番反映済み）
-- `needs_manual_review.json` は全カテゴリ後に Naoya が一括判断
+- **パイロット再テスト OK** → Step 3 本生成（≥2,000 件 merge）→ Phase 2 着手
+- Pages からの `callGas` を実機確認（CORS + 現行 URL は本番反映済み）
+- `needs_manual_review.json` はパイロット・本生成後に Naoya が一括判断
 
 ---
 

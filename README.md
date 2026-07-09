@@ -8,13 +8,14 @@ CEFR に沿った語彙・チャンク訓練用 PWA。Basic 2400 完走後に IE
 - 構成表: [`doc/repository-structure.md`](doc/repository-structure.md)
 - Phase 1 作業報告（差分・残課題）: [`doc/handoff/phase1-handoff-report.md`](doc/handoff/phase1-handoff-report.md)
 - Step 1〜3 作業報告: [`doc/handoff/step1-3-handoff-report.md`](doc/handoff/step1-3-handoff-report.md)
+- パイロットテスト報告: [`doc/handoff/pilot-test-handoff-report.md`](doc/handoff/pilot-test-handoff-report.md)
 
 ## Phase 1 の範囲
 
 - Vite + React + TypeScript + Tailwind PWA 骨格
 - 日英 UI・ガイドモーダル・レイアウト
 - `/browse` 骨格・`/review` 検証 UI
-- `scripts/` データパイプライン（GAS 経由 Claude）
+- `scripts/pipeline/` データパイプライン（GAS 経由 Claude）
 - `gas/` Claude API プロキシ
 
 **未実装（Phase 2）**: Mode A/B/C 学習画面、SRS、単語帳検索・詳細、`/review-writing`

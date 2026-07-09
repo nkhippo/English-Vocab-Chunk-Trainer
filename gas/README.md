@@ -29,7 +29,7 @@ curl -sL "$GAS_ENDPOINT_URL"
 | generate-seed / enrich-item / generate-examples / generate-insight | `claude-opus-4-7` | `temperature` は送信しない（4.7 仕様） |
 | validate-cefr | `claude-haiku-4-5-20251001` | 判定系 Haiku |
 
-**本番 Web App**: `clasp push` 後、エディタで **デプロイ → 新バージョン** が必要。`clasp deploy -V` で新規バージョンを公開した際、反映まで 1〜2 分かかることがある。稼働中デプロイを旧バージョンに戻す場合は `clasp deploy -i <DEPLOYMENT_ID> -V 2` 等。
+**本番 Web App**: `clasp push` 後、エディタで **デプロイ → 新バージョン** を推奨。`clasp deploy -i <DEPLOYMENT_ID> -V <N>` は本番 URL が 404 になる事例あり（`doc/handoff/pilot-test-handoff-report.md`）。現行本番 URL はファイル先頭を参照。
 
 ### CORS / 許可オリジン（2026-07-09）
 

@@ -35,7 +35,7 @@
 ### テスト（コード反映後に実施）
 
 ```bash
-U="https://script.google.com/macros/s/AKfycbz_94XYG6UzI4v5Na6VF-_yxnG5VWmit3KceNhHJiFZjGvbJKp6m-RnEYXdaV4hnlIH/exec"
+U="https://script.google.com/macros/s/AKfycbymECuc_1QayB_u3Zhf07Ls5HYzkASEXdYz4kDYi7vzvutwP5ZLvGWIwyQuRLye3954/exec"
 curl -sL "$U"                                    # OK
 curl -sL "${U}?origin=https://nkhippo.github.io" # OK
 curl -sL "${U}?origin=https://evil.example.com"  # 403 origin_forbidden
@@ -113,7 +113,7 @@ pnpm run generate:seed -- --cefr=A2 --category=word --batch=3
 ## GAS URL（現行）
 
 ```
-https://script.google.com/macros/s/AKfycbz_94XYG6UzI4v5Na6VF-_yxnG5VWmit3KceNhHJiFZjGvbJKp6m-RnEYXdaV4hnlIH/exec
+https://script.google.com/macros/s/AKfycbymECuc_1QayB_u3Zhf07Ls5HYzkASEXdYz4kDYi7vzvutwP5ZLvGWIwyQuRLye3954/exec
 ```
 
 （2026-07-09 Naoya 手動デプロイ。旧 `AKfycbx...` / `AKfycbz_gk2...` は使用しない）

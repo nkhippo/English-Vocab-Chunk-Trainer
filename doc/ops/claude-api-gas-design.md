@@ -6,7 +6,7 @@
 
 | 項目 | 状態 |
 |---|---|
-| Web App URL | `https://script.google.com/macros/s/AKfycbz_94XYG6UzI4v5Na6VF-_yxnG5VWmit3KceNhHJiFZjGvbJKp6m-RnEYXdaV4hnlIH/exec` |
+| Web App URL | `https://script.google.com/macros/s/AKfycbymECuc_1QayB_u3Zhf07Ls5HYzkASEXdYz4kDYi7vzvutwP5ZLvGWIwyQuRLye3954/exec` |
 | Script Properties `ANTHROPIC_API_KEY` | 設定済み |
 | Phase 1 エンドポイント 5 つ | 稼働確認済み（GET health + POST generate-seed / validate-cefr） |
 | キャッシュ | Drive フォルダ `vocab-chunk-trainer-cache`（SHA-256） |

@@ -13,7 +13,7 @@
 
 ### Changed
 
-- GAS Web App URL を Step 1〜2 反映デプロイに更新（`AKfycbz_94XY...`）
+- GAS Web App URL を手動デプロイ本番に更新（`AKfycbymECuc_...`、CORS 確認済み）
 - `generate:examples` から `temperature` パラメータ送信を削除
 
 ### Pending (Naoya)

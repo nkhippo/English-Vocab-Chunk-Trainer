@@ -45,7 +45,7 @@ Phase 1 指示書: `doc/instructions/cursor-instruction-phase1.md`
 4. **現行 Web App URL**（2026-07-09 Step 1〜2 反映デプロイ。CORS + Opus 4.7）:
 
 ```
-https://script.google.com/macros/s/AKfycbz_94XYG6UzI4v5Na6VF-_yxnG5VWmit3KceNhHJiFZjGvbJKp6m-RnEYXdaV4hnlIH/exec
+https://script.google.com/macros/s/AKfycbymECuc_1QayB_u3Zhf07Ls5HYzkASEXdYz4kDYi7vzvutwP5ZLvGWIwyQuRLye3954/exec
 ```
 
 5. 疎通確認（新 URL）

@@ -24,7 +24,7 @@
     "category": "idiom",
     "cefr_level": "B1",
     "translations_ja": ["楽勝", "簡単すぎること"],
-    "register": "casual",
+    "register": "informal",
     "frequency_hint": "medium"
   },
   {
@@ -42,7 +42,7 @@
     "category": "institutionalized",
     "cefr_level": "A1",
     "translations_ja": ["調子どう？"],
-    "register": "casual",
+    "register": "informal",
     "frequency_hint": "high"
   }
 ]

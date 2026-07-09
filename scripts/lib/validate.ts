@@ -87,10 +87,38 @@ function checkCefrCeiling(item: LearningItem, errors: string[]) {
 }
 
 function checkRegisterCoverage(item: LearningItem, warnings: string[]) {
-  const registers = new Set((item.example_sentences ?? []).map((e) => e.register))
-  if (item.category === 'institutionalized' && item.register === 'casual') {
-    if (!registers.has('casual')) warnings.push(`${item.id}: expected casual example`)
+  const exampleRegisters = new Set((item.example_sentences ?? []).map((e) => e.register))
+  const itemRegisters = new Set(
+    Array.isArray(item.register) ? item.register : [item.register].filter(Boolean),
+  )
+
+  for (const r of exampleRegisters) {
+    if (!itemRegisters.has(r)) {
+      warnings.push(`${item.id}: example has register "${r}" but item.register does not include it`)
+    }
+  }
+  for (const r of itemRegisters) {
+    if (!exampleRegisters.has(r)) {
+      warnings.push(`${item.id}: item.register includes "${r}" but no example has that register`)
+    }
+  }
+
+  if (exampleRegisters.size === 0) {
+    warnings.push(`${item.id}: no examples`)
     return
   }
-  if (registers.size < 1) warnings.push(`${item.id}: no examples`)
+
+  if (item.category === 'collocation' || item.category === 'phrasal_verb') {
+    if (exampleRegisters.size < 3) {
+      warnings.push(
+        `${item.id}: expected 3 registers (formal/neutral/informal) for ${item.category}, got ${exampleRegisters.size} (${[...exampleRegisters].join(', ')})`,
+      )
+    }
+  }
+
+  if (item.category === 'institutionalized') {
+    if (exampleRegisters.size < 1) {
+      warnings.push(`${item.id}: institutionalized item has no examples`)
+    }
+  }
 }

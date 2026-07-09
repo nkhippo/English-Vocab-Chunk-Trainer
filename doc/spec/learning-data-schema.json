@@ -3,7 +3,7 @@
   "$id": "https://github.com/nkhippo/English-Vocab-Chunk-Trainer/schema/v1",
   "title": "Vocab & Chunk Trainer Data Schema",
   "description": "Authoritative schema for LearningItem and Insight. All data in the app conforms to this schema.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "definitions": {
     "cefrLevel": {
       "type": "string",
@@ -24,7 +24,7 @@
     },
     "register": {
       "type": "string",
-      "enum": ["formal", "neutral", "casual"]
+      "enum": ["formal", "neutral", "informal"]
     },
     "skillFocus": {
       "type": "string",
@@ -32,7 +32,18 @@
     },
     "collocationPattern": {
       "type": ["string", "null"],
-      "enum": ["V+N", "Adj+N", "Adv+V", "Adv+Adj", "V+Prep", "N+of+N", null]
+      "enum": [
+        "V+N",
+        "Adj+N",
+        "Adv+V",
+        "Adv+Adj",
+        "V+Prep",
+        "V+Prep+N",
+        "V+Ving",
+        "V+Adv",
+        "N+of+N",
+        null
+      ]
     },
     "exampleSentence": {
       "type": "object",
@@ -167,7 +178,13 @@
           "items": { "type": "string" },
           "minItems": 1
         },
-        "register": { "$ref": "#/definitions/register" },
+        "register": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/register" },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "Set of registers this item can naturally be used in. Derived from example_sentences[].register in the pipeline; used for browse-view filtering."
+        },
         "collocation_pattern": { "$ref": "#/definitions/collocationPattern" },
         "function_tag": {
           "type": "array",
@@ -178,7 +195,7 @@
         "ipa_careful": { "type": "string" },
         "ipa_connected": {
           "type": "string",
-          "description": "For phrases only; single-word items may omit this"
+          "description": "For phrases (surface contains spaces) this is required; single-word items may omit this"
         },
         "audio_ref": { "type": "string" },
         "book_alignment": { "$ref": "#/definitions/bookAlignment" },

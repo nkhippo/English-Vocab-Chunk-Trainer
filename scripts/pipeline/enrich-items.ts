@@ -41,6 +41,7 @@ async function main() {
     console.log(`[enrich] ${i + 1}/${items.length} ${item.id}`)
     await sleep(1000)
     const result = await callGasScript<Record<string, unknown>>('enrich-item', {
+      schema_version: '1.1.0',
       item: {
         id: item.id,
         surface: item.surface,

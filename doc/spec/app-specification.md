@@ -1,4 +1,4 @@
-# 語彙学習アプリ 最終仕様 v3 (統合版)
+# 語彙学習アプリ 最終仕様 v3.1 (統合版)
 
 v1/v2 を統合し、以下の追加要件を反映した最終仕様:
 - PWA(Vite + React + Service Worker + IndexedDB)確定
@@ -11,6 +11,11 @@ v1/v2 を統合し、以下の追加要件を反映した最終仕様:
 - **CEFR 単語帳ビュー(参照・閲覧用)追加**
 
 作業指示書・実装は本ドキュメントを唯一の参照ソースとする。
+
+**v3.1 (2026-07-09) 改訂ノート**: パイロットテスト結果に基づく整合性修正:
+- register 表記を `informal` に統一（旧 `casual` は廃止）
+- item.register を配列型に変更（複数 register 対応 item のブラウズビュー絞り込み対応）
+- collocation_pattern enum を実データに基づき拡張（`V+Ving` / `V+Prep+N` / `V+Adv` を追加）
 
 ---
 
@@ -71,14 +76,14 @@ LearningItem {
     {
       en: "She made a difficult decision.",
       ja: "彼女は難しい決断を下した。",
-      register: "neutral" | "formal" | "casual",   // 表現シーン
+      register: "neutral" | "formal" | "informal", // 表現シーン
       surrounding_cefr_ceiling: "A2" | "B1" | ...  // 周辺語彙が超えない上限
     }
   ]
   
   // 分類補助タグ
   semantic_field: string[]            // ["thinking", "work"]
-  register: enum { "formal", "neutral", "informal" }
+  register: Array<"formal" | "neutral" | "informal">  // 例文が実際に持つ register 集合。パイプラインで自動導出。
   collocation_pattern: enum {         // コロケーションのみ
     "V+N", "Adj+N", "Adv+V", "Adv+Adj", null
   }
@@ -186,11 +191,13 @@ LearningItem {
 
 #### 制約 B: register 別バリエーション
 
-各項目は原則として **neutral 1 + formal 1 + casual 1 = 最低 3 例文**を持つ。ただし以下の例外がある:
+各項目は原則として **neutral 1 + formal 1 + informal 1 = 最低 3 例文**を持つ。ただし以下の例外がある:
 
-- **慣習表現(institutionalized)** で register が固有な場合: *What's up?* は casual のみ、*How do you do?* は formal のみ、といった単一 register 例が正しい
-- **学術・専門用語** で casual 使用が不自然な場合: formal + neutral の 2 種のみでよい
-- **口語イディオム** で formal 使用が不自然な場合: neutral + casual の 2 種のみでよい
+- **慣習表現(institutionalized)** で register が固有な場合: *What's up?* は informal のみ、*How do you do?* は formal のみ、といった単一 register 例が正しい
+- **学術・専門用語** で informal 使用が不自然な場合: formal + neutral の 2 種のみでよい
+- **口語イディオム** で formal 使用が不自然な場合: neutral + informal の 2 種のみでよい
+
+**item.register の導出**: 生成された example_sentences[].register の unique 集合を item.register として自動的に設定する（パイプライン側で処理）。手動でも LLM 出力でも設定しない。これにより両フィールドの整合が常に保たれる。
 
 **設計意図**: 貴殿の目標(IELTS 7.0 Speaking で idiomatic 使用、Writing で collocation 正確)は register 認識に直結する。同じ語でも Speaking と Writing で選び方が変わることを、例文レベルで体感できる設計。
 

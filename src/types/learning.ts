@@ -10,7 +10,7 @@ export type Category =
   | 'institutionalized'
   | 'other'
 
-export type Register = 'formal' | 'neutral' | 'casual'
+export type Register = 'formal' | 'neutral' | 'informal'
 
 export type SkillFocus = 'receptive_only' | 'receptive_and_productive'
 
@@ -64,7 +64,7 @@ export interface LearningItem {
   definition_en?: string
   example_sentences: ExampleSentence[]
   semantic_field: string[]
-  register: Register
+  register: Register[]
   collocation_pattern?: string | null
   function_tag?: string[]
   skill_focus: SkillFocus

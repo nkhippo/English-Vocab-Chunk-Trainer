@@ -50,7 +50,7 @@ async function main() {
 
   const merged: Dataset = {
     ...current,
-    schema_version: current.schema_version ?? '1.0.0',
+    schema_version: '1.1.0',
     generated_at: new Date().toISOString(),
     items: [...map.values()],
     total_items: map.size,

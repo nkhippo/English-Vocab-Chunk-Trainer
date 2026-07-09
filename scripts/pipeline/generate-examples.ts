@@ -6,6 +6,18 @@ import { callGasScript, parseArgs, sleep, readJson, writeJson, ensureDir } from 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(__dirname, '../..')
 
+interface ExampleSentenceCandidate {
+  register?: string
+  [key: string]: unknown
+}
+
+function normalizeExampleRegisters(examples: unknown[]): ExampleSentenceCandidate[] {
+  return (examples as ExampleSentenceCandidate[]).map((ex) => ({
+    ...ex,
+    register: ex.register === 'casual' ? 'informal' : ex.register,
+  }))
+}
+
 interface ExampleItem {
   id: string
   surface: string
@@ -40,12 +52,14 @@ async function main() {
     for (let attempt = 1; attempt <= 3; attempt++) {
       await sleep(1000)
       const gen = await callGasScript<{ example_sentences?: unknown[] }>('generate-examples', {
+        schema_version: '1.1.0',
         item: {
           id: item.id,
           surface: item.surface,
           category: item.category,
           cefr_level: item.cefr_level,
           translations_ja: item.translations_ja,
+          collocation_pattern: item.collocation_pattern,
         },
       })
 
@@ -54,9 +68,10 @@ async function main() {
         continue
       }
 
-      const candidate = gen.data.example_sentences ?? []
+      const candidate = normalizeExampleRegisters(gen.data.example_sentences ?? [])
       await sleep(1000)
       const validation = await callGasScript<{ ok?: boolean; violations?: unknown[] }>('validate-cefr', {
+        schema_version: '1.1.0',
         item_id: item.id,
         cefr_level: item.cefr_level,
         example_sentences: candidate,
@@ -74,7 +89,10 @@ async function main() {
         break
       }
 
-      console.warn(`[examples] CEFR violations on attempt ${attempt}, retrying…`)
+      console.warn(
+        `[examples] CEFR violations on attempt ${attempt}, violations:`,
+        JSON.stringify(violations, null, 2),
+      )
     }
 
     if (!examples) {
@@ -84,7 +102,20 @@ async function main() {
       continue
     }
 
-    output.push({ ...item, example_sentences: examples })
+    const normalizedExamples = normalizeExampleRegisters(examples)
+    const derivedRegisters = Array.from(
+      new Set(
+        normalizedExamples
+          .map((e) => e.register)
+          .filter((r): r is string => Boolean(r)),
+      ),
+    )
+
+    output.push({
+      ...item,
+      example_sentences: normalizedExamples,
+      register: derivedRegisters,
+    })
     await writeJson(outPath, output)
   }
 

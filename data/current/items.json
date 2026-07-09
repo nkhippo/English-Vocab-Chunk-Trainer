@@ -1,8 +1,11 @@
 {
-  "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T00:00:00.000Z",
-  "cefr_levels_included": ["A2"],
-  "total_items": 3,
+  "schema_version": "1.1.0",
+  "generated_at": "2026-07-09T07:59:10.777Z",
+  "cefr_levels_included": [
+    "A1",
+    "A2"
+  ],
+  "total_items": 11,
   "items": [
     {
       "id": "make_a_decision",
@@ -10,7 +13,10 @@
       "category": "collocation",
       "cefr_level": "A2",
       "frequency_rank_in_level": 12,
-      "translations_ja": ["決定する", "決断を下す"],
+      "translations_ja": [
+        "決定する",
+        "決断を下す"
+      ],
       "definition_en": "to choose what to do after thinking",
       "example_sentences": [
         {
@@ -20,14 +26,19 @@
           "surrounding_cefr_ceiling": "A2"
         }
       ],
-      "semantic_field": ["thinking", "work"],
-      "register": "neutral",
+      "semantic_field": [
+        "thinking",
+        "work"
+      ],
+      "register": [
+        "neutral"
+      ],
       "collocation_pattern": "V+N",
       "skill_focus": "receptive_and_productive",
       "ipa_careful": "/ˈmeɪk ə dɪˈsɪʒən/",
       "ipa_connected": "/ˈmeɪkə dɪˈsɪʒən/",
       "meta": {
-        "schema_version": "1.0.0",
+        "schema_version": "1.1.0",
         "source": "claude_generated",
         "validated_by_user": true
       }
@@ -38,7 +49,9 @@
       "category": "phrasal_verb",
       "cefr_level": "A2",
       "frequency_rank_in_level": 8,
-      "translations_ja": ["〜を楽しみにする"],
+      "translations_ja": [
+        "〜を楽しみにする"
+      ],
       "example_sentences": [
         {
           "en": "I look forward to seeing you.",
@@ -47,8 +60,12 @@
           "surrounding_cefr_ceiling": "A2"
         }
       ],
-      "semantic_field": ["emotion"],
-      "register": "neutral",
+      "semantic_field": [
+        "emotion"
+      ],
+      "register": [
+        "formal"
+      ],
       "skill_focus": "receptive_and_productive",
       "ipa_careful": "/lʊk ˈfɔːwəd tuː/",
       "ipa_connected": "/lʊkˈfɔːwəd tə/"
@@ -59,21 +76,1242 @@
       "category": "institutionalized",
       "cefr_level": "A1",
       "frequency_rank_in_level": 3,
-      "translations_ja": ["最近どう？", "元気？"],
+      "translations_ja": [
+        "最近どう？",
+        "元気？"
+      ],
       "example_sentences": [
         {
           "en": "Hey, what's up?",
           "ja": "やあ、最近どう？",
-          "register": "casual",
+          "register": "informal",
           "surrounding_cefr_ceiling": "A1"
         }
       ],
-      "semantic_field": ["greeting"],
-      "register": "casual",
-      "function_tag": ["greeting", "conversation_opener"],
+      "semantic_field": [
+        "greeting"
+      ],
+      "register": [
+        "informal"
+      ],
+      "function_tag": [
+        "greeting",
+        "conversation_opener"
+      ],
       "skill_focus": "receptive_and_productive",
       "ipa_careful": "/wɒts ʌp/",
       "ipa_connected": "/wʌtsʌp/"
+    },
+    {
+      "surface": "take a picture",
+      "id": "take_a_picture",
+      "translations_ja": [
+        "写真を撮る"
+      ],
+      "collocation_pattern": "V+N",
+      "register": [
+        "formal",
+        "neutral",
+        "informal"
+      ],
+      "category": "collocation",
+      "cefr_level": "A2",
+      "meta": {
+        "validated_by_user": true
+      },
+      "synonyms": [
+        {
+          "item": "take a photo",
+          "difference_ja": "意味はほぼ同じで、日常会話でよく使われる"
+        },
+        {
+          "item": "snap a picture",
+          "difference_ja": "素早くさっと撮るニュアンス。カジュアル"
+        },
+        {
+          "item": "shoot a picture",
+          "difference_ja": "やや専門的で、写真家やビデオ撮影でも使う"
+        },
+        {
+          "item": "get a picture",
+          "difference_ja": "「1枚もらう・撮ってもらう」感覚で口語的"
+        },
+        {
+          "item": "capture an image",
+          "difference_ja": "やや文語的・技術的な表現"
+        }
+      ],
+      "antonyms": [],
+      "hypernyms": [
+        "record",
+        "photograph"
+      ],
+      "hyponyms": [
+        "take a selfie",
+        "take a group photo"
+      ],
+      "confusables": [
+        {
+          "item": "take a photo",
+          "similarity_ja": "意味がほぼ同じ",
+          "key_difference_ja": "picture より photo の方がやや口語的",
+          "correct_usage_ja": "どちらもA2でよく使うが、混ぜないで統一するとよい",
+          "example_en": "Can you take a photo of us?"
+        },
+        {
+          "item": "make a picture",
+          "similarity_ja": "日本人が誤って言いがち",
+          "key_difference_ja": "英語では make ではなく take を使う",
+          "correct_usage_ja": "「写真を撮る」は必ず take a picture",
+          "example_en": "I took a picture of the cat."
+        },
+        {
+          "item": "draw a picture",
+          "similarity_ja": "picture を含むコロケーション",
+          "key_difference_ja": "draw は「絵を描く」、take は「写真を撮る」",
+          "correct_usage_ja": "カメラで撮るなら take、鉛筆などで描くなら draw",
+          "example_en": "She drew a picture of her dog."
+        },
+        {
+          "item": "take a look",
+          "similarity_ja": "take + 名詞の形が似ている",
+          "key_difference_ja": "take a look は「見る」の意味",
+          "correct_usage_ja": "「写真を撮る」とは意味が全く違うので注意",
+          "example_en": "Take a look at this photo."
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "take a selfie",
+          "meaning_ja": "自撮りをする",
+          "type": "collocation"
+        },
+        {
+          "form": "take a photo",
+          "meaning_ja": "写真を撮る",
+          "type": "collocation"
+        },
+        {
+          "form": "picture-perfect",
+          "meaning_ja": "完璧な、絵に描いたような",
+          "type": "metaphor",
+          "metaphor_ja": "写真のように美しい様子を表す"
+        },
+        {
+          "form": "get the picture",
+          "meaning_ja": "状況を理解する",
+          "type": "metaphor",
+          "metaphor_ja": "頭の中に絵として浮かぶ=わかる"
+        },
+        {
+          "form": "picture book",
+          "meaning_ja": "絵本",
+          "type": "compound"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "make a picture",
+          "correct": "take a picture",
+          "why_ja": "英語では写真を撮るときは take を使う。make は使わない"
+        },
+        {
+          "incorrect": "take a picture to my friend",
+          "correct": "take a picture of my friend",
+          "why_ja": "「〜の写真」は of を使う。to は誤り"
+        },
+        {
+          "incorrect": "take picture",
+          "correct": "take a picture",
+          "why_ja": "可算名詞なので冠詞 a が必要"
+        },
+        {
+          "incorrect": "shoot a picture with me",
+          "correct": "take a picture of me",
+          "why_ja": "「私の写真を撮って」は of me が自然"
+        },
+        {
+          "incorrect": "do a picture",
+          "correct": "take a picture",
+          "why_ja": "動詞は do ではなく take を使う"
+        }
+      ],
+      "definition_en": "To use a camera to record an image of someone or something.",
+      "semantic_field": [
+        "photography",
+        "daily activities",
+        "travel"
+      ],
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/teɪk ə ˈpɪk.tʃɚ/",
+      "ipa_connected": "/teɪ.kə ˈpɪk.tʃɚ/",
+      "frequency_rank_in_level": 120,
+      "example_sentences": [
+        {
+          "en": "Visitors are kindly asked not to take a picture inside the museum.",
+          "ja": "来館者の方は館内で写真を撮らないようお願いいたします。",
+          "register": "formal",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "Could you take a picture of us in front of the station?",
+          "ja": "駅の前で私たちの写真を撮ってもらえますか。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "Hey, let's take a picture together!",
+          "ja": "ねえ、一緒に写真撮ろうよ！",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ]
+    },
+    {
+      "surface": "have breakfast",
+      "id": "have_breakfast",
+      "translations_ja": [
+        "朝食を食べる"
+      ],
+      "collocation_pattern": "V+N",
+      "register": [
+        "formal",
+        "neutral",
+        "informal"
+      ],
+      "category": "collocation",
+      "cefr_level": "A2",
+      "meta": {
+        "validated_by_user": true
+      },
+      "synonyms": [
+        {
+          "item": "eat breakfast",
+          "difference_ja": "より直接的に「食べる」動作を表す。意味はほぼ同じ。"
+        },
+        {
+          "item": "take breakfast",
+          "difference_ja": "やや古風・フォーマルな言い方。日常会話では稀。"
+        }
+      ],
+      "antonyms": [
+        {
+          "item": "skip breakfast",
+          "difference_ja": "朝食を抜くこと。食べないことを意味する。"
+        }
+      ],
+      "hypernyms": [
+        "have a meal",
+        "eat"
+      ],
+      "hyponyms": [],
+      "confusables": [
+        {
+          "item": "make breakfast",
+          "similarity_ja": "どちらも朝食に関する動作。",
+          "key_difference_ja": "make は「作る（調理する）」、have は「食べる」。",
+          "correct_usage_ja": "食べる動作なら have breakfast、料理するなら make breakfast。",
+          "example_en": "I make breakfast for my family, then we have breakfast together."
+        },
+        {
+          "item": "have a breakfast",
+          "similarity_ja": "形が似ているが冠詞 a が付いている。",
+          "key_difference_ja": "通常は無冠詞で have breakfast と言う。形容詞が付く場合のみ a を使う。",
+          "correct_usage_ja": "通常は無冠詞。例: have a big breakfast。",
+          "example_en": "I have breakfast at 7. / I had a big breakfast today."
+        },
+        {
+          "item": "have brunch",
+          "similarity_ja": "朝の食事を指す表現。",
+          "key_difference_ja": "brunch は朝食と昼食を兼ねた遅めの食事。",
+          "correct_usage_ja": "朝早めの食事は breakfast、遅めの朝昼兼用は brunch。",
+          "example_en": "On Sundays we have brunch instead of breakfast."
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "have lunch",
+          "meaning_ja": "昼食を食べる",
+          "type": "collocation"
+        },
+        {
+          "form": "have dinner",
+          "meaning_ja": "夕食を食べる",
+          "type": "collocation"
+        },
+        {
+          "form": "have a big breakfast",
+          "meaning_ja": "たっぷり朝食を食べる",
+          "type": "collocation"
+        },
+        {
+          "form": "breakfast in bed",
+          "meaning_ja": "ベッドで食べる朝食",
+          "type": "compound"
+        },
+        {
+          "form": "have breakfast together",
+          "meaning_ja": "一緒に朝食を食べる",
+          "type": "collocation"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "I have a breakfast at 7.",
+          "correct": "I have breakfast at 7.",
+          "why_ja": "食事名 breakfast は通常無冠詞で使う。"
+        },
+        {
+          "incorrect": "I eat my breakfast every day.",
+          "correct": "I have breakfast every day.",
+          "why_ja": "英語では食事に have を使うのが自然。"
+        },
+        {
+          "incorrect": "I make breakfast every morning (=食べる意味で).",
+          "correct": "I have breakfast every morning.",
+          "why_ja": "make は「作る」、食べる意味では have を使う。"
+        },
+        {
+          "incorrect": "I have the breakfast at home.",
+          "correct": "I have breakfast at home.",
+          "why_ja": "特定の朝食を指す場合以外は無冠詞。"
+        }
+      ],
+      "definition_en": "To eat the first meal of the day, usually in the morning.",
+      "semantic_field": [
+        "daily routine",
+        "meals",
+        "food"
+      ],
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/hæv ˈbrɛkfəst/",
+      "ipa_connected": "/həv ˈbrekfəst/",
+      "frequency_rank_in_level": 45,
+      "example_sentences": [
+        {
+          "en": "Guests may have breakfast in the dining room between seven and ten.",
+          "ja": "お客様は7時から10時の間に食堂で朝食を召し上がれます。",
+          "register": "formal",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "I usually have breakfast at seven in the morning.",
+          "ja": "私はたいてい朝7時に朝食を食べます。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "Let's have breakfast together tomorrow!",
+          "ja": "明日一緒に朝ごはん食べようよ！",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ]
+    },
+    {
+      "surface": "do homework",
+      "id": "do_homework",
+      "translations_ja": [
+        "宿題をする"
+      ],
+      "collocation_pattern": "V+N",
+      "register": [
+        "formal",
+        "neutral",
+        "informal"
+      ],
+      "category": "collocation",
+      "cefr_level": "A2",
+      "meta": {
+        "validated_by_user": true
+      },
+      "synonyms": [
+        {
+          "item": "do one's assignment",
+          "difference_ja": "「assignment」は学校から与えられた特定の課題を指し、ややフォーマル。"
+        },
+        {
+          "item": "complete homework",
+          "difference_ja": "「complete」は「終わらせる」という完了の意味が強い。"
+        },
+        {
+          "item": "finish homework",
+          "difference_ja": "宿題を「終える」という完了に焦点。"
+        },
+        {
+          "item": "study",
+          "difference_ja": "「勉強する」全般を指し、宿題に限らない。"
+        }
+      ],
+      "antonyms": [
+        {
+          "item": "skip homework",
+          "difference_ja": "宿題をやらずに飛ばすこと。"
+        },
+        {
+          "item": "play",
+          "difference_ja": "勉強せずに遊ぶこと。"
+        }
+      ],
+      "hypernyms": [
+        "study",
+        "schoolwork"
+      ],
+      "hyponyms": [
+        "do math homework",
+        "do English homework"
+      ],
+      "confusables": [
+        {
+          "item": "make homework",
+          "similarity_ja": "日本語の「宿題を作る」に引きずられて使いがち。",
+          "key_difference_ja": "英語では宿題には「do」を使い、「make」は使わない。",
+          "correct_usage_ja": "「do homework」が正しい。",
+          "example_en": "I do my homework every evening."
+        },
+        {
+          "item": "do housework",
+          "similarity_ja": "「do + work」で似た形。",
+          "key_difference_ja": "「housework」は家事で、勉強の宿題ではない。",
+          "correct_usage_ja": "学校の宿題は「homework」、家事は「housework」。",
+          "example_en": "My mom does housework on weekends."
+        },
+        {
+          "item": "do the homework",
+          "similarity_ja": "冠詞のありなしで迷いやすい。",
+          "key_difference_ja": "一般的な習慣なら無冠詞、特定の宿題を指すなら「the」を付ける。",
+          "correct_usage_ja": "I do my homework. / I did the homework you gave me.",
+          "example_en": "Did you do the homework for today?"
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "do one's homework",
+          "meaning_ja": "(比喩) 事前によく調べて準備する",
+          "type": "metaphor",
+          "metaphor_ja": "宿題をきちんとやるように、下調べを済ませておくイメージ。"
+        },
+        {
+          "form": "homework assignment",
+          "meaning_ja": "宿題の課題",
+          "type": "compound"
+        },
+        {
+          "form": "hand in homework",
+          "meaning_ja": "宿題を提出する",
+          "type": "collocation"
+        },
+        {
+          "form": "check homework",
+          "meaning_ja": "宿題を確認する・採点する",
+          "type": "collocation"
+        },
+        {
+          "form": "forget one's homework",
+          "meaning_ja": "宿題を忘れる",
+          "type": "collocation"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "I make my homework every day.",
+          "correct": "I do my homework every day.",
+          "why_ja": "英語では「homework」に「do」を使う。「make」は不可。"
+        },
+        {
+          "incorrect": "I do my homeworks.",
+          "correct": "I do my homework.",
+          "why_ja": "homeworkは不可算名詞なので複数形にしない。"
+        },
+        {
+          "incorrect": "I did a homework.",
+          "correct": "I did my homework.",
+          "why_ja": "不可算名詞なので「a」は付けず、通常「my/the」を使う。"
+        },
+        {
+          "incorrect": "I do homework to my teacher.",
+          "correct": "I hand in homework to my teacher.",
+          "why_ja": "提出する意味では「hand in」や「give」を使う。"
+        }
+      ],
+      "definition_en": "To complete school assignments given by a teacher, usually at home.",
+      "semantic_field": [
+        "school life",
+        "daily routine",
+        "study"
+      ],
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/duː ˈhoʊmˌwɜːrk/",
+      "ipa_connected": "/dəˈhoʊmwɜːrk/",
+      "frequency_rank_in_level": 120,
+      "example_sentences": [
+        {
+          "en": "Students are expected to do their homework before each class.",
+          "ja": "生徒は毎回の授業の前に宿題をすることが求められています。",
+          "register": "formal",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "I always do my homework after dinner.",
+          "ja": "私はいつも夕食の後に宿題をします。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "Hey, did you do your homework yet?",
+          "ja": "ねえ、もう宿題やった?",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ]
+    },
+    {
+      "surface": "catch a cold",
+      "id": "catch_a_cold",
+      "translations_ja": [
+        "風邪をひく"
+      ],
+      "collocation_pattern": "V+N",
+      "register": [
+        "formal",
+        "neutral",
+        "informal"
+      ],
+      "category": "collocation",
+      "cefr_level": "A2",
+      "meta": {
+        "validated_by_user": true
+      },
+      "synonyms": [
+        {
+          "item": "come down with a cold",
+          "difference_ja": "風邪をひき始める、発症するというニュアンスが強い"
+        },
+        {
+          "item": "get a cold",
+          "difference_ja": "より口語的でカジュアルな表現"
+        },
+        {
+          "item": "have a cold",
+          "difference_ja": "すでに風邪をひいている状態を表す"
+        }
+      ],
+      "antonyms": [
+        {
+          "item": "recover from a cold",
+          "difference_ja": "風邪から回復するという反対の動作"
+        },
+        {
+          "item": "get over a cold",
+          "difference_ja": "風邪を治すという意味で対照的"
+        }
+      ],
+      "hypernyms": [
+        "become ill",
+        "get sick"
+      ],
+      "hyponyms": [],
+      "confusables": [
+        {
+          "item": "catch cold",
+          "similarity_ja": "a なしでも使われることがあり紛らわしい",
+          "key_difference_ja": "catch cold は古風・文語的、通常は a を付ける",
+          "correct_usage_ja": "日常会話では catch a cold を使う",
+          "example_en": "I caught a cold last week."
+        },
+        {
+          "item": "take a cold",
+          "similarity_ja": "直訳すると似ているが誤用",
+          "key_difference_ja": "英語では take a cold とは言わない",
+          "correct_usage_ja": "必ず catch を使う",
+          "example_en": "I caught a cold yesterday."
+        },
+        {
+          "item": "catch the flu",
+          "similarity_ja": "同じ catch を使う病気の表現",
+          "key_difference_ja": "cold は風邪、flu はインフルエンザ",
+          "correct_usage_ja": "病名によって使い分ける",
+          "example_en": "He caught the flu at school."
+        },
+        {
+          "item": "feel cold",
+          "similarity_ja": "cold を含むが意味が違う",
+          "key_difference_ja": "feel cold は「寒く感じる」で病気ではない",
+          "correct_usage_ja": "体感温度は feel cold、病気は catch a cold",
+          "example_en": "I feel cold in this room."
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "catch a fever",
+          "meaning_ja": "熱を出す",
+          "type": "collocation"
+        },
+        {
+          "form": "catch the flu",
+          "meaning_ja": "インフルエンザにかかる",
+          "type": "collocation"
+        },
+        {
+          "form": "come down with something",
+          "meaning_ja": "(病気に)かかる",
+          "type": "phrasal_verb"
+        },
+        {
+          "form": "a bad cold",
+          "meaning_ja": "ひどい風邪",
+          "type": "collocation"
+        },
+        {
+          "form": "catch one's death (of cold)",
+          "meaning_ja": "ひどい風邪をひく(比喩表現)",
+          "type": "metaphor",
+          "metaphor_ja": "風邪で死ぬほど体調を崩すという誇張表現"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "I catched a cold.",
+          "correct": "I caught a cold.",
+          "why_ja": "catch の過去形は caught で不規則変化"
+        },
+        {
+          "incorrect": "I took a cold.",
+          "correct": "I caught a cold.",
+          "why_ja": "英語では take ではなく catch を使う"
+        },
+        {
+          "incorrect": "I catch a cold now.",
+          "correct": "I have a cold now.",
+          "why_ja": "現在の状態は have を使う。catch は発症の瞬間を表す"
+        },
+        {
+          "incorrect": "I caught cold.",
+          "correct": "I caught a cold.",
+          "why_ja": "通常は不定冠詞 a が必要"
+        },
+        {
+          "incorrect": "I caught a cold from the weather.",
+          "correct": "I caught a cold because of the cold weather.",
+          "why_ja": "from の後は通常「人・場所」など感染源が来る"
+        }
+      ],
+      "definition_en": "To become infected with a common cold virus and start showing symptoms.",
+      "semantic_field": [
+        "health",
+        "illness",
+        "daily life"
+      ],
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/kætʃ ə koʊld/",
+      "ipa_connected": "/ˈkætʃ ə ˈkoʊld/",
+      "frequency_rank_in_level": 120,
+      "example_sentences": [
+        {
+          "en": "If you do not wear a coat, you may catch a cold.",
+          "ja": "コートを着ないと、風邪をひくかもしれません。",
+          "register": "formal",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "I often catch a cold in winter.",
+          "ja": "私は冬によく風邪をひきます。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "Be careful, or you'll catch a cold!",
+          "ja": "気をつけて、風邪ひくよ！",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ]
+    },
+    {
+      "surface": "take a shower",
+      "id": "take_a_shower",
+      "translations_ja": [
+        "シャワーを浴びる"
+      ],
+      "collocation_pattern": "V+N",
+      "register": [
+        "formal",
+        "neutral",
+        "informal"
+      ],
+      "category": "collocation",
+      "cefr_level": "A2",
+      "meta": {
+        "validated_by_user": true
+      },
+      "synonyms": [
+        {
+          "item": "have a shower",
+          "difference_ja": "イギリス英語でよく使われる。意味はほぼ同じ。"
+        },
+        {
+          "item": "shower",
+          "difference_ja": "動詞1語で「シャワーを浴びる」。よりカジュアルで短い表現。"
+        },
+        {
+          "item": "wash up",
+          "difference_ja": "体や手を軽く洗う意味。シャワー全体を指すとは限らない。"
+        }
+      ],
+      "antonyms": [
+        {
+          "item": "take a bath",
+          "difference_ja": "浴槽につかる入浴。シャワーとは方法が違う。"
+        }
+      ],
+      "hypernyms": [
+        "wash",
+        "clean oneself"
+      ],
+      "hyponyms": [
+        "take a cold shower",
+        "take a hot shower",
+        "take a quick shower"
+      ],
+      "confusables": [
+        {
+          "item": "take a bath",
+          "similarity_ja": "どちらも体を洗う行為で日常表現。",
+          "key_difference_ja": "bathは浴槽につかる、showerは立って水を浴びる。",
+          "correct_usage_ja": "浴槽ならtake a bath、シャワーならtake a shower。",
+          "example_en": "I take a shower every morning, but I take a bath on weekends."
+        },
+        {
+          "item": "have a shower",
+          "similarity_ja": "意味はほぼ同じ。",
+          "key_difference_ja": "haveはイギリス英語、takeはアメリカ英語で好まれる。",
+          "correct_usage_ja": "どちらも正しいが地域で使い分けられる。",
+          "example_en": "She has a shower before breakfast."
+        },
+        {
+          "item": "make a shower",
+          "similarity_ja": "日本人がつい言いがちな誤り。",
+          "key_difference_ja": "makeは使わない。動詞はtakeかhave。",
+          "correct_usage_ja": "take/have a showerを使う。",
+          "example_en": "I take a shower after work."
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "take a quick shower",
+          "meaning_ja": "さっとシャワーを浴びる",
+          "type": "collocation"
+        },
+        {
+          "form": "take a hot shower",
+          "meaning_ja": "熱いシャワーを浴びる",
+          "type": "collocation"
+        },
+        {
+          "form": "take a cold shower",
+          "meaning_ja": "冷たいシャワーを浴びる",
+          "type": "collocation"
+        },
+        {
+          "form": "baby shower",
+          "meaning_ja": "出産祝いのパーティー",
+          "type": "compound",
+          "metaphor_ja": "贈り物を「浴びせる」ことから。"
+        },
+        {
+          "form": "shower someone with gifts",
+          "meaning_ja": "人に贈り物をたくさん与える",
+          "type": "metaphor",
+          "metaphor_ja": "シャワーのように降り注ぐイメージ。"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "make a shower",
+          "correct": "take a shower",
+          "why_ja": "動詞はmakeではなくtake(またはhave)を使う。"
+        },
+        {
+          "incorrect": "take shower",
+          "correct": "take a shower",
+          "why_ja": "数えられる名詞なので冠詞aが必要。"
+        },
+        {
+          "incorrect": "take a shower bath",
+          "correct": "take a shower",
+          "why_ja": "bathを付ける必要はない。"
+        },
+        {
+          "incorrect": "do a shower",
+          "correct": "take a shower",
+          "why_ja": "doは使えない。takeまたはhaveが正しい。"
+        }
+      ],
+      "definition_en": "To wash your body by standing under running water from a shower.",
+      "semantic_field": [
+        "daily routine",
+        "personal hygiene"
+      ],
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/teɪk ə ˈʃaʊ.ɚ/",
+      "ipa_connected": "/teɪ.kə ˈʃaʊ.ɚ/",
+      "frequency_rank_in_level": 120,
+      "example_sentences": [
+        {
+          "en": "Guests are kindly asked to take a shower before using the pool.",
+          "ja": "お客様はプールをご利用の前にシャワーを浴びていただきますようお願いいたします。",
+          "register": "formal",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "I take a shower every morning before breakfast.",
+          "ja": "私は毎朝、朝食の前にシャワーを浴びます。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "I'm gonna take a shower real quick, okay?",
+          "ja": "ちょっとシャワー浴びてくるね。",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ]
+    },
+    {
+      "surface": "go shopping",
+      "id": "go_shopping",
+      "translations_ja": [
+        "買い物に行く"
+      ],
+      "collocation_pattern": "V+Ving",
+      "register": [
+        "formal",
+        "neutral",
+        "informal"
+      ],
+      "category": "collocation",
+      "cefr_level": "A2",
+      "meta": {
+        "validated_by_user": true
+      },
+      "synonyms": [
+        {
+          "item": "do the shopping",
+          "difference_ja": "日常の必需品の買い物というニュアンスが強い"
+        },
+        {
+          "item": "go to the store",
+          "difference_ja": "特定の店に行くことを指し、目的がより具体的"
+        }
+      ],
+      "antonyms": [
+        {
+          "item": "stay home",
+          "difference_ja": "外出せず家にいることで、買い物とは反対の行動"
+        }
+      ],
+      "hypernyms": [
+        "shop",
+        "buy things"
+      ],
+      "hyponyms": [
+        "go grocery shopping",
+        "go clothes shopping",
+        "go window shopping"
+      ],
+      "confusables": [
+        {
+          "item": "go to shopping",
+          "similarity_ja": "形が似ているが誤用",
+          "key_difference_ja": "正しくは go shopping で to は不要",
+          "correct_usage_ja": "go + 動詞ing の形を使う",
+          "example_en": "I go shopping every weekend."
+        },
+        {
+          "item": "go for shopping",
+          "similarity_ja": "前置詞を入れがちな誤形",
+          "key_difference_ja": "go shopping には前置詞を入れない",
+          "correct_usage_ja": "そのまま go shopping と言う",
+          "example_en": "Let's go shopping tomorrow."
+        },
+        {
+          "item": "do shopping",
+          "similarity_ja": "買い物をする意味で似ている",
+          "key_difference_ja": "通常 do the shopping と the を付ける",
+          "correct_usage_ja": "do the shopping の形で使う",
+          "example_en": "I do the shopping on Sundays."
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "go swimming",
+          "meaning_ja": "泳ぎに行く",
+          "type": "collocation"
+        },
+        {
+          "form": "go fishing",
+          "meaning_ja": "釣りに行く",
+          "type": "collocation"
+        },
+        {
+          "form": "go window shopping",
+          "meaning_ja": "ウィンドウショッピングをする(見るだけの買い物)",
+          "type": "collocation"
+        },
+        {
+          "form": "go grocery shopping",
+          "meaning_ja": "食料品の買い物に行く",
+          "type": "collocation"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "I go to shopping.",
+          "correct": "I go shopping.",
+          "why_ja": "go + ing の後に to は入れない"
+        },
+        {
+          "incorrect": "I go for shopping.",
+          "correct": "I go shopping.",
+          "why_ja": "go shopping の間に前置詞は不要"
+        },
+        {
+          "incorrect": "I went shopped.",
+          "correct": "I went shopping.",
+          "why_ja": "go の後は動詞ing 形を使う"
+        },
+        {
+          "incorrect": "I go shopping to the mall.",
+          "correct": "I go shopping at the mall.",
+          "why_ja": "場所を示すときは at を使うのが自然"
+        }
+      ],
+      "definition_en": "To go out in order to buy things, especially from shops.",
+      "semantic_field": [
+        "daily routine",
+        "shopping",
+        "leisure"
+      ],
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/ɡoʊ ˈʃɑːpɪŋ/",
+      "ipa_connected": "/ɡoʊˈʃɑːpɪŋ/",
+      "frequency_rank_in_level": 120,
+      "example_sentences": [
+        {
+          "en": "I would like to go shopping for a new suit this weekend.",
+          "ja": "今週末、新しいスーツを買いに行きたいと思っております。",
+          "register": "formal",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "My mother and I go shopping every Saturday morning.",
+          "ja": "母と私は毎週土曜日の朝に買い物に行きます。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "Hey, let's go shopping after lunch!",
+          "ja": "ねえ、お昼のあと買い物に行こうよ！",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ]
+    },
+    {
+      "surface": "get up early",
+      "id": "get_up_early",
+      "translations_ja": [
+        "早く起きる"
+      ],
+      "collocation_pattern": "V+Adv",
+      "register": [
+        "formal",
+        "neutral",
+        "informal"
+      ],
+      "category": "collocation",
+      "cefr_level": "A2",
+      "meta": {
+        "validated_by_user": true
+      },
+      "synonyms": [
+        {
+          "item": "wake up early",
+          "difference_ja": "「目を覚ます」動作に焦点。起き上がるとは限らない"
+        },
+        {
+          "item": "rise early",
+          "difference_ja": "やや文語的で硬い表現"
+        },
+        {
+          "item": "get up at dawn",
+          "difference_ja": "夜明けという具体的な時間を強調"
+        }
+      ],
+      "antonyms": [
+        {
+          "item": "get up late",
+          "difference_ja": "遅く起きること"
+        },
+        {
+          "item": "sleep in",
+          "difference_ja": "いつもより長く寝ていること"
+        },
+        {
+          "item": "stay in bed",
+          "difference_ja": "起き上がらずベッドにいること"
+        }
+      ],
+      "hypernyms": [
+        "wake up"
+      ],
+      "hyponyms": [],
+      "confusables": [
+        {
+          "item": "wake up early",
+          "similarity_ja": "どちらも朝早く目を覚ますこと",
+          "key_difference_ja": "wake up は目が覚めるだけ、get up はベッドから出て起き上がる",
+          "correct_usage_ja": "起き上がる動作なら get up early",
+          "example_en": "I get up early every day."
+        },
+        {
+          "item": "stand up early",
+          "similarity_ja": "up が付いて似ている",
+          "key_difference_ja": "stand up は「立ち上がる」で意味が全く違う",
+          "correct_usage_ja": "朝起きるには get up を使う",
+          "example_en": "He stood up early to greet her."
+        },
+        {
+          "item": "grow up early",
+          "similarity_ja": "get と grow の形が似る",
+          "key_difference_ja": "grow up は「成長する」の意味",
+          "correct_usage_ja": "朝起きる文脈では使わない"
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "get up late",
+          "meaning_ja": "遅く起きる",
+          "type": "collocation"
+        },
+        {
+          "form": "get up at six",
+          "meaning_ja": "6時に起きる",
+          "type": "collocation"
+        },
+        {
+          "form": "get out of bed",
+          "meaning_ja": "ベッドから出る",
+          "type": "phrasal_verb"
+        },
+        {
+          "form": "early bird",
+          "meaning_ja": "早起きする人",
+          "type": "metaphor",
+          "metaphor_ja": "早く来る鳥にたとえる"
+        },
+        {
+          "form": "wake up early",
+          "meaning_ja": "早く目を覚ます",
+          "type": "collocation"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "I get up earlier in the morning.",
+          "correct": "I get up early in the morning.",
+          "why_ja": "習慣を表すときは原級 early を使う。earlier は比較の意味になる"
+        },
+        {
+          "incorrect": "I get up early to the school.",
+          "correct": "I get up early to go to school.",
+          "why_ja": "目的を示すには to + 動詞が必要"
+        },
+        {
+          "incorrect": "I getting up early.",
+          "correct": "I get up early.",
+          "why_ja": "習慣は現在形。進行形は不適切"
+        },
+        {
+          "incorrect": "I get early up.",
+          "correct": "I get up early.",
+          "why_ja": "get up の語順は固定。early は後ろに置く"
+        },
+        {
+          "incorrect": "I woke up early, so I get up early.",
+          "correct": "I woke up early and got up early.",
+          "why_ja": "過去の話は時制を揃える"
+        }
+      ],
+      "definition_en": "to leave your bed in the morning at an early time",
+      "semantic_field": [
+        "daily routine",
+        "sleep",
+        "morning"
+      ],
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/ɡɛt ʌp ˈɜːrli/",
+      "ipa_connected": "/ɡeɾ‿ʌp ˈɜːrli/",
+      "frequency_rank_in_level": 120,
+      "example_sentences": [
+        {
+          "en": "I must get up early tomorrow to catch the first train to the meeting.",
+          "ja": "明日は会議に向かう始発電車に乗るため、早く起きなければなりません。",
+          "register": "formal",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "I usually get up early on weekdays to go to work.",
+          "ja": "平日は仕事に行くためにたいてい早く起きます。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "I hate getting up early on Mondays!",
+          "ja": "月曜に早く起きるのって本当にイヤ！",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ]
+    },
+    {
+      "surface": "listen to music",
+      "id": "listen_to_music",
+      "translations_ja": [
+        "音楽を聴く"
+      ],
+      "collocation_pattern": "V+Prep+N",
+      "register": [
+        "formal",
+        "neutral",
+        "informal"
+      ],
+      "category": "collocation",
+      "cefr_level": "A2",
+      "meta": {
+        "validated_by_user": true
+      },
+      "synonyms": [
+        {
+          "item": "hear music",
+          "difference_ja": "「hear」は自然に耳に入ることを指し、意識して聴く「listen」とは異なる"
+        },
+        {
+          "item": "enjoy music",
+          "difference_ja": "音楽を楽しむという感情面を強調する表現"
+        },
+        {
+          "item": "play music",
+          "difference_ja": "再生する、または演奏することを意味し、聴く行為とは違う"
+        }
+      ],
+      "antonyms": [
+        {
+          "item": "ignore music",
+          "difference_ja": "音楽に注意を向けない、無視することを表す"
+        }
+      ],
+      "hypernyms": [
+        "listen to something"
+      ],
+      "hyponyms": [
+        "listen to pop music",
+        "listen to classical music",
+        "listen to the radio"
+      ],
+      "confusables": [
+        {
+          "item": "hear music",
+          "similarity_ja": "どちらも音楽と耳に関する表現",
+          "key_difference_ja": "hearは自然に聞こえる、listen toは意識して聴く",
+          "correct_usage_ja": "集中して聴くときはlisten to musicを使う",
+          "example_en": "I listen to music every morning."
+        },
+        {
+          "item": "listen music",
+          "similarity_ja": "見た目が似ている誤形",
+          "key_difference_ja": "listenの後には必ずtoが必要",
+          "correct_usage_ja": "listen to musicと必ずtoを入れる",
+          "example_en": "She listens to music on the bus."
+        },
+        {
+          "item": "watch music",
+          "similarity_ja": "音楽に関する動作動詞",
+          "key_difference_ja": "watchは視覚、listenは聴覚を表す",
+          "correct_usage_ja": "音楽ビデオならwatch a music video、聴くだけならlisten to music",
+          "example_en": "I watch music videos and listen to music."
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "listen to the radio",
+          "meaning_ja": "ラジオを聴く",
+          "type": "collocation"
+        },
+        {
+          "form": "listen to a song",
+          "meaning_ja": "歌を聴く",
+          "type": "collocation"
+        },
+        {
+          "form": "listen up",
+          "meaning_ja": "よく聞いて（注意を促す）",
+          "type": "phrasal_verb"
+        },
+        {
+          "form": "music to my ears",
+          "meaning_ja": "とても嬉しい知らせ（比喩）",
+          "type": "metaphor",
+          "metaphor_ja": "耳に心地よい音楽のように嬉しい情報"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "I listen music.",
+          "correct": "I listen to music.",
+          "why_ja": "listenは自動詞なので目的語の前にtoが必要"
+        },
+        {
+          "incorrect": "I hear to music every day.",
+          "correct": "I listen to music every day.",
+          "why_ja": "hearの後にtoは不要で、意識して聴く意味ならlisten toを使う"
+        },
+        {
+          "incorrect": "I am listening music now.",
+          "correct": "I am listening to music now.",
+          "why_ja": "進行形でもtoを省略できない"
+        }
+      ],
+      "definition_en": "To pay attention with your ears to music being played.",
+      "semantic_field": [
+        "hobbies",
+        "daily routine",
+        "entertainment"
+      ],
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/ˈlɪs.ən tuː ˈmjuː.zɪk/",
+      "ipa_connected": "/ˈlɪs.ən tə ˈmjuː.zɪk/",
+      "frequency_rank_in_level": 120,
+      "example_sentences": [
+        {
+          "en": "Guests may listen to music in the lounge after dinner.",
+          "ja": "お客様は夕食後、ラウンジで音楽を聴くことができます。",
+          "register": "formal",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "I often listen to music when I study at home.",
+          "ja": "家で勉強するとき、私はよく音楽を聴きます。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "Let's listen to music in my room!",
+          "ja": "私の部屋で音楽を聴こうよ！",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ]
     }
   ],
   "insights": []

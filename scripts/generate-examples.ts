@@ -36,7 +36,6 @@ async function main() {
   for (const [i, item] of items.entries()) {
     console.log(`[examples] ${i + 1}/${items.length} ${item.id}`)
     let examples: unknown[] | null = null
-    let temperature = 0.5
 
     for (let attempt = 1; attempt <= 3; attempt++) {
       await sleep(1000)
@@ -48,12 +47,10 @@ async function main() {
           cefr_level: item.cefr_level,
           translations_ja: item.translations_ja,
         },
-        temperature,
       })
 
       if (!gen.ok) {
         console.warn(`[examples] generate failed attempt ${attempt}:`, gen.error.message)
-        temperature = 0.3
         continue
       }
 
@@ -67,7 +64,6 @@ async function main() {
 
       if (!validation.ok) {
         console.warn(`[examples] validate call failed attempt ${attempt}:`, validation.error.message)
-        temperature = 0.3
         continue
       }
 
@@ -79,7 +75,6 @@ async function main() {
       }
 
       console.warn(`[examples] CEFR violations on attempt ${attempt}, retrying…`)
-      temperature = 0.3
     }
 
     if (!examples) {

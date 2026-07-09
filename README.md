@@ -7,6 +7,7 @@ CEFR に沿った語彙・チャンク訓練用 PWA。Basic 2400 完走後に IE
 - Phase 1 指示書: [`doc/cursor-instruction-phase1.md`](doc/cursor-instruction-phase1.md)
 - 構成表: [`doc/repository-structure.md`](doc/repository-structure.md)
 - Phase 1 作業報告（差分・残課題）: [`doc/phase1-handoff-report.md`](doc/phase1-handoff-report.md)
+- Step 1〜3 作業報告: [`doc/step1-3-handoff-report.md`](doc/step1-3-handoff-report.md)
 
 ## Phase 1 の範囲
 
@@ -49,7 +50,7 @@ pnpm dev
 現行 Web App:
 
 ```
-https://script.google.com/macros/s/AKfycbz_gk2WigbcJKX7DH-pq14Mp-O5v5f9f1_MfwvooGZGnwTGrMylQVhFgkFWIxB4ZVbX/exec
+https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec
 ```
 
 ## GitHub Pages

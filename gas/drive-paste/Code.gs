@@ -1,13 +1,13 @@
+/** Auto-generated from gas/*.js — run: pnpm run build:gas-paste */
+// --- main.js ---
 /**
  * Vocab & Chunk Trainer — GAS Web App entry
- * Deploy as Web App. Call with ?path=generate-seed etc.
- *
- * Script Properties:
- * - ANTHROPIC_API_KEY
- * - ALLOWED_ORIGINS (comma-separated, optional)
  */
 
 function doGet(e) {
+  var blocked = originForbiddenResponse_(e)
+  if (blocked) return blocked
+
   return jsonResponse({
     service: 'vocab-chunk-trainer-gas',
     paths: [
@@ -22,10 +22,13 @@ function doGet(e) {
 
 function doPost(e) {
   try {
-    const path = (e.parameter && e.parameter.path) || ''
-    const body = e.postData && e.postData.contents ? JSON.parse(e.postData.contents) : {}
+    var blocked = originForbiddenResponse_(e)
+    if (blocked) return blocked
 
-    const handlers = {
+    var path = (e.parameter && e.parameter.path) || ''
+    var body = e.postData && e.postData.contents ? JSON.parse(e.postData.contents) : {}
+
+    var handlers = {
       'generate-seed': generateSeed,
       'enrich-item': enrichItem,
       'generate-examples': generateExamples,
@@ -33,20 +36,20 @@ function doPost(e) {
       'validate-cefr': validateCefr,
     }
 
-    const handler = handlers[path]
+    var handler = handlers[path]
     if (!handler) {
       return jsonError(400, 'unknown_path', 'Unknown path: ' + path)
     }
 
-    const cacheKey = computeCacheKey(path, body)
+    var cacheKey = computeCacheKey(path, body)
     if (path !== 'review-writing') {
-      const cached = getCachedResponse(cacheKey)
+      var cached = getCachedResponse(cacheKey)
       if (cached) {
         return jsonResponse(cached, true)
       }
     }
 
-    const result = withRetry(function () {
+    var result = withRetry(function () {
       return handler(body)
     }, 3)
 
@@ -57,6 +60,13 @@ function doPost(e) {
   } catch (err) {
     return jsonError(500, 'internal_error', String(err && err.message ? err.message : err))
   }
+}
+
+function originForbiddenResponse_(e) {
+  var origin = e && e.parameter && e.parameter.origin ? String(e.parameter.origin).trim() : ''
+  if (!origin) return null
+  if (origin === 'https://nkhippo.github.io' || origin === 'http://localhost:5173') return null
+  return jsonError(403, 'origin_forbidden', 'Origin not allowed: ' + origin)
 }
 
 function withRetry(fn, maxAttempts) {
@@ -89,6 +99,8 @@ function jsonError(status, code, message) {
     ContentService.MimeType.JSON,
   )
 }
+
+// --- cache.js ---
 function computeCacheKey(path, body) {
   var raw = path + '::' + JSON.stringify(body)
   var digest = Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, raw)
@@ -132,10 +144,24 @@ function saveCachedResponse(cacheKey, data) {
   }
   folder.createFile(cacheKey + '.json', JSON.stringify(data), MimeType.PLAIN_TEXT)
 }
+
+// --- claude.js ---
 function callClaude(prompt, model, temperature, maxTokens) {
   var apiKey = PropertiesService.getScriptProperties().getProperty('ANTHROPIC_API_KEY')
   if (!apiKey) {
     throw new Error('ANTHROPIC_API_KEY is not set in Script Properties')
+  }
+
+  var resolvedModel = model || 'claude-opus-4-7'
+  var payload = {
+    model: resolvedModel,
+    max_tokens: maxTokens || 4000,
+    messages: [{ role: 'user', content: prompt }],
+  }
+
+  // Opus 4.7 rejects non-default temperature / top_p / top_k (HTTP 400).
+  if (resolvedModel.indexOf('claude-opus-4-7') !== 0) {
+    payload.temperature = temperature == null ? 0.4 : temperature
   }
 
   var response = UrlFetchApp.fetch('https://api.anthropic.com/v1/messages', {
@@ -145,12 +171,7 @@ function callClaude(prompt, model, temperature, maxTokens) {
       'x-api-key': apiKey,
       'anthropic-version': '2023-06-01',
     },
-    payload: JSON.stringify({
-      model: model || 'claude-opus-4-6',
-      max_tokens: maxTokens || 4000,
-      temperature: temperature == null ? 0.4 : temperature,
-      messages: [{ role: 'user', content: prompt }],
-    }),
+    payload: JSON.stringify(payload),
     muteHttpExceptions: true,
   })
 
@@ -175,12 +196,12 @@ function extractJson(text) {
 }
 
 function loadPrompt_(name) {
-  // clasp deploys .gs only; prompts are inlined via prompts/*.js functions
-  // or stored as Script Properties / Drive files later.
   return PROMPTS[name]
 }
 
 var PROMPTS = {}
+
+// --- handlers.js ---
 function generateSeed(body) {
   var category = body.category
   var cefr = body.cefr_level
@@ -217,7 +238,7 @@ function generateSeed(body) {
     ']',
   ].join('\n')
 
-  var text = callClaude(prompt, 'claude-opus-4-6', 0.4, 4000)
+  var text = callClaude(prompt, 'claude-opus-4-7', 0.4, 4000)
   return { items: extractJson(text) }
 }
 
@@ -231,7 +252,7 @@ function enrichItem(body) {
     'JSON オブジェクトのみ出力。',
   ].join('\n')
 
-  var text = callClaude(prompt, 'claude-opus-4-6', 0.3, 4000)
+  var text = callClaude(prompt, 'claude-opus-4-7', 0.3, 4000)
   return extractJson(text)
 }
 
@@ -249,7 +270,7 @@ function generateExamples(body) {
     'JSON のみ。',
   ].join('\n')
 
-  var text = callClaude(prompt, 'claude-opus-4-6', temperature, 2500)
+  var text = callClaude(prompt, 'claude-opus-4-7', temperature, 2500)
   return extractJson(text)
 }
 
@@ -260,7 +281,7 @@ function generateInsight(body) {
     JSON.stringify(item),
     '形式: {"id":"insight_<id>","target_id":"<id>","type":"core_image","content_ja":"...","content_en":"..."}',
   ].join('\n')
-  var text = callClaude(prompt, 'claude-opus-4-6', 0.4, 1500)
+  var text = callClaude(prompt, 'claude-opus-4-7', 0.4, 1500)
   return extractJson(text)
 }
 

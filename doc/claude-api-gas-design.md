@@ -6,12 +6,12 @@
 
 | 項目 | 状態 |
 |---|---|
-| Web App URL | `https://script.google.com/macros/s/AKfycbz_gk2WigbcJKX7DH-pq14Mp-O5v5f9f1_MfwvooGZGnwTGrMylQVhFgkFWIxB4ZVbX/exec` |
+| Web App URL | `https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec` |
 | Script Properties `ANTHROPIC_API_KEY` | 設定済み |
 | Phase 1 エンドポイント 5 つ | 稼働確認済み（GET health + POST generate-seed / validate-cefr） |
 | キャッシュ | Drive フォルダ `vocab-chunk-trainer-cache`（SHA-256） |
 | リポジトリ側ソース | `gas/*.js` + 貼り付け用 `gas/drive-paste/Code.gs` |
-| Build モデル | `claude-opus-4-6`（公式上は legacy だが有効。最新は `claude-opus-4-8`） |
+| Build モデル | `claude-opus-4-7`（2026-07-09 移行。`temperature` は Opus 4.7 で送信しない） |
 | Runtime / 判定モデル | `claude-haiku-4-5-20251001`（現行 Haiku 正式 ID） |
 
 運用コマンド・env の詳細は `gas/README.md`。作業差分の全体像は `doc/phase1-handoff-report.md`。
@@ -55,7 +55,7 @@
 
 **目的**: カテゴリ × CEFR レベルの学習項目候補を生成する。
 
-**モデル**: `claude-opus-4-6`(生成品質を優先、Build 時は速度より品質)  
+**モデル**: `claude-opus-4-7`  
 **Temperature**: `0.4`(多様性は要るが品質もほしい)  
 **max_tokens**: `4000`
 
@@ -108,7 +108,7 @@ JSON 配列のみを出力。前置きや説明は不要。
 
 **目的**: seed 生成で確定した 1 項目に対し、意味関係・混同語・派生用法・典型誤用を生成する。
 
-**モデル**: `claude-opus-4-6`  
+**モデル**: `claude-opus-4-7`  
 **Temperature**: `0.3`  
 **max_tokens**: `3000`
 
@@ -174,7 +174,7 @@ JSON オブジェクトのみ。前置き不要。
 
 **目的**: register 別(neutral/formal/casual)の例文を生成。**制約 A/B/C を厳守**。
 
-**モデル**: `claude-opus-4-6`  
+**モデル**: `claude-opus-4-7`  
 **Temperature**: `0.5`(例文の自然さのため、やや高め)  
 **max_tokens**: `2000`
 
@@ -235,7 +235,7 @@ JSON 配列のみ:
 
 **目的**: 語源・メタファー・文化背景など Insight カードのコンテンツを生成する。
 
-**モデル**: `claude-opus-4-6`  
+**モデル**: `claude-opus-4-7`  
 **Temperature**: `0.3`  
 **max_tokens**: `1000`
 

@@ -45,7 +45,7 @@ Phase 1 指示書: `doc/cursor-instruction-phase1.md`
 4. **現行 Web App URL**（2026-07-09 clasp push 後の新バージョン。GET health OK）:
 
 ```
-https://script.google.com/macros/s/AKfycbz_gk2WigbcJKX7DH-pq14Mp-O5v5f9f1_MfwvooGZGnwTGrMylQVhFgkFWIxB4ZVbX/exec
+https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec
 ```
 
 （旧 URL `...AKfycbxKVKogM8d...` は無効扱い。`.env*` / docs は新 URL に更新済み）
@@ -142,7 +142,7 @@ https://script.google.com/macros/s/AKfycbz_gk2WigbcJKX7DH-pq14Mp-O5v5f9f1_Mfwvoo
 
 4. ~~Apps Script API + clasp push~~ → **完了**（2026-07-09）。以後は `clasp push` → エディタで新バージョンデプロイ。手順は `gas/README.md`
 5. Build モデルを **`claude-opus-4-8` に上げるか**方針決定（現状 `opus-4-6` で問題なし）
-6. GAS CORS / 許可オリジンを本番 Pages ドメインに限定（設計書どおりの締め）
+| P1-6 GAS CORS | コード完了・**GAS 新バージョンデプロイ待ち**（`doc/step1-3-handoff-report.md`） |
 7. ~~`data/current` と `src/data/current` の二重管理~~ → **完了**: 正本は `data/current/` のみ（`@data` alias）
 
 ### P2 — Phase 2（指示書どおり前倒ししない）

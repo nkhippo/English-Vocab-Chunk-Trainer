@@ -34,7 +34,7 @@ function generateSeed(body) {
     ']',
   ].join('\n')
 
-  var text = callClaude(prompt, 'claude-opus-4-6', 0.4, 4000)
+  var text = callClaude(prompt, 'claude-opus-4-7', 0.4, 4000)
   return { items: extractJson(text) }
 }
 
@@ -48,7 +48,7 @@ function enrichItem(body) {
     'JSON オブジェクトのみ出力。',
   ].join('\n')
 
-  var text = callClaude(prompt, 'claude-opus-4-6', 0.3, 4000)
+  var text = callClaude(prompt, 'claude-opus-4-7', 0.3, 4000)
   return extractJson(text)
 }
 
@@ -66,7 +66,7 @@ function generateExamples(body) {
     'JSON のみ。',
   ].join('\n')
 
-  var text = callClaude(prompt, 'claude-opus-4-6', temperature, 2500)
+  var text = callClaude(prompt, 'claude-opus-4-7', temperature, 2500)
   return extractJson(text)
 }
 
@@ -77,7 +77,7 @@ function generateInsight(body) {
     JSON.stringify(item),
     '形式: {"id":"insight_<id>","target_id":"<id>","type":"core_image","content_ja":"...","content_en":"..."}',
   ].join('\n')
-  var text = callClaude(prompt, 'claude-opus-4-6', 0.4, 1500)
+  var text = callClaude(prompt, 'claude-opus-4-7', 0.4, 1500)
   return extractJson(text)
 }
 

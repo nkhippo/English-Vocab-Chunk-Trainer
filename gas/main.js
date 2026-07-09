@@ -1,13 +1,11 @@
 /**
  * Vocab & Chunk Trainer — GAS Web App entry
- * Deploy as Web App. Call with ?path=generate-seed etc.
- *
- * Script Properties:
- * - ANTHROPIC_API_KEY
- * - ALLOWED_ORIGINS (comma-separated, optional)
  */
 
 function doGet(e) {
+  var blocked = originForbiddenResponse_(e)
+  if (blocked) return blocked
+
   return jsonResponse({
     service: 'vocab-chunk-trainer-gas',
     paths: [
@@ -22,10 +20,13 @@ function doGet(e) {
 
 function doPost(e) {
   try {
-    const path = (e.parameter && e.parameter.path) || ''
-    const body = e.postData && e.postData.contents ? JSON.parse(e.postData.contents) : {}
+    var blocked = originForbiddenResponse_(e)
+    if (blocked) return blocked
 
-    const handlers = {
+    var path = (e.parameter && e.parameter.path) || ''
+    var body = e.postData && e.postData.contents ? JSON.parse(e.postData.contents) : {}
+
+    var handlers = {
       'generate-seed': generateSeed,
       'enrich-item': enrichItem,
       'generate-examples': generateExamples,
@@ -33,20 +34,20 @@ function doPost(e) {
       'validate-cefr': validateCefr,
     }
 
-    const handler = handlers[path]
+    var handler = handlers[path]
     if (!handler) {
       return jsonError(400, 'unknown_path', 'Unknown path: ' + path)
     }
 
-    const cacheKey = computeCacheKey(path, body)
+    var cacheKey = computeCacheKey(path, body)
     if (path !== 'review-writing') {
-      const cached = getCachedResponse(cacheKey)
+      var cached = getCachedResponse(cacheKey)
       if (cached) {
         return jsonResponse(cached, true)
       }
     }
 
-    const result = withRetry(function () {
+    var result = withRetry(function () {
       return handler(body)
     }, 3)
 
@@ -57,6 +58,13 @@ function doPost(e) {
   } catch (err) {
     return jsonError(500, 'internal_error', String(err && err.message ? err.message : err))
   }
+}
+
+function originForbiddenResponse_(e) {
+  var origin = e && e.parameter && e.parameter.origin ? String(e.parameter.origin).trim() : ''
+  if (!origin) return null
+  if (origin === 'https://nkhippo.github.io' || origin === 'http://localhost:5173') return null
+  return jsonError(403, 'origin_forbidden', 'Origin not allowed: ' + origin)
 }
 
 function withRetry(fn, maxAttempts) {

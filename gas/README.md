@@ -7,7 +7,7 @@ Implements the endpoints described in `doc/claude-api-gas-design.md`.
 ## Deployed endpoint (Phase 1)
 
 ```
-https://script.google.com/macros/s/AKfycbz_gk2WigbcJKX7DH-pq14Mp-O5v5f9f1_MfwvooGZGnwTGrMylQVhFgkFWIxB4ZVbX/exec
+https://script.google.com/macros/s/AKfycbxKVKogM8dKeHNuNOvjp7M8i9nsEEmtg943VYc5t_yzTtNG7geSN3fOQ3AZ8HBhVXPW/exec
 ```
 
 - Script Properties: `ANTHROPIC_API_KEY`（設定済み）
@@ -22,14 +22,27 @@ curl -sL "$GAS_ENDPOINT_URL"
 # → {"ok":true,"data":{"service":"vocab-chunk-trainer-gas","paths":[...]}}
 ```
 
-### Models in use (verified 2026-07-08)
+### Models in use (repo: 2026-07-09)
 
-| Endpoint group | Model ID | Status |
+| Endpoint group | Model ID | Notes |
 |---|---|---|
-| generate-seed / enrich-item / generate-examples / generate-insight | `claude-opus-4-6` | Valid (legacy, still available) |
-| validate-cefr | `claude-haiku-4-5-20251001` | Valid (current Haiku) |
+| generate-seed / enrich-item / generate-examples / generate-insight | `claude-opus-4-7` | `temperature` は送信しない（4.7 仕様） |
+| validate-cefr | `claude-haiku-4-5-20251001` | 判定系 Haiku |
 
-Optional later upgrade for Build quality: `claude-opus-4-8`.
+**本番 Web App**: `clasp push` 後、エディタで **デプロイ → 新バージョン** が必要。`clasp deploy -V` で新規バージョンを公開した際、反映まで 1〜2 分かかることがある。稼働中デプロイを旧バージョンに戻す場合は `clasp deploy -i <DEPLOYMENT_ID> -V 2` 等。
+
+### CORS / 許可オリジン（2026-07-09）
+
+- 許可: `https://nkhippo.github.io` / `http://localhost:5173`
+- ブラウザは `?origin=` クエリでページ origin を渡す（`src/lib/gas-client` 実装済み）
+- CLI / `curl` は origin 省略可
+- GAS `ContentService` はカスタム CORS ヘッダーを設定できないため、**サーバー側 origin ゲート**（許可外は `403 origin_forbidden`）で制御
+
+変更履歴:
+
+| 日付 | 内容 |
+|---|---|
+| 2026-07-09 | 許可オリジンを本番 + localhost に限定（`gas/main.js`） |
 
 ---
 

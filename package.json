@@ -12,7 +12,9 @@
     "generate:enrichment": "tsx scripts/enrich-items.ts",
     "generate:examples": "tsx scripts/generate-examples.ts",
     "merge": "tsx scripts/merge-data.ts",
-    "validate": "tsx scripts/validate-schema.ts"
+    "validate": "tsx scripts/validate-schema.ts",
+    "build:gas-paste": "tsx scripts/build-gas-paste.ts",
+    "batch:a2-seeds": "tsx scripts/batch-a2-seeds.ts"
   },
   "dependencies": {
     "ajv": "^8.17.1",

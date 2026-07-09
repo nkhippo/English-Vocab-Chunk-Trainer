@@ -12,15 +12,28 @@ async function main() {
   const cefr = String(args.cefr ?? 'A2')
   const category = String(args.category ?? 'collocation')
   const batch = Number(args.batch ?? 30)
+  const append = Boolean(args.append)
 
   const currentPath = path.join(root, 'data/current/items.json')
   const dataset = (await readJson<Dataset>(currentPath).catch(() => ({
     schema_version: '1.0.0',
     items: [],
   }))) as Dataset
-  const existingIds = dataset.items.map((item) => item.id)
 
-  console.log(`[generate-seed] cefr=${cefr} category=${category} batch=${batch}`)
+  const outDir = path.join(root, 'data/staging')
+  await ensureDir(outDir)
+  const outPath = path.join(outDir, `${cefr}_${category}_seeds.json`)
+
+  const stagingExisting = append
+    ? ((await readJson<SeedItem[]>(outPath).catch(() => [])) as SeedItem[])
+    : []
+
+  const existingIds = [
+    ...dataset.items.map((item) => item.id),
+    ...stagingExisting.map((item) => item.id),
+  ]
+
+  console.log(`[generate-seed] cefr=${cefr} category=${category} batch=${batch} append=${append}`)
   console.log(`[generate-seed] existing ids: ${existingIds.length}`)
 
   await sleep(1000)
@@ -36,12 +49,16 @@ async function main() {
     process.exit(1)
   }
 
-  const items = Array.isArray(result.data) ? result.data : (result.data.items ?? [])
-  const outDir = path.join(root, 'data/staging')
-  await ensureDir(outDir)
-  const outPath = path.join(outDir, `${cefr}_${category}_seeds.json`)
-  await writeJson(outPath, items)
-  console.log(`[generate-seed] wrote ${items.length} items → ${outPath}${result.cached ? ' (cached)' : ''}`)
+  const newItems = Array.isArray(result.data) ? result.data : (result.data.items ?? [])
+  const byId = new Map<string, SeedItem>()
+  for (const item of stagingExisting) byId.set(item.id, item)
+  for (const item of newItems) byId.set(item.id, item)
+  const merged = [...byId.values()]
+
+  await writeJson(outPath, merged)
+  console.log(
+    `[generate-seed] wrote ${merged.length} items (+${newItems.length} new) → ${outPath}${result.cached ? ' (cached)' : ''}`,
+  )
 }
 
 main().catch((err) => {

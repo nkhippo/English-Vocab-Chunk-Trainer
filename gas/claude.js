@@ -4,6 +4,18 @@ function callClaude(prompt, model, temperature, maxTokens) {
     throw new Error('ANTHROPIC_API_KEY is not set in Script Properties')
   }
 
+  var resolvedModel = model || 'claude-opus-4-7'
+  var payload = {
+    model: resolvedModel,
+    max_tokens: maxTokens || 4000,
+    messages: [{ role: 'user', content: prompt }],
+  }
+
+  // Opus 4.7 rejects non-default temperature / top_p / top_k (HTTP 400).
+  if (resolvedModel.indexOf('claude-opus-4-7') !== 0) {
+    payload.temperature = temperature == null ? 0.4 : temperature
+  }
+
   var response = UrlFetchApp.fetch('https://api.anthropic.com/v1/messages', {
     method: 'post',
     contentType: 'application/json',
@@ -11,12 +23,7 @@ function callClaude(prompt, model, temperature, maxTokens) {
       'x-api-key': apiKey,
       'anthropic-version': '2023-06-01',
     },
-    payload: JSON.stringify({
-      model: model || 'claude-opus-4-6',
-      max_tokens: maxTokens || 4000,
-      temperature: temperature == null ? 0.4 : temperature,
-      messages: [{ role: 'user', content: prompt }],
-    }),
+    payload: JSON.stringify(payload),
     muteHttpExceptions: true,
   })
 
@@ -41,8 +48,6 @@ function extractJson(text) {
 }
 
 function loadPrompt_(name) {
-  // clasp deploys .gs only; prompts are inlined via prompts/*.js functions
-  // or stored as Script Properties / Drive files later.
   return PROMPTS[name]
 }
 

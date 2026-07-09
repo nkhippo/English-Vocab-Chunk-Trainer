@@ -32,7 +32,10 @@ function resolveEndpoint(): string {
 
 export async function callGas<T>(path: GasPath, body: unknown): Promise<GasResponse<T>> {
   const endpoint = resolveEndpoint()
-  const url = `${endpoint}${endpoint.includes('?') ? '&' : '?'}path=${encodeURIComponent(path)}`
+  const origin =
+    typeof window !== 'undefined' && window.location?.origin ? window.location.origin : ''
+  const originParam = origin ? `&origin=${encodeURIComponent(origin)}` : ''
+  const url = `${endpoint}${endpoint.includes('?') ? '&' : '?'}path=${encodeURIComponent(path)}${originParam}`
 
   const response = await fetch(url, {
     method: 'POST',

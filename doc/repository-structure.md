@@ -116,6 +116,7 @@ english-vocab-chunk-trainer/
 │   │   └── learning-data-schema.json  #   JSON Schema（validate が参照）
 │   ├── ops/                           # 運用手順・インフラ設計
 │   │   ├── data-operations-guide.md   #   データ生成・SemVer・チェックリスト
+│   │   ├── ux-smoke-test-checklist.md #   5分 UX スモークテスト（初見向け）
 │   │   └── claude-api-gas-design.md   #   GAS エンドポイント・プロンプト設計
 │   ├── instructions/                  # Cursor / 作業指示書
 │   │   └── cursor-instruction-phase1.md

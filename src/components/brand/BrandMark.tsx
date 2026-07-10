@@ -9,7 +9,7 @@ function LoomIcon({ className }: { className?: string }) {
         <line x1="24" y1="4" x2="24" y2="34" />
         <line x1="32" y1="4" x2="32" y2="34" />
       </g>
-      <g stroke="var(--color-brand)" strokeWidth="3">
+      <g stroke="var(--color-text-secondary)" strokeWidth="3">
         <line x1="4" y1="9" x2="34" y2="9" />
         <line x1="4" y1="17" x2="34" y2="17" />
         <line x1="4" y1="25" x2="34" y2="25" />
@@ -32,9 +32,9 @@ export function BrandMark({ compact = false, className = '' }: BrandMarkProps) {
     <div className={`flex items-end gap-3.5 ${className}`}>
       <LoomIcon className={compact ? 'size-8 shrink-0' : 'size-[38px] shrink-0'} />
       <div className="min-w-0">
-        <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-ink-muted">{t('app.eyebrow')}</p>
+        <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-text-secondary">{t('app.eyebrow')}</p>
         <p
-          className={`relative inline-block font-extrabold tracking-tight text-ink ${
+          className={`relative inline-block font-extrabold tracking-tight text-text-primary ${
             compact ? 'text-base' : 'text-[21px]'
           }`}
         >

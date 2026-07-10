@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.1.0",
-  "generated_at": "2026-07-09T15:25:56.719Z",
+  "schema_version": "1.2.0",
+  "generated_at": "2026-07-10T15:00:00.000Z",
   "cefr_levels_included": [
     "A1",
     "A2"
@@ -38,10 +38,128 @@
       "ipa_careful": "/ˈmeɪk ə dɪˈsɪʒən/",
       "ipa_connected": "/ˈmeɪkə dɪˈsɪʒən/",
       "meta": {
-        "schema_version": "1.1.0",
+        "schema_version": "1.2.0",
         "source": "claude_generated",
-        "validated_by_user": true
-      }
+        "validated_by_user": true,
+        "updated_at": "2026-07-10T15:00:00.000Z"
+      },
+      "contexts": [
+        {
+          "id": "make_a_decision_c1",
+          "text_en": "Last week, our team needed to solve a big problem. After the long meeting, the manager finally made a decision. Everyone agreed with the plan.",
+          "text_ja": "先週、私たちのチームは大きな問題を解決する必要がありました。長い会議の後、マネージャーはついに決断しました。みんながその計画に賛成しました。",
+          "target_span": {
+            "start": 95,
+            "end": 110
+          },
+          "cloze_spans": [
+            {
+              "start": 95,
+              "end": 99,
+              "answer": "made"
+            },
+            {
+              "start": 102,
+              "end": 110,
+              "answer": "decision"
+            }
+          ],
+          "scene": "business_meeting",
+          "register": "neutral"
+        },
+        {
+          "id": "make_a_decision_c2",
+          "text_en": "Mia looked at the two schools for a long time. She wanted to make a decision before dinner. Her parents waited quietly in the kitchen.",
+          "text_ja": "ミアは二つの学校を長いあいだ見比べました。夕食前に決断したかったのです。両親は台所で静かに待っていました。",
+          "target_span": {
+            "start": 61,
+            "end": 76
+          },
+          "cloze_spans": [
+            {
+              "start": 61,
+              "end": 65,
+              "answer": "make"
+            },
+            {
+              "start": 68,
+              "end": 76,
+              "answer": "decision"
+            }
+          ],
+          "scene": "family_conversation",
+          "register": "neutral"
+        },
+        {
+          "id": "make_a_decision_c3",
+          "text_en": "The coach did not want to rush. He needed more time to make a decision about the starting team. The players practiced while they waited.",
+          "text_ja": "コーチは急ぐつもりはありませんでした。先発メンバーについて決断する時間がもっと必要でした。選手たちは待ちながら練習しました。",
+          "target_span": {
+            "start": 55,
+            "end": 70
+          },
+          "cloze_spans": [
+            {
+              "start": 55,
+              "end": 59,
+              "answer": "make"
+            },
+            {
+              "start": 62,
+              "end": 70,
+              "answer": "decision"
+            }
+          ],
+          "scene": "sports_team",
+          "register": "neutral"
+        },
+        {
+          "id": "make_a_decision_c4",
+          "text_en": "At the travel desk, Ken compared two tickets. He made a decision and bought the cheaper flight. Then he called his sister with the news.",
+          "text_ja": "旅行カウンターでケンは二つのチケットを比べました。彼は決断して、安い方の便を買いました。それから妹にその知らせを電話しました。",
+          "target_span": {
+            "start": 49,
+            "end": 64
+          },
+          "cloze_spans": [
+            {
+              "start": 49,
+              "end": 53,
+              "answer": "made"
+            },
+            {
+              "start": 56,
+              "end": 64,
+              "answer": "decision"
+            }
+          ],
+          "scene": "travel_desk",
+          "register": "neutral"
+        },
+        {
+          "id": "make_a_decision_c5",
+          "text_en": "The doctor explained both options carefully. Ana had to make a decision about the treatment. She asked one more question before she chose.",
+          "text_ja": "医者は両方の選択肢を丁寧に説明しました。アナは治療について決断しなければなりませんでした。選ぶ前にもう一つ質問しました。",
+          "target_span": {
+            "start": 56,
+            "end": 71
+          },
+          "cloze_spans": [
+            {
+              "start": 56,
+              "end": 60,
+              "answer": "make"
+            },
+            {
+              "start": 63,
+              "end": 71,
+              "answer": "decision"
+            }
+          ],
+          "scene": "clinic",
+          "register": "formal"
+        }
+      ]
     },
     {
       "id": "look_forward_to",
@@ -68,7 +186,149 @@
       ],
       "skill_focus": "receptive_and_productive",
       "ipa_careful": "/lʊk ˈfɔːwəd tuː/",
-      "ipa_connected": "/lʊkˈfɔːwəd tə/"
+      "ipa_connected": "/lʊkˈfɔːwəd tə/",
+      "contexts": [
+        {
+          "id": "look_forward_to_c1",
+          "text_en": "Tom sent a short message to his friend. He said he looked forward to their trip next month. They planned to visit the sea together.",
+          "text_ja": "トムは友人に短いメッセージを送りました。来月の旅行を楽しみにしていると書きました。二人で海へ行く予定です。",
+          "target_span": {
+            "start": 51,
+            "end": 68
+          },
+          "cloze_spans": [
+            {
+              "start": 51,
+              "end": 57,
+              "answer": "looked"
+            },
+            {
+              "start": 58,
+              "end": 65,
+              "answer": "forward"
+            },
+            {
+              "start": 66,
+              "end": 68,
+              "answer": "to"
+            }
+          ],
+          "scene": "friend_message",
+          "register": "neutral"
+        },
+        {
+          "id": "look_forward_to_c2",
+          "text_en": "Every Friday, the class talks about the weekend. The students look forward to the school festival. They practice songs after lunch.",
+          "text_ja": "毎週金曜、クラスは週末の話をします。生徒たちは学園祭を楽しみにしています。昼休みのあとに歌の練習をします。",
+          "target_span": {
+            "start": 62,
+            "end": 77
+          },
+          "cloze_spans": [
+            {
+              "start": 62,
+              "end": 66,
+              "answer": "look"
+            },
+            {
+              "start": 67,
+              "end": 74,
+              "answer": "forward"
+            },
+            {
+              "start": 75,
+              "end": 77,
+              "answer": "to"
+            }
+          ],
+          "scene": "school",
+          "register": "neutral"
+        },
+        {
+          "id": "look_forward_to_c3",
+          "text_en": "Sara packed her bag early in the morning. She looked forward to seeing her grandparents again. The train left at nine.",
+          "text_ja": "サラは朝早くかばんを詰めました。祖父母にまた会えるのを楽しみにしていました。電車は9時に出発しました。",
+          "target_span": {
+            "start": 46,
+            "end": 63
+          },
+          "cloze_spans": [
+            {
+              "start": 46,
+              "end": 52,
+              "answer": "looked"
+            },
+            {
+              "start": 53,
+              "end": 60,
+              "answer": "forward"
+            },
+            {
+              "start": 61,
+              "end": 63,
+              "answer": "to"
+            }
+          ],
+          "scene": "family_visit",
+          "register": "neutral"
+        },
+        {
+          "id": "look_forward_to_c4",
+          "text_en": "After a hard week at work, Rina wrote in her diary. She looked forward to a quiet Sunday at home. She bought tea and a new book.",
+          "text_ja": "忙しい一週間のあと、リナは日記に書きました。静かな日曜の家での時間を楽しみにしていました。お茶と新しい本を買いました。",
+          "target_span": {
+            "start": 56,
+            "end": 73
+          },
+          "cloze_spans": [
+            {
+              "start": 56,
+              "end": 62,
+              "answer": "looked"
+            },
+            {
+              "start": 63,
+              "end": 70,
+              "answer": "forward"
+            },
+            {
+              "start": 71,
+              "end": 73,
+              "answer": "to"
+            }
+          ],
+          "scene": "home_rest",
+          "register": "neutral"
+        },
+        {
+          "id": "look_forward_to_c5",
+          "text_en": "The team finished the project on Friday. Now they look forward to the holiday next week. Their manager thanked them for the work.",
+          "text_ja": "チームは金曜にプロジェクトを終えました。今は来週の休みを楽しみにしています。マネージャーは仕事への感謝を伝えました。",
+          "target_span": {
+            "start": 50,
+            "end": 65
+          },
+          "cloze_spans": [
+            {
+              "start": 50,
+              "end": 54,
+              "answer": "look"
+            },
+            {
+              "start": 55,
+              "end": 62,
+              "answer": "forward"
+            },
+            {
+              "start": 63,
+              "end": 65,
+              "answer": "to"
+            }
+          ],
+          "scene": "office",
+          "register": "neutral"
+        }
+      ]
     },
     {
       "id": "whats_up",
@@ -100,7 +360,99 @@
       ],
       "skill_focus": "receptive_and_productive",
       "ipa_careful": "/wɒts ʌp/",
-      "ipa_connected": "/wʌtsʌp/"
+      "ipa_connected": "/wʌtsʌp/",
+      "contexts": [
+        {
+          "id": "whats_up_c1",
+          "text_en": "Leo met his classmate near the station. He smiled and said, What's up? They talked about the homework for a minute.",
+          "text_ja": "レオは駅の近くでクラスメートに会いました。笑って「調子どう？」と言いました。宿題の話を少ししました。",
+          "target_span": {
+            "start": 60,
+            "end": 70
+          },
+          "cloze_spans": [
+            {
+              "start": 60,
+              "end": 70,
+              "answer": "What's up?"
+            }
+          ],
+          "scene": "station_chat",
+          "register": "informal"
+        },
+        {
+          "id": "whats_up_c2",
+          "text_en": "Maya opened the chat app after school. Her friend wrote, What's up? Maya answered with a photo of her new cat.",
+          "text_ja": "マヤは放課後にチャットアプリを開きました。友だちが「調子どう？」と書いていました。マヤは新しい猫の写真で返事しました。",
+          "target_span": {
+            "start": 57,
+            "end": 67
+          },
+          "cloze_spans": [
+            {
+              "start": 57,
+              "end": 67,
+              "answer": "What's up?"
+            }
+          ],
+          "scene": "chat_app",
+          "register": "informal"
+        },
+        {
+          "id": "whats_up_c3",
+          "text_en": "On the phone, Ben sounded tired. His brother asked, What's up? Ben said he had a long day at work.",
+          "text_ja": "電話でベンは疲れた声でした。兄が「どうしたの？」と聞きました。ベンは仕事で長い一日だったと言いました。",
+          "target_span": {
+            "start": 52,
+            "end": 62
+          },
+          "cloze_spans": [
+            {
+              "start": 52,
+              "end": 62,
+              "answer": "What's up?"
+            }
+          ],
+          "scene": "phone_call",
+          "register": "informal"
+        },
+        {
+          "id": "whats_up_c4",
+          "text_en": "In the park, two friends sat on a bench. One of them asked, What's up? The other talked about a funny movie.",
+          "text_ja": "公園で二人の友だちがベンチに座っていました。一人が「調子どう？」と聞きました。もう一人はおもしろい映画の話をしました。",
+          "target_span": {
+            "start": 60,
+            "end": 70
+          },
+          "cloze_spans": [
+            {
+              "start": 60,
+              "end": 70,
+              "answer": "What's up?"
+            }
+          ],
+          "scene": "park",
+          "register": "informal"
+        },
+        {
+          "id": "whats_up_c5",
+          "text_en": "Before class started, Nina walked into the room. Her friend waved and said, What's up? They laughed and opened their books.",
+          "text_ja": "授業の前にニナが教室に入りました。友だちが手を振って「調子どう？」と言いました。二人は笑って本を開きました。",
+          "target_span": {
+            "start": 76,
+            "end": 86
+          },
+          "cloze_spans": [
+            {
+              "start": 76,
+              "end": 86,
+              "answer": "What's up?"
+            }
+          ],
+          "scene": "classroom",
+          "register": "informal"
+        }
+      ]
     },
     {
       "surface": "take a picture",
@@ -117,7 +469,9 @@
       "category": "collocation",
       "cefr_level": "A2",
       "meta": {
-        "validated_by_user": true
+        "validated_by_user": true,
+        "schema_version": "1.2.0",
+        "updated_at": "2026-07-10T15:00:00.000Z"
       },
       "synonyms": [
         {
@@ -265,6 +619,123 @@
           "register": "informal",
           "surrounding_cefr_ceiling": "A2"
         }
+      ],
+      "contexts": [
+        {
+          "id": "take_a_picture_c1",
+          "text_en": "At the museum, the guide stopped near a painting. Many visitors wanted to take a picture. A guard asked them not to use flash.",
+          "text_ja": "美術館でガイドが絵の前で立ち止まりました。多くの来館者が写真を撮りたがっていました。警備員はフラッシュを使わないよう頼みました。",
+          "target_span": {
+            "start": 74,
+            "end": 88
+          },
+          "cloze_spans": [
+            {
+              "start": 74,
+              "end": 78,
+              "answer": "take"
+            },
+            {
+              "start": 81,
+              "end": 88,
+              "answer": "picture"
+            }
+          ],
+          "scene": "museum",
+          "register": "neutral"
+        },
+        {
+          "id": "take_a_picture_c2",
+          "text_en": "The children stood under the cherry trees. Their teacher said they could take a picture together. Everyone smiled for the camera.",
+          "text_ja": "子どもたちは桜の木の下に立ちました。先生は一緒に写真を撮ってよいと言いました。みんなカメラに向かって笑いました。",
+          "target_span": {
+            "start": 73,
+            "end": 87
+          },
+          "cloze_spans": [
+            {
+              "start": 73,
+              "end": 77,
+              "answer": "take"
+            },
+            {
+              "start": 80,
+              "end": 87,
+              "answer": "picture"
+            }
+          ],
+          "scene": "school_trip",
+          "register": "neutral"
+        },
+        {
+          "id": "take_a_picture_c3",
+          "text_en": "On the beach, Yuki found a bright shell. She asked her friend to take a picture of it. The waves were quiet that morning.",
+          "text_ja": "海岸でユキはきれいな貝を見つけました。友だちにそれを写真に撮ってほしいと頼みました。その朝、波は静かでした。",
+          "target_span": {
+            "start": 65,
+            "end": 79
+          },
+          "cloze_spans": [
+            {
+              "start": 65,
+              "end": 69,
+              "answer": "take"
+            },
+            {
+              "start": 72,
+              "end": 79,
+              "answer": "picture"
+            }
+          ],
+          "scene": "beach",
+          "register": "neutral"
+        },
+        {
+          "id": "take_a_picture_c4",
+          "text_en": "Before they left the restaurant, the family took a picture. The waiter offered to hold the phone. They thanked him and went home.",
+          "text_ja": "レストランを出る前に、家族は写真を撮りました。店員が電話を持ってあげると申し出ました。彼らは礼を言って帰りました。",
+          "target_span": {
+            "start": 44,
+            "end": 58
+          },
+          "cloze_spans": [
+            {
+              "start": 44,
+              "end": 48,
+              "answer": "took"
+            },
+            {
+              "start": 51,
+              "end": 58,
+              "answer": "picture"
+            }
+          ],
+          "scene": "restaurant",
+          "register": "neutral"
+        },
+        {
+          "id": "take_a_picture_c5",
+          "text_en": "During the city walk, Ken stopped at the old bridge. He wanted to take a picture for his blog. The light was soft and warm.",
+          "text_ja": "街歩きの途中、ケンは古い橋で立ち止まりました。ブログ用に写真を撮りたかったのです。光はやわらかく温かい色でした。",
+          "target_span": {
+            "start": 66,
+            "end": 80
+          },
+          "cloze_spans": [
+            {
+              "start": 66,
+              "end": 70,
+              "answer": "take"
+            },
+            {
+              "start": 73,
+              "end": 80,
+              "answer": "picture"
+            }
+          ],
+          "scene": "city_walk",
+          "register": "neutral"
+        }
       ]
     },
     {
@@ -282,7 +753,9 @@
       "category": "collocation",
       "cefr_level": "A2",
       "meta": {
-        "validated_by_user": true
+        "validated_by_user": true,
+        "schema_version": "1.2.0",
+        "updated_at": "2026-07-10T15:00:00.000Z"
       },
       "synonyms": [
         {
@@ -406,6 +879,123 @@
           "register": "informal",
           "surrounding_cefr_ceiling": "A2"
         }
+      ],
+      "contexts": [
+        {
+          "id": "have_breakfast_c1",
+          "text_en": "Every morning, Hana sits by the window. She likes to have breakfast with toast and tea. Then she checks the weather on her phone.",
+          "text_ja": "毎朝、ハナは窓のそばに座ります。トーストとお茶で朝食をとるのが好きです。そのあと電話で天気を確認します。",
+          "target_span": {
+            "start": 53,
+            "end": 67
+          },
+          "cloze_spans": [
+            {
+              "start": 53,
+              "end": 57,
+              "answer": "have"
+            },
+            {
+              "start": 58,
+              "end": 67,
+              "answer": "breakfast"
+            }
+          ],
+          "scene": "home_morning",
+          "register": "neutral"
+        },
+        {
+          "id": "have_breakfast_c2",
+          "text_en": "At the hotel, guests can have breakfast from seven. The room is bright and quiet. Many people choose eggs and fruit.",
+          "text_ja": "ホテルでは7時から朝食をとれます。部屋は明るく静かです。多くの人が卵と果物を選びます。",
+          "target_span": {
+            "start": 25,
+            "end": 39
+          },
+          "cloze_spans": [
+            {
+              "start": 25,
+              "end": 29,
+              "answer": "have"
+            },
+            {
+              "start": 30,
+              "end": 39,
+              "answer": "breakfast"
+            }
+          ],
+          "scene": "hotel",
+          "register": "neutral"
+        },
+        {
+          "id": "have_breakfast_c3",
+          "text_en": "Before the exam, Jun woke up early. He had breakfast slowly and reviewed his notes. He felt a little calmer after that.",
+          "text_ja": "試験の前、ジュンは早く起きました。ゆっくり朝食をとってノートを見直しました。そのあと少し落ち着きました。",
+          "target_span": {
+            "start": 39,
+            "end": 52
+          },
+          "cloze_spans": [
+            {
+              "start": 39,
+              "end": 42,
+              "answer": "had"
+            },
+            {
+              "start": 43,
+              "end": 52,
+              "answer": "breakfast"
+            }
+          ],
+          "scene": "exam_day",
+          "register": "neutral"
+        },
+        {
+          "id": "have_breakfast_c4",
+          "text_en": "On Sundays, the family has breakfast together. They talk about plans for the afternoon. The kitchen smells like coffee.",
+          "text_ja": "日曜は家族で一緒に朝食をとります。午後の予定について話します。台所はコーヒーの香りがします。",
+          "target_span": {
+            "start": 23,
+            "end": 36
+          },
+          "cloze_spans": [
+            {
+              "start": 23,
+              "end": 26,
+              "answer": "has"
+            },
+            {
+              "start": 27,
+              "end": 36,
+              "answer": "breakfast"
+            }
+          ],
+          "scene": "family_sunday",
+          "register": "neutral"
+        },
+        {
+          "id": "have_breakfast_c5",
+          "text_en": "After the morning run, Leo was hungry. He went home to have breakfast. A bowl of rice and soup felt perfect.",
+          "text_ja": "朝のランニングのあと、レオはお腹が空いていました。家に帰って朝食をとることにしました。ご飯とスープがちょうどよかったです。",
+          "target_span": {
+            "start": 55,
+            "end": 69
+          },
+          "cloze_spans": [
+            {
+              "start": 55,
+              "end": 59,
+              "answer": "have"
+            },
+            {
+              "start": 60,
+              "end": 69,
+              "answer": "breakfast"
+            }
+          ],
+          "scene": "after_exercise",
+          "register": "neutral"
+        }
       ]
     },
     {
@@ -423,7 +1013,9 @@
       "category": "collocation",
       "cefr_level": "A2",
       "meta": {
-        "validated_by_user": true
+        "validated_by_user": true,
+        "schema_version": "1.2.0",
+        "updated_at": "2026-07-10T15:00:00.000Z"
       },
       "synonyms": [
         {
@@ -563,6 +1155,123 @@
           "register": "informal",
           "surrounding_cefr_ceiling": "A2"
         }
+      ],
+      "contexts": [
+        {
+          "id": "do_homework_c1",
+          "text_en": "After dinner, Sora sat at her desk. She needed to do homework before she watched TV. Her brother played quietly in the next room.",
+          "text_ja": "夕食のあと、ソラは机に座りました。テレビを見る前に宿題をしなければなりませんでした。弟は隣の部屋で静かに遊んでいました。",
+          "target_span": {
+            "start": 50,
+            "end": 61
+          },
+          "cloze_spans": [
+            {
+              "start": 50,
+              "end": 52,
+              "answer": "do"
+            },
+            {
+              "start": 53,
+              "end": 61,
+              "answer": "homework"
+            }
+          ],
+          "scene": "home_evening",
+          "register": "neutral"
+        },
+        {
+          "id": "do_homework_c2",
+          "text_en": "In the library, two students shared a table. They wanted to do homework without noise. The librarian smiled and walked past.",
+          "text_ja": "図書館で二人の生徒が机を共有していました。静かに宿題をしたかったのです。司書は微笑んで通り過ぎました。",
+          "target_span": {
+            "start": 60,
+            "end": 71
+          },
+          "cloze_spans": [
+            {
+              "start": 60,
+              "end": 62,
+              "answer": "do"
+            },
+            {
+              "start": 63,
+              "end": 71,
+              "answer": "homework"
+            }
+          ],
+          "scene": "library",
+          "register": "neutral"
+        },
+        {
+          "id": "do_homework_c3",
+          "text_en": "On the train, Ken opened his notebook. He tried to do homework between stations. The ride was short, so he worked fast.",
+          "text_ja": "電車の中でケンはノートを開きました。駅と駅のあいだで宿題をしようとしました。乗車時間が短いので急いで取り組みました。",
+          "target_span": {
+            "start": 51,
+            "end": 62
+          },
+          "cloze_spans": [
+            {
+              "start": 51,
+              "end": 53,
+              "answer": "do"
+            },
+            {
+              "start": 54,
+              "end": 62,
+              "answer": "homework"
+            }
+          ],
+          "scene": "commute",
+          "register": "neutral"
+        },
+        {
+          "id": "do_homework_c4",
+          "text_en": "Mia finished dinner and washed the dishes. Then she did homework for English class. She checked the answers twice.",
+          "text_ja": "ミアは夕食を終えて皿を洗いました。それから英語の宿題をしました。答えを二度確認しました。",
+          "target_span": {
+            "start": 52,
+            "end": 64
+          },
+          "cloze_spans": [
+            {
+              "start": 52,
+              "end": 55,
+              "answer": "did"
+            },
+            {
+              "start": 56,
+              "end": 64,
+              "answer": "homework"
+            }
+          ],
+          "scene": "home_study",
+          "register": "neutral"
+        },
+        {
+          "id": "do_homework_c5",
+          "text_en": "The teacher gave the class a short reminder. Everyone should do homework by Friday. A few students wrote the date in their planners.",
+          "text_ja": "先生はクラスに短い注意をしました。金曜までに宿題をするように、とのことでした。何人かの生徒は手帳に日付を書きました。",
+          "target_span": {
+            "start": 61,
+            "end": 72
+          },
+          "cloze_spans": [
+            {
+              "start": 61,
+              "end": 63,
+              "answer": "do"
+            },
+            {
+              "start": 64,
+              "end": 72,
+              "answer": "homework"
+            }
+          ],
+          "scene": "classroom",
+          "register": "neutral"
+        }
       ]
     },
     {
@@ -580,7 +1289,9 @@
       "category": "collocation",
       "cefr_level": "A2",
       "meta": {
-        "validated_by_user": true
+        "validated_by_user": true,
+        "schema_version": "1.2.0",
+        "updated_at": "2026-07-10T15:00:00.000Z"
       },
       "synonyms": [
         {
@@ -725,6 +1436,123 @@
           "register": "informal",
           "surrounding_cefr_ceiling": "A2"
         }
+      ],
+      "contexts": [
+        {
+          "id": "catch_a_cold_c1",
+          "text_en": "After the rainy game, the players felt tired. Two of them caught a cold the next day. The coach told them to rest at home.",
+          "text_ja": "雨の試合のあと、選手たちは疲れていました。翌日、二人は風邪をひきました。コーチは家で休むように言いました。",
+          "target_span": {
+            "start": 58,
+            "end": 71
+          },
+          "cloze_spans": [
+            {
+              "start": 58,
+              "end": 64,
+              "answer": "caught"
+            },
+            {
+              "start": 67,
+              "end": 71,
+              "answer": "cold"
+            }
+          ],
+          "scene": "sports",
+          "register": "neutral"
+        },
+        {
+          "id": "catch_a_cold_c2",
+          "text_en": "In winter, many people forget a warm scarf. It is easy to catch a cold on the bus. Drink water and sleep well if you feel weak.",
+          "text_ja": "冬は多くの人が暖かいマフラーを忘れます。バスの中で風邪をひきやすいです。体がだるいときは水を飲んでよく寝ましょう。",
+          "target_span": {
+            "start": 58,
+            "end": 70
+          },
+          "cloze_spans": [
+            {
+              "start": 58,
+              "end": 63,
+              "answer": "catch"
+            },
+            {
+              "start": 66,
+              "end": 70,
+              "answer": "cold"
+            }
+          ],
+          "scene": "winter_commute",
+          "register": "neutral"
+        },
+        {
+          "id": "catch_a_cold_c3",
+          "text_en": "Lina stayed late at the office with wet hair. She caught a cold over the weekend. Her friend brought soup to her apartment.",
+          "text_ja": "リナは濡れた髪のままオフィスに遅くまでいました。週末に風邪をひきました。友だちがアパートにスープを持ってきました。",
+          "target_span": {
+            "start": 50,
+            "end": 63
+          },
+          "cloze_spans": [
+            {
+              "start": 50,
+              "end": 56,
+              "answer": "caught"
+            },
+            {
+              "start": 59,
+              "end": 63,
+              "answer": "cold"
+            }
+          ],
+          "scene": "office",
+          "register": "neutral"
+        },
+        {
+          "id": "catch_a_cold_c4",
+          "text_en": "The school nurse spoke to the class. She said children often catch a cold in March. She asked them to wash their hands often.",
+          "text_ja": "保健室の先生がクラスに話しました。3月は子どもがよく風邪をひくと言いました。手をこまめに洗うよう頼みました。",
+          "target_span": {
+            "start": 61,
+            "end": 73
+          },
+          "cloze_spans": [
+            {
+              "start": 61,
+              "end": 66,
+              "answer": "catch"
+            },
+            {
+              "start": 69,
+              "end": 73,
+              "answer": "cold"
+            }
+          ],
+          "scene": "school_nurse",
+          "register": "neutral"
+        },
+        {
+          "id": "catch_a_cold_c5",
+          "text_en": "After camping by the lake, Dan felt a sore throat. He was afraid he might catch a cold. He went home early and slept.",
+          "text_ja": "湖でのキャンプのあと、ダンは喉が痛くなりました。風邪をひくかもしれないと心配しました。早めに帰宅して眠りました。",
+          "target_span": {
+            "start": 74,
+            "end": 86
+          },
+          "cloze_spans": [
+            {
+              "start": 74,
+              "end": 79,
+              "answer": "catch"
+            },
+            {
+              "start": 82,
+              "end": 86,
+              "answer": "cold"
+            }
+          ],
+          "scene": "camping",
+          "register": "neutral"
+        }
       ]
     },
     {
@@ -742,7 +1570,9 @@
       "category": "collocation",
       "cefr_level": "A2",
       "meta": {
-        "validated_by_user": true
+        "validated_by_user": true,
+        "schema_version": "1.2.0",
+        "updated_at": "2026-07-10T15:00:00.000Z"
       },
       "synonyms": [
         {
@@ -875,6 +1705,123 @@
           "register": "informal",
           "surrounding_cefr_ceiling": "A2"
         }
+      ],
+      "contexts": [
+        {
+          "id": "take_a_shower_c1",
+          "text_en": "After football practice, the boys were dirty. They went home to take a shower. Hot water and soap felt wonderful.",
+          "text_ja": "サッカーの練習のあと、男の子たちは汚れていました。家に帰ってシャワーを浴びることにしました。お湯と石けんがとても気持ちよかったです。",
+          "target_span": {
+            "start": 64,
+            "end": 77
+          },
+          "cloze_spans": [
+            {
+              "start": 64,
+              "end": 68,
+              "answer": "take"
+            },
+            {
+              "start": 71,
+              "end": 77,
+              "answer": "shower"
+            }
+          ],
+          "scene": "after_sports",
+          "register": "neutral"
+        },
+        {
+          "id": "take_a_shower_c2",
+          "text_en": "Before the interview, Aya checked the time. She wanted to take a shower and dress carefully. She left the house at eight.",
+          "text_ja": "面接の前、アヤは時間を確認しました。シャワーを浴びて丁寧に服を着たかったのです。8時に家を出ました。",
+          "target_span": {
+            "start": 58,
+            "end": 71
+          },
+          "cloze_spans": [
+            {
+              "start": 58,
+              "end": 62,
+              "answer": "take"
+            },
+            {
+              "start": 65,
+              "end": 71,
+              "answer": "shower"
+            }
+          ],
+          "scene": "interview_prep",
+          "register": "neutral"
+        },
+        {
+          "id": "take_a_shower_c3",
+          "text_en": "On hot summer nights, Ken cannot sleep well. He takes a shower and opens the window. Then he reads for a few minutes.",
+          "text_ja": "暑い夏の夜、ケンはよく眠れません。シャワーを浴びて窓を開けます。それから数分本を読みます。",
+          "target_span": {
+            "start": 48,
+            "end": 62
+          },
+          "cloze_spans": [
+            {
+              "start": 48,
+              "end": 53,
+              "answer": "takes"
+            },
+            {
+              "start": 56,
+              "end": 62,
+              "answer": "shower"
+            }
+          ],
+          "scene": "summer_night",
+          "register": "neutral"
+        },
+        {
+          "id": "take_a_shower_c4",
+          "text_en": "After the long hike, the group returned to the hotel. Everyone took a shower before dinner. They talked about the mountain path.",
+          "text_ja": "長いハイキングのあと、一行はホテルに戻りました。みんな夕食前にシャワーを浴びました。山道の話をしました。",
+          "target_span": {
+            "start": 63,
+            "end": 76
+          },
+          "cloze_spans": [
+            {
+              "start": 63,
+              "end": 67,
+              "answer": "took"
+            },
+            {
+              "start": 70,
+              "end": 76,
+              "answer": "shower"
+            }
+          ],
+          "scene": "hotel_after_hike",
+          "register": "neutral"
+        },
+        {
+          "id": "take_a_shower_c5",
+          "text_en": "Mom called from the kitchen. She asked Riku to take a shower before bed. He finished his game and went to the bathroom.",
+          "text_ja": "母が台所から呼びました。リクに寝る前にシャワーを浴びるよう言いました。彼はゲームを終えて洗面所へ行きました。",
+          "target_span": {
+            "start": 47,
+            "end": 60
+          },
+          "cloze_spans": [
+            {
+              "start": 47,
+              "end": 51,
+              "answer": "take"
+            },
+            {
+              "start": 54,
+              "end": 60,
+              "answer": "shower"
+            }
+          ],
+          "scene": "family_home",
+          "register": "neutral"
+        }
       ]
     },
     {
@@ -892,7 +1839,9 @@
       "category": "collocation",
       "cefr_level": "A2",
       "meta": {
-        "validated_by_user": true
+        "validated_by_user": true,
+        "schema_version": "1.2.0",
+        "updated_at": "2026-07-10T15:00:00.000Z"
       },
       "synonyms": [
         {
@@ -1015,6 +1964,123 @@
           "register": "informal",
           "surrounding_cefr_ceiling": "A2"
         }
+      ],
+      "contexts": [
+        {
+          "id": "go_shopping_c1",
+          "text_en": "On Saturday morning, Emi made a short list. She planned to go shopping for fruit and bread. The market was busy but friendly.",
+          "text_ja": "土曜の朝、エミは短い買い物リストを作りました。果物とパンを買いに行く予定でした。市場は混んでいましたが雰囲気はよかったです。",
+          "target_span": {
+            "start": 59,
+            "end": 70
+          },
+          "cloze_spans": [
+            {
+              "start": 59,
+              "end": 61,
+              "answer": "go"
+            },
+            {
+              "start": 62,
+              "end": 70,
+              "answer": "shopping"
+            }
+          ],
+          "scene": "market",
+          "register": "neutral"
+        },
+        {
+          "id": "go_shopping_c2",
+          "text_en": "After work, two friends met at the station. They decided to go shopping for winter coats. The store had a small sale.",
+          "text_ja": "仕事のあと、二人の友だちが駅で会いました。冬用コートを買いに行くことにしました。店では小さなセールをしていました。",
+          "target_span": {
+            "start": 60,
+            "end": 71
+          },
+          "cloze_spans": [
+            {
+              "start": 60,
+              "end": 62,
+              "answer": "go"
+            },
+            {
+              "start": 63,
+              "end": 71,
+              "answer": "shopping"
+            }
+          ],
+          "scene": "after_work",
+          "register": "neutral"
+        },
+        {
+          "id": "go_shopping_c3",
+          "text_en": "Before the party, Noah checked the fridge. He needed to go shopping for drinks and snacks. He took a cloth bag with him.",
+          "text_ja": "パーティーの前、ノアは冷蔵庫を確認しました。飲み物とお菓子を買いに行く必要がありました。布の袋を持って行きました。",
+          "target_span": {
+            "start": 56,
+            "end": 67
+          },
+          "cloze_spans": [
+            {
+              "start": 56,
+              "end": 58,
+              "answer": "go"
+            },
+            {
+              "start": 59,
+              "end": 67,
+              "answer": "shopping"
+            }
+          ],
+          "scene": "party_prep",
+          "register": "neutral"
+        },
+        {
+          "id": "go_shopping_c4",
+          "text_en": "Last Sunday, the family went shopping downtown. They bought shoes for the children. Then they ate lunch near the park.",
+          "text_ja": "先週の日曜、家族は繁華街へ買い物に行きました。子どもたちの靴を買いました。そのあと公園の近くで昼食をとりました。",
+          "target_span": {
+            "start": 24,
+            "end": 37
+          },
+          "cloze_spans": [
+            {
+              "start": 24,
+              "end": 28,
+              "answer": "went"
+            },
+            {
+              "start": 29,
+              "end": 37,
+              "answer": "shopping"
+            }
+          ],
+          "scene": "downtown",
+          "register": "neutral"
+        },
+        {
+          "id": "go_shopping_c5",
+          "text_en": "When guests visit, Hana likes a clean house. She also likes to go shopping for flowers. Fresh flowers make the room bright.",
+          "text_ja": "お客さんが来るとき、ハナはきれいな家が好きです。花を買いに行くのも好きです。新鮮な花が部屋を明るくします。",
+          "target_span": {
+            "start": 63,
+            "end": 74
+          },
+          "cloze_spans": [
+            {
+              "start": 63,
+              "end": 65,
+              "answer": "go"
+            },
+            {
+              "start": 66,
+              "end": 74,
+              "answer": "shopping"
+            }
+          ],
+          "scene": "home_guest",
+          "register": "neutral"
+        }
       ]
     },
     {
@@ -1032,7 +2098,9 @@
       "category": "collocation",
       "cefr_level": "A2",
       "meta": {
-        "validated_by_user": true
+        "validated_by_user": true,
+        "schema_version": "1.2.0",
+        "updated_at": "2026-07-10T15:00:00.000Z"
       },
       "synonyms": [
         {
@@ -1172,6 +2240,148 @@
           "register": "informal",
           "surrounding_cefr_ceiling": "A2"
         }
+      ],
+      "contexts": [
+        {
+          "id": "get_up_early_c1",
+          "text_en": "During exam week, Yui set two alarms. She had to get up early and review math. The house was quiet at six.",
+          "text_ja": "試験週間、ユイは目覚ましを二つセットしました。早く起きて数学を復習しなければなりませんでした。6時の家は静かでした。",
+          "target_span": {
+            "start": 49,
+            "end": 61
+          },
+          "cloze_spans": [
+            {
+              "start": 49,
+              "end": 52,
+              "answer": "get"
+            },
+            {
+              "start": 53,
+              "end": 55,
+              "answer": "up"
+            },
+            {
+              "start": 56,
+              "end": 61,
+              "answer": "early"
+            }
+          ],
+          "scene": "exam_week",
+          "register": "neutral"
+        },
+        {
+          "id": "get_up_early_c2",
+          "text_en": "Farmers often get up early in summer. They work before the sun becomes too strong. Breakfast tastes better after that work.",
+          "text_ja": "農家は夏によく早く起きます。日差しが強くなる前に働きます。そのあとの朝食はよりおいしく感じます。",
+          "target_span": {
+            "start": 14,
+            "end": 26
+          },
+          "cloze_spans": [
+            {
+              "start": 14,
+              "end": 17,
+              "answer": "get"
+            },
+            {
+              "start": 18,
+              "end": 20,
+              "answer": "up"
+            },
+            {
+              "start": 21,
+              "end": 26,
+              "answer": "early"
+            }
+          ],
+          "scene": "farm",
+          "register": "neutral"
+        },
+        {
+          "id": "get_up_early_c3",
+          "text_en": "For the morning flight, Ken packed the night before. He got up early and checked his passport twice. A taxi waited outside.",
+          "text_ja": "朝の便のため、ケンは前の夜に荷物を詰めました。早く起きてパスポートを二度確認しました。外ではタクシーが待っていました。",
+          "target_span": {
+            "start": 56,
+            "end": 68
+          },
+          "cloze_spans": [
+            {
+              "start": 56,
+              "end": 59,
+              "answer": "got"
+            },
+            {
+              "start": 60,
+              "end": 62,
+              "answer": "up"
+            },
+            {
+              "start": 63,
+              "end": 68,
+              "answer": "early"
+            }
+          ],
+          "scene": "travel_morning",
+          "register": "neutral"
+        },
+        {
+          "id": "get_up_early_c4",
+          "text_en": "On training days, the runners get up early. They meet at the park before school. Cool air helps them run well.",
+          "text_ja": "練習のある日、ランナーたちは早く起きます。登校前に公園で集合します。涼しい空気が走りを助けます。",
+          "target_span": {
+            "start": 30,
+            "end": 42
+          },
+          "cloze_spans": [
+            {
+              "start": 30,
+              "end": 33,
+              "answer": "get"
+            },
+            {
+              "start": 34,
+              "end": 36,
+              "answer": "up"
+            },
+            {
+              "start": 37,
+              "end": 42,
+              "answer": "early"
+            }
+          ],
+          "scene": "running_club",
+          "register": "neutral"
+        },
+        {
+          "id": "get_up_early_c5",
+          "text_en": "Mia does not like dark mornings. Still, she tries to get up early on weekdays. A cup of tea helps her start.",
+          "text_ja": "ミアは暗い朝が好きではありません。それでも平日は早く起きようとします。お茶一杯が一日の始まりを助けます。",
+          "target_span": {
+            "start": 53,
+            "end": 65
+          },
+          "cloze_spans": [
+            {
+              "start": 53,
+              "end": 56,
+              "answer": "get"
+            },
+            {
+              "start": 57,
+              "end": 59,
+              "answer": "up"
+            },
+            {
+              "start": 60,
+              "end": 65,
+              "answer": "early"
+            }
+          ],
+          "scene": "weekday_routine",
+          "register": "neutral"
+        }
       ]
     },
     {
@@ -1189,7 +2399,9 @@
       "category": "collocation",
       "cefr_level": "A2",
       "meta": {
-        "validated_by_user": true
+        "validated_by_user": true,
+        "schema_version": "1.2.0",
+        "updated_at": "2026-07-10T15:00:00.000Z"
       },
       "synonyms": [
         {
@@ -1310,6 +2522,148 @@
           "ja": "部屋を掃除するときはいつも音楽を聴くんだ。",
           "register": "informal",
           "surrounding_cefr_ceiling": "A2"
+        }
+      ],
+      "contexts": [
+        {
+          "id": "listen_to_music_c1",
+          "text_en": "On the way to school, Rina puts on headphones. She likes to listen to music on the bus. Soft songs make the ride feel shorter.",
+          "text_ja": "通学の途中、リナはヘッドホンをつけます。バスの中で音楽を聴くのが好きです。やわらかい曲で乗車時間が短く感じます。",
+          "target_span": {
+            "start": 60,
+            "end": 75
+          },
+          "cloze_spans": [
+            {
+              "start": 60,
+              "end": 66,
+              "answer": "listen"
+            },
+            {
+              "start": 67,
+              "end": 69,
+              "answer": "to"
+            },
+            {
+              "start": 70,
+              "end": 75,
+              "answer": "music"
+            }
+          ],
+          "scene": "commute",
+          "register": "neutral"
+        },
+        {
+          "id": "listen_to_music_c2",
+          "text_en": "After dinner, the family cleans the kitchen. Dad likes to listen to music while they work. Everyone moves a little faster.",
+          "text_ja": "夕食のあと、家族は台所を片付けます。父は作業中に音楽を聴くのが好きです。みんな少し速く動きます。",
+          "target_span": {
+            "start": 58,
+            "end": 73
+          },
+          "cloze_spans": [
+            {
+              "start": 58,
+              "end": 64,
+              "answer": "listen"
+            },
+            {
+              "start": 65,
+              "end": 67,
+              "answer": "to"
+            },
+            {
+              "start": 68,
+              "end": 73,
+              "answer": "music"
+            }
+          ],
+          "scene": "family_chores",
+          "register": "neutral"
+        },
+        {
+          "id": "listen_to_music_c3",
+          "text_en": "Before the big game, the team sat quietly. Some players listened to music to stay calm. The coach gave a short talk later.",
+          "text_ja": "大事な試合の前、チームは静かに座っていました。落ち着くために音楽を聴く選手もいました。あとでコーチが短い話をしました。",
+          "target_span": {
+            "start": 56,
+            "end": 73
+          },
+          "cloze_spans": [
+            {
+              "start": 56,
+              "end": 64,
+              "answer": "listened"
+            },
+            {
+              "start": 65,
+              "end": 67,
+              "answer": "to"
+            },
+            {
+              "start": 68,
+              "end": 73,
+              "answer": "music"
+            }
+          ],
+          "scene": "pre_game",
+          "register": "neutral"
+        },
+        {
+          "id": "listen_to_music_c4",
+          "text_en": "In the cafe, students study for hours. Many of them listen to music with one earbud. The barista keeps the room warm.",
+          "text_ja": "カフェで生徒たちは何時間も勉強します。多くの人が片耳で音楽を聴いています。バリスタは店内を暖かく保っています。",
+          "target_span": {
+            "start": 52,
+            "end": 67
+          },
+          "cloze_spans": [
+            {
+              "start": 52,
+              "end": 58,
+              "answer": "listen"
+            },
+            {
+              "start": 59,
+              "end": 61,
+              "answer": "to"
+            },
+            {
+              "start": 62,
+              "end": 67,
+              "answer": "music"
+            }
+          ],
+          "scene": "cafe_study",
+          "register": "neutral"
+        },
+        {
+          "id": "listen_to_music_c5",
+          "text_en": "When she feels stressed, Aya closes her eyes. She listens to music for ten minutes. Then she returns to her homework.",
+          "text_ja": "ストレスを感じると、アヤは目を閉じます。10分間音楽を聴きます。それから宿題に戻ります。",
+          "target_span": {
+            "start": 50,
+            "end": 66
+          },
+          "cloze_spans": [
+            {
+              "start": 50,
+              "end": 57,
+              "answer": "listens"
+            },
+            {
+              "start": 58,
+              "end": 60,
+              "answer": "to"
+            },
+            {
+              "start": 61,
+              "end": 66,
+              "answer": "music"
+            }
+          ],
+          "scene": "stress_break",
+          "register": "neutral"
         }
       ]
     }

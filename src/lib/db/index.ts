@@ -19,25 +19,36 @@ export class VocabDatabase extends Dexie {
 
 export const db = new VocabDatabase()
 
+async function syncBundledDataset() {
+  await db.items.clear()
+  await db.insights.clear()
+  if (bundledDataset.items?.length) {
+    await db.items.bulkPut(bundledDataset.items as LearningItem[])
+  }
+  if (bundledDataset.insights?.length) {
+    await db.insights.bulkPut(bundledDataset.insights as Insight[])
+  }
+  await db.meta.put({
+    key: 'schema_version',
+    value: bundledDataset.schema_version ?? '1.0.0',
+  })
+}
+
 export async function ensureDatasetLoaded(): Promise<Dataset> {
   const count = await db.items.count()
-  if (count === 0 && bundledDataset.items?.length) {
-    await db.items.bulkPut(bundledDataset.items as LearningItem[])
-    if (bundledDataset.insights?.length) {
-      await db.insights.bulkPut(bundledDataset.insights as Insight[])
-    }
-    await db.meta.put({
-      key: 'schema_version',
-      value: bundledDataset.schema_version ?? '1.0.0',
-    })
+  const schema = await db.meta.get('schema_version')
+  const bundledVersion = bundledDataset.schema_version ?? '1.0.0'
+
+  if (count === 0 || schema?.value !== bundledVersion) {
+    await syncBundledDataset()
   }
 
   const items = await db.items.toArray()
   const insights = await db.insights.toArray()
-  const schema = await db.meta.get('schema_version')
+  const currentSchema = await db.meta.get('schema_version')
 
   return {
-    schema_version: schema?.value ?? bundledDataset.schema_version ?? '1.0.0',
+    schema_version: currentSchema?.value ?? bundledVersion,
     items,
     insights,
     total_items: items.length,
@@ -54,4 +65,8 @@ export async function countByCefr(): Promise<Record<string, number>> {
 
 export async function getItemsByCefr(level: CefrLevel): Promise<LearningItem[]> {
   return db.items.where('cefr_level').equals(level).sortBy('surface')
+}
+
+export async function getAllItems(): Promise<LearningItem[]> {
+  return db.items.toArray()
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Button } from '@/components/ui/Button'
 import { resetMode, type CheckmarkMode } from '@/lib/checkmarks'
 
 interface CheckmarkResetButtonProps {
@@ -27,7 +28,7 @@ export function CheckmarkResetButton({ mode, className }: CheckmarkResetButtonPr
         type="button"
         className={
           className ??
-          'rounded-[11px] border-[1.5px] border-line px-3 py-2 text-sm font-bold text-ink-muted hover:border-[#bfc3bc] hover:text-ink'
+          'rounded border border-border px-3 py-2 font-sans text-sm font-medium text-text-secondary hover:border-accent hover:text-text-primary'
         }
         onClick={() => setConfirmOpen(true)}
       >
@@ -35,36 +36,32 @@ export function CheckmarkResetButton({ mode, className }: CheckmarkResetButtonPr
       </button>
 
       {confirmOpen ? (
-        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-ink/50 p-4">
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-text-primary/40 p-4">
           <div
             role="dialog"
             aria-modal="true"
-            className="w-full max-w-md rounded-2xl border border-line bg-paper-elevated p-5 shadow-xl"
+            className="w-full max-w-md rounded-lg border border-border bg-bg-elevated p-5"
           >
-            <p className="text-base font-semibold text-ink">{t('checkmarks.resetConfirmTitle', { mode: modeLabel })}</p>
-            <p className="mt-2 text-sm leading-relaxed text-ink-muted">{t('checkmarks.resetConfirmBody')}</p>
+            <p className="font-serif text-lg text-text-primary">
+              {t('checkmarks.resetConfirmTitle', { mode: modeLabel })}
+            </p>
+            <p className="mt-2 font-sans text-sm leading-relaxed text-text-secondary">
+              {t('checkmarks.resetConfirmBody')}
+            </p>
             <div className="mt-5 flex justify-end gap-2">
-              <button
-                type="button"
-                className="rounded-xl border border-line px-4 py-2 text-sm font-medium"
-                onClick={() => setConfirmOpen(false)}
-              >
+              <Button variant="ghost" onClick={() => setConfirmOpen(false)}>
                 {t('review.cancel')}
-              </button>
-              <button
-                type="button"
-                className="rounded-xl bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700"
-                onClick={onConfirm}
-              >
+              </Button>
+              <Button variant="hold" onClick={onConfirm} className="border-error text-error">
                 {t('checkmarks.resetAction')}
-              </button>
+              </Button>
             </div>
           </div>
         </div>
       ) : null}
 
       {toast ? (
-        <div className="fixed bottom-6 left-1/2 z-[70] -translate-x-1/2 rounded-full bg-ink px-4 py-2 text-sm text-white shadow-lg">
+        <div className="fixed bottom-6 left-1/2 z-[70] -translate-x-1/2 rounded bg-text-primary px-4 py-2 font-sans text-sm text-bg-elevated">
           {t('checkmarks.resetDone')}
         </div>
       ) : null}

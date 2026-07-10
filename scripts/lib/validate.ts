@@ -44,6 +44,7 @@ export async function validateDataset(dataset: Dataset): Promise<ValidationRepor
     checkItemRefs(item, ids, insightIds, errors, warnings)
     checkCefrCeiling(item, errors)
     checkRegisterCoverage(item, warnings)
+    checkContexts(item, errors)
 
     const key = `${item.surface.toLowerCase()}::${item.category}`
     if (surfaces.has(key)) {
@@ -119,6 +120,54 @@ function checkRegisterCoverage(item: LearningItem, warnings: string[]) {
   if (item.category === 'institutionalized') {
     if (exampleRegisters.size < 1) {
       warnings.push(`${item.id}: institutionalized item has no examples`)
+    }
+  }
+}
+
+function normalizeSurfaceToken(value: string) {
+  return value.toLowerCase().replace(/[^\p{L}\p{N}\s']/gu, '').trim()
+}
+
+function checkContexts(item: LearningItem, errors: string[]) {
+  const contexts = item.contexts
+  if (!contexts) {
+    errors.push(`${item.id}: contexts[] is required (exactly 5 passages)`)
+    return
+  }
+  if (contexts.length !== 5) {
+    errors.push(`${item.id}: contexts must have exactly 5 items, got ${contexts.length}`)
+  }
+
+  const surfaceNorm = normalizeSurfaceToken(item.surface)
+
+  for (const ctx of contexts) {
+    const { text_en, target_span, cloze_spans } = ctx
+    if (target_span.start < 0 || target_span.end > text_en.length || target_span.start >= target_span.end) {
+      errors.push(`${item.id}/${ctx.id}: target_span out of range`)
+      continue
+    }
+
+    const targetText = text_en.slice(target_span.start, target_span.end)
+    const targetNorm = normalizeSurfaceToken(targetText)
+    if (!targetNorm.includes(surfaceNorm.split(/\s+/)[0] ?? '') && !surfaceNorm.includes(targetNorm.split(/\s+/)[0] ?? '')) {
+      // Allow conjugations: require at least one content word overlap with surface
+      const surfaceWords = surfaceNorm.split(/\s+/).filter(Boolean)
+      const targetWords = targetNorm.split(/\s+/).filter(Boolean)
+      const overlap = surfaceWords.some((w) => targetWords.some((tw) => tw.startsWith(w.slice(0, 3)) || w.startsWith(tw.slice(0, 3))))
+      if (!overlap) {
+        errors.push(`${item.id}/${ctx.id}: target_span "${targetText}" does not match surface "${item.surface}"`)
+      }
+    }
+
+    for (const span of cloze_spans) {
+      if (span.start < 0 || span.end > text_en.length || span.start >= span.end) {
+        errors.push(`${item.id}/${ctx.id}: cloze_span out of range`)
+        continue
+      }
+      const sliced = text_en.slice(span.start, span.end)
+      if (sliced !== span.answer) {
+        errors.push(`${item.id}/${ctx.id}: cloze answer "${span.answer}" != slice "${sliced}"`)
+      }
     }
   }
 }

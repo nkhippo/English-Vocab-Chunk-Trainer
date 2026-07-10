@@ -1,181 +1,129 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { ItemDetailModal } from '@/components/item-detail-modal'
-import { CheckmarkRow } from '@/components/checkmark-row'
-import { useCheckmark } from '@/lib/checkmarks'
-import { ensureDatasetLoaded } from '@/lib/db'
-import { buildModeAChoices, pickWeightedItem, type DistractorMode } from '@/lib/quiz'
+import { AppFooter } from '@/components/layout/AppFooter'
+import { AppHeader } from '@/components/layout/AppHeader'
+import { TargetSidePanel } from '@/features/train/components/TargetSidePanel'
+import { ensureDatasetLoaded, getAllItems } from '@/lib/db'
+import {
+  getSeenPassageIndices,
+  pickPassageIndex,
+  pickRandomItemId,
+  recordPassageSeen,
+} from '@/lib/passage-history'
+import { getContextOrNull, renderHighlightedPassage } from '@/lib/train/passage'
+import { useSessionTimer } from '@/lib/train/use-session-timer'
 import type { LearningItem } from '@/types/learning'
 
-function ModeACheckmarks({ itemId }: { itemId: string }) {
-  const { t } = useTranslation()
-  const [count, setCount] = useCheckmark('mode_a', itemId)
-
-  return (
-    <div className="flex flex-col items-center gap-2">
-      <span className="text-sm font-medium text-ink-muted">{t('checkmarks.recordUnderstanding')}</span>
-      <CheckmarkRow
-        count={count}
-        onChange={setCount}
-        size="lg"
-        ariaLabel={t('checkmarks.recordUnderstanding')}
-      />
-    </div>
-  )
+interface Round {
+  item: LearningItem
+  passageIndex: number
 }
 
 export function ModeAPage() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
   const [items, setItems] = useState<LearningItem[]>([])
+  const [round, setRound] = useState<Round | null>(null)
+  const [choice, setChoice] = useState<'ok' | 'hold' | null>(null)
   const [ready, setReady] = useState(false)
-  const [current, setCurrent] = useState<LearningItem | null>(null)
-  const [distractorMode, setDistractorMode] = useState<DistractorMode>('confusables')
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
-  const [streak, setStreak] = useState(0)
-  const [detailOpen, setDetailOpen] = useState(false)
+  const { label: timerLabel, reset: resetTimer } = useSessionTimer(true)
 
-  useEffect(() => {
-    void (async () => {
-      const dataset = await ensureDatasetLoaded()
-      setItems(dataset.items)
-      setReady(true)
-    })()
-  }, [])
-
-  const loadQuestion = useCallback(
-    (excludeId?: string) => {
-      if (items.length === 0) return
-      const next = pickWeightedItem(items, 'mode_a', excludeId)
-      setCurrent(next)
-      setSelectedIndex(null)
+  const loadRound = useCallback(
+    (pool: LearningItem[], excludeId?: string | null) => {
+      const withContexts = pool.filter((item) => (item.contexts?.length ?? 0) > 0)
+      const nextId = pickRandomItemId(
+        withContexts.map((item) => item.id),
+        excludeId,
+      )
+      if (!nextId) {
+        setRound(null)
+        return
+      }
+      const item = withContexts.find((entry) => entry.id === nextId)!
+      const passageIndex = pickPassageIndex(item.id, 'mode_a', item.contexts!.length)
+      setRound({ item, passageIndex })
+      setChoice(null)
+      resetTimer()
     },
-    [items],
+    [resetTimer],
   )
 
   useEffect(() => {
-    if (ready && items.length > 0 && !current) {
-      loadQuestion()
-    }
-  }, [ready, items, current, loadQuestion])
+    void (async () => {
+      await ensureDatasetLoaded()
+      const all = await getAllItems()
+      setItems(all)
+      loadRound(all)
+      setReady(true)
+    })()
+  }, [loadRound])
 
-  const { choices, correctIndex } = useMemo(() => {
-    if (!current) return { choices: [] as string[], correctIndex: -1 }
-    return buildModeAChoices(current, items, distractorMode)
-  }, [current, items, distractorMode])
+  const context = useMemo(() => {
+    if (!round) return null
+    return getContextOrNull(round.item, round.passageIndex)
+  }, [round])
 
-  const answered = selectedIndex !== null
-
-  const toggleDistractor = () => {
-    setDistractorMode((mode) => (mode === 'confusables' ? 'random' : 'confusables'))
-    setSelectedIndex(null)
-  }
-
-  const onSelect = (index: number) => {
-    if (answered || !current) return
-    setSelectedIndex(index)
-    if (index === correctIndex) {
-      setStreak((value) => value + 1)
-    } else {
-      setStreak(0)
-    }
-  }
+  const encounters = round ? getSeenPassageIndices(round.item.id, 'mode_a').length : 0
 
   const onNext = () => {
-    if (!current) return
-    loadQuestion(current.id)
+    if (!round || !choice) return
+    recordPassageSeen(round.item.id, 'mode_a', round.passageIndex)
+    loadRound(items, round.item.id)
   }
 
   if (!ready) {
-    return <p className="text-lg text-ink-muted">…</p>
+    return <div className="grid h-full place-items-center font-sans text-text-muted">…</div>
   }
 
-  if (!current) {
-    return <p className="text-lg text-ink-muted">{t('browse.empty')}</p>
+  if (!round || !context) {
+    return (
+      <div className="flex h-full flex-col">
+        <AppHeader cefrLabel="—" timerLabel={timerLabel} />
+        <div className="grid flex-1 place-items-center p-6 text-center">
+          <p className="font-sans text-text-secondary">{t('modeA.noContexts')}</p>
+        </div>
+        <AppFooter
+          onPause={() => navigate('/')}
+          pauseLabel={t('modeA.pause')}
+          primaryLabel={t('modeA.next')}
+          onPrimary={() => navigate('/train')}
+        />
+      </div>
+    )
   }
+
+  const parts = renderHighlightedPassage(context.text_en, context.target_span)
 
   return (
-    <section className="mx-auto max-w-xl space-y-6">
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <Link to="/train" className="text-sm font-medium text-brand hover:underline">
-            ← {t('train.title')}
-          </Link>
-          <h1 className="mt-2 font-display text-3xl font-bold">{t('modeA.title')}</h1>
-        </div>
-        <button
-          type="button"
-          onClick={toggleDistractor}
-          className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-medium ${
-            distractorMode === 'confusables'
-              ? 'bg-brand text-white'
-              : 'border border-line bg-paper-elevated text-ink-muted'
-          }`}
-        >
-          {distractorMode === 'confusables' ? t('modeA.distractorConfusables') : t('modeA.distractorRandom')}
-        </button>
+    <div className="flex h-full min-h-0 flex-col">
+      <AppHeader cefrLabel={round.item.cefr_level} timerLabel={timerLabel} />
+
+      <div className="grid min-h-0 flex-1 grid-rows-[1fr_auto] md:grid-cols-[1fr_minmax(240px,30%)] md:grid-rows-1">
+        <section className="overflow-auto px-5 py-8 md:px-10 md:py-12">
+          <article className="mx-auto max-w-xl font-serif text-[19px] leading-relaxed text-text-primary md:text-[20px]">
+            {parts.before}
+            <mark className="chunk-highlight">{parts.target}</mark>
+            {parts.after}
+          </article>
+        </section>
+
+        <TargetSidePanel
+          item={round.item}
+          encounters={encounters}
+          choice={choice}
+          onOk={() => setChoice('ok')}
+          onHold={() => setChoice('hold')}
+        />
       </div>
 
-      {streak > 0 ? (
-        <p className="text-sm font-medium text-brand">{t('modeA.streak', { count: streak })}</p>
-      ) : null}
-
-      <div className="rounded-3xl border border-line bg-paper-elevated p-6 text-center">
-        <p className="font-display text-3xl font-bold text-ink">{current.surface}</p>
-        <p className="mt-2 font-mono text-base text-ink-muted">{current.ipa_careful}</p>
-      </div>
-
-      <p className="text-center text-lg font-medium text-ink">{t('modeA.prompt')}</p>
-
-      <div className="space-y-3">
-        {choices.map((choice, index) => {
-          const isSelected = selectedIndex === index
-          const isCorrect = index === correctIndex
-          let className = 'w-full rounded-2xl border px-4 py-4 text-left text-lg transition '
-          if (!answered) {
-            className += 'border-line bg-paper-elevated hover:border-brand hover:bg-brand-soft/40'
-          } else if (isCorrect) {
-            className += 'border-emerald-500 bg-emerald-50 text-emerald-900'
-          } else if (isSelected) {
-            className += 'border-red-400 bg-red-50 text-red-900'
-          } else {
-            className += 'border-line bg-paper text-ink-muted opacity-70'
-          }
-
-          return (
-            <button key={`${choice}-${index}`} type="button" className={className} onClick={() => onSelect(index)}>
-              {choice}
-            </button>
-          )
-        })}
-      </div>
-
-      {answered ? (
-        <div className="space-y-3 rounded-2xl border border-line bg-paper p-4 text-center">
-          <p className="text-xl font-semibold">
-            {selectedIndex === correctIndex ? t('modeA.correct') : t('modeA.incorrect')}
-          </p>
-          <ModeACheckmarks itemId={current.id} />
-          <div className="flex flex-wrap justify-center gap-3">
-            <button
-              type="button"
-              className="rounded-xl border border-line px-4 py-2.5 text-sm font-medium hover:bg-paper-elevated"
-              onClick={() => setDetailOpen(true)}
-            >
-              {t('modeA.viewDetail')}
-            </button>
-            <button
-              type="button"
-              className="rounded-xl bg-brand px-4 py-2.5 text-sm font-medium text-white hover:bg-brand-strong"
-              onClick={onNext}
-            >
-              {t('modeA.next')}
-            </button>
-          </div>
-        </div>
-      ) : null}
-
-      <ItemDetailModal item={current} open={detailOpen} onClose={() => setDetailOpen(false)} />
-    </section>
+      <AppFooter
+        onPause={() => navigate('/')}
+        pauseLabel={t('modeA.pause')}
+        primaryLabel={t('modeA.next')}
+        onPrimary={onNext}
+        primaryDisabled={!choice}
+      />
+    </div>
   )
 }

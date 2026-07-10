@@ -132,16 +132,16 @@ export function ReviewPage() {
   return (
     <section className="space-y-5">
       <div>
-        <h1 className="font-display text-3xl font-bold">{t('review.title')}</h1>
-        <p className="mt-2 text-ink-muted">{t('review.subtitle')}</p>
+        <h1 className="font-serif text-3xl font-bold">{t('review.title')}</h1>
+        <p className="mt-2 text-text-secondary">{t('review.subtitle')}</p>
       </div>
 
       {!session ? (
-        <div className="rounded-3xl border border-line bg-paper-elevated p-6 space-y-4">
-          <p className="text-ink-muted">{t('review.loadHint')}</p>
-          {error ? <p className="text-sm text-danger">{error}</p> : null}
+        <div className="rounded-3xl border border-border bg-bg-elevated p-6 space-y-4">
+          <p className="text-text-secondary">{t('review.loadHint')}</p>
+          {error ? <p className="text-sm text-error">{error}</p> : null}
           <div className="flex flex-wrap gap-3">
-            <label className="cursor-pointer rounded-xl bg-brand px-4 py-2.5 text-sm font-medium text-white hover:bg-brand-strong">
+            <label className="cursor-pointer rounded-xl bg-accent px-4 py-2.5 text-sm font-medium text-bg-elevated hover:bg-accent">
               {t('review.loadFile')}
               <input
                 type="file"
@@ -155,7 +155,7 @@ export function ReviewPage() {
             </label>
             <button
               type="button"
-              className="rounded-xl border border-line px-4 py-2.5 text-sm"
+              className="rounded-xl border border-border px-4 py-2.5 text-sm"
               onClick={() => setReviewSession(normalizeItems(sampleSeeds, 'sample-seeds.json'))}
             >
               {t('review.loadSample')}
@@ -164,7 +164,7 @@ export function ReviewPage() {
         </div>
       ) : (
         <>
-          <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-line bg-paper-elevated px-4 py-3">
+          <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-border bg-bg-elevated px-4 py-3">
             <p className="text-sm font-medium">
               {t('review.progress', {
                 current: Math.min(index + 1, total),
@@ -172,37 +172,37 @@ export function ReviewPage() {
                 percent: total ? Math.round((decided / total) * 100) : 0,
               })}
             </p>
-            <p className="text-xs text-ink-muted">
+            <p className="text-xs text-text-secondary">
               {t('review.accepted')}: {accepted} / {t('review.rejected')}: {rejected}
             </p>
           </div>
 
           {complete ? (
-            <div className="rounded-3xl border border-success/30 bg-green-50 p-6">
-              <h2 className="font-display text-2xl font-bold text-success">{t('review.completeTitle')}</h2>
-              <p className="mt-2 text-ink-muted">
+            <div className="rounded-3xl border border-success/30 bg-success/10 p-6">
+              <h2 className="font-serif text-2xl font-bold text-success">{t('review.completeTitle')}</h2>
+              <p className="mt-2 text-text-secondary">
                 {t('review.completeBody', { accepted, rejected, total })}
               </p>
             </div>
           ) : null}
 
           {item ? (
-            <article className="rounded-3xl border border-line bg-paper-elevated p-6 shadow-sm">
+            <article className="rounded-3xl border border-border bg-bg-elevated p-6 shadow-sm">
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div>
-                  <p className="text-sm uppercase tracking-wide text-ink-muted">
+                  <p className="text-sm uppercase tracking-wide text-text-secondary">
                     {labelCategory(t, item.category)}
                   </p>
-                  <h2 className="mt-1 font-display text-3xl font-bold">{item.surface}</h2>
-                  <p className="mt-1 font-mono text-sm text-brand">@{item.id}</p>
+                  <h2 className="mt-1 font-serif text-3xl font-bold">{item.surface}</h2>
+                  <p className="mt-1 font-mono text-sm text-accent">@{item.id}</p>
                 </div>
                 <span
                   className={`rounded-full px-3 py-1 text-xs font-semibold ${
                     item.decision === 'accepted'
                       ? 'bg-green-100 text-success'
                       : item.decision === 'rejected'
-                        ? 'bg-red-100 text-danger'
-                        : 'bg-slate-100 text-ink-muted'
+                        ? 'bg-red-100 text-error'
+                        : 'bg-slate-100 text-text-secondary'
                   }`}
                 >
                   {t(`review.${item.decision}`)}
@@ -211,26 +211,26 @@ export function ReviewPage() {
 
               <dl className="mt-6 grid gap-3 sm:grid-cols-2">
                 <div>
-                  <dt className="text-xs text-ink-muted">{t('review.fields.cefr')}</dt>
+                  <dt className="text-xs text-text-secondary">{t('review.fields.cefr')}</dt>
                   <dd className="font-semibold">{item.cefr_override ?? item.cefr_level}</dd>
                 </div>
                 <div>
-                  <dt className="text-xs text-ink-muted">{t('review.fields.register')}</dt>
+                  <dt className="text-xs text-text-secondary">{t('review.fields.register')}</dt>
                   <dd className="font-semibold">{labelRegister(t, item.register)}</dd>
                 </div>
                 <div>
-                  <dt className="text-xs text-ink-muted">{t('review.fields.collocationPattern')}</dt>
+                  <dt className="text-xs text-text-secondary">{t('review.fields.collocationPattern')}</dt>
                   <dd className="font-semibold">{String(item.collocation_pattern ?? '—')}</dd>
                 </div>
                 <div>
-                  <dt className="text-xs text-ink-muted">{t('review.fields.frequencyHint')}</dt>
+                  <dt className="text-xs text-text-secondary">{t('review.fields.frequencyHint')}</dt>
                   <dd className="font-semibold">{labelFrequencyHint(t, item.frequency_hint)}</dd>
                 </div>
               </dl>
 
               <div className="mt-5">
-                <p className="text-xs text-ink-muted">{t('review.fields.translationsJa')}</p>
-                <ul className="mt-1 list-disc pl-5 text-ink">
+                <p className="text-xs text-text-secondary">{t('review.fields.translationsJa')}</p>
+                <ul className="mt-1 list-disc pl-5 text-text-primary">
                   {(item.translations_override ?? item.translations_ja).map((tr) => (
                     <li key={tr}>{tr}</li>
                   ))}
@@ -240,21 +240,21 @@ export function ReviewPage() {
               <div className="mt-6 flex flex-wrap gap-2">
                 <button
                   type="button"
-                  className="rounded-xl bg-success px-4 py-2 text-sm font-medium text-white"
+                  className="rounded-xl bg-success px-4 py-2 text-sm font-medium text-bg-elevated"
                   onClick={() => decide('accepted')}
                 >
                   Y · {t('review.accepted')}
                 </button>
                 <button
                   type="button"
-                  className="rounded-xl bg-danger px-4 py-2 text-sm font-medium text-white"
+                  className="rounded-xl bg-danger px-4 py-2 text-sm font-medium text-bg-elevated"
                   onClick={() => decide('rejected')}
                 >
                   N · {t('review.rejected')}
                 </button>
                 <button
                   type="button"
-                  className="rounded-xl border border-line px-4 py-2 text-sm"
+                  className="rounded-xl border border-border px-4 py-2 text-sm"
                   onClick={() => {
                     setEditText((item.translations_override ?? item.translations_ja).join('\n'))
                     setEditOpen(true)
@@ -262,14 +262,14 @@ export function ReviewPage() {
                 >
                   E · {t('review.editTranslations')}
                 </button>
-                <button type="button" className="rounded-xl border border-line px-4 py-2 text-sm" onClick={() => move(-1)}>
+                <button type="button" className="rounded-xl border border-border px-4 py-2 text-sm" onClick={() => move(-1)}>
                   ←
                 </button>
-                <button type="button" className="rounded-xl border border-line px-4 py-2 text-sm" onClick={() => move(1)}>
+                <button type="button" className="rounded-xl border border-border px-4 py-2 text-sm" onClick={() => move(1)}>
                   →
                 </button>
               </div>
-              <p className="mt-4 text-xs text-ink-muted">{t('review.shortcuts')}</p>
+              <p className="mt-4 text-xs text-text-secondary">{t('review.shortcuts')}</p>
             </article>
           ) : (
             <p>{t('review.noItems')}</p>
@@ -278,39 +278,39 @@ export function ReviewPage() {
           <div className="flex flex-wrap gap-3">
             <button
               type="button"
-              className="rounded-xl bg-brand px-4 py-2.5 text-sm font-medium text-white"
+              className="rounded-xl bg-accent px-4 py-2.5 text-sm font-medium text-bg-elevated"
               onClick={exportValidated}
             >
               {t('review.export')}
             </button>
             <button
               type="button"
-              className="rounded-xl border border-line px-4 py-2.5 text-sm"
+              className="rounded-xl border border-border px-4 py-2.5 text-sm"
               onClick={() => setReviewSession(null)}
             >
               {t('review.loadFile')}
             </button>
           </div>
-          <p className="text-xs text-ink-muted">{t('review.saveNote')}</p>
+          <p className="text-xs text-text-secondary">{t('review.saveNote')}</p>
         </>
       )}
 
       {editOpen && item ? (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/50 p-4">
-          <div className="w-full max-w-md rounded-3xl bg-paper-elevated p-6 shadow-xl">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-text-primary/50 p-4">
+          <div className="w-full max-w-md rounded-3xl bg-bg-elevated p-6 shadow-xl">
             <h3 className="font-semibold">{t('review.editTranslations')}</h3>
             <textarea
-              className="mt-3 h-40 w-full rounded-xl border border-line p-3 text-sm"
+              className="mt-3 h-40 w-full rounded-xl border border-border p-3 text-sm"
               value={editText}
               onChange={(e) => setEditText(e.target.value)}
             />
             <div className="mt-4 flex justify-end gap-2">
-              <button type="button" className="rounded-xl border border-line px-3 py-2 text-sm" onClick={() => setEditOpen(false)}>
+              <button type="button" className="rounded-xl border border-border px-3 py-2 text-sm" onClick={() => setEditOpen(false)}>
                 {t('review.cancel')}
               </button>
               <button
                 type="button"
-                className="rounded-xl bg-brand px-3 py-2 text-sm text-white"
+                className="rounded-xl bg-accent px-3 py-2 text-sm text-bg-elevated"
                 onClick={() => {
                   const translations = editText
                     .split('\n')

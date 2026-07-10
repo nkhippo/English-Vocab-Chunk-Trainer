@@ -50,7 +50,7 @@ export function CheckmarkRow({
       aria-label={ariaLabel}
       tabIndex={disabled ? -1 : 0}
       onKeyDown={onKeyDown}
-      className="inline-flex items-center gap-1 outline-none focus-visible:ring-2 focus-visible:ring-brand/40"
+      className="inline-flex items-center gap-1 outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
     >
       {([1, 2, 3] as const).map((slot) => {
         const filled = count >= slot
@@ -65,13 +65,13 @@ export function CheckmarkRow({
               event.stopPropagation()
               handleSlot(slot)
             }}
-            className={`flex min-h-11 min-w-11 items-center justify-center rounded-lg p-2 disabled:opacity-50 ${boxClass}`}
+            className={`flex min-h-11 min-w-11 items-center justify-center rounded p-2 disabled:opacity-50 ${boxClass}`}
           >
             <span
               className={`flex ${boxClass} items-center justify-center rounded border font-semibold leading-none ${
                 filled
-                  ? 'border-emerald-600 bg-emerald-50 text-emerald-700'
-                  : 'border-gray-400 bg-paper text-gray-400'
+                  ? 'border-success bg-success/10 text-success'
+                  : 'border-border bg-bg-base text-text-muted'
               }`}
             >
               {filled ? '☑' : '▢'}

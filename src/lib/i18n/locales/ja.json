@@ -17,19 +17,19 @@
   },
   "home": {
     "title": "ようこそ",
-    "body": "11 件のサンプルで単語帳・Mode A（識別）・Mode B（想起）の UI を試せます。情報の過不足を確認してから本格量産に進みます。",
-    "ctaModeA": "Mode A（意味を選ぶ）",
-    "ctaModeB": "Mode B（思い出す）",
+    "body": "文脈から英語を理解する Mode A / 穴埋めで想起する Mode B、および単語帳を 11 件のサンプルで試せます。",
+    "ctaModeA": "Mode A（文脈で読む）",
+    "ctaModeB": "Mode B（穴埋め）",
     "ctaBrowse": "単語帳を見る",
     "ctaReview": "検証 UI を開く"
   },
   "train": {
     "title": "学習モード",
-    "subtitle": "MVP では Mode A（識別）と Mode B（想起）を試せます。Mode C（自由英作文）はデータ量産後に実装します。",
+    "subtitle": "Mode A はパッセージを読んで意味を推測し、Mode B は日本語訳を手がかりに穴埋めを解きます。",
     "modeALabel": "Mode A",
-    "modeADesc": "英語を見て、正しい日本語訳を4択で選びます。",
+    "modeADesc": "短いパッセージを読み、ハイライトされた表現の意味を文脈から推測します。",
     "modeBLabel": "Mode B",
-    "modeBDesc": "日本語のヒントから英語の surface を思い出します。",
+    "modeBDesc": "日本語訳を見て、穴埋めされた英文を思い出し、「解答を見る」で確認します。",
     "modeCNote": "Mode C（自由英作文添削）は今回のスコープ外です。"
   },
   "browse": {
@@ -40,23 +40,20 @@
     "count": "{{count}} 件"
   },
   "modeA": {
-    "title": "Mode A（意味を選ぶ）",
-    "prompt": "意味として正しいものを選んでください",
-    "distractorConfusables": "誤答: confusables",
-    "distractorRandom": "誤答: ランダム",
-    "correct": "正解です",
-    "incorrect": "不正解です",
-    "viewDetail": "詳細を見る",
-    "next": "次の問題",
-    "streak": "連続正解 {{count}}"
+    "title": "Mode A（文脈で読む）",
+    "prompt": "パッセージを読み、ハイライトの意味を推測してください",
+    "pause": "中断",
+    "next": "次へ →",
+    "noContexts": "このデータにはパッセージ（contexts）がありません。"
   },
   "modeB": {
-    "title": "Mode B（思い出す）",
-    "prompt": "英語で何と言うか思い出してください",
-    "reveal": "タップで解答を見る",
-    "hintLevel1": "ヒント Lv1",
-    "hintLevel2": "ヒント Lv2",
-    "hintLevel3": "ヒント Lv3"
+    "title": "Mode B（穴埋め）",
+    "prompt": "日本語訳を手がかりに、穴埋めを思い出してください",
+    "reveal": "解答を見る",
+    "pause": "中断",
+    "next": "次へ →",
+    "sideHint": "解答を見たら詳細が表示されます",
+    "noContexts": "このデータにはパッセージ（contexts）がありません。"
   },
   "itemDetail": {
     "title": "単語詳細",

@@ -17,20 +17,20 @@
   },
   "home": {
     "title": "Welcome",
-    "body": "Try the wordbook, Mode A (recognize), and Mode B (recall) with 11 sample items before scaling data generation.",
-    "ctaModeA": "Mode A (pick meaning)",
-    "ctaModeB": "Mode B (recall)",
+    "body": "Try Mode A (read in context), Mode B (cloze recall), and the wordbook with 11 sample items.",
+    "ctaModeA": "Mode A (read in context)",
+    "ctaModeB": "Mode B (cloze)",
     "ctaBrowse": "Open wordbook",
     "ctaReview": "Open review UI"
   },
   "train": {
     "title": "Training modes",
-    "subtitle": "MVP ships Mode A (recognize) and Mode B (recall). Mode C (free writing) comes after data scale-up.",
+    "subtitle": "Mode A asks you to infer meaning from a short passage. Mode B shows a Japanese translation and a cloze English text.",
     "modeALabel": "Mode A",
-    "modeADesc": "See English and pick the correct Japanese meaning from four choices.",
+    "modeADesc": "Read a short passage and infer the highlighted expression from context.",
     "modeBLabel": "Mode B",
-    "modeBDesc": "Recall the English surface from Japanese hints.",
-    "modeCNote": "Mode C (writing review) is out of scope for this MVP."
+    "modeBDesc": "Use the Japanese translation, fill the blanks mentally, then reveal the answer.",
+    "modeCNote": "Mode C (writing review) is out of scope for this release."
   },
   "browse": {
     "title": "CEFR wordbook",
@@ -40,23 +40,20 @@
     "count": "{{count}} items"
   },
   "modeA": {
-    "title": "Mode A (recognize)",
-    "prompt": "Choose the correct meaning",
-    "distractorConfusables": "Distractors: confusables",
-    "distractorRandom": "Distractors: random",
-    "correct": "Correct",
-    "incorrect": "Incorrect",
-    "viewDetail": "View detail",
-    "next": "Next question",
-    "streak": "Streak {{count}}"
+    "title": "Mode A (read in context)",
+    "prompt": "Read the passage and infer the highlighted meaning",
+    "pause": "Pause",
+    "next": "Next →",
+    "noContexts": "No passage contexts are available for this dataset."
   },
   "modeB": {
-    "title": "Mode B (recall)",
-    "prompt": "Recall the English expression",
-    "reveal": "Tap to reveal answer",
-    "hintLevel1": "Hint Lv1",
-    "hintLevel2": "Hint Lv2",
-    "hintLevel3": "Hint Lv3"
+    "title": "Mode B (cloze)",
+    "prompt": "Use the Japanese translation to recall the blanks",
+    "reveal": "Show answer",
+    "pause": "Pause",
+    "next": "Next →",
+    "sideHint": "Details appear after you reveal the answer",
+    "noContexts": "No passage contexts are available for this dataset."
   },
   "itemDetail": {
     "title": "Item detail",

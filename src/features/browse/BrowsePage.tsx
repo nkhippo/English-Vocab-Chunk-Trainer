@@ -55,22 +55,22 @@ export function BrowsePage() {
     <section className="space-y-5">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <h1 className="font-display text-3xl font-bold">{t('browse.title')}</h1>
-          <p className="mt-2 text-lg text-ink-muted">{t('browse.subtitle')}</p>
+          <h1 className="font-serif text-3xl font-medium text-text-primary md:text-4xl">{t('browse.title')}</h1>
+          <p className="mt-2 font-sans text-base text-text-secondary">{t('browse.subtitle')}</p>
         </div>
         <CheckmarkResetButton mode="browse" />
       </div>
 
-      <div className="inline-flex flex-wrap gap-1 rounded-[12px] bg-paper-soft p-[5px]">
+      <div className="inline-flex flex-wrap gap-1 rounded border border-border bg-bg-panel p-1">
         {LEVELS.map((level) => (
           <button
             key={level}
             type="button"
             onClick={() => setActive(level)}
-            className={`rounded-[9px] px-3.5 py-2 text-sm font-bold transition ${
+            className={`rounded px-3.5 py-2 font-sans text-sm font-medium transition ${
               active === level
-                ? 'bg-paper-elevated text-ink shadow-soft'
-                : 'bg-transparent text-ink-muted'
+                ? 'bg-bg-elevated text-text-primary'
+                : 'bg-transparent text-text-muted hover:text-text-primary'
             }`}
           >
             {level}
@@ -79,44 +79,46 @@ export function BrowsePage() {
         ))}
       </div>
 
-      <div className="rounded-[14px] border border-line bg-paper-elevated p-4 shadow-soft sm:p-6">
-        {!ready ? (
-          <p className="text-lg text-ink-muted">…</p>
-        ) : total === 0 ? (
-          <p className="text-lg text-ink-muted">{t('browse.empty')}</p>
-        ) : items.length === 0 ? (
-          <p className="text-lg text-ink-muted">{t('browse.emptyLevel', { level: active })}</p>
-        ) : (
-          <div className="space-y-3">
-            <p className="text-lg font-semibold">{t('browse.count', { count: items.length })}</p>
-            <ul className="space-y-3">
-              {items.map((item) => (
-                <li
-                  key={item.id}
-                  className="flex items-center gap-1 rounded-[13px] border-[1.5px] border-line bg-paper-soft transition hover:-translate-y-px hover:border-[#bfc3bc] hover:shadow-soft"
+      {!ready ? (
+        <p className="font-sans text-text-muted">…</p>
+      ) : total === 0 ? (
+        <p className="font-sans text-text-muted">{t('browse.empty')}</p>
+      ) : items.length === 0 ? (
+        <p className="font-sans text-text-muted">{t('browse.emptyLevel', { level: active })}</p>
+      ) : (
+        <div className="space-y-3">
+          <p className="font-sans text-sm font-medium text-text-secondary">
+            {t('browse.count', { count: items.length })}
+          </p>
+          <ul className="grid gap-3 sm:grid-cols-2">
+            {items.map((item) => (
+              <li
+                key={item.id}
+                className="flex items-center gap-1 rounded border border-border bg-bg-elevated transition hover:border-accent"
+              >
+                <button
+                  type="button"
+                  onClick={() => setSelected(item)}
+                  className="flex min-w-0 flex-1 items-center gap-3 px-4 py-4 text-left"
                 >
-                  <button
-                    type="button"
-                    onClick={() => setSelected(item)}
-                    className="flex min-w-0 flex-1 items-center gap-3 px-4 py-4 text-left"
-                  >
-                    <div className="min-w-0 flex-1">
-                      <p className="truncate text-xl font-semibold text-ink">{item.surface}</p>
-                    </div>
-                    <p className="shrink-0 text-base text-ink-muted">{item.translations_ja[0]}</p>
-                    <span className="hidden rounded-full bg-brand-soft px-2 py-0.5 text-xs font-medium text-brand-strong sm:inline">
-                      {labelCategory(t, item.category)}
-                    </span>
-                  </button>
-                  <div className="shrink-0 pr-2">
-                    <BrowseCardCheckmarks itemId={item.id} />
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate font-serif text-xl text-text-primary">{item.surface}</p>
+                    <p className="mt-1 truncate font-sans text-sm text-text-secondary">
+                      {item.translations_ja[0]}
+                    </p>
                   </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </div>
+                  <span className="hidden shrink-0 font-sans text-xs text-text-muted sm:inline">
+                    {labelCategory(t, item.category)}
+                  </span>
+                </button>
+                <div className="shrink-0 pr-2">
+                  <BrowseCardCheckmarks itemId={item.id} />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <ItemDetailModal item={selected} open={Boolean(selected)} onClose={() => setSelected(null)} />
     </section>

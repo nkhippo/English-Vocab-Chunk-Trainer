@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { guidePages } from '@/content/guide/pages'
+import { Button } from '@/components/ui/Button'
 import { useAppStore } from '@/lib/stores/app-store'
 
 export function GuideModal() {
@@ -17,47 +18,40 @@ export function GuideModal() {
   const isLast = page === guidePages.length - 1
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center bg-ink/50 p-4 sm:items-center">
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-text-primary/40 p-4 sm:items-center">
       <div
         role="dialog"
         aria-modal="true"
-        className="max-h-[90vh] w-full max-w-xl overflow-auto rounded-[14px] border border-line bg-paper-elevated p-6 shadow-soft"
+        className="max-h-[90vh] w-full max-w-xl overflow-auto rounded-lg border border-border bg-bg-elevated p-6"
       >
         <div className="mb-4 flex items-center justify-between gap-3">
-          <p className="text-sm font-bold text-ink-muted">
+          <p className="font-sans text-sm text-text-muted">
             {t('guide.pageOf', { current: page + 1, total: guidePages.length })}
           </p>
-          <button type="button" className="text-sm font-bold text-ink-muted hover:text-ink" onClick={markGuideSeen}>
+          <button
+            type="button"
+            className="font-sans text-sm font-medium text-text-muted hover:text-text-primary"
+            onClick={markGuideSeen}
+          >
             {t('guide.skip')}
           </button>
         </div>
-        <h2 className="font-display text-2xl font-bold text-brand-strong">{current.title[language]}</h2>
-        <p className="mt-4 leading-relaxed text-ink-muted whitespace-pre-wrap">{current.body[language]}</p>
+        <h2 className="font-serif text-2xl text-text-primary">{current.title[language]}</h2>
+        <p className="mt-4 whitespace-pre-wrap font-sans leading-relaxed text-text-secondary">
+          {current.body[language]}
+        </p>
         <div className="mt-8 flex items-center justify-between gap-3">
-          <button
-            type="button"
-            className="rounded-[11px] border-[1.5px] border-line px-4 py-2 text-sm font-bold text-ink-muted disabled:opacity-40 hover:border-[#bfc3bc] hover:text-ink"
-            disabled={page === 0}
-            onClick={() => setPage((p) => Math.max(0, p - 1))}
-          >
+          <Button variant="ghost" disabled={page === 0} onClick={() => setPage((p) => Math.max(0, p - 1))}>
             {t('guide.prev')}
-          </button>
+          </Button>
           {isLast ? (
-            <button
-              type="button"
-              className="rounded-[11px] bg-brand px-5 py-2.5 text-sm font-bold text-white transition hover:-translate-y-px hover:bg-brand-strong hover:shadow-soft"
-              onClick={markGuideSeen}
-            >
+            <Button variant="primary" onClick={markGuideSeen}>
               {t('guide.done')}
-            </button>
+            </Button>
           ) : (
-            <button
-              type="button"
-              className="rounded-[11px] bg-brand px-5 py-2.5 text-sm font-bold text-white transition hover:-translate-y-px hover:bg-brand-strong hover:shadow-soft"
-              onClick={() => setPage((p) => Math.min(guidePages.length - 1, p + 1))}
-            >
+            <Button variant="primary" onClick={() => setPage((p) => Math.min(guidePages.length - 1, p + 1))}>
               {t('guide.next')}
-            </button>
+            </Button>
           )}
         </div>
         <button type="button" className="sr-only" onClick={() => setGuideOpen(false)}>

@@ -54,6 +54,27 @@ export interface CommonError {
   why_ja: string
 }
 
+export interface TextSpan {
+  start: number
+  end: number
+}
+
+export interface ClozeSpan {
+  start: number
+  end: number
+  answer: string
+}
+
+export interface ItemContext {
+  id: string
+  text_en: string
+  text_ja: string
+  target_span: TextSpan
+  cloze_spans: ClozeSpan[]
+  scene?: string
+  register?: Register
+}
+
 export interface LearningItem {
   id: string
   surface: string
@@ -83,6 +104,8 @@ export interface LearningItem {
   confusables?: ConfusableEntry[]
   related_uses?: RelatedUseEntry[]
   common_errors_ja?: CommonError[]
+  /** Passages for Mode A (read) and Mode B (cloze). Exactly 5 when present. */
+  contexts?: ItemContext[]
   meta?: {
     schema_version?: string
     created_at?: string

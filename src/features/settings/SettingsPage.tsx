@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { LanguageToggle } from '@/components/language-toggle/LanguageToggle'
+import { Button } from '@/components/ui/Button'
 import { useAppStore } from '@/lib/stores/app-store'
 
 export function SettingsPage() {
@@ -8,26 +9,22 @@ export function SettingsPage() {
 
   return (
     <section className="mx-auto max-w-xl space-y-4">
-      <h1 className="font-display text-3xl font-bold">{t('settings.title')}</h1>
+      <h1 className="font-serif text-3xl font-medium text-text-primary">{t('settings.title')}</h1>
 
-      <div className="rounded-[14px] border border-line bg-paper-elevated p-5 shadow-soft">
-        <p className="mb-3 text-sm font-bold text-ink-muted">{t('settings.language')}</p>
+      <div className="rounded border border-border bg-bg-elevated p-5">
+        <p className="mb-3 font-sans text-sm font-medium text-text-secondary">{t('settings.language')}</p>
         <LanguageToggle />
       </div>
 
-      <div className="rounded-[14px] border border-line bg-paper-elevated p-5 shadow-soft">
-        <button
-          type="button"
-          onClick={reopenGuide}
-          className="rounded-[11px] bg-brand px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-px hover:bg-brand-strong hover:shadow-soft"
-        >
+      <div className="rounded border border-border bg-bg-elevated p-5">
+        <Button variant="primary" onClick={reopenGuide}>
           {t('settings.guide')}
-        </button>
+        </Button>
       </div>
 
-      <div className="rounded-[14px] border border-line bg-paper-elevated p-5 shadow-soft">
-        <h2 className="font-bold">{t('settings.about')}</h2>
-        <p className="mt-2 text-sm leading-relaxed text-ink-muted">{t('settings.aboutBody')}</p>
+      <div className="rounded border border-border bg-bg-elevated p-5">
+        <h2 className="font-serif text-xl text-text-primary">{t('settings.about')}</h2>
+        <p className="mt-2 font-sans text-sm leading-relaxed text-text-secondary">{t('settings.aboutBody')}</p>
       </div>
     </section>
   )

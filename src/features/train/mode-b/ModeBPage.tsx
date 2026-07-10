@@ -1,161 +1,158 @@
-import { useCallback, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { ItemDetailModal } from '@/components/item-detail-modal'
-import { CheckmarkRow } from '@/components/checkmark-row'
-import { useCheckmark } from '@/lib/checkmarks'
-import { ensureDatasetLoaded } from '@/lib/db'
-import { pickWeightedItem } from '@/lib/quiz'
+import { AppFooter } from '@/components/layout/AppFooter'
+import { AppHeader } from '@/components/layout/AppHeader'
+import { TargetSidePanel } from '@/features/train/components/TargetSidePanel'
+import { ensureDatasetLoaded, getAllItems } from '@/lib/db'
+import {
+  getSeenPassageIndices,
+  pickPassageIndex,
+  pickRandomItemId,
+  recordPassageSeen,
+} from '@/lib/passage-history'
+import { generateClozeSegments, getContextOrNull, renderHighlightedPassage } from '@/lib/train/passage'
+import { useSessionTimer } from '@/lib/train/use-session-timer'
 import type { LearningItem } from '@/types/learning'
 
-export type HintLevel = 1 | 2 | 3
-
-function exampleForReveal(item: LearningItem) {
-  return (
-    item.example_sentences.find((ex) => ex.register === 'neutral') ?? item.example_sentences[0] ?? null
-  )
-}
-
-function ModeBCheckmarks({ itemId }: { itemId: string }) {
-  const { t } = useTranslation()
-  const [count, setCount] = useCheckmark('mode_b', itemId)
-
-  return (
-    <div className="flex flex-col items-center gap-2">
-      <span className="text-sm font-medium text-ink-muted">{t('checkmarks.recordRecall')}</span>
-      <CheckmarkRow
-        count={count}
-        onChange={setCount}
-        size="lg"
-        ariaLabel={t('checkmarks.recordRecall')}
-      />
-    </div>
-  )
+interface Round {
+  item: LearningItem
+  passageIndex: number
 }
 
 export function ModeBPage() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
   const [items, setItems] = useState<LearningItem[]>([])
-  const [ready, setReady] = useState(false)
-  const [current, setCurrent] = useState<LearningItem | null>(null)
-  const [hintLevel, setHintLevel] = useState<HintLevel>(1)
+  const [round, setRound] = useState<Round | null>(null)
   const [revealed, setRevealed] = useState(false)
-  const [detailOpen, setDetailOpen] = useState(false)
+  const [choice, setChoice] = useState<'ok' | 'hold' | null>(null)
+  const [ready, setReady] = useState(false)
+  const { label: timerLabel, reset: resetTimer } = useSessionTimer(true)
 
-  useEffect(() => {
-    void (async () => {
-      const dataset = await ensureDatasetLoaded()
-      setItems(dataset.items)
-      setReady(true)
-    })()
-  }, [])
-
-  const loadQuestion = useCallback(
-    (excludeId?: string) => {
-      if (items.length === 0) return
-      const next = pickWeightedItem(items, 'mode_b', excludeId)
-      setCurrent(next)
+  const loadRound = useCallback(
+    (pool: LearningItem[], excludeId?: string | null) => {
+      const withContexts = pool.filter((item) => (item.contexts?.length ?? 0) > 0)
+      const nextId = pickRandomItemId(
+        withContexts.map((item) => item.id),
+        excludeId,
+      )
+      if (!nextId) {
+        setRound(null)
+        return
+      }
+      const item = withContexts.find((entry) => entry.id === nextId)!
+      const passageIndex = pickPassageIndex(item.id, 'mode_b', item.contexts!.length)
+      setRound({ item, passageIndex })
       setRevealed(false)
+      setChoice(null)
+      resetTimer()
     },
-    [items],
+    [resetTimer],
   )
 
   useEffect(() => {
-    if (ready && items.length > 0 && !current) {
-      loadQuestion()
+    void (async () => {
+      await ensureDatasetLoaded()
+      const all = await getAllItems()
+      setItems(all)
+      loadRound(all)
+      setReady(true)
+    })()
+  }, [loadRound])
+
+  const context = useMemo(() => {
+    if (!round) return null
+    return getContextOrNull(round.item, round.passageIndex)
+  }, [round])
+
+  const encounters = round ? getSeenPassageIndices(round.item.id, 'mode_b').length : 0
+
+  const onPrimary = () => {
+    if (!round) return
+    if (!revealed) {
+      setRevealed(true)
+      return
     }
-  }, [ready, items, current, loadQuestion])
-
-  const cycleHintLevel = () => {
-    setHintLevel((level) => (level === 3 ? 1 : ((level + 1) as HintLevel)))
-  }
-
-  const onNext = () => {
-    if (!current) return
-    loadQuestion(current.id)
+    if (!choice) return
+    recordPassageSeen(round.item.id, 'mode_b', round.passageIndex)
+    loadRound(items, round.item.id)
   }
 
   if (!ready) {
-    return <p className="text-lg text-ink-muted">…</p>
+    return <div className="grid h-full place-items-center font-sans text-text-muted">…</div>
   }
 
-  if (!current) {
-    return <p className="text-lg text-ink-muted">{t('browse.empty')}</p>
+  if (!round || !context) {
+    return (
+      <div className="flex h-full flex-col">
+        <AppHeader cefrLabel="—" timerLabel={timerLabel} />
+        <div className="grid flex-1 place-items-center p-6 text-center">
+          <p className="font-sans text-text-secondary">{t('modeB.noContexts')}</p>
+        </div>
+        <AppFooter
+          onPause={() => navigate('/')}
+          pauseLabel={t('modeB.pause')}
+          primaryLabel={t('modeB.next')}
+          onPrimary={() => navigate('/train')}
+        />
+      </div>
+    )
   }
 
-  const example = exampleForReveal(current)
+  const clozeSegments = generateClozeSegments(context.text_en, context.cloze_spans)
+  const revealedParts = renderHighlightedPassage(context.text_en, context.target_span)
 
   return (
-    <section className="mx-auto max-w-xl space-y-6">
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <Link to="/train" className="text-sm font-medium text-brand hover:underline">
-            ← {t('train.title')}
-          </Link>
-          <h1 className="mt-2 font-display text-3xl font-bold">{t('modeB.title')}</h1>
-        </div>
-        <button
-          type="button"
-          onClick={cycleHintLevel}
-          className="shrink-0 rounded-full border border-line bg-paper-elevated px-3 py-1.5 text-xs font-medium text-ink-muted"
-        >
-          {t(`modeB.hintLevel${hintLevel}`)}
-        </button>
-      </div>
+    <div className="flex h-full min-h-0 flex-col">
+      <AppHeader cefrLabel={round.item.cefr_level} timerLabel={timerLabel} />
 
-      <div className="rounded-3xl border border-line bg-paper-elevated p-6">
-        <p className="text-2xl font-semibold leading-relaxed text-ink">{current.translations_ja.join('、')}</p>
-        {hintLevel >= 2 && current.definition_en ? (
-          <p className="mt-4 text-base leading-relaxed text-ink-muted">{current.definition_en}</p>
-        ) : null}
-        {hintLevel >= 3 && current.semantic_field.length > 0 ? (
-          <p className="mt-3 text-sm text-ink-muted">
-            {t('itemDetail.semanticField')}: {current.semantic_field.join(', ')}
-          </p>
-        ) : null}
-      </div>
-
-      <p className="text-center text-lg font-medium text-ink">{t('modeB.prompt')}</p>
-
-      {!revealed ? (
-        <button
-          type="button"
-          className="w-full rounded-2xl border border-dashed border-brand bg-brand-soft/30 px-4 py-5 text-lg font-medium text-brand-strong hover:bg-brand-soft/50"
-          onClick={() => setRevealed(true)}
-        >
-          {t('modeB.reveal')}
-        </button>
-      ) : (
-        <div className="space-y-4 rounded-3xl border border-line bg-paper p-6 text-center">
-          <p className="font-display text-3xl font-bold text-ink">{current.surface}</p>
-          <p className="font-mono text-base text-ink-muted">{current.ipa_careful}</p>
-          {example ? (
-            <div className="rounded-2xl bg-paper-elevated p-4 text-left">
-              <p className="text-lg text-ink">{example.en}</p>
-              <p className="mt-2 text-base text-ink-muted">{example.ja}</p>
-            </div>
-          ) : null}
-          <ModeBCheckmarks itemId={current.id} />
-          <div className="flex flex-wrap justify-center gap-3">
-            <button
-              type="button"
-              className="rounded-xl border border-line px-4 py-2.5 text-sm font-medium hover:bg-paper-elevated"
-              onClick={() => setDetailOpen(true)}
-            >
-              {t('modeA.viewDetail')}
-            </button>
-            <button
-              type="button"
-              className="rounded-xl bg-brand px-4 py-2.5 text-sm font-medium text-white hover:bg-brand-strong"
-              onClick={onNext}
-            >
-              {t('modeA.next')}
-            </button>
+      <div className="grid min-h-0 flex-1 grid-rows-[1fr_auto] md:grid-cols-[1fr_minmax(240px,30%)] md:grid-rows-1">
+        <section className="space-y-8 overflow-auto px-5 py-8 md:px-10 md:py-12">
+          <div className="mx-auto max-w-xl">
+            <p className="font-serif text-[18px] leading-relaxed text-text-primary">{context.text_ja}</p>
           </div>
-        </div>
-      )}
+          <div className="mx-auto max-w-xl border-t border-border pt-8">
+            {revealed ? (
+              <article className="font-serif text-[19px] leading-relaxed text-text-primary md:text-[20px]">
+                {revealedParts.before}
+                <mark className="chunk-highlight">{revealedParts.target}</mark>
+                {revealedParts.after}
+              </article>
+            ) : (
+              <article className="font-serif text-[19px] leading-relaxed text-text-primary md:text-[20px]">
+                {clozeSegments.map((segment, index) =>
+                  segment.type === 'blank' ? (
+                    <span key={`b-${index}`} className="cloze-blank">
+                      {segment.value}
+                    </span>
+                  ) : (
+                    <span key={`t-${index}`}>{segment.value}</span>
+                  ),
+                )}
+              </article>
+            )}
+          </div>
+        </section>
 
-      <ItemDetailModal item={current} open={detailOpen} onClose={() => setDetailOpen(false)} />
-    </section>
+        <TargetSidePanel
+          item={round.item}
+          encounters={encounters}
+          choice={choice}
+          onOk={() => setChoice('ok')}
+          onHold={() => setChoice('hold')}
+          emptyHint={revealed ? null : t('modeB.sideHint')}
+        />
+      </div>
+
+      <AppFooter
+        onPause={() => navigate('/')}
+        pauseLabel={t('modeB.pause')}
+        primaryLabel={revealed ? t('modeB.next') : t('modeB.reveal')}
+        onPrimary={onPrimary}
+        primaryDisabled={revealed && !choice}
+        primaryVariant="primary"
+      />
+    </div>
   )
 }

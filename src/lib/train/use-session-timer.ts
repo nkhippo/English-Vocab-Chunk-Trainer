@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 /** Display-only session timer (seconds). Does not persist. */
 export function useSessionTimer(active: boolean) {
@@ -11,6 +11,7 @@ export function useSessionTimer(active: boolean) {
     return () => window.clearInterval(id)
   }, [active])
 
-  const label = `${seconds}s`
-  return { seconds, label, reset: () => setSeconds(0) }
+  const reset = useCallback(() => setSeconds(0), [])
+
+  return { seconds, label: `${seconds}s`, reset }
 }

@@ -50,14 +50,22 @@ export function ModeAPage() {
   )
 
   useEffect(() => {
+    let cancelled = false
     void (async () => {
       await ensureDatasetLoaded()
+      if (cancelled) return
       const all = await getAllItems()
+      if (cancelled) return
       setItems(all)
       loadRound(all)
       setReady(true)
     })()
-  }, [loadRound])
+    return () => {
+      cancelled = true
+    }
+    // Initial load only — loadRound is stable once resetTimer is memoized.
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- mount once
+  }, [])
 
   const context = useMemo(() => {
     if (!round) return null

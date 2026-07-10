@@ -15,21 +15,68 @@
   },
   "home": {
     "title": "Welcome",
-    "body": "Phase 1 ships the PWA shell, JA/EN UI, guide modal, data pipeline scripts, and review UI. Learning Modes A/B/C arrive in Phase 2.",
-    "ctaTrain": "Training (coming soon)",
-    "ctaBrowse": "Open CEFR wordbook",
+    "body": "Try the wordbook, Mode A (recognize), and Mode B (recall) with 11 sample items before scaling data generation.",
+    "ctaModeA": "Mode A (pick meaning)",
+    "ctaModeB": "Mode B (recall)",
+    "ctaBrowse": "Open wordbook",
     "ctaReview": "Open review UI"
   },
   "train": {
     "title": "Training modes",
-    "placeholder": "Mode A (recognize) / Mode B (recall) / Mode C (produce) will be implemented in Phase 2."
+    "subtitle": "MVP ships Mode A (recognize) and Mode B (recall). Mode C (free writing) comes after data scale-up.",
+    "modeALabel": "Mode A",
+    "modeADesc": "See English and pick the correct Japanese meaning from four choices.",
+    "modeBLabel": "Mode B",
+    "modeBDesc": "Recall the English surface from Japanese hints.",
+    "modeCNote": "Mode C (writing review) is out of scope for this MVP."
   },
   "browse": {
     "title": "CEFR wordbook",
-    "subtitle": "Per-level counts for now (search/detail in Phase 2)",
+    "subtitle": "Pick a level and tap a card for full detail",
     "empty": "No data yet. Add data/current/items.json.",
-    "count": "{{count}} items",
-    "searchHint": "Search lands in Phase 2"
+    "emptyLevel": "No items for {{level}} yet",
+    "count": "{{count}} items"
+  },
+  "modeA": {
+    "title": "Mode A (recognize)",
+    "prompt": "Choose the correct meaning",
+    "distractorConfusables": "Distractors: confusables",
+    "distractorRandom": "Distractors: random",
+    "correct": "Correct",
+    "incorrect": "Incorrect",
+    "viewDetail": "View detail",
+    "next": "Next question",
+    "streak": "Streak {{count}}"
+  },
+  "modeB": {
+    "title": "Mode B (recall)",
+    "prompt": "Recall the English expression",
+    "reveal": "Tap to reveal answer",
+    "hintLevel1": "Hint Lv1",
+    "hintLevel2": "Hint Lv2",
+    "hintLevel3": "Hint Lv3"
+  },
+  "itemDetail": {
+    "title": "Item detail",
+    "examples": "Examples",
+    "confusables": "Confusables",
+    "noConfusables": "No confusables listed",
+    "commonErrors": "Common errors (JA)",
+    "relatedWords": "Related words",
+    "synonyms": "Synonyms",
+    "antonyms": "Antonyms",
+    "hypernyms": "Hypernyms",
+    "hyponyms": "Hyponyms",
+    "relatedUses": "Related uses",
+    "meta": "Metadata",
+    "similarity": "Similarity:",
+    "difference": "Key difference:",
+    "usage": "Usage:",
+    "none": "None",
+    "category": "Category",
+    "frequency": "Frequency rank",
+    "semanticField": "Semantic field",
+    "skillFocus": "Skill focus"
   },
   "review": {
     "title": "Review UI",
@@ -78,7 +125,8 @@
   "common": {
     "comingSoon": "Coming soon",
     "phase1": "Phase 1",
-    "phase2": "Phase 2"
+    "phase2": "Phase 2",
+    "mvp": "MVP UI"
   },
   "enum": {
     "category": {

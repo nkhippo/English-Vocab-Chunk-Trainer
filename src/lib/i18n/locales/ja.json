@@ -15,21 +15,68 @@
   },
   "home": {
     "title": "ようこそ",
-    "body": "Phase 1 では PWA 骨格、日英 UI、ガイド、データパイプライン、検証 UI を用意しています。Mode A/B/C の学習画面は Phase 2 で実装します。",
-    "ctaTrain": "学習モード（準備中）",
-    "ctaBrowse": "CEFR 単語帳を見る",
+    "body": "11 件のサンプルで単語帳・Mode A（識別）・Mode B（想起）の UI を試せます。情報の過不足を確認してから本格量産に進みます。",
+    "ctaModeA": "Mode A（意味を選ぶ）",
+    "ctaModeB": "Mode B（思い出す）",
+    "ctaBrowse": "単語帳を見る",
     "ctaReview": "検証 UI を開く"
   },
   "train": {
     "title": "学習モード",
-    "placeholder": "Mode A（識別）/ Mode B（想起）/ Mode C（運用）は Phase 2 で実装予定です。"
+    "subtitle": "MVP では Mode A（識別）と Mode B（想起）を試せます。Mode C（自由英作文）はデータ量産後に実装します。",
+    "modeALabel": "Mode A",
+    "modeADesc": "英語を見て、正しい日本語訳を4択で選びます。",
+    "modeBLabel": "Mode B",
+    "modeBDesc": "日本語のヒントから英語の surface を思い出します。",
+    "modeCNote": "Mode C（自由英作文添削）は今回のスコープ外です。"
   },
   "browse": {
     "title": "CEFR 単語帳",
-    "subtitle": "レベル別の件数確認（検索・詳細は Phase 2）",
+    "subtitle": "レベルを選び、カードをタップして詳細を確認します",
     "empty": "まだデータがありません。data/current/items.json を投入してください。",
-    "count": "{{count}} 件",
-    "searchHint": "検索は Phase 2 で実装します"
+    "emptyLevel": "{{level}} のデータはまだありません",
+    "count": "{{count}} 件"
+  },
+  "modeA": {
+    "title": "Mode A（意味を選ぶ）",
+    "prompt": "意味として正しいものを選んでください",
+    "distractorConfusables": "誤答: confusables",
+    "distractorRandom": "誤答: ランダム",
+    "correct": "正解です",
+    "incorrect": "不正解です",
+    "viewDetail": "詳細を見る",
+    "next": "次の問題",
+    "streak": "連続正解 {{count}}"
+  },
+  "modeB": {
+    "title": "Mode B（思い出す）",
+    "prompt": "英語で何と言うか思い出してください",
+    "reveal": "タップで解答を見る",
+    "hintLevel1": "ヒント Lv1",
+    "hintLevel2": "ヒント Lv2",
+    "hintLevel3": "ヒント Lv3"
+  },
+  "itemDetail": {
+    "title": "単語詳細",
+    "examples": "例文",
+    "confusables": "混同しやすい語 / Confusables",
+    "noConfusables": "混同しやすい語なし",
+    "commonErrors": "日本人がしがちな間違い / Common Errors",
+    "relatedWords": "関連語",
+    "synonyms": "類義語",
+    "antonyms": "反意語",
+    "hypernyms": "上位語",
+    "hyponyms": "下位語",
+    "relatedUses": "派生・関連する使い方 / Related Uses",
+    "meta": "メタ情報",
+    "similarity": "似ている点:",
+    "difference": "違うポイント:",
+    "usage": "使い分け:",
+    "none": "特になし",
+    "category": "カテゴリ",
+    "frequency": "頻度ランク",
+    "semanticField": "意味分野",
+    "skillFocus": "スキル焦点"
   },
   "review": {
     "title": "検証 UI",
@@ -78,7 +125,8 @@
   "common": {
     "comingSoon": "準備中",
     "phase1": "Phase 1",
-    "phase2": "Phase 2"
+    "phase2": "Phase 2",
+    "mvp": "MVP UI"
   },
   "enum": {
     "category": {

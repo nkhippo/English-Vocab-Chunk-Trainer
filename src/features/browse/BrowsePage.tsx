@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { countByCefr, ensureDatasetLoaded } from '@/lib/db'
-import type { CefrLevel } from '@/types/learning'
+import { ItemDetailModal } from '@/components/item-detail-modal'
+import { countByCefr, ensureDatasetLoaded, getItemsByCefr } from '@/lib/db'
+import { labelCategory } from '@/lib/i18n/labels'
+import type { CefrLevel, LearningItem } from '@/types/learning'
 
 const LEVELS: CefrLevel[] = ['A1', 'A2', 'B1', 'B2', 'C1']
 
@@ -9,7 +11,9 @@ export function BrowsePage() {
   const { t } = useTranslation()
   const [active, setActive] = useState<CefrLevel>('A2')
   const [counts, setCounts] = useState<Record<string, number>>({})
+  const [items, setItems] = useState<LearningItem[]>([])
   const [ready, setReady] = useState(false)
+  const [selected, setSelected] = useState<LearningItem | null>(null)
 
   useEffect(() => {
     void (async () => {
@@ -19,13 +23,20 @@ export function BrowsePage() {
     })()
   }, [])
 
+  useEffect(() => {
+    if (!ready) return
+    void (async () => {
+      setItems(await getItemsByCefr(active))
+    })()
+  }, [active, ready])
+
   const total = Object.values(counts).reduce((a, b) => a + b, 0)
 
   return (
     <section className="space-y-5">
       <div>
         <h1 className="font-display text-3xl font-bold">{t('browse.title')}</h1>
-        <p className="mt-2 text-ink-muted">{t('browse.subtitle')}</p>
+        <p className="mt-2 text-lg text-ink-muted">{t('browse.subtitle')}</p>
       </div>
 
       <div className="flex flex-wrap gap-2">
@@ -44,24 +55,40 @@ export function BrowsePage() {
         ))}
       </div>
 
-      <div className="rounded-3xl border border-line bg-paper-elevated p-6">
+      <div className="rounded-3xl border border-line bg-paper-elevated p-4 sm:p-6">
         {!ready ? (
-          <p className="text-ink-muted">…</p>
+          <p className="text-lg text-ink-muted">…</p>
         ) : total === 0 ? (
-          <p className="text-ink-muted">{t('browse.empty')}</p>
+          <p className="text-lg text-ink-muted">{t('browse.empty')}</p>
+        ) : items.length === 0 ? (
+          <p className="text-lg text-ink-muted">{t('browse.emptyLevel', { level: active })}</p>
         ) : (
           <div className="space-y-3">
-            <p className="text-lg font-semibold">
-              {active}: {t('browse.count', { count: counts[active] ?? 0 })}
-            </p>
-            <input
-              disabled
-              placeholder={t('browse.searchHint')}
-              className="w-full rounded-xl border border-line bg-paper px-4 py-3 text-sm text-ink-muted"
-            />
+            <p className="text-lg font-semibold">{t('browse.count', { count: items.length })}</p>
+            <ul className="space-y-3">
+              {items.map((item) => (
+                <li key={item.id}>
+                  <button
+                    type="button"
+                    onClick={() => setSelected(item)}
+                    className="flex w-full items-center gap-3 rounded-2xl border border-line bg-paper px-4 py-4 text-left transition hover:border-brand hover:bg-brand-soft/20"
+                  >
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-xl font-semibold text-ink">{item.surface}</p>
+                    </div>
+                    <p className="shrink-0 text-base text-ink-muted">{item.translations_ja[0]}</p>
+                    <span className="hidden rounded-full bg-brand-soft px-2 py-0.5 text-xs font-medium text-brand-strong sm:inline">
+                      {labelCategory(t, item.category)}
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
           </div>
         )}
       </div>
+
+      <ItemDetailModal item={selected} open={Boolean(selected)} onClose={() => setSelected(null)} />
     </section>
   )
 }

@@ -38,6 +38,13 @@
 - `gas/handlers.js`: validateCefr プロンプト厳格化（false negative 優先）
 - `generate-examples.ts`: `validator_version: v3` / `schema_version: 1.1.1`
 
+### Added (MVP UI — 2026-07-10)
+
+- 単語帳詳細モーダル（`ItemDetailModal`）+ Browse 一覧カード
+- Mode A `/train/mode-a`（4 択・distractor トグル）
+- Mode B `/train/mode-b`（想起・ヒント Lv1〜3）
+- `doc/handoff/mvp-ui-handoff-report.md` / `doc/ops/ux-evaluation-checklist.md`
+
 ### Changed (2026-07-10)
 
 - パイロット v4 **再実行完了**: 8/8・DoD OK・`data/current` 11 件マージ

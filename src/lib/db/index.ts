@@ -1,5 +1,5 @@
 import Dexie, { type Table } from 'dexie'
-import type { Dataset, LearningItem, Insight } from '@/types/learning'
+import type { Dataset, LearningItem, Insight, CefrLevel } from '@/types/learning'
 import bundledDataset from '@data/current/items.json'
 
 export class VocabDatabase extends Dexie {
@@ -50,4 +50,8 @@ export async function countByCefr(): Promise<Record<string, number>> {
     acc[item.cefr_level] = (acc[item.cefr_level] ?? 0) + 1
     return acc
   }, {})
+}
+
+export async function getItemsByCefr(level: CefrLevel): Promise<LearningItem[]> {
+  return db.items.where('cefr_level').equals(level).sortBy('surface')
 }

@@ -11,7 +11,7 @@ import {
   pickRandomItemId,
   recordPassageSeen,
 } from '@/lib/passage-history'
-import { getContextOrNull, renderHighlightedPassage } from '@/lib/train/passage'
+import { getContextOrNull, renderHighlightedPassage, filterEligibleTrainItems } from '@/lib/train/passage'
 import { useSessionTimer } from '@/lib/train/use-session-timer'
 import type { LearningItem } from '@/types/learning'
 
@@ -31,7 +31,7 @@ export function ModeAPage() {
 
   const loadRound = useCallback(
     (pool: LearningItem[], excludeId?: string | null) => {
-      const withContexts = pool.filter((item) => (item.contexts?.length ?? 0) > 0)
+      const withContexts = filterEligibleTrainItems(pool)
       const nextId = pickRandomItemId(
         withContexts.map((item) => item.id),
         excludeId,

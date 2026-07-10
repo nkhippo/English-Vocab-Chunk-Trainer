@@ -44,7 +44,7 @@
     "prompt": "パッセージを読み、ハイライトの意味を推測してください",
     "pause": "中断",
     "next": "次へ →",
-    "noContexts": "このデータにはパッセージ（contexts）がありません。"
+    "noContexts": "パッセージデータが未整備です"
   },
   "modeB": {
     "title": "Mode B（穴埋め）",
@@ -53,7 +53,7 @@
     "pause": "中断",
     "next": "次へ →",
     "sideHint": "解答を見たら詳細が表示されます",
-    "noContexts": "このデータにはパッセージ（contexts）がありません。"
+    "noContexts": "パッセージデータが未整備です"
   },
   "itemDetail": {
     "title": "単語詳細",

@@ -60,13 +60,13 @@
   .cloze-blank {
     display: inline-block;
     min-width: 1.75em;
-    padding: 1px 6px;
+    padding: 4px 2px;
     margin: 0 2px;
-    border-radius: 2px;
-    background: var(--color-highlight-bg);
+    border-bottom: 2px solid var(--color-text-secondary);
     font-family: var(--font-mono);
-    font-size: 0.9em;
-    letter-spacing: 0.04em;
-    color: var(--color-text-secondary);
+    font-size: 0.95em;
+    letter-spacing: 0.08em;
+    color: transparent;
+    user-select: none;
   }
 }

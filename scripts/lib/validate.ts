@@ -130,10 +130,8 @@ function normalizeSurfaceToken(value: string) {
 
 function checkContexts(item: LearningItem, errors: string[]) {
   const contexts = item.contexts
-  if (!contexts) {
-    errors.push(`${item.id}: contexts[] is required (exactly 5 passages)`)
-    return
-  }
+  // contexts is optional (sample items may omit). When present, must be exactly 5.
+  if (!contexts) return
   if (contexts.length !== 5) {
     errors.push(`${item.id}: contexts must have exactly 5 items, got ${contexts.length}`)
   }

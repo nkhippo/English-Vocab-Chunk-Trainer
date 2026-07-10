@@ -44,7 +44,7 @@
     "prompt": "Read the passage and infer the highlighted meaning",
     "pause": "Pause",
     "next": "Next →",
-    "noContexts": "No passage contexts are available for this dataset."
+    "noContexts": "Passage data is not ready yet."
   },
   "modeB": {
     "title": "Mode B (cloze)",
@@ -53,7 +53,7 @@
     "pause": "Pause",
     "next": "Next →",
     "sideHint": "Details appear after you reveal the answer",
-    "noContexts": "No passage contexts are available for this dataset."
+    "noContexts": "Passage data is not ready yet."
   },
   "itemDetail": {
     "title": "Item detail",

@@ -78,6 +78,21 @@
     "semanticField": "Semantic field",
     "skillFocus": "Skill focus"
   },
+  "checkmarks": {
+    "learningHistory": "Learning history",
+    "recordUnderstanding": "Record your understanding",
+    "recordRecall": "Mark if you recalled it",
+    "reset": "Reset {{mode}} checkmarks",
+    "resetConfirmTitle": "Clear all {{mode}} checkmarks?",
+    "resetConfirmBody": "This cannot be undone.",
+    "resetAction": "Clear",
+    "resetDone": "Checkmarks cleared",
+    "mode": {
+      "browse": "Wordbook",
+      "mode_a": "Mode A",
+      "mode_b": "Mode B"
+    }
+  },
   "review": {
     "title": "Review UI",
     "subtitle": "Accept or reject generated seeds quickly",

@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { CheckmarkRow } from '@/components/checkmark-row'
+import { useCheckmark } from '@/lib/checkmarks'
 import { labelCategory, labelRegister } from '@/lib/i18n/labels'
 import type { LearningItem, Register } from '@/types/learning'
 
@@ -38,6 +40,23 @@ function AccordionSection({
 function defaultRegister(registers: Register[]): Register {
   if (registers.includes('neutral')) return 'neutral'
   return registers[0] ?? 'neutral'
+}
+
+function BrowseDetailCheckmarks({ itemId }: { itemId: string }) {
+  const { t } = useTranslation()
+  const [count, setCount] = useCheckmark('browse', itemId)
+
+  return (
+    <div className="flex flex-wrap items-center gap-3">
+      <span className="text-sm font-medium text-ink-muted">{t('checkmarks.learningHistory')}</span>
+      <CheckmarkRow
+        count={count}
+        onChange={setCount}
+        size="md"
+        ariaLabel={t('checkmarks.learningHistory')}
+      />
+    </div>
+  )
 }
 
 export function ItemDetailModal({ item, open, onClose }: ItemDetailModalProps) {
@@ -96,6 +115,7 @@ export function ItemDetailModal({ item, open, onClose }: ItemDetailModalProps) {
             {item.definition_en ? (
               <p className="text-base leading-relaxed text-ink-muted">{item.definition_en}</p>
             ) : null}
+            <BrowseDetailCheckmarks itemId={item.id} />
           </header>
 
           {/* Section B: Examples */}

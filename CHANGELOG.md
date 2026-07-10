@@ -1,5 +1,21 @@
 # Changelog
 
+## [Unreleased] — 2026-07-10
+
+### Added
+
+- チェックマーク機能（☑️×3・browse / mode_a / mode_b 独立・`vct_checkmarks_v1`）
+- `src/lib/checkmarks/`（store・hooks・sort）
+- `src/components/checkmark-row/` / `checkmark-reset/`
+- `src/lib/quiz/weighted-selection.ts`（8/4/2/1 重み付き出題）
+- `doc/handoff/checkmark-feature-handoff-report.md`
+
+### Changed
+
+- 単語帳: カード・詳細モーダルにチェックマーク、チェック数昇順ソート
+- Mode A/B: 回答・解答後にチェック記録、出題を `pickWeightedItem` に変更
+- 学習ハブ・単語帳: モード別チェックリセットボタン
+
 ## [Unreleased] — 2026-07-09（夕方更新）
 
 ### Added
@@ -67,7 +83,8 @@
 
 ### Pending (Naoya)
 
-- **A2 本生成 GO** 判断（パイロット v4 DoD OK — `pilot-v4-handoff-report.md` §8）
+- **UX 情報充足度評価**（`doc/ops/ux-evaluation-checklist.md`）→ 量産 GO/スキーマ改定判断
+- **A2 本生成 GO**（評価後）
 - iPhone Safari ホーム画面追加（任意）
 - `/review` UI の情報設計・レイアウト改善（Phase 2 以降）
 

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { CheckmarkResetButton } from '@/components/checkmark-reset'
 
 export function TrainPage() {
   const { t } = useTranslation()
@@ -28,6 +29,11 @@ export function TrainPage() {
           <h2 className="mt-2 text-2xl font-bold text-ink">{t('modeB.title')}</h2>
           <p className="mt-3 text-base text-ink-muted">{t('train.modeBDesc')}</p>
         </Link>
+      </div>
+
+      <div className="flex flex-wrap gap-3">
+        <CheckmarkResetButton mode="mode_a" />
+        <CheckmarkResetButton mode="mode_b" />
       </div>
 
       <p className="text-sm text-ink-muted">{t('train.modeCNote')}</p>

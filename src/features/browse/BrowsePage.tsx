@@ -1,11 +1,28 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { CheckmarkResetButton } from '@/components/checkmark-reset'
+import { CheckmarkRow } from '@/components/checkmark-row'
 import { ItemDetailModal } from '@/components/item-detail-modal'
+import { sortByBrowseCheckmarks, useCheckmark, useCheckmarkVersion } from '@/lib/checkmarks'
 import { countByCefr, ensureDatasetLoaded, getItemsByCefr } from '@/lib/db'
 import { labelCategory } from '@/lib/i18n/labels'
 import type { CefrLevel, LearningItem } from '@/types/learning'
 
 const LEVELS: CefrLevel[] = ['A1', 'A2', 'B1', 'B2', 'C1']
+
+function BrowseCardCheckmarks({ itemId }: { itemId: string }) {
+  const { t } = useTranslation()
+  const [count, setCount] = useCheckmark('browse', itemId)
+
+  return (
+    <CheckmarkRow
+      count={count}
+      onChange={setCount}
+      size="sm"
+      ariaLabel={t('checkmarks.learningHistory')}
+    />
+  )
+}
 
 export function BrowsePage() {
   const { t } = useTranslation()
@@ -14,6 +31,7 @@ export function BrowsePage() {
   const [items, setItems] = useState<LearningItem[]>([])
   const [ready, setReady] = useState(false)
   const [selected, setSelected] = useState<LearningItem | null>(null)
+  const checkmarkVersion = useCheckmarkVersion()
 
   useEffect(() => {
     void (async () => {
@@ -26,17 +44,21 @@ export function BrowsePage() {
   useEffect(() => {
     if (!ready) return
     void (async () => {
-      setItems(await getItemsByCefr(active))
+      const raw = await getItemsByCefr(active)
+      setItems(sortByBrowseCheckmarks(raw))
     })()
-  }, [active, ready])
+  }, [active, ready, checkmarkVersion])
 
   const total = Object.values(counts).reduce((a, b) => a + b, 0)
 
   return (
     <section className="space-y-5">
-      <div>
-        <h1 className="font-display text-3xl font-bold">{t('browse.title')}</h1>
-        <p className="mt-2 text-lg text-ink-muted">{t('browse.subtitle')}</p>
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <h1 className="font-display text-3xl font-bold">{t('browse.title')}</h1>
+          <p className="mt-2 text-lg text-ink-muted">{t('browse.subtitle')}</p>
+        </div>
+        <CheckmarkResetButton mode="browse" />
       </div>
 
       <div className="flex flex-wrap gap-2">
@@ -67,11 +89,14 @@ export function BrowsePage() {
             <p className="text-lg font-semibold">{t('browse.count', { count: items.length })}</p>
             <ul className="space-y-3">
               {items.map((item) => (
-                <li key={item.id}>
+                <li
+                  key={item.id}
+                  className="flex items-center gap-1 rounded-2xl border border-line bg-paper transition hover:border-brand hover:bg-brand-soft/20"
+                >
                   <button
                     type="button"
                     onClick={() => setSelected(item)}
-                    className="flex w-full items-center gap-3 rounded-2xl border border-line bg-paper px-4 py-4 text-left transition hover:border-brand hover:bg-brand-soft/20"
+                    className="flex min-w-0 flex-1 items-center gap-3 px-4 py-4 text-left"
                   >
                     <div className="min-w-0 flex-1">
                       <p className="truncate text-xl font-semibold text-ink">{item.surface}</p>
@@ -81,6 +106,9 @@ export function BrowsePage() {
                       {labelCategory(t, item.category)}
                     </span>
                   </button>
+                  <div className="shrink-0 pr-2">
+                    <BrowseCardCheckmarks itemId={item.id} />
+                  </div>
                 </li>
               ))}
             </ul>

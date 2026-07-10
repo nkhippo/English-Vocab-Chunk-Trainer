@@ -2,9 +2,28 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { ItemDetailModal } from '@/components/item-detail-modal'
+import { CheckmarkRow } from '@/components/checkmark-row'
+import { useCheckmark } from '@/lib/checkmarks'
 import { ensureDatasetLoaded } from '@/lib/db'
-import { buildModeAChoices, pickRandomItem, type DistractorMode } from '@/lib/quiz'
+import { buildModeAChoices, pickWeightedItem, type DistractorMode } from '@/lib/quiz'
 import type { LearningItem } from '@/types/learning'
+
+function ModeACheckmarks({ itemId }: { itemId: string }) {
+  const { t } = useTranslation()
+  const [count, setCount] = useCheckmark('mode_a', itemId)
+
+  return (
+    <div className="flex flex-col items-center gap-2">
+      <span className="text-sm font-medium text-ink-muted">{t('checkmarks.recordUnderstanding')}</span>
+      <CheckmarkRow
+        count={count}
+        onChange={setCount}
+        size="lg"
+        ariaLabel={t('checkmarks.recordUnderstanding')}
+      />
+    </div>
+  )
+}
 
 export function ModeAPage() {
   const { t } = useTranslation()
@@ -27,7 +46,7 @@ export function ModeAPage() {
   const loadQuestion = useCallback(
     (excludeId?: string) => {
       if (items.length === 0) return
-      const next = pickRandomItem(items, excludeId)
+      const next = pickWeightedItem(items, 'mode_a', excludeId)
       setCurrent(next)
       setSelectedIndex(null)
     },
@@ -136,6 +155,7 @@ export function ModeAPage() {
           <p className="text-xl font-semibold">
             {selectedIndex === correctIndex ? t('modeA.correct') : t('modeA.incorrect')}
           </p>
+          <ModeACheckmarks itemId={current.id} />
           <div className="flex flex-wrap justify-center gap-3">
             <button
               type="button"

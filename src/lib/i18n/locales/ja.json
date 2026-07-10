@@ -78,6 +78,21 @@
     "semanticField": "意味分野",
     "skillFocus": "スキル焦点"
   },
+  "checkmarks": {
+    "learningHistory": "学習履歴",
+    "recordUnderstanding": "今回の理解度を記録",
+    "recordRecall": "思い出せたら記録",
+    "reset": "{{mode}}のチェックをリセット",
+    "resetConfirmTitle": "{{mode}}のチェックを全てクリアしますか？",
+    "resetConfirmBody": "この操作は元に戻せません。",
+    "resetAction": "クリア",
+    "resetDone": "チェックをクリアしました",
+    "mode": {
+      "browse": "単語帳",
+      "mode_a": "Mode A",
+      "mode_b": "Mode B"
+    }
+  },
   "review": {
     "title": "検証 UI",
     "subtitle": "生成 seed を高速に採用 / 却下する",

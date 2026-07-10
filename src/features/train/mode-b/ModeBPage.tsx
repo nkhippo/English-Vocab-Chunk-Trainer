@@ -2,8 +2,10 @@ import { useCallback, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { ItemDetailModal } from '@/components/item-detail-modal'
+import { CheckmarkRow } from '@/components/checkmark-row'
+import { useCheckmark } from '@/lib/checkmarks'
 import { ensureDatasetLoaded } from '@/lib/db'
-import { pickRandomItem } from '@/lib/quiz'
+import { pickWeightedItem } from '@/lib/quiz'
 import type { LearningItem } from '@/types/learning'
 
 export type HintLevel = 1 | 2 | 3
@@ -11,6 +13,23 @@ export type HintLevel = 1 | 2 | 3
 function exampleForReveal(item: LearningItem) {
   return (
     item.example_sentences.find((ex) => ex.register === 'neutral') ?? item.example_sentences[0] ?? null
+  )
+}
+
+function ModeBCheckmarks({ itemId }: { itemId: string }) {
+  const { t } = useTranslation()
+  const [count, setCount] = useCheckmark('mode_b', itemId)
+
+  return (
+    <div className="flex flex-col items-center gap-2">
+      <span className="text-sm font-medium text-ink-muted">{t('checkmarks.recordRecall')}</span>
+      <CheckmarkRow
+        count={count}
+        onChange={setCount}
+        size="lg"
+        ariaLabel={t('checkmarks.recordRecall')}
+      />
+    </div>
   )
 }
 
@@ -34,7 +53,7 @@ export function ModeBPage() {
   const loadQuestion = useCallback(
     (excludeId?: string) => {
       if (items.length === 0) return
-      const next = pickRandomItem(items, excludeId)
+      const next = pickWeightedItem(items, 'mode_b', excludeId)
       setCurrent(next)
       setRevealed(false)
     },
@@ -116,6 +135,7 @@ export function ModeBPage() {
               <p className="mt-2 text-base text-ink-muted">{example.ja}</p>
             </div>
           ) : null}
+          <ModeBCheckmarks itemId={current.id} />
           <div className="flex flex-wrap justify-center gap-3">
             <button
               type="button"

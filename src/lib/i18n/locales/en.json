@@ -1,6 +1,8 @@
 {
   "app": {
     "name": "Vocab & Chunk Trainer",
+    "eyebrow": "English · Vocab & Chunk Trainer",
+    "wordmark": "Vocab & Chunk Trainer",
     "tagline": "CEFR-aligned vocabulary & chunk practice"
   },
   "nav": {

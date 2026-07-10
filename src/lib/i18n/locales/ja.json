@@ -1,6 +1,8 @@
 {
   "app": {
     "name": "Vocab & Chunk Trainer",
+    "eyebrow": "English · Vocab & Chunk Trainer",
+    "wordmark": "語彙・チャンクトレーナー",
     "tagline": "CEFR に沿った語彙・チャンク訓練"
   },
   "nav": {

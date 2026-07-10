@@ -61,14 +61,16 @@ export function BrowsePage() {
         <CheckmarkResetButton mode="browse" />
       </div>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="inline-flex flex-wrap gap-1 rounded-[12px] bg-paper-soft p-[5px]">
         {LEVELS.map((level) => (
           <button
             key={level}
             type="button"
             onClick={() => setActive(level)}
-            className={`rounded-full px-4 py-2 text-sm font-medium ${
-              active === level ? 'bg-brand text-white' : 'border border-line bg-paper-elevated text-ink-muted'
+            className={`rounded-[9px] px-3.5 py-2 text-sm font-bold transition ${
+              active === level
+                ? 'bg-paper-elevated text-ink shadow-soft'
+                : 'bg-transparent text-ink-muted'
             }`}
           >
             {level}
@@ -77,7 +79,7 @@ export function BrowsePage() {
         ))}
       </div>
 
-      <div className="rounded-3xl border border-line bg-paper-elevated p-4 sm:p-6">
+      <div className="rounded-[14px] border border-line bg-paper-elevated p-4 shadow-soft sm:p-6">
         {!ready ? (
           <p className="text-lg text-ink-muted">…</p>
         ) : total === 0 ? (
@@ -91,7 +93,7 @@ export function BrowsePage() {
               {items.map((item) => (
                 <li
                   key={item.id}
-                  className="flex items-center gap-1 rounded-2xl border border-line bg-paper transition hover:border-brand hover:bg-brand-soft/20"
+                  className="flex items-center gap-1 rounded-[13px] border-[1.5px] border-line bg-paper-soft transition hover:-translate-y-px hover:border-[#bfc3bc] hover:shadow-soft"
                 >
                   <button
                     type="button"

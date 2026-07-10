@@ -1,22 +1,27 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Source Serif 4", "Noto Serif JP", Georgia, serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-  --color-ink: #0f172a;
-  --color-ink-muted: #475569;
-  --color-paper: #f8fafc;
-  --color-paper-elevated: #ffffff;
-  --color-line: #e2e8f0;
-  --color-brand: #0f766e;
-  --color-brand-soft: #ccfbf1;
-  --color-brand-strong: #115e59;
-  --color-accent: #c2410c;
+  /* Question Trainer–aligned surfaces; teal remains primary */
+  --color-ink: #20262b;
+  --color-ink-muted: #5a6365;
+  --color-paper: #eceeea;
+  --color-paper-elevated: #fcfcfa;
+  --color-paper-soft: #f4f5f1;
+  --color-line: #d9dcd6;
+  --color-brand: #1c6e6a;
+  --color-brand-soft: #d3e7e4;
+  --color-brand-strong: #14534f;
+  --color-accent: #b5701a;
+  --color-accent-soft: #f6e7c9;
   --color-danger: #b91c1c;
   --color-success: #15803d;
   --color-warning: #a16207;
+
+  --shadow-soft: 0 1px 2px rgba(32, 38, 43, 0.05), 0 8px 24px rgba(32, 38, 43, 0.06);
 }
 
 @layer base {
@@ -30,10 +35,9 @@
     margin: 0;
     font-family: var(--font-sans);
     color: var(--color-ink);
-    background:
-      radial-gradient(circle at top left, color-mix(in oklab, var(--color-brand-soft) 70%, white), transparent 40%),
-      linear-gradient(180deg, #f1f5f9 0%, var(--color-paper) 40%, #eef2ff 100%);
-    background-attachment: fixed;
+    background: var(--color-paper);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
   }
 
   button,

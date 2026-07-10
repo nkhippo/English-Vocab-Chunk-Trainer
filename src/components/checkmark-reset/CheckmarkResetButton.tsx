@@ -27,7 +27,7 @@ export function CheckmarkResetButton({ mode, className }: CheckmarkResetButtonPr
         type="button"
         className={
           className ??
-          'rounded-xl border border-line px-3 py-2 text-sm font-medium text-ink-muted hover:bg-paper hover:text-ink'
+          'rounded-[11px] border-[1.5px] border-line px-3 py-2 text-sm font-bold text-ink-muted hover:border-[#bfc3bc] hover:text-ink'
         }
         onClick={() => setConfirmOpen(true)}
       >

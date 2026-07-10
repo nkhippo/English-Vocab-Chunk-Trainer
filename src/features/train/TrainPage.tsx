@@ -9,25 +9,39 @@ export function TrainPage() {
     <section className="space-y-6">
       <div>
         <h1 className="font-display text-3xl font-bold">{t('train.title')}</h1>
-        <p className="mt-3 max-w-2xl text-lg leading-relaxed text-ink-muted">{t('train.subtitle')}</p>
+        <p className="mt-3 max-w-2xl text-base leading-relaxed text-ink-muted md:text-lg">{t('train.subtitle')}</p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-2.5 sm:grid-cols-2">
         <Link
           to="/train/mode-a"
-          className="rounded-3xl border border-line bg-paper-elevated p-6 transition hover:border-brand hover:shadow-sm"
+          className="flex items-start gap-3.5 rounded-[13px] border-[1.5px] border-line bg-paper-elevated p-4 transition hover:-translate-y-px hover:border-[#bfc3bc] hover:shadow-soft"
         >
-          <p className="text-sm font-medium text-brand">{t('train.modeALabel')}</p>
-          <h2 className="mt-2 text-2xl font-bold text-ink">{t('modeA.title')}</h2>
-          <p className="mt-3 text-base text-ink-muted">{t('train.modeADesc')}</p>
+          <span className="grid size-[30px] shrink-0 place-items-center rounded-lg bg-ink text-sm font-extrabold text-white">
+            A
+          </span>
+          <span className="min-w-0">
+            <span className="block text-[10.5px] font-extrabold uppercase tracking-wide text-brand">
+              {t('train.modeALabel')}
+            </span>
+            <span className="mt-0.5 block text-[14.5px] font-bold text-ink">{t('modeA.title')}</span>
+            <span className="mt-1 block text-[12.5px] text-ink-muted">{t('train.modeADesc')}</span>
+          </span>
         </Link>
         <Link
           to="/train/mode-b"
-          className="rounded-3xl border border-line bg-paper-elevated p-6 transition hover:border-brand hover:shadow-sm"
+          className="flex items-start gap-3.5 rounded-[13px] border-[1.5px] border-line bg-paper-elevated p-4 transition hover:-translate-y-px hover:border-[#bfc3bc] hover:shadow-soft"
         >
-          <p className="text-sm font-medium text-brand">{t('train.modeBLabel')}</p>
-          <h2 className="mt-2 text-2xl font-bold text-ink">{t('modeB.title')}</h2>
-          <p className="mt-3 text-base text-ink-muted">{t('train.modeBDesc')}</p>
+          <span className="grid size-[30px] shrink-0 place-items-center rounded-lg bg-ink text-sm font-extrabold text-white">
+            B
+          </span>
+          <span className="min-w-0">
+            <span className="block text-[10.5px] font-extrabold uppercase tracking-wide text-brand">
+              {t('train.modeBLabel')}
+            </span>
+            <span className="mt-0.5 block text-[14.5px] font-bold text-ink">{t('modeB.title')}</span>
+            <span className="mt-1 block text-[12.5px] text-ink-muted">{t('train.modeBDesc')}</span>
+          </span>
         </Link>
       </div>
 

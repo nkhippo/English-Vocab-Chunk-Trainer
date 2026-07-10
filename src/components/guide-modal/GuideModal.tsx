@@ -21,13 +21,13 @@ export function GuideModal() {
       <div
         role="dialog"
         aria-modal="true"
-        className="max-h-[90vh] w-full max-w-xl overflow-auto rounded-3xl border border-line bg-paper-elevated p-6 shadow-2xl"
+        className="max-h-[90vh] w-full max-w-xl overflow-auto rounded-[14px] border border-line bg-paper-elevated p-6 shadow-soft"
       >
         <div className="mb-4 flex items-center justify-between gap-3">
-          <p className="text-sm font-medium text-ink-muted">
+          <p className="text-sm font-bold text-ink-muted">
             {t('guide.pageOf', { current: page + 1, total: guidePages.length })}
           </p>
-          <button type="button" className="text-sm text-ink-muted hover:text-ink" onClick={markGuideSeen}>
+          <button type="button" className="text-sm font-bold text-ink-muted hover:text-ink" onClick={markGuideSeen}>
             {t('guide.skip')}
           </button>
         </div>
@@ -36,7 +36,7 @@ export function GuideModal() {
         <div className="mt-8 flex items-center justify-between gap-3">
           <button
             type="button"
-            className="rounded-xl border border-line px-4 py-2 text-sm disabled:opacity-40"
+            className="rounded-[11px] border-[1.5px] border-line px-4 py-2 text-sm font-bold text-ink-muted disabled:opacity-40 hover:border-[#bfc3bc] hover:text-ink"
             disabled={page === 0}
             onClick={() => setPage((p) => Math.max(0, p - 1))}
           >
@@ -45,7 +45,7 @@ export function GuideModal() {
           {isLast ? (
             <button
               type="button"
-              className="rounded-xl bg-brand px-4 py-2 text-sm font-medium text-white hover:bg-brand-strong"
+              className="rounded-[11px] bg-brand px-5 py-2.5 text-sm font-bold text-white transition hover:-translate-y-px hover:bg-brand-strong hover:shadow-soft"
               onClick={markGuideSeen}
             >
               {t('guide.done')}
@@ -53,7 +53,7 @@ export function GuideModal() {
           ) : (
             <button
               type="button"
-              className="rounded-xl bg-brand px-4 py-2 text-sm font-medium text-white hover:bg-brand-strong"
+              className="rounded-[11px] bg-brand px-5 py-2.5 text-sm font-bold text-white transition hover:-translate-y-px hover:bg-brand-strong hover:shadow-soft"
               onClick={() => setPage((p) => Math.min(guidePages.length - 1, p + 1))}
             >
               {t('guide.next')}

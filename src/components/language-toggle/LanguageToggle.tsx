@@ -7,17 +7,21 @@ export function LanguageToggle() {
   const setLanguage = useAppStore((s) => s.setLanguage)
 
   return (
-    <div className="inline-flex overflow-hidden rounded-full border border-line bg-paper-elevated text-sm">
+    <div className="inline-flex gap-1 rounded-[12px] bg-paper-soft p-[5px] text-sm">
       <button
         type="button"
-        className={`px-3 py-1.5 ${language === 'ja' ? 'bg-brand text-white' : 'text-ink-muted'}`}
+        className={`rounded-[9px] px-3.5 py-2 font-bold transition ${
+          language === 'ja' ? 'bg-paper-elevated text-ink shadow-soft' : 'bg-transparent text-ink-muted'
+        }`}
         onClick={() => setLanguage('ja')}
       >
         {t('settings.languageJa')}
       </button>
       <button
         type="button"
-        className={`px-3 py-1.5 ${language === 'en' ? 'bg-brand text-white' : 'text-ink-muted'}`}
+        className={`rounded-[9px] px-3.5 py-2 font-bold transition ${
+          language === 'en' ? 'bg-paper-elevated text-ink shadow-soft' : 'bg-transparent text-ink-muted'
+        }`}
         onClick={() => setLanguage('en')}
       >
         {t('settings.languageEn')}

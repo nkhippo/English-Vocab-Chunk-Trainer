@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next'
 import { AppFooter } from '@/components/layout/AppFooter'
 import { AppHeader } from '@/components/layout/AppHeader'
 import { Button } from '@/components/ui/Button'
-import { EvalButtons, type EvalChoice } from '@/features/train/components/EvalButtons'
 import { TargetSidePanel } from '@/features/train/components/TargetSidePanel'
 import { useTrainInteractions } from '@/features/train/hooks/useTrainInteractions'
 import { ensureDatasetLoaded, getAllItems } from '@/lib/db'
@@ -29,7 +28,7 @@ export function ModeBPage() {
   const [items, setItems] = useState<LearningItem[]>([])
   const [round, setRound] = useState<Round | null>(null)
   const [revealed, setRevealed] = useState(false)
-  const [choice, setChoice] = useState<EvalChoice>(null)
+  const [detailOpen, setDetailOpen] = useState(false)
   const [ready, setReady] = useState(false)
   const [fading, setFading] = useState(false)
 
@@ -47,7 +46,7 @@ export function ModeBPage() {
     const passageIndex = pickPassageIndex(item.id, 'mode_b', item.contexts!.length)
     setRound({ item, passageIndex })
     setRevealed(false)
-    setChoice(null)
+    setDetailOpen(false)
   }, [])
 
   useEffect(() => {
@@ -72,29 +71,19 @@ export function ModeBPage() {
     return getContextOrNull(round.item, round.passageIndex)
   }, [round])
 
-  const toggleOk = useCallback(() => {
-    if (!revealed) return
-    setChoice((prev) => (prev === 'ok' ? null : 'ok'))
-  }, [revealed])
-
-  const toggleHold = useCallback(() => {
-    if (!revealed) return
-    setChoice((prev) => (prev === 'hold' ? null : 'hold'))
-  }, [revealed])
-
   const onReveal = useCallback(() => {
     setRevealed(true)
   }, [])
 
   const onNext = useCallback(() => {
-    if (!round || !choice || fading) return
+    if (!round || !revealed || fading) return
     setFading(true)
     window.setTimeout(() => {
       recordPassageSeen(round.item.id, 'mode_b', round.passageIndex)
       loadRound(items, round.item.id)
       setFading(false)
     }, 150)
-  }, [round, choice, fading, items, loadRound])
+  }, [round, revealed, fading, items, loadRound])
 
   const onPrimary = () => {
     if (!revealed) {
@@ -106,10 +95,8 @@ export function ModeBPage() {
 
   useTrainInteractions({
     enabled: ready && Boolean(round && context),
-    canAdvance: revealed && Boolean(choice) && !fading,
+    canAdvance: revealed && !fading,
     canReveal: !revealed,
-    onOk: toggleOk,
-    onHold: toggleHold,
     onAdvance: onNext,
     onReveal,
     swipeTargetRef: swipeRef,
@@ -134,20 +121,27 @@ export function ModeBPage() {
   const clozeSegments = generateClozeSegments(context.text_en, context.cloze_spans)
   const revealedParts = renderHighlightedPassage(context.text_en, context.target_span)
   const roundKey = `${round.item.id}-${round.passageIndex}`
+  const showPanel = revealed && detailOpen
 
   return (
-    <div className="flex h-full min-h-0 flex-col">
-      <AppHeader showClose onClose={() => navigate('/')} />
+    <div className="relative flex h-full min-h-0 flex-col">
+      <AppHeader
+        showClose
+        onClose={() => navigate('/')}
+        showDetailToggle={revealed}
+        detailOpen={detailOpen}
+        onDetailToggle={() => setDetailOpen((value) => !value)}
+      />
 
       <div
         ref={swipeRef}
-        className={`min-h-0 flex-1 overflow-y-auto transition-opacity duration-300 md:grid md:grid-cols-[3fr_2fr] md:overflow-hidden ${
+        className={`min-h-0 flex-1 overflow-y-auto transition-opacity duration-300 md:overflow-hidden ${
           fading ? 'opacity-0' : 'opacity-100'
-        }`}
+        } ${showPanel ? 'md:grid md:grid-cols-[3fr_2fr]' : ''}`}
       >
         <section
           key={`passage-${roundKey}`}
-          className="animate-[fadeIn_0.3s_ease-out] space-y-8 px-5 py-6 md:overflow-y-auto md:px-10 md:py-12"
+          className="animate-[fadeIn_0.3s_ease-out] space-y-8 px-5 py-6 md:h-full md:overflow-y-auto md:px-10 md:py-12"
         >
           <div className="mx-auto max-w-xl">
             <p className="font-serif text-[17px] leading-[1.7] text-text-primary md:text-[18px]">
@@ -177,36 +171,43 @@ export function ModeBPage() {
           </div>
         </section>
 
-        <TargetSidePanel
-          key={`panel-${roundKey}`}
-          item={round.item}
-          checkmarkMode="mode_b"
-          choice={choice}
-          onOk={toggleOk}
-          onHold={toggleHold}
-          emptyHint={revealed ? null : t('modeB.sideHint')}
-        />
+        {showPanel ? (
+          <div className="hidden h-full min-h-0 animate-[fadeIn_0.3s_ease-out] border-l border-border md:block">
+            <TargetSidePanel item={round.item} onClose={() => setDetailOpen(false)} />
+          </div>
+        ) : null}
       </div>
 
-      {/* Mobile sticky actions */}
-      <div className="shrink-0 space-y-3 border-t border-border bg-bg-base px-4 py-3 md:hidden">
-        {revealed ? <EvalButtons choice={choice} onOk={toggleOk} onHold={toggleHold} /> : null}
+      {showPanel ? (
+        <div className="md:hidden">
+          <button
+            type="button"
+            aria-label={t('modeA.hideDetail')}
+            className="fixed inset-0 z-40 bg-text-primary/20"
+            onClick={() => setDetailOpen(false)}
+          />
+          <div className="fixed inset-y-0 right-0 z-50 w-[min(100%,22rem)] animate-[fadeIn_0.3s_ease-out] shadow-lg">
+            <TargetSidePanel item={round.item} onClose={() => setDetailOpen(false)} />
+          </div>
+        </div>
+      ) : null}
+
+      <div className="shrink-0 border-t border-border bg-bg-base px-4 py-3 md:hidden">
         <Button
           variant="primary"
           className="min-h-14 w-full rounded-xl px-8 py-4 text-base"
           onClick={onPrimary}
-          disabled={revealed && (!choice || fading)}
+          disabled={fading}
         >
           {revealed ? t('modeB.next') : t('modeB.reveal')}
         </Button>
       </div>
 
-      {/* Desktop: eval in panel; reveal/next in footer */}
       <AppFooter
         className="hidden md:flex"
         primaryLabel={revealed ? t('modeB.next') : t('modeB.reveal')}
         onPrimary={onPrimary}
-        primaryDisabled={revealed && (!choice || fading)}
+        primaryDisabled={fading}
       />
     </div>
   )

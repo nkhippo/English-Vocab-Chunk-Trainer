@@ -31,14 +31,15 @@ v1/v2 を統合し、以下の追加要件を反映した最終仕様:
 - collocation_pattern enum を実データに基づき拡張（`V+Ving` / `V+Prep+N` / `V+Adv` を追加）
 
 **実装ステータス (2026-07-11)**:
-- Phase 1 PWA 骨格・ガイド・`/review`・`/browse`・Mode A/B(文脈型・v8 UI): **稼働中**（GitHub Pages）
+- Phase 1 PWA 骨格・ガイド・`/review`・`/browse`・Mode A/B(文脈型・v9 UX): **稼働中**（GitHub Pages）
 - `data/current`: **21 件**（スキーマ v1.2.4）+ Insight 公式 3
 - 日英 UI: 設定トグル + ガイド二言語。**実装方針**は `doc/ops/i18n-strategy.md`（3 層モデル）
 - Mode C・SRS・音声再生: **Phase 2+**
 - UX スモークテスト: **合格**（`doc/ops/ux-smoke-test-checklist.md`）
-- confusables / common_errors 役割分離: **11 items 修正済み**（`doc/ops/confusables-common-errors-role-separation.md`）
-- A2 量産テンプレート: **v2 配置済み**（`doc/ops/chat-generation-template-a2-v2.md` / `chat-generation-workflow-v2.md`）
-- 残: 空 example スロット補充・A2 collocation 本生成（9/〜500）
+- confusables / common_errors 役割分離: **11 items 修正済み**
+- A2 量産テンプレート: **v2 配置済み**
+- Mode A: OK/保留なし・詳細任意・日本語訳任意（v9）
+- 残: 空 example スロット補充・A2 collocation 本生成（9/〜500）・Mode B 本格 UX
 
 ---
 

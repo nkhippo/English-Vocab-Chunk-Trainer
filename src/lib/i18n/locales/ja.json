@@ -45,7 +45,11 @@
     "prompt": "パッセージを読み、ハイライトの意味を推測してください",
     "pause": "中断",
     "next": "次へ →",
-    "noContexts": "パッセージデータが未整備です"
+    "noContexts": "パッセージデータが未整備です",
+    "showDetail": "詳細を見る",
+    "hideDetail": "詳細を隠す",
+    "showJa": "日本語訳を見る",
+    "hideJa": "日本語訳を隠す"
   },
   "modeB": {
     "title": "Mode B（穴埋め）",

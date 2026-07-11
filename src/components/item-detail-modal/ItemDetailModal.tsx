@@ -1,44 +1,26 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CheckmarkRow } from '@/components/checkmark-row'
+import {
+  AccordionSection,
+  CommonErrorsList,
+  ConfusablesList,
+  ContrastEntriesList,
+  ExamplesList,
+  RelatedUsesList,
+} from '@/components/detail-sections'
 import { InsightCard } from '@/components/insight-card'
 import { IpaTabs } from '@/components/ipa-tabs'
 import { Modal } from '@/components/ui/Modal'
 import { useCheckmark } from '@/lib/checkmarks'
 import { getInsightById, getSurfacesByIds } from '@/lib/db'
 import { labelCategory, labelSkillFocus, metaValue } from '@/lib/i18n/labels'
-import type { AntonymEntry, Insight, LearningItem, RelatedUseEntry, SynonymEntry } from '@/types/learning'
+import type { Insight, LearningItem } from '@/types/learning'
 
 interface ItemDetailModalProps {
   item: LearningItem | null
   open: boolean
   onClose: () => void
-}
-
-function AccordionSection({
-  title,
-  defaultOpen,
-  children,
-}: {
-  title: string
-  defaultOpen: boolean
-  children: React.ReactNode
-}) {
-  const [open, setOpen] = useState(defaultOpen)
-
-  return (
-    <div className="border border-border">
-      <button
-        type="button"
-        className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left"
-        onClick={() => setOpen((value) => !value)}
-      >
-        <span className="font-serif text-lg text-text-primary">{title}</span>
-        <span className="font-sans text-sm text-text-muted">{open ? '−' : '+'}</span>
-      </button>
-      {open ? <div className="space-y-3 border-t border-border px-4 py-4">{children}</div> : null}
-    </div>
-  )
 }
 
 function BrowseDetailCheckmarks({ itemId }: { itemId: string }) {
@@ -54,41 +36,6 @@ function BrowseDetailCheckmarks({ itemId }: { itemId: string }) {
         size="md"
         ariaLabel={t('checkmarks.learningHistory')}
       />
-    </div>
-  )
-}
-
-function shouldShowExample(entry: { example_en?: string; example_ja?: string }): boolean {
-  return Boolean(entry.example_en?.trim()) && Boolean(entry.example_ja?.trim())
-}
-
-function ContrastEntryCard({ entry }: { entry: SynonymEntry | AntonymEntry }) {
-  return (
-    <div className="space-y-2 border border-border bg-bg-base p-3">
-      <p className="font-serif text-lg text-text-primary">{entry.item}</p>
-      <p className="font-sans text-sm leading-relaxed text-text-secondary">{entry.nuance_contrast_ja}</p>
-      {shouldShowExample(entry) ? (
-        <div className="space-y-1 border-t border-border pt-2">
-          <p className="font-serif text-sm text-text-primary">{entry.example_en}</p>
-          <p className="font-sans text-sm text-text-secondary">{entry.example_ja}</p>
-        </div>
-      ) : null}
-    </div>
-  )
-}
-
-function RelatedUseCard({ use }: { use: RelatedUseEntry }) {
-  return (
-    <div className="space-y-2 border border-border bg-bg-base p-3">
-      <p className="font-serif text-lg text-text-primary">{use.form}</p>
-      <p className="font-sans text-sm text-text-secondary">{use.meaning_ja}</p>
-      {use.metaphor_ja ? <p className="font-sans text-xs text-text-muted">{use.metaphor_ja}</p> : null}
-      {shouldShowExample(use) ? (
-        <div className="space-y-1 border-t border-border pt-2">
-          <p className="font-serif text-sm text-text-primary">{use.example_en}</p>
-          <p className="font-sans text-sm text-text-secondary">{use.example_ja}</p>
-        </div>
-      ) : null}
     </div>
   )
 }
@@ -140,7 +87,7 @@ export function ItemDetailModal({ item, open, onClose }: ItemDetailModalProps) {
 
   return (
     <Modal open={open} onClose={onClose} title={t('itemDetail.title')}>
-      <div className="space-y-5">
+      <div className="space-y-6">
         <header className="space-y-2">
           <h2 className="font-serif text-[32px] leading-tight text-text-primary">{item.surface}</h2>
           <IpaTabs careful={item.ipa_careful} connected={item.ipa_connected} />
@@ -170,100 +117,31 @@ export function ItemDetailModal({ item, open, onClose }: ItemDetailModalProps) {
           </div>
         ) : null}
 
-        <section className="space-y-3">
-          <h3 className="font-serif text-lg text-text-primary">{t('itemDetail.examples')}</h3>
-          {examples.length > 0 ? (
-            <div className="space-y-3">
-              {examples.map((example) => (
-                <div
-                  key={`${example.register}-${example.en}`}
-                  className="border border-border bg-bg-base p-4"
-                >
-                  <p className="font-serif text-lg leading-relaxed text-text-primary">{example.en}</p>
-                  <p className="mt-2 font-sans text-base text-text-secondary">{example.ja}</p>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p className="text-text-muted">{t('itemDetail.none')}</p>
-          )}
-        </section>
+        <AccordionSection title={t('itemDetail.examples')} defaultOpen>
+          <ExamplesList examples={examples} />
+        </AccordionSection>
 
         {showRelatedWords ? (
           <AccordionSection title={t('itemDetail.relatedWords')} defaultOpen>
-            <div className="space-y-4">
-              {(item.synonyms ?? []).length > 0 ? (
-                <div className="space-y-3">
-                  <p className="font-sans text-sm font-medium text-text-primary">{t('itemDetail.synonyms')}</p>
-                  {(item.synonyms ?? []).map((syn) => (
-                    <ContrastEntryCard key={syn.item} entry={syn} />
-                  ))}
-                </div>
-              ) : null}
-              {(item.antonyms ?? []).length > 0 ? (
-                <div className="space-y-3">
-                  <p className="font-sans text-sm font-medium text-text-primary">{t('itemDetail.antonyms')}</p>
-                  {(item.antonyms ?? []).map((ant) => (
-                    <ContrastEntryCard key={ant.item} entry={ant} />
-                  ))}
-                </div>
-              ) : null}
-            </div>
+            <ContrastEntriesList synonyms={item.synonyms} antonyms={item.antonyms} />
           </AccordionSection>
         ) : null}
 
         {hasConfusables ? (
           <AccordionSection title={t('itemDetail.confusables')} defaultOpen>
-            {(item.confusables ?? []).map((conf) => (
-              <div key={conf.item} className="space-y-1 border border-border bg-bg-base p-3">
-                <p className="font-serif text-lg text-text-primary">{conf.item}</p>
-                <p className="font-sans text-sm text-text-secondary">
-                  <span className="font-medium text-text-primary">{t('itemDetail.similarity')}</span>{' '}
-                  {conf.similarity_ja}
-                </p>
-                <p className="font-sans text-sm text-text-secondary">
-                  <span className="font-medium text-text-primary">{t('itemDetail.difference')}</span>{' '}
-                  {conf.key_difference_ja}
-                </p>
-                {conf.correct_usage_ja ? (
-                  <p className="font-sans text-sm text-text-secondary">
-                    <span className="font-medium text-text-primary">{t('itemDetail.usage')}</span>{' '}
-                    {conf.correct_usage_ja}
-                  </p>
-                ) : null}
-                {conf.example_en ? (
-                  <p className="font-serif text-sm italic text-text-muted">{conf.example_en}</p>
-                ) : null}
-              </div>
-            ))}
+            <ConfusablesList entries={item.confusables ?? []} />
           </AccordionSection>
         ) : null}
 
         {hasCommonErrors ? (
           <AccordionSection title={t('itemDetail.commonErrors')} defaultOpen>
-            {(item.common_errors_ja ?? []).map((error) => (
-              <div key={`${error.incorrect}-${error.correct}`} className="border border-border bg-bg-base p-3">
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
-                  <p className="font-sans text-base text-error">❌ {error.incorrect}</p>
-                  <span className="hidden font-sans text-text-muted sm:inline" aria-hidden>
-                    →
-                  </span>
-                  <span className="font-sans text-text-muted sm:hidden" aria-hidden>
-                    ↓
-                  </span>
-                  <p className="font-sans text-base text-success">✅ {error.correct}</p>
-                </div>
-                <p className="mt-2 font-sans text-sm text-text-secondary">{error.why_ja}</p>
-              </div>
-            ))}
+            <CommonErrorsList entries={item.common_errors_ja ?? []} />
           </AccordionSection>
         ) : null}
 
         {hasRelatedUses ? (
           <AccordionSection title={t('itemDetail.relatedUses')} defaultOpen={false}>
-            {(item.related_uses ?? []).map((use) => (
-              <RelatedUseCard key={use.form} use={use} />
-            ))}
+            <RelatedUsesList entries={item.related_uses ?? []} />
           </AccordionSection>
         ) : null}
 

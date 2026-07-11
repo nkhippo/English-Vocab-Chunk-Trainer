@@ -45,7 +45,11 @@
     "prompt": "Read the passage and infer the highlighted meaning",
     "pause": "Pause",
     "next": "Next →",
-    "noContexts": "Passage data is not ready yet."
+    "noContexts": "Passage data is not ready yet.",
+    "showDetail": "Show details",
+    "hideDetail": "Hide details",
+    "showJa": "Show Japanese",
+    "hideJa": "Hide Japanese"
   },
   "modeB": {
     "title": "Mode B (cloze)",

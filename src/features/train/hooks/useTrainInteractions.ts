@@ -5,31 +5,24 @@ const SWIPE_MAX_DY = 56
 
 interface UseTrainInteractionsOptions {
   enabled: boolean
-  /** When false, swipe / Space / Enter are ignored (e.g. no OK/Hold yet). */
   canAdvance: boolean
-  /** Mode B: Space/Enter may reveal before choice is set. */
   canReveal?: boolean
-  onOk: () => void
-  onHold: () => void
   onAdvance: () => void
   onReveal?: () => void
-  /** Attach swipe listeners to this element (mobile). */
   swipeTargetRef?: RefObject<HTMLElement | null>
 }
 
-/** Keyboard (O/H/Space/Enter) + left-swipe → next for Mode A/B. */
+/** Space/Enter (+ optional reveal) and left-swipe → next for Mode A/B. */
 export function useTrainInteractions({
   enabled,
   canAdvance,
   canReveal = false,
-  onOk,
-  onHold,
   onAdvance,
   onReveal,
   swipeTargetRef,
 }: UseTrainInteractionsOptions) {
-  const handlers = useRef({ onOk, onHold, onAdvance, onReveal, canAdvance, canReveal })
-  handlers.current = { onOk, onHold, onAdvance, onReveal, canAdvance, canReveal }
+  const handlers = useRef({ onAdvance, onReveal, canAdvance, canReveal })
+  handlers.current = { onAdvance, onReveal, canAdvance, canReveal }
 
   useEffect(() => {
     if (!enabled) return
@@ -39,19 +32,8 @@ export function useTrainInteractions({
       if (target?.closest('input, textarea, select, [contenteditable="true"]')) return
 
       const key = event.key
-      const lower = key.length === 1 ? key.toLowerCase() : key
       const h = handlers.current
 
-      if (lower === 'o') {
-        event.preventDefault()
-        h.onOk()
-        return
-      }
-      if (lower === 'h') {
-        event.preventDefault()
-        h.onHold()
-        return
-      }
       if (key === ' ' || key === 'Enter') {
         event.preventDefault()
         if (h.canAdvance) {
@@ -88,7 +70,6 @@ export function useTrainInteractions({
       const dx = event.changedTouches[0].clientX - startX
       const dy = event.changedTouches[0].clientY - startY
       if (Math.abs(dy) > SWIPE_MAX_DY) return
-      // Left swipe
       if (dx <= -SWIPE_MIN_DX && handlers.current.canAdvance) {
         handlers.current.onAdvance()
       }

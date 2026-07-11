@@ -4,13 +4,16 @@
 
 ### Added
 
+- v9: Mode A UX 簡素化（詳細任意展開・日本語訳トグル）+ 単語帳折衷 UI
+- `src/components/detail-sections/*`（モーダル / Mode A 共有）
+- `DetailToggleButton` / `JaTranslationToggle`
+- `doc/handoff/v9-ux-simplification-report.md` / `v9-scope-questions.md`
 - A2 chat 生成テンプレート / 運用ガイド **v2**（schema 1.2.4・役割分離・contexts）
 - `pnpm run verify:contexts`（contexts インデックス検証）
 - `doc/handoff/chat-generation-template-v2-handoff-report.md`
 - confusables / common_errors 役割分離パッチ（11 items）+ ガイドライン
 - `doc/handoff/confusables-role-separation-handoff-report.md`
 - v8: Mode A/B モバイル最適化（confusables / related_uses / 学習履歴表示）
-- `EvalButtons` / `ConfusablesInline` / `RelatedUsesInline` / `TrainCheckmarks` / `useTrainInteractions`
 - `doc/handoff/v8-mode-a-redesign-report.md` / `v8-scope-questions.md`
 - v7: `nuance_contrast_ja` + synonym/antonym/related_uses 例文フィールド
 - `pnpm run migrate:v1.2.3`
@@ -22,15 +25,16 @@
 
 ### Changed
 
+- Mode A/B: OK/保留削除、次へ常時活性、詳細パネル初期非表示
+- 単語帳詳細: タイル感削減、register ラベル復活、confusable example_en 非表示
 - `data/current/items.json` schema **1.2.4**（11 items の confusables/errors 差し替え）
 - `app-specification.md` → **v3.3**（Mode A/B 文脈型・v8 UI・ロードマップ現状を同期）
 - `learning-data-schema.json` / `repository-structure.md` を v5〜v8 指示の累積に同期
-- Mode A/B: タイマー・中断・出会い回数・上部 CEFR 削除、× 閉じる追加
-- 詳細モーダル: 類義語・反意語を上位、例文全表示、IPA 語ごとのみ、上位語・下位語削除
 - ホーム文言を 21 件表記に更新
 
 ### Removed
 
+- Mode A/B の EvalButtons / TrainCheckmarks（学習履歴は単語帳のみ）
 - LearningItem の `hypernyms` / `hyponyms`
 - i18n `itemDetail.hypernyms` / `hyponyms`
 - synonym/antonym の `difference_ja` / `difference_en`（`nuance_contrast_ja` へ移行）

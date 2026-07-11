@@ -1,14 +1,23 @@
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { DetailToggleButton } from '@/features/train/components/DetailToggleButton'
 import { useAppStore } from '@/lib/stores/app-store'
 
 interface AppHeaderProps {
-  /** When set, shows × close (train modes). Defaults to navigate home. */
   showClose?: boolean
   onClose?: () => void
+  showDetailToggle?: boolean
+  detailOpen?: boolean
+  onDetailToggle?: () => void
 }
 
-export function AppHeader({ showClose = false, onClose }: AppHeaderProps) {
+export function AppHeader({
+  showClose = false,
+  onClose,
+  showDetailToggle = false,
+  detailOpen = false,
+  onDetailToggle,
+}: AppHeaderProps) {
   const { t } = useTranslation()
   const navigate = useNavigate()
   const setNavOpen = useAppStore((s) => s.setNavOpen)
@@ -38,7 +47,10 @@ export function AppHeader({ showClose = false, onClose }: AppHeaderProps) {
         <div className="justify-self-center">
           <span className="sr-only">Vocab & Chunk Trainer</span>
         </div>
-        <div className="justify-self-end">
+        <div className="flex items-center justify-self-end gap-0.5">
+          {showDetailToggle && onDetailToggle ? (
+            <DetailToggleButton open={detailOpen} onToggle={onDetailToggle} />
+          ) : null}
           {showClose ? (
             <button
               type="button"

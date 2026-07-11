@@ -1,0 +1,866 @@
+[
+  {
+    "id": "wf001",
+    "w": "a",
+    "ipa": "/ə/",
+    "ipa_strong": "/ə/",
+    "rp_ipa": "/ə/",
+    "rp_ipa_strong": "/ə/",
+    "level": 1,
+    "src": "weak_form",
+    "carriers": [
+      "I need {P} pen.",
+      "She has {P} car.",
+      "It's {P} good idea.",
+      "Give me {P} minute."
+    ],
+    "cs_rule": {
+      "en": "weak 'a' is always /ə/ before a consonant",
+      "ja": "弱形の a は子音前で常に /ə/",
+      "fil": "mahinang 'a' ay laging /ə/ bago ang katinig"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf002",
+    "w": "an",
+    "ipa": "/ən/",
+    "ipa_strong": "/æn/",
+    "rp_ipa": "/ən/",
+    "rp_ipa_strong": "/æn/",
+    "level": 1,
+    "src": "weak_form",
+    "carriers": [
+      "I want {P} apple.",
+      "It's {P} egg.",
+      "He's {P} hour late.",
+      "She's {P} artist."
+    ],
+    "cs_rule": {
+      "en": "weak 'an' → /ən/ before a vowel",
+      "ja": "弱形の an は母音前で /ən/",
+      "fil": "mahinang 'an' → /ən/ bago ang patinig"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf003",
+    "w": "the",
+    "ipa": "/ðə/",
+    "ipa_strong": "/ðə/",
+    "rp_ipa": "/ðə/",
+    "rp_ipa_strong": "/ðə/",
+    "level": 1,
+    "src": "weak_form",
+    "carriers": [
+      "Close {P} door.",
+      "Pass {P} salt.",
+      "I saw {P} movie.",
+      "It's on {P} table."
+    ],
+    "cs_rule": {
+      "en": "weak 'the' → /ðə/ before a consonant",
+      "ja": "弱形の the は子音前で /ðə/",
+      "fil": "mahinang 'the' → /ðə/ bago ang katinig"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf004",
+    "w": "to",
+    "ipa": "/tə/",
+    "ipa_strong": "/tu/",
+    "rp_ipa": "/tə/",
+    "rp_ipa_strong": "/tuː/",
+    "level": 1,
+    "src": "weak_form",
+    "carriers": [
+      "I want {P} go.",
+      "Time {P} eat.",
+      "Nice {P} meet you.",
+      "Try {P} relax."
+    ],
+    "cs_rule": {
+      "en": "weak 'to' → /tə/ before a consonant",
+      "ja": "弱形の to は子音前で /tə/",
+      "fil": "mahinang 'to' → /tə/ bago ang katinig"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf005",
+    "w": "of",
+    "ipa": "/əv/",
+    "ipa_strong": "/ʌv/",
+    "rp_ipa": "/əv/",
+    "rp_ipa_strong": "/ɒv/",
+    "level": 1,
+    "src": "weak_form",
+    "carriers": [
+      "A cup {P} tea.",
+      "Part {P} it.",
+      "One {P} them.",
+      "A lot {P} fun."
+    ],
+    "cs_rule": {
+      "en": "weak 'of' → /əv/, often /ə/ before a consonant",
+      "ja": "弱形の of は /əv/、子音前では /ə/ も",
+      "fil": "mahinang 'of' → /əv/, kadalasang /ə/ bago ang katinig"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf006",
+    "w": "and",
+    "ipa": "/ən/",
+    "ipa_strong": "/ænd/",
+    "rp_ipa": "/ən/",
+    "rp_ipa_strong": "/ænd/",
+    "level": 1,
+    "src": "weak_form",
+    "carriers": [
+      "Bread {P} butter.",
+      "You {P} me.",
+      "Fish {P} chips.",
+      "Up {P} down."
+    ],
+    "cs_rule": {
+      "en": "weak 'and' → /ən/ (d dropped)",
+      "ja": "弱形の and は /ən/(d脱落)",
+      "fil": "mahinang 'and' → /ən/ (kinakaltas ang d)"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf007",
+    "w": "for",
+    "ipa": "/fɚ/",
+    "ipa_strong": "/fɔr/",
+    "rp_ipa": "/fə/",
+    "rp_ipa_strong": "/fɔː/",
+    "level": 1,
+    "src": "weak_form",
+    "carriers": [
+      "This is {P} you.",
+      "Wait {P} me.",
+      "It's time {P} lunch.",
+      "Thanks {P} coming."
+    ],
+    "cs_rule": {
+      "en": "weak 'for' → /fɚ/ (GA) / /fə/ (RP)",
+      "ja": "弱形の for は /fɚ/(GA)/fə/(RP)",
+      "fil": "mahinang 'for' → /fɚ/ (GA) / /fə/ (RP)"
+    },
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "wf008",
+    "w": "at",
+    "ipa": "/ət/",
+    "ipa_strong": "/æt/",
+    "rp_ipa": "/ət/",
+    "rp_ipa_strong": "/æt/",
+    "level": 1,
+    "src": "weak_form",
+    "carriers": [
+      "Look {P} this.",
+      "Meet me {P} noon.",
+      "She's {P} home.",
+      "Wait {P} the door."
+    ],
+    "cs_rule": {
+      "en": "weak 'at' → /ət/",
+      "ja": "弱形の at は /ət/",
+      "fil": "mahinang 'at' → /ət/"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf009",
+    "w": "but",
+    "ipa": "/bət/",
+    "ipa_strong": "/bʌt/",
+    "rp_ipa": "/bət/",
+    "rp_ipa_strong": "/bʌt/",
+    "level": 1,
+    "src": "weak_form",
+    "carriers": [
+      "Slow {P} sure.",
+      "Cheap {P} good.",
+      "Tired {P} happy.",
+      "Small {P} strong."
+    ],
+    "cs_rule": {
+      "en": "weak 'but' → /bət/",
+      "ja": "弱形の but は /bət/",
+      "fil": "mahinang 'but' → /bət/"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf010",
+    "w": "you",
+    "ipa": "/jə/",
+    "ipa_strong": "/ju/",
+    "rp_ipa": "/jə/",
+    "rp_ipa_strong": "/juː/",
+    "level": 1,
+    "src": "weak_form",
+    "carriers": [
+      "Did {P} go?",
+      "Can {P} help?",
+      "Are {P} ready?",
+      "Do {P} know?"
+    ],
+    "cs_rule": {
+      "en": "weak 'you' → /jə/ in connected speech",
+      "ja": "弱形の you は連結時 /jə/",
+      "fil": "mahinang 'you' → /jə/ sa konektadong pananalita"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf011",
+    "w": "can",
+    "ipa": "/kən/",
+    "ipa_strong": "/kæn/",
+    "rp_ipa": "/kən/",
+    "rp_ipa_strong": "/kæn/",
+    "level": 2,
+    "src": "weak_form",
+    "carriers": [
+      "I {P} swim.",
+      "We {P} go now.",
+      "They {P} help.",
+      "She {P} drive."
+    ],
+    "cs_rule": {
+      "en": "weak 'can' → /kən/ (strong /kæn/ when stressed)",
+      "ja": "弱形の can は /kən/(強形は /kæn/)",
+      "fil": "mahinang 'can' → /kən/ (malakas /kæn/ kapag may diin)"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf012",
+    "w": "are",
+    "ipa": "/ɚ/",
+    "ipa_strong": "/ɑr/",
+    "rp_ipa": "/ə/",
+    "rp_ipa_strong": "/ɑː/",
+    "level": 2,
+    "src": "weak_form",
+    "carriers": [
+      "They {P} here.",
+      "We {P} ready.",
+      "You {P} late.",
+      "These {P} mine."
+    ],
+    "cs_rule": {
+      "en": "weak 'are' → /ɚ/ (GA) / /ə/ (RP)",
+      "ja": "弱形の are は /ɚ/(GA)/ə/(RP)",
+      "fil": "mahinang 'are' → /ɚ/ (GA) / /ə/ (RP)"
+    },
+    "cefr": "B1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "wf013",
+    "w": "was",
+    "ipa": "/wəz/",
+    "ipa_strong": "/wɑz/",
+    "rp_ipa": "/wəz/",
+    "rp_ipa_strong": "/wɒz/",
+    "level": 2,
+    "src": "weak_form",
+    "carriers": [
+      "He {P} late.",
+      "It {P} fun.",
+      "She {P} here.",
+      "That {P} easy."
+    ],
+    "cs_rule": {
+      "en": "weak 'was' → /wəz/",
+      "ja": "弱形の was は /wəz/",
+      "fil": "mahinang 'was' → /wəz/"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf014",
+    "w": "were",
+    "ipa": "/wɚ/",
+    "ipa_strong": "/wɝ/",
+    "rp_ipa": "/wə/",
+    "rp_ipa_strong": "/wɜː/",
+    "level": 2,
+    "src": "weak_form",
+    "carriers": [
+      "They {P} happy.",
+      "We {P} there.",
+      "You {P} right.",
+      "These {P} cheap."
+    ],
+    "cs_rule": {
+      "en": "weak 'were' → /wɚ/ (GA) / /wə/ (RP)",
+      "ja": "弱形の were は /wɚ/(GA)/wə/(RP)",
+      "fil": "mahinang 'were' → /wɚ/ (GA) / /wə/ (RP)"
+    },
+    "cefr": "B1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "wf015",
+    "w": "have",
+    "ipa": "/həv/",
+    "ipa_strong": "/hæv/",
+    "rp_ipa": "/həv/",
+    "rp_ipa_strong": "/hæv/",
+    "level": 2,
+    "src": "weak_form",
+    "carriers": [
+      "I {P} seen it.",
+      "They {P} gone.",
+      "We {P} tried.",
+      "You {P} won."
+    ],
+    "cs_rule": {
+      "en": "weak 'have' → /həv/, often /əv/ after a pronoun",
+      "ja": "弱形の have は /həv/、代名詞後では /əv/ も",
+      "fil": "mahinang 'have' → /həv/, kadalasang /əv/ pagkatapos ng panghalip"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf016",
+    "w": "has",
+    "ipa": "/həz/",
+    "ipa_strong": "/hæz/",
+    "rp_ipa": "/həz/",
+    "rp_ipa_strong": "/hæz/",
+    "level": 2,
+    "src": "weak_form",
+    "carriers": [
+      "She {P} left.",
+      "It {P} started.",
+      "He {P} won.",
+      "Time {P} passed."
+    ],
+    "cs_rule": {
+      "en": "weak 'has' → /həz/",
+      "ja": "弱形の has は /həz/",
+      "fil": "mahinang 'has' → /həz/"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf017",
+    "w": "had",
+    "ipa": "/həd/",
+    "ipa_strong": "/hæd/",
+    "rp_ipa": "/həd/",
+    "rp_ipa_strong": "/hæd/",
+    "level": 2,
+    "src": "weak_form",
+    "carriers": [
+      "I {P} known.",
+      "They {P} gone.",
+      "We {P} eaten.",
+      "She {P} tried."
+    ],
+    "cs_rule": {
+      "en": "weak 'had' → /həd/, often /əd/ after a pronoun",
+      "ja": "弱形の had は /həd/、代名詞後では /əd/ も",
+      "fil": "mahinang 'had' → /həd/, kadalasang /əd/ pagkatapos ng panghalip"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf018",
+    "w": "your",
+    "ipa": "/jɚ/",
+    "ipa_strong": "/jɔr/",
+    "rp_ipa": "/jə/",
+    "rp_ipa_strong": "/jɔː/",
+    "level": 2,
+    "src": "weak_form",
+    "carriers": [
+      "Take {P} time.",
+      "It's {P} turn.",
+      "Bring {P} book.",
+      "Use {P} key."
+    ],
+    "cs_rule": {
+      "en": "weak 'your' → /jɚ/ (GA) / /jə/ (RP)",
+      "ja": "弱形の your は /jɚ/(GA)/jə/(RP)",
+      "fil": "mahinang 'your' → /jɚ/ (GA) / /jə/ (RP)"
+    },
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "wf019",
+    "w": "them",
+    "ipa": "/ðəm/",
+    "ipa_strong": "/ðɛm/",
+    "rp_ipa": "/ðəm/",
+    "rp_ipa_strong": "/ðem/",
+    "level": 2,
+    "src": "weak_form",
+    "carriers": [
+      "Tell {P} now.",
+      "Ask {P} first.",
+      "Send {P} home.",
+      "Give {P} time."
+    ],
+    "cs_rule": {
+      "en": "weak 'them' → /ðəm/, often /əm/ casually",
+      "ja": "弱形の them は /ðəm/、口語では /əm/ も",
+      "fil": "mahinang 'them' → /ðəm/, kadalasang /əm/ sa impormal"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf020",
+    "w": "us",
+    "ipa": "/əs/",
+    "ipa_strong": "/ʌs/",
+    "rp_ipa": "/əs/",
+    "rp_ipa_strong": "/ʌs/",
+    "level": 2,
+    "src": "weak_form",
+    "carriers": [
+      "Call {P} later.",
+      "Help {P} please.",
+      "Show {P} the way.",
+      "Join {P} now."
+    ],
+    "cs_rule": {
+      "en": "weak 'us' → /əs/",
+      "ja": "弱形の us は /əs/",
+      "fil": "mahinang 'us' → /əs/"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf021",
+    "w": "from",
+    "ipa": "/frəm/",
+    "ipa_strong": "/frʌm/",
+    "rp_ipa": "/frəm/",
+    "rp_ipa_strong": "/frʌm/",
+    "level": 2,
+    "src": "weak_form",
+    "carriers": [
+      "Far {P} home.",
+      "A gift {P} her.",
+      "Walk {P} here.",
+      "It's {P} him."
+    ],
+    "cs_rule": {
+      "en": "weak 'from' → /frəm/",
+      "ja": "弱形の from は /frəm/",
+      "fil": "mahinang 'from' → /frəm/"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf022",
+    "w": "as",
+    "ipa": "/əz/",
+    "ipa_strong": "/æz/",
+    "rp_ipa": "/əz/",
+    "rp_ipa_strong": "/æz/",
+    "level": 2,
+    "src": "weak_form",
+    "carriers": [
+      "Big {P} a house.",
+      "Same {P} mine.",
+      "Soft {P} silk.",
+      "Cold {P} ice."
+    ],
+    "cs_rule": {
+      "en": "weak 'as' → /əz/",
+      "ja": "弱形の as は /əz/",
+      "fil": "mahinang 'as' → /əz/"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf023",
+    "w": "than",
+    "ipa": "/ðən/",
+    "ipa_strong": "/ðæn/",
+    "rp_ipa": "/ðən/",
+    "rp_ipa_strong": "/ðæn/",
+    "level": 2,
+    "src": "weak_form",
+    "carriers": [
+      "Bigger {P} that.",
+      "More {P} ever.",
+      "Better {P} before.",
+      "Faster {P} me."
+    ],
+    "cs_rule": {
+      "en": "weak 'than' → /ðən/",
+      "ja": "弱形の than は /ðən/",
+      "fil": "mahinang 'than' → /ðən/"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf024",
+    "w": "some",
+    "ipa": "/səm/",
+    "ipa_strong": "/sʌm/",
+    "rp_ipa": "/səm/",
+    "rp_ipa_strong": "/sʌm/",
+    "level": 2,
+    "src": "weak_form",
+    "carriers": [
+      "I need {P} water.",
+      "Buy {P} bread.",
+      "Take {P} rest.",
+      "Have {P} tea."
+    ],
+    "cs_rule": {
+      "en": "weak 'some' → /səm/ (uncountable; strong when 'a few')",
+      "ja": "弱形の some は /səm/(不可算)",
+      "fil": "mahinang 'some' → /səm/ (di-mabilang; malakas kapag 'iilan')"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf025",
+    "w": "could",
+    "ipa": "/kəd/",
+    "ipa_strong": "/kʊd/",
+    "rp_ipa": "/kəd/",
+    "rp_ipa_strong": "/kʊd/",
+    "level": 3,
+    "src": "weak_form",
+    "carriers": [
+      "{P} you help?",
+      "We {P} try.",
+      "They {P} come.",
+      "She {P} sing."
+    ],
+    "cs_rule": {
+      "en": "weak 'could' → /kəd/ (strong /kʊd/ when stressed)",
+      "ja": "弱形の could は /kəd/(強形 /kʊd/)",
+      "fil": "mahinang 'could' → /kəd/ (malakas /kʊd/ kapag may diin)"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf026",
+    "w": "would",
+    "ipa": "/wəd/",
+    "ipa_strong": "/wʊd/",
+    "rp_ipa": "/wəd/",
+    "rp_ipa_strong": "/wʊd/",
+    "level": 3,
+    "src": "weak_form",
+    "carriers": [
+      "{P} you mind?",
+      "I {P} go.",
+      "They {P} agree.",
+      "She {P} know."
+    ],
+    "cs_rule": {
+      "en": "weak 'would' → /wəd/, often /əd/ after a pronoun",
+      "ja": "弱形の would は /wəd/、代名詞後では /əd/ も",
+      "fil": "mahinang 'would' → /wəd/, kadalasang /əd/ pagkatapos ng panghalip"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf027",
+    "w": "should",
+    "ipa": "/ʃəd/",
+    "ipa_strong": "/ʃʊd/",
+    "rp_ipa": "/ʃəd/",
+    "rp_ipa_strong": "/ʃʊd/",
+    "level": 3,
+    "src": "weak_form",
+    "carriers": [
+      "You {P} go.",
+      "We {P} wait.",
+      "They {P} know.",
+      "I {P} try."
+    ],
+    "cs_rule": {
+      "en": "weak 'should' → /ʃəd/",
+      "ja": "弱形の should は /ʃəd/",
+      "fil": "mahinang 'should' → /ʃəd/"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf028",
+    "w": "must",
+    "ipa": "/məst/",
+    "ipa_strong": "/mʌst/",
+    "rp_ipa": "/məst/",
+    "rp_ipa_strong": "/mʌst/",
+    "level": 3,
+    "src": "weak_form",
+    "carriers": [
+      "You {P} go.",
+      "It {P} be late.",
+      "We {P} hurry.",
+      "They {P} know."
+    ],
+    "cs_rule": {
+      "en": "weak 'must' → /məst/",
+      "ja": "弱形の must は /məst/",
+      "fil": "mahinang 'must' → /məst/"
+    },
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf029",
+    "w": "do",
+    "ipa": "/də/",
+    "ipa_strong": "/du/",
+    "rp_ipa": "/də/",
+    "rp_ipa_strong": "/duː/",
+    "level": 3,
+    "src": "weak_form",
+    "carriers": [
+      "{P} you know?",
+      "Where {P} they live?",
+      "When {P} we eat?",
+      "How {P} you feel?"
+    ],
+    "cs_rule": {
+      "en": "weak 'do' → /də/ before a consonant in questions",
+      "ja": "弱形の do は疑問で子音前 /də/",
+      "fil": "mahinang 'do' → /də/ bago ang katinig sa mga tanong"
+    },
+    "cefr": "B1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf030",
+    "w": "does",
+    "ipa": "/dəz/",
+    "ipa_strong": "/dʌz/",
+    "rp_ipa": "/dəz/",
+    "rp_ipa_strong": "/dʌz/",
+    "level": 3,
+    "src": "weak_form",
+    "carriers": [
+      "{P} he know?",
+      "When {P} it start?",
+      "Where {P} she live?",
+      "What {P} it mean?"
+    ],
+    "cs_rule": {
+      "en": "weak 'does' → /dəz/",
+      "ja": "弱形の does は /dəz/",
+      "fil": "mahinang 'does' → /dəz/"
+    },
+    "cefr": "B1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf031",
+    "w": "am",
+    "ipa": "/əm/",
+    "ipa_strong": "/æm/",
+    "rp_ipa": "/əm/",
+    "rp_ipa_strong": "/æm/",
+    "level": 3,
+    "src": "weak_form",
+    "carriers": [
+      "I {P} ready.",
+      "{P} I right?",
+      "I {P} late.",
+      "I {P} here."
+    ],
+    "cs_rule": {
+      "en": "weak 'am' → /əm/, often /m/ after I",
+      "ja": "弱形の am は /əm/、I の後では /m/ も",
+      "fil": "mahinang 'am' → /əm/, kadalasang /m/ pagkatapos ng I"
+    },
+    "cefr": "B1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf032",
+    "w": "he",
+    "ipa": "/i/",
+    "ipa_strong": "/hi/",
+    "rp_ipa": "/iː/",
+    "rp_ipa_strong": "/hiː/",
+    "level": 3,
+    "src": "weak_form",
+    "carriers": [
+      "Did {P} go?",
+      "Where {P} is.",
+      "Can {P} come?",
+      "Is {P} ready?"
+    ],
+    "cs_rule": {
+      "en": "weak 'he' → /i/ (h dropped after a word)",
+      "ja": "弱形の he は /i/(語の後で h 脱落)",
+      "fil": "mahinang 'he' → /i/ (kinakaltas ang h pagkatapos ng salita)"
+    },
+    "cefr": "B1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "wf033",
+    "w": "him",
+    "ipa": "/ɪm/",
+    "ipa_strong": "/hɪm/",
+    "rp_ipa": "/ɪm/",
+    "rp_ipa_strong": "/hɪm/",
+    "level": 3,
+    "src": "weak_form",
+    "carriers": [
+      "Tell {P} now.",
+      "Give {P} time.",
+      "Ask {P} first.",
+      "Help {P} please."
+    ],
+    "cs_rule": {
+      "en": "weak 'him' → /ɪm/ (h dropped)",
+      "ja": "弱形の him は /ɪm/(h脱落)",
+      "fil": "mahinang 'him' → /ɪm/ (kinakaltas ang h)"
+    },
+    "cefr": "B1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf034",
+    "w": "her",
+    "ipa": "/ɚ/",
+    "ipa_strong": "/hɝ/",
+    "rp_ipa": "/ə/",
+    "rp_ipa_strong": "/hɜː/",
+    "level": 3,
+    "src": "weak_form",
+    "carriers": [
+      "Give {P} this.",
+      "Tell {P} now.",
+      "Ask {P} first.",
+      "Show {P} the way."
+    ],
+    "cs_rule": {
+      "en": "weak 'her' → /ɚ/ (GA) / /ə/ (RP), h dropped",
+      "ja": "弱形の her は /ɚ/(GA)/ə/(RP)、h脱落",
+      "fil": "mahinang 'her' → /ɚ/ (GA) / /ə/ (RP), kinakaltas ang h"
+    },
+    "cefr": "B1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "wf035",
+    "w": "his",
+    "ipa": "/ɪz/",
+    "ipa_strong": "/hɪz/",
+    "rp_ipa": "/ɪz/",
+    "rp_ipa_strong": "/hɪz/",
+    "level": 3,
+    "src": "weak_form",
+    "carriers": [
+      "Take {P} hand.",
+      "It's {P} turn.",
+      "Use {P} pen.",
+      "Find {P} key."
+    ],
+    "cs_rule": {
+      "en": "weak 'his' → /ɪz/ (h dropped mid-sentence)",
+      "ja": "弱形の his は /ɪz/(文中で h 脱落)",
+      "fil": "mahinang 'his' → /ɪz/ (kinakaltas ang h sa gitna ng pangungusap)"
+    },
+    "cefr": "B1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "wf036",
+    "w": "there",
+    "ipa": "/ðɚ/",
+    "ipa_strong": "/ðɛr/",
+    "rp_ipa": "/ðə/",
+    "rp_ipa_strong": "/ðeə/",
+    "level": 3,
+    "src": "weak_form",
+    "carriers": [
+      "{P} is a problem.",
+      "{P} are many.",
+      "{P} was a noise.",
+      "{P} were two."
+    ],
+    "cs_rule": {
+      "en": "weak 'there' (existential) → /ðɚ/ (GA) / /ðə/ (RP)",
+      "ja": "存在の there は弱形 /ðɚ/(GA)/ðə/(RP)",
+      "fil": "mahinang 'there' (existential) → /ðɚ/ (GA) / /ðə/ (RP)"
+    },
+    "cefr": "B1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  }
+]

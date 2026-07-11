@@ -30,7 +30,8 @@
     "modeADesc": "短いパッセージを読み、ハイライトされた表現の意味を文脈から推測します。",
     "modeBLabel": "Mode B",
     "modeBDesc": "日本語訳を見て、穴埋めされた英文を思い出し、「解答を見る」で確認します。",
-    "modeCNote": "Mode C（自由英作文添削）は今回のスコープ外です。"
+    "modeCNote": "Mode C（自由英作文添削）は今回のスコープ外です。",
+    "hold": "保留"
   },
   "browse": {
     "title": "CEFR 単語帳",
@@ -58,24 +59,43 @@
   "itemDetail": {
     "title": "単語詳細",
     "examples": "例文",
-    "confusables": "混同しやすい語 / Confusables",
+    "confusables": "混同しやすい語",
     "noConfusables": "混同しやすい語なし",
-    "commonErrors": "日本人がしがちな間違い / Common Errors",
+    "commonErrors": "日本人がしがちな間違い",
     "relatedWords": "関連語",
     "synonyms": "類義語",
     "antonyms": "反意語",
     "hypernyms": "上位語",
     "hyponyms": "下位語",
-    "relatedUses": "派生・関連する使い方 / Related Uses",
+    "relatedUses": "派生・関連する使い方",
     "meta": "メタ情報",
     "similarity": "似ている点:",
     "difference": "違うポイント:",
     "usage": "使い分け:",
     "none": "特になし",
+    "unset": "（未設定）",
     "category": "カテゴリ",
     "frequency": "頻度ランク",
     "semanticField": "意味分野",
     "skillFocus": "スキル焦点"
+  },
+  "ipa": {
+    "tabsLabel": "発音表記",
+    "careful": "語ごと",
+    "connected": "連結"
+  },
+  "insight": {
+    "title": "語源・由来",
+    "show": "💡 語源・由来を見る",
+    "hide": "語源・由来を閉じる",
+    "related": "関連",
+    "type": {
+      "morphology": "語源",
+      "metaphor": "メタファー",
+      "cultural": "文化",
+      "cognate": "語族",
+      "coreImage": "コアイメージ"
+    }
   },
   "checkmarks": {
     "learningHistory": "学習履歴",
@@ -162,6 +182,10 @@
       "high": "高",
       "medium": "中",
       "low": "低"
+    },
+    "skillFocus": {
+      "receptive_only": "受容のみ",
+      "receptive_and_productive": "受容+産出"
     }
   }
 }

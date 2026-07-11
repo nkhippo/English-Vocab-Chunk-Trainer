@@ -1,5 +1,21 @@
 # Changelog
 
+## [Unreleased] — 2026-07-11
+
+### Added
+
+- v6 UI: 詳細モーダル IA（空セクション非表示・skill_focus ラベル・Common Errors 横並び）
+- `IpaTabs`（語ごと / 連結）+ EPT 参照データ `data/reference/ept/`
+- `pnpm run sync:ipa-ept` / `sync:phrase-ipa-ept`
+- InsightCard + モーダル導線 + Mode A/B 保留時フェードイン
+- Insight サンプル 3 件（プレースホルダー）
+- `doc/handoff/v6-improvements-report.md` / `v6-scope-questions.md`
+
+### Changed
+
+- `data/current/items.json` schema **1.2.1**（合成 connected IPA・insight_id）
+- Mode A/B: `word` カテゴリを出題対象から明示除外
+
 ## [Unreleased] — 2026-07-10
 
 ### Added

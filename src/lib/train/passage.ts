@@ -51,7 +51,7 @@ export function getContextOrNull(item: LearningItem, index1Based: number): ItemC
   return contexts[index1Based - 1] ?? null
 }
 
-/** Mode A/B: only items with exactly 5 contexts are eligible. */
+/** Mode A/B: items with exactly 5 contexts; word category is never eligible. */
 export function filterEligibleTrainItems(items: LearningItem[]): LearningItem[] {
-  return items.filter((item) => item.contexts?.length === 5)
+  return items.filter((item) => item.category !== 'word' && item.contexts?.length === 5)
 }

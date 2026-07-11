@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.2.0",
-  "generated_at": "2026-07-10T14:57:16.798Z",
+  "schema_version": "1.2.1",
+  "generated_at": "2026-07-11T02:47:55.406Z",
   "cefr_levels_included": [
     "A1",
     "A2"
@@ -36,7 +36,7 @@
       "collocation_pattern": "V+N",
       "skill_focus": "receptive_and_productive",
       "ipa_careful": "/ˈmeɪk ə dɪˈsɪʒən/",
-      "ipa_connected": "/ˈmeɪkə dɪˈsɪʒən/",
+      "ipa_connected": "/meɪkə[decision]/",
       "meta": {
         "schema_version": "1.2.0",
         "source": "claude_generated",
@@ -69,7 +69,7 @@
       ],
       "skill_focus": "receptive_and_productive",
       "ipa_careful": "/lʊk ˈfɔːwəd tuː/",
-      "ipa_connected": "/lʊkˈfɔːwəd tə/"
+      "ipa_connected": "/lʊkˈfɔrwɚdtu/"
     },
     {
       "id": "whats_up",
@@ -101,7 +101,7 @@
       ],
       "skill_focus": "receptive_and_productive",
       "ipa_careful": "/wɒts ʌp/",
-      "ipa_connected": "/wʌtsʌp/"
+      "ipa_connected": "/wʌtʌp/"
     },
     {
       "surface": "take a picture",
@@ -247,7 +247,7 @@
       ],
       "skill_focus": "receptive_and_productive",
       "ipa_careful": "/teɪk ə ˈpɪk.tʃɚ/",
-      "ipa_connected": "/teɪ.kə ˈpɪk.tʃɚ/",
+      "ipa_connected": "/teɪkəˈpɪktʃɚ/",
       "frequency_rank_in_level": 120,
       "example_sentences": [
         {
@@ -385,7 +385,8 @@
           "scene": "casual_request",
           "register": "informal"
         }
-      ]
+      ],
+      "insight_id": "insight_take_a_picture_core"
     },
     {
       "surface": "have breakfast",
@@ -507,7 +508,7 @@
       ],
       "skill_focus": "receptive_and_productive",
       "ipa_careful": "/hæv ˈbrɛkfəst/",
-      "ipa_connected": "/həv ˈbrekfəst/",
+      "ipa_connected": "/hævˈbrɛkfəst/",
       "frequency_rank_in_level": 45,
       "example_sentences": [
         {
@@ -645,7 +646,8 @@
           "scene": "casual_morning_offer",
           "register": "informal"
         }
-      ]
+      ],
+      "insight_id": "insight_have_breakfast_cultural"
     },
     {
       "surface": "do homework",
@@ -783,7 +785,7 @@
       ],
       "skill_focus": "receptive_and_productive",
       "ipa_careful": "/duː ˈhoʊmˌwɜːrk/",
-      "ipa_connected": "/dəˈhoʊmwɜːrk/",
+      "ipa_connected": "/duˈhoʊmˌwɝk/",
       "frequency_rank_in_level": 120,
       "example_sentences": [
         {
@@ -1064,7 +1066,7 @@
       ],
       "skill_focus": "receptive_and_productive",
       "ipa_careful": "/kætʃ ə koʊld/",
-      "ipa_connected": "/ˈkætʃ ə ˈkoʊld/",
+      "ipa_connected": "/kætʃəkoʊld/",
       "frequency_rank_in_level": 120,
       "example_sentences": [
         {
@@ -1202,7 +1204,8 @@
           "scene": "casual_apology",
           "register": "informal"
         }
-      ]
+      ],
+      "insight_id": "insight_catch_a_cold_metaphor"
     },
     {
       "surface": "take a shower",
@@ -1333,7 +1336,7 @@
       ],
       "skill_focus": "receptive_and_productive",
       "ipa_careful": "/teɪk ə ˈʃaʊ.ɚ/",
-      "ipa_connected": "/teɪ.kə ˈʃaʊ.ɚ/",
+      "ipa_connected": "/teɪkəˈʃaʊɚ/",
       "frequency_rank_in_level": 120,
       "example_sentences": [
         {
@@ -1592,7 +1595,7 @@
       ],
       "skill_focus": "receptive_and_productive",
       "ipa_careful": "/ɡoʊ ˈʃɑːpɪŋ/",
-      "ipa_connected": "/ɡoʊˈʃɑːpɪŋ/",
+      "ipa_connected": "/ɡoʊˈʃɑpɪŋ/",
       "frequency_rank_in_level": 120,
       "example_sentences": [
         {
@@ -1868,7 +1871,7 @@
       ],
       "skill_focus": "receptive_and_productive",
       "ipa_careful": "/ɡɛt ʌp ˈɜːrli/",
-      "ipa_connected": "/ɡeɾ‿ʌp ˈɜːrli/",
+      "ipa_connected": "/ɡɛtʌpˈɝli/",
       "frequency_rank_in_level": 120,
       "example_sentences": [
         {
@@ -2126,7 +2129,7 @@
       ],
       "skill_focus": "receptive_and_productive",
       "ipa_careful": "/ˈlɪs.ən tuː ˈmjuː.zɪk/",
-      "ipa_connected": "/ˈlɪs.ən tə ˈmjuː.zɪk/",
+      "ipa_connected": "/ˈlɪsəntuˈmjuzɪk/",
       "frequency_rank_in_level": 120,
       "example_sentences": [
         {
@@ -2267,5 +2270,41 @@
       ]
     }
   ],
-  "insights": []
+  "insights": [
+    {
+      "id": "insight_catch_a_cold_metaphor",
+      "target_id": "catch_a_cold",
+      "type": "metaphor",
+      "content_ja": "【サンプル】catch a cold の catch は「捕まえる」イメージ。病気を「つかまえてしまう」という比喩で、日本語の「風邪をひく」と発想が近い。",
+      "content_en": "[Sample] In catch a cold, catch keeps the image of grabbing something — you 'catch' the illness.",
+      "related_items": [
+        "take_a_shower",
+        "get_up_early"
+      ],
+      "claude_generated": true
+    },
+    {
+      "id": "insight_take_a_picture_core",
+      "target_id": "take_a_picture",
+      "type": "core_image",
+      "content_ja": "【サンプル】take a picture の take は「取る」ではなく「（写真を）撮る」固定表現。日本語の「写真を撮る」に対応し、*make a picture は不自然。",
+      "content_en": "[Sample] take a picture is a fixed collocation; make a picture sounds unnatural.",
+      "related_items": [
+        "take_a_shower"
+      ],
+      "claude_generated": true
+    },
+    {
+      "id": "insight_have_breakfast_cultural",
+      "target_id": "have_breakfast",
+      "type": "cultural",
+      "content_ja": "【サンプル】have breakfast は食事を「持つ」ではなく「食べる・とる」意味の have。英米では食事名とセットで使う基本表現。",
+      "content_en": "[Sample] have breakfast uses have in the meal-taking sense, not possession.",
+      "related_items": [
+        "go_shopping",
+        "do_homework"
+      ],
+      "claude_generated": true
+    }
+  ]
 }

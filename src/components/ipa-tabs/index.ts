@@ -1,0 +1,1 @@
+export { IpaTabs } from './IpaTabs'

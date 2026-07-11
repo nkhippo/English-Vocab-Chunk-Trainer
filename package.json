@@ -15,7 +15,9 @@
     "validate": "tsx scripts/pipeline/validate-schema.ts",
     "build:gas-paste": "tsx scripts/build-gas-paste.ts",
     "env:sync": "tsx scripts/sync-env.ts",
-    "batch:a2-seeds": "tsx scripts/pipeline/batch-a2-seeds.ts"
+    "batch:a2-seeds": "tsx scripts/pipeline/batch-a2-seeds.ts",
+    "sync:ipa-ept": "tsx scripts/pipeline/sync-ipa-from-ept.ts",
+    "sync:phrase-ipa-ept": "tsx scripts/pipeline/sync-phrase-ipa-from-ept.ts"
   },
   "dependencies": {
     "ajv": "^8.17.1",

@@ -1,0 +1,5831 @@
+[
+  {
+    "id": "cs001",
+    "w": "an apple",
+    "ipa": "/əˈnæpəl/",
+    "rp_ipa": "/əˈnæpəl/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n links onto the next vowel: a-napple",
+      "ja": "n が次の母音へ連結: a-napple",
+      "fil": "n umuugnay sa kasunod na patinig: a-napple"
+    },
+    "gloss": {
+      "en": "an apple",
+      "ja": "リンゴ",
+      "zh": "一个苹果",
+      "ko": "사과 하나"
+    },
+    "carriers": [
+      "I ate {P} for breakfast.",
+      "She bought {P} at the store.",
+      "There's {P} on the table.",
+      "He gave me {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs002",
+    "w": "pick it up",
+    "ipa": "/ˈpɪkɪˈtʌp/",
+    "rp_ipa": "/ˈpɪkɪˈtʌp/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "k→it, t→up link consonant to vowel",
+      "ja": "k→it, t→up が母音へ連結",
+      "fil": "k→it, t→up nag-uugnay ng katinig sa patinig"
+    },
+    "gloss": {
+      "en": "pick it up",
+      "ja": "拾い上げる",
+      "zh": "捡起来",
+      "ko": "집어 올리다"
+    },
+    "carriers": [
+      "Could you {P} for me?",
+      "He bent down to {P}.",
+      "Please {P} before you go.",
+      "I'll {P} on my way out."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs003",
+    "w": "come on",
+    "ipa": "/kʌˈmɑn/",
+    "rp_ipa": "/kʌˈmɒn/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "m links into on: co-mon",
+      "ja": "m が on へ連結: co-mon",
+      "fil": "m umuugnay sa on: co-mon"
+    },
+    "gloss": {
+      "en": "come on",
+      "ja": "さあ、おいで",
+      "zh": "来吧",
+      "ko": "어서"
+    },
+    "carriers": [
+      "{P}, we're going to be late!",
+      "Oh {P}, you can do it.",
+      "{P}, the bus is here.",
+      "Hey, {P} and join us."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "id": "cs004",
+    "w": "look at",
+    "ipa": "/ˈlʊkət/",
+    "rp_ipa": "/ˈlʊkət/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "k links into at: loo-kat",
+      "ja": "k が at へ連結: loo-kat",
+      "fil": "k umuugnay sa at: loo-kat"
+    },
+    "gloss": {
+      "en": "look at",
+      "ja": "見る",
+      "zh": "看",
+      "ko": "보다"
+    },
+    "carriers": [
+      "{P} that beautiful sky.",
+      "Just {P} the time!",
+      "Let's {P} the map first.",
+      "{P} what you did."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs005",
+    "w": "check it",
+    "ipa": "/ˈtʃɛkɪt/",
+    "rp_ipa": "/ˈtʃekɪt/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "k links into it: che-kit",
+      "ja": "k が it へ連結: che-kit",
+      "fil": "k umuugnay sa it: che-kit"
+    },
+    "gloss": {
+      "en": "check it",
+      "ja": "確認する",
+      "zh": "检查它",
+      "ko": "확인하다"
+    },
+    "carriers": [
+      "Let me {P} before we go.",
+      "Can you {P} for me?",
+      "I'll {P} one more time.",
+      "Please {P} carefully."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs006",
+    "w": "turn off",
+    "ipa": "/tɝˈnɔf/",
+    "rp_ipa": "/tɜːˈnɒf/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n links into off: tur-noff",
+      "ja": "n が off へ連結: tur-noff",
+      "fil": "n umuugnay sa off: tur-noff"
+    },
+    "gloss": {
+      "en": "turn off",
+      "ja": "消す",
+      "zh": "关掉",
+      "ko": "끄다"
+    },
+    "carriers": [
+      "Don't forget to {P} the lights.",
+      "Please {P} your phone.",
+      "Can you {P} the TV?",
+      "I'll {P} the heater now."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs007",
+    "w": "an hour",
+    "ipa": "/əˈnaʊɝ/",
+    "rp_ipa": "/əˈnaʊə/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "silent h; n links to the vowel",
+      "ja": "h は黙字; n が母音へ連結",
+      "fil": "tahimik na h; n umuugnay sa patinig"
+    },
+    "gloss": {
+      "en": "an hour",
+      "ja": "1時間",
+      "zh": "一小时",
+      "ko": "한 시간"
+    },
+    "carriers": [
+      "We waited {P} for the train.",
+      "The meeting lasted {P}.",
+      "I'll be there in {P}.",
+      "It takes {P} to get there."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs008",
+    "w": "far away",
+    "ipa": "/ˌfɑrəˈweɪ/",
+    "rp_ipa": "/ˌfɑːrəˈweɪ/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "RP keeps r only because a vowel follows (linking r)",
+      "ja": "RPは母音が続くため r を保持(linking r)",
+      "fil": "pinapanatili ng RP ang r dahil may patinig na sumusunod (linking r)"
+    },
+    "gloss": {
+      "en": "far away",
+      "ja": "遠く離れて",
+      "zh": "遥远",
+      "ko": "멀리"
+    },
+    "carriers": [
+      "They live {P} from here.",
+      "The beach is {P}.",
+      "He moved {P} last year.",
+      "It's not that {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "cs009",
+    "w": "I am",
+    "ipa": "/aɪˈjæm/",
+    "rp_ipa": "/aɪˈjæm/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "a /j/ glide bridges I→am",
+      "ja": "/j/ の渡り音が I→am をつなぐ",
+      "fil": "/j/ glide ang umuugnay sa I→am"
+    },
+    "gloss": {
+      "en": "I am",
+      "ja": "私は～です",
+      "zh": "我是",
+      "ko": "나는 ~이다"
+    },
+    "carriers": [
+      "{P} so happy today.",
+      "I think {P} ready now.",
+      "Yes, {P} listening.",
+      "{P} sure it will work."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs010",
+    "w": "go away",
+    "ipa": "/ˌɡoʊwəˈweɪ/",
+    "rp_ipa": "/ˌɡəʊwəˈweɪ/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "a /w/ glide bridges go→away",
+      "ja": "/w/ の渡り音が go→away をつなぐ",
+      "fil": "/w/ glide ang umuugnay sa go→away"
+    },
+    "gloss": {
+      "en": "go away",
+      "ja": "立ち去る",
+      "zh": "走开",
+      "ko": "저리 가"
+    },
+    "carriers": [
+      "Please {P} and leave me alone.",
+      "The clouds will {P} soon.",
+      "Tell them to {P}.",
+      "I watched the train {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs011",
+    "w": "the end",
+    "ipa": "/ðiˈjɛnd/",
+    "rp_ipa": "/ðiˈjend/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "the→/ði/ before vowel, /j/ glide",
+      "ja": "母音前で the→/ði/、/j/ 渡り音",
+      "fil": "bago ang patinig, the→/ði/, /j/ glide"
+    },
+    "gloss": {
+      "en": "the end",
+      "ja": "終わり",
+      "zh": "结束",
+      "ko": "끝"
+    },
+    "carriers": [
+      "We reached {P} at last.",
+      "This is {P} of the road.",
+      "Read it to {P}.",
+      "That was {P} of the movie."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs012",
+    "w": "did you",
+    "ipa": "/ˈdɪdʒu/",
+    "rp_ipa": "/ˈdɪdʒu/",
+    "cs_type": "assimilation",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d + y → /dʒ/ (yod-coalescence)",
+      "ja": "d + y → /dʒ/(同化)",
+      "fil": "d + y → /dʒ/ (asimilasyon)"
+    },
+    "gloss": {
+      "en": "did you",
+      "ja": "～しましたか",
+      "zh": "你...了吗",
+      "ko": "너 ~했니"
+    },
+    "carriers": [
+      "{P} finish the report?",
+      "{P} see that?",
+      "Where {P} put my keys?",
+      "{P} call her yesterday?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs013",
+    "w": "would you",
+    "ipa": "/ˈwʊdʒu/",
+    "rp_ipa": "/ˈwʊdʒu/",
+    "cs_type": "assimilation",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d + y → /dʒ/",
+      "ja": "d + y → /dʒ/(同化)",
+      "fil": "d + y → /dʒ/ (asimilasyon)"
+    },
+    "gloss": {
+      "en": "would you",
+      "ja": "～してくれますか",
+      "zh": "你愿意吗",
+      "ko": "~해 주겠니"
+    },
+    "carriers": [
+      "{P} pass me the salt?",
+      "{P} like some tea?",
+      "{P} mind helping me?",
+      "{P} come with us?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs014",
+    "w": "could you",
+    "ipa": "/ˈkʊdʒu/",
+    "rp_ipa": "/ˈkʊdʒu/",
+    "cs_type": "assimilation",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d + y → /dʒ/",
+      "ja": "d + y → /dʒ/(同化)",
+      "fil": "d + y → /dʒ/ (asimilasyon)"
+    },
+    "gloss": {
+      "en": "could you",
+      "ja": "～できますか",
+      "zh": "你能吗",
+      "ko": "~할 수 있니"
+    },
+    "carriers": [
+      "{P} help me move this?",
+      "{P} open the window?",
+      "{P} explain it again?",
+      "{P} wait a moment?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs015",
+    "w": "don't you",
+    "ipa": "/ˈdoʊntʃu/",
+    "rp_ipa": "/ˈdəʊntʃu/",
+    "cs_type": "assimilation",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t + y → /tʃ/",
+      "ja": "t + y → /tʃ/(同化)",
+      "fil": "t + y → /tʃ/ (asimilasyon)"
+    },
+    "gloss": {
+      "en": "don't you",
+      "ja": "～しないの",
+      "zh": "你不...吗",
+      "ko": "너 ~안 하니"
+    },
+    "carriers": [
+      "{P} remember to lock up?",
+      "{P} want to come along?",
+      "{P} like this one better?",
+      "{P} agree with me?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs016",
+    "w": "won't you",
+    "ipa": "/ˈwoʊntʃu/",
+    "rp_ipa": "/ˈwəʊntʃu/",
+    "cs_type": "assimilation",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t + y → /tʃ/",
+      "ja": "t + y → /tʃ/(同化)",
+      "fil": "t + y → /tʃ/ (asimilasyon)"
+    },
+    "gloss": {
+      "en": "won't you",
+      "ja": "～しませんか",
+      "zh": "你不...吗",
+      "ko": "~하지 않겠니"
+    },
+    "carriers": [
+      "{P} join us for dinner?",
+      "{P} stay a little longer?",
+      "{P} try the other door?",
+      "{P} call me later?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs017",
+    "w": "next day",
+    "ipa": "/ˈnɛksˌdeɪ/",
+    "rp_ipa": "/ˈneksˌdeɪ/",
+    "cs_type": "elision",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t dropped between s and d",
+      "ja": "s と d の間で t が脱落",
+      "fil": "t kinakaltas sa pagitan ng s at d"
+    },
+    "gloss": {
+      "en": "next day",
+      "ja": "翌日",
+      "zh": "第二天",
+      "ko": "다음 날"
+    },
+    "carriers": [
+      "We'll continue the {P}.",
+      "Let's meet the {P}.",
+      "I'll start the {P}.",
+      "The {P} was sunny."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs018",
+    "w": "must be",
+    "ipa": "/ˈmʌsbi/",
+    "rp_ipa": "/ˈmʌsbi/",
+    "cs_type": "elision",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t dropped before b",
+      "ja": "b の前で t が脱落",
+      "fil": "bago ang b, kinakaltas ang t"
+    },
+    "gloss": {
+      "en": "must be",
+      "ja": "～にちがいない",
+      "zh": "一定是",
+      "ko": "~임에 틀림없다"
+    },
+    "carriers": [
+      "It {P} a mistake.",
+      "He {P} home by now.",
+      "There {P} a reason.",
+      "That {P} the answer."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs019",
+    "w": "old man",
+    "ipa": "/ˈoʊlˈmæn/",
+    "rp_ipa": "/ˈəʊlˈmæn/",
+    "cs_type": "elision",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d dropped between l and m",
+      "ja": "l と m の間で d が脱落",
+      "fil": "d kinakaltas sa pagitan ng l at m"
+    },
+    "gloss": {
+      "en": "old man",
+      "ja": "老人",
+      "zh": "老人",
+      "ko": "노인"
+    },
+    "carriers": [
+      "The {P} sat by the window.",
+      "An {P} told the story.",
+      "That {P} is my neighbor.",
+      "A kind {P} helped us."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs020",
+    "w": "last night",
+    "ipa": "/ˈlæsˈnaɪt/",
+    "rp_ipa": "/ˈlɑːsˈnaɪt/",
+    "cs_type": "elision",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t dropped between s and n",
+      "ja": "s と n の間で t が脱落",
+      "fil": "t kinakaltas sa pagitan ng s at n"
+    },
+    "gloss": {
+      "en": "last night",
+      "ja": "昨夜",
+      "zh": "昨晚",
+      "ko": "어젯밤"
+    },
+    "carriers": [
+      "I slept badly {P}.",
+      "We met {P}.",
+      "It rained all {P}.",
+      "She called me {P}."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "trap_bath"
+  },
+  {
+    "id": "cs021",
+    "w": "best friend",
+    "ipa": "/ˈbɛsˈfrɛnd/",
+    "rp_ipa": "/ˈbesˈfrend/",
+    "cs_type": "elision",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t dropped between s and f",
+      "ja": "s と f の間で t が脱落",
+      "fil": "t kinakaltas sa pagitan ng s at f"
+    },
+    "gloss": {
+      "en": "best friend",
+      "ja": "親友",
+      "zh": "好朋友",
+      "ko": "절친한 친구"
+    },
+    "carriers": [
+      "She is my {P}.",
+      "He's my {P}.",
+      "My {P} lives nearby.",
+      "You're my {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs022",
+    "w": "a lot of",
+    "ipa": "/əˈlɑɾəv/",
+    "rp_ipa": "/əˈlɒtəv/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t→of links; GA flaps t to /ɾ/; of→/əv/ weak",
+      "ja": "t→of 連結; GAは t を /ɾ/、of は弱形 /əv/",
+      "fil": "t→of nag-uugnay; sa GA, t→/ɾ/, of→/əv/ mahina"
+    },
+    "gloss": {
+      "en": "a lot of",
+      "ja": "たくさんの",
+      "zh": "很多",
+      "ko": "많은"
+    },
+    "carriers": [
+      "I have {P} work today.",
+      "There's {P} food left.",
+      "She knows {P} people.",
+      "We had {P} fun."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs023",
+    "w": "part of it",
+    "ipa": "/ˈpɑrɾəvɪt/",
+    "rp_ipa": "/ˈpɑːtəvɪt/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "two links: part-of-it; GA flap",
+      "ja": "二重連結 part-of-it; GAは t をフラップ",
+      "fil": "dalawahang pag-uugnay: part-of-it; GA flap"
+    },
+    "gloss": {
+      "en": "part of it",
+      "ja": "その一部",
+      "zh": "其中一部分",
+      "ko": "그 일부"
+    },
+    "carriers": [
+      "That's {P}.",
+      "I missed {P}.",
+      "This is {P}.",
+      "He explained {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs024",
+    "w": "first of all",
+    "ipa": "/ˈfɝsəˈvɔl/",
+    "rp_ipa": "/ˈfɜːstəˈvɔːl/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/əv/ weak, links into all",
+      "ja": "of→/əv/ 弱形、all へ連結",
+      "fil": "of→/əv/ mahina, umuugnay sa all"
+    },
+    "gloss": {
+      "en": "first of all",
+      "ja": "まず第一に",
+      "zh": "首先",
+      "ko": "우선"
+    },
+    "carriers": [
+      "{P}, let me say thanks.",
+      "{P}, we need a plan.",
+      "{P}, check the date.",
+      "{P}, sit down."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs025",
+    "w": "more and more",
+    "ipa": "/ˈmɔrənˈmɔr/",
+    "rp_ipa": "/ˈmɔːrənˈmɔː/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "and→/ən/; RP linking r on first more",
+      "ja": "and→/ən/; RPは最初の more に linking r",
+      "fil": "and→/ən/; sa RP, linking r sa unang more"
+    },
+    "gloss": {
+      "en": "more and more",
+      "ja": "ますます",
+      "zh": "越来越多",
+      "ko": "점점 더"
+    },
+    "carriers": [
+      "It's getting {P} difficult.",
+      "She likes him {P}.",
+      "Prices rise {P}.",
+      "We hear it {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs026",
+    "w": "get out of",
+    "ipa": "/ˌɡɛˈɾaʊɾəv/",
+    "rp_ipa": "/ˌɡeˈtaʊtəv/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "get-out-of all link; GA double flap",
+      "ja": "get-out-of 連結; GAは t を二重フラップ",
+      "fil": "get-out-of buong pag-uugnay; GA double flap"
+    },
+    "gloss": {
+      "en": "get out of",
+      "ja": "～から出る",
+      "zh": "离开",
+      "ko": "~에서 나가다"
+    },
+    "carriers": [
+      "Let's {P} here.",
+      "I need to {P} the house.",
+      "Try to {P} trouble.",
+      "Help me {P} this."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs027",
+    "w": "hold on a sec",
+    "ipa": "/ˌhoʊldɑˈnəˈsɛk/",
+    "rp_ipa": "/ˌhəʊldɒˈnəˈsek/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "on→a links: o-na",
+      "ja": "on→a 連結: o-na",
+      "fil": "on→a pag-uugnay: o-na"
+    },
+    "gloss": {
+      "en": "hold on a second",
+      "ja": "ちょっと待って",
+      "zh": "等一下",
+      "ko": "잠깐만"
+    },
+    "carriers": [
+      "{P}, I'm almost ready.",
+      "Please {P}.",
+      "{P}, let me check.",
+      "Just {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "id": "cs028",
+    "w": "not at all",
+    "ipa": "/ˈnɑɾəˈtɔl/",
+    "rp_ipa": "/ˈnɒtəˈtɔːl/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "not-at-all all link; GA flap on not",
+      "ja": "not-at-all 連結; GAは not を flap",
+      "fil": "not-at-all buong pag-uugnay; sa GA, flap ang not"
+    },
+    "gloss": {
+      "en": "not at all",
+      "ja": "全然～ない",
+      "zh": "一点也不",
+      "ko": "전혀 아니다"
+    },
+    "carriers": [
+      "{P}, it was easy.",
+      "I'm {P} tired.",
+      "That's {P} true.",
+      "No trouble {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs029",
+    "w": "one of them",
+    "ipa": "/ˈwʌnəvðəm/",
+    "rp_ipa": "/ˈwʌnəvðəm/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "one→of links; of→/əv/, them→/ðəm/",
+      "ja": "one→of 連結; of→/əv/, them→/ðəm/",
+      "fil": "one→of pag-uugnay; of→/əv/, them→/ðəm/"
+    },
+    "gloss": {
+      "en": "one of them",
+      "ja": "そのうちの一つ",
+      "zh": "其中之一",
+      "ko": "그중 하나"
+    },
+    "carriers": [
+      "She's {P}.",
+      "Take {P}.",
+      "He's {P}.",
+      "Pick {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs030",
+    "w": "got you",
+    "ipa": "/ˈɡɑtʃu/",
+    "rp_ipa": "/ˈɡɒtʃu/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t + y → /tʃ/ (cf. casual 'gotcha')",
+      "ja": "t + y → /tʃ/(口語 gotcha 相当)",
+      "fil": "t + y → /tʃ/ (cf. impormal 'gotcha')"
+    },
+    "gloss": {
+      "en": "got you (understood)",
+      "ja": "わかった／捕まえた",
+      "zh": "明白了／抓到你了",
+      "ko": "알았어／잡았다"
+    },
+    "carriers": [
+      "{P}, don't worry.",
+      "Ah, {P}!",
+      "{P} on that one.",
+      "Okay, {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "id": "cs031",
+    "w": "what you",
+    "ipa": "/ˈwʌtʃu/",
+    "rp_ipa": "/ˈwɒtʃu/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t + y → /tʃ/",
+      "ja": "t + y → /tʃ/(同化)",
+      "fil": "t + y → /tʃ/ (asimilasyon)"
+    },
+    "gloss": {
+      "en": "what you",
+      "ja": "あなたが何を",
+      "zh": "你...什么",
+      "ko": "네가 무엇을"
+    },
+    "carriers": [
+      "I know {P} mean.",
+      "Is that {P} want?",
+      "Tell me {P} need.",
+      "That's {P} said."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs032",
+    "w": "would you mind",
+    "ipa": "/ˈwʊdʒuˈmaɪnd/",
+    "rp_ipa": "/ˈwʊdʒuˈmaɪnd/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d + y → /dʒ/",
+      "ja": "d + y → /dʒ/(同化)",
+      "fil": "d + y → /dʒ/ (asimilasyon)"
+    },
+    "gloss": {
+      "en": "would you mind",
+      "ja": "～していただけますか",
+      "zh": "你介意吗",
+      "ko": "~해 주시겠어요"
+    },
+    "carriers": [
+      "{P} closing the door?",
+      "{P} waiting a moment?",
+      "{P} helping me?",
+      "{P} repeating that?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs033",
+    "w": "in case",
+    "ipa": "/ˈɪŋˈkeɪs/",
+    "rp_ipa": "/ˈɪŋˈkeɪs/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n→/ŋ/ before k (place assimilation)",
+      "ja": "k の前で n→/ŋ/(調音位置の同化)",
+      "fil": "bago ang k, n→/ŋ/ (asimilasyon ng pook)"
+    },
+    "gloss": {
+      "en": "in case",
+      "ja": "～の場合に備えて",
+      "zh": "以防",
+      "ko": "~할 경우에 대비해"
+    },
+    "carriers": [
+      "Bring an umbrella {P} it rains.",
+      "Take a map {P} you get lost.",
+      "Save some {P} we need it.",
+      "Call me {P} of trouble."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs034",
+    "w": "ten boys",
+    "ipa": "/ˈtɛmˈbɔɪz/",
+    "rp_ipa": "/ˈtemˈbɔɪz/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n→/m/ before b (place assimilation)",
+      "ja": "b の前で n→/m/(調音位置の同化)",
+      "fil": "bago ang b, n→/m/ (asimilasyon ng pook)"
+    },
+    "gloss": {
+      "en": "ten boys",
+      "ja": "10人の少年",
+      "zh": "十个男孩",
+      "ko": "열 명의 소년"
+    },
+    "carriers": [
+      "There were {P}.",
+      "I saw {P}.",
+      "{P} were playing.",
+      "We counted {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs035",
+    "w": "good boy",
+    "ipa": "/ˈɡʊbˈbɔɪ/",
+    "rp_ipa": "/ˈɡʊbˈbɔɪ/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d→/b/ before b (place assimilation)",
+      "ja": "b の前で d→/b/(調音位置の同化)",
+      "fil": "bago ang b, d→/b/ (asimilasyon ng pook)"
+    },
+    "gloss": {
+      "en": "good boy",
+      "ja": "いい子",
+      "zh": "好孩子",
+      "ko": "착한 아이"
+    },
+    "carriers": [
+      "He's a {P}.",
+      "What a {P}!",
+      "Such a {P}.",
+      "That's a {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs036",
+    "w": "that case",
+    "ipa": "/ˈðækˈkeɪs/",
+    "rp_ipa": "/ˈðækˈkeɪs/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t→/k/ before k (place assimilation)",
+      "ja": "k の前で t→/k/(調音位置の同化)",
+      "fil": "bago ang k, t→/k/ (asimilasyon ng pook)"
+    },
+    "gloss": {
+      "en": "that case",
+      "ja": "あの件",
+      "zh": "那个案子",
+      "ko": "그 경우"
+    },
+    "carriers": [
+      "In {P}, call me.",
+      "{P} is closed.",
+      "Take {P} to court.",
+      "We dropped {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs037",
+    "w": "bless you",
+    "ipa": "/ˈblɛʃu/",
+    "rp_ipa": "/ˈbleʃu/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "s + y → /ʃ/",
+      "ja": "s + y → /ʃ/(同化)",
+      "fil": "s + y → /ʃ/ (asimilasyon)"
+    },
+    "gloss": {
+      "en": "bless you",
+      "ja": "お大事に",
+      "zh": "保佑你",
+      "ko": "건강하세요"
+    },
+    "carriers": [
+      "{P}! Are you okay?",
+      "Oh, {P}.",
+      "{P}, take care.",
+      "{P}! That was a big sneeze."
+    ],
+    "cefr": "B2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs038",
+    "w": "kind of",
+    "ipa": "/ˈkaɪndəv/",
+    "rp_ipa": "/ˈkaɪndəv/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/əv/; casual 'kinda' drops more",
+      "ja": "of→/əv/; 口語 kinda は更に脱落",
+      "fil": "of→/əv/; impormal 'kinda' ay mas marami pang nakaltas"
+    },
+    "gloss": {
+      "en": "kind of (somewhat)",
+      "ja": "ちょっと、まあ",
+      "zh": "有点",
+      "ko": "약간"
+    },
+    "carriers": [
+      "It's {P} cold today.",
+      "I'm {P} tired.",
+      "That's {P} strange.",
+      "He's {P} shy."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs039",
+    "w": "sort of",
+    "ipa": "/ˈsɔrɾəv/",
+    "rp_ipa": "/ˈsɔːtəv/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/əv/; casual 'sorta'",
+      "ja": "of→/əv/; 口語 sorta",
+      "fil": "of→/əv/; impormal 'sorta'"
+    },
+    "gloss": {
+      "en": "sort of (somewhat)",
+      "ja": "ある程度、まあ",
+      "zh": "有点",
+      "ko": "어느 정도"
+    },
+    "carriers": [
+      "It's {P} interesting.",
+      "I'm {P} hungry.",
+      "That's {P} odd.",
+      "She's {P} busy."
+    ],
+    "cefr": "B2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs040",
+    "w": "ask them",
+    "ipa": "/ˈæskðəm/",
+    "rp_ipa": "/ɑːskðəm/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "them→/ðəm/ weak; h-less",
+      "ja": "them→/ðəm/ 弱形",
+      "fil": "them→/ðəm/ mahina; walang h"
+    },
+    "gloss": {
+      "en": "ask them",
+      "ja": "彼らに尋ねる",
+      "zh": "问他们",
+      "ko": "그들에게 묻다"
+    },
+    "carriers": [
+      "I'll {P} later.",
+      "Let's {P} first.",
+      "Please {P} about it.",
+      "We should {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs041",
+    "w": "tell him",
+    "ipa": "/ˈtɛlɪm/",
+    "rp_ipa": "/ˈtelɪm/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "him→/ɪm/, h dropped after consonant",
+      "ja": "him→/ɪm/、子音後で h 脱落",
+      "fil": "him→/ɪm/, pagkatapos ng katinig, kinakaltas ang h"
+    },
+    "gloss": {
+      "en": "tell him",
+      "ja": "彼に伝える",
+      "zh": "告诉他",
+      "ko": "그에게 말하다"
+    },
+    "carriers": [
+      "Please {P} the news.",
+      "I'll {P} tomorrow.",
+      "Don't {P} yet.",
+      "Can you {P}?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs042",
+    "w": "give her",
+    "ipa": "/ˈɡɪvɝ/",
+    "rp_ipa": "/ˈɡɪvə/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "her→/ɝ/(GA)/ə/(RP), h dropped",
+      "ja": "her→/ɝ/(GA)/ə/(RP)、h 脱落",
+      "fil": "her→/ɝ/(GA)/ə/(RP), kinakaltas ang h"
+    },
+    "gloss": {
+      "en": "give her",
+      "ja": "彼女に渡す",
+      "zh": "给她",
+      "ko": "그녀에게 주다"
+    },
+    "carriers": [
+      "I'll {P} the book.",
+      "Please {P} a hand.",
+      "We should {P} a chance.",
+      "Let me {P} this."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs043",
+    "w": "cup of tea",
+    "ipa": "/ˈkʌpəˈti/",
+    "rp_ipa": "/ˈkʌpəˈtiː/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/ə/ (v dropped before consonant)",
+      "ja": "of→/ə/(子音前で v 脱落)",
+      "fil": "of→/ə/ (bago katinig, kinakaltas ang v)"
+    },
+    "gloss": {
+      "en": "cup of tea",
+      "ja": "一杯のお茶",
+      "zh": "一杯茶",
+      "ko": "차 한 잔"
+    },
+    "carriers": [
+      "I'd like a {P}.",
+      "She made a {P}.",
+      "A {P}, please.",
+      "He poured a {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "cs044",
+    "w": "lots of time",
+    "ipa": "/ˈlɑtsəˈtaɪm/",
+    "rp_ipa": "/ˈlɒtsəˈtaɪm/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/ə/ before consonant",
+      "ja": "子音前で of→/ə/",
+      "fil": "bago katinig, of→/ə/"
+    },
+    "gloss": {
+      "en": "lots of time",
+      "ja": "たっぷりの時間",
+      "zh": "很多时间",
+      "ko": "충분한 시간"
+    },
+    "carriers": [
+      "We have {P}.",
+      "There's {P} left.",
+      "Take {P}.",
+      "I need {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "id": "cs045",
+    "w": "send them",
+    "ipa": "/ˈsɛnðəm/",
+    "rp_ipa": "/ˈsenðəm/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d dropped between n and ð; them→/ðəm/",
+      "ja": "n と ð の間で d 脱落; them→/ðəm/",
+      "fil": "d kinakaltas sa pagitan ng n at ð; them→/ðəm/"
+    },
+    "gloss": {
+      "en": "send them",
+      "ja": "彼らに送る",
+      "zh": "发给他们",
+      "ko": "그들에게 보내다"
+    },
+    "carriers": [
+      "I'll {P} the files.",
+      "We'll {P} a note.",
+      "Please {P} home.",
+      "Let me {P}."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs046",
+    "w": "what do you want",
+    "ipa": "/ˈwʌɾəjəˈwɑnt/",
+    "rp_ipa": "/ˈwɒtdʒəˈwɒnt/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "GA: flap+reduce; RP: d+you→/dʒə/",
+      "ja": "GAはフラップ+弱化; RPは d+you→/dʒə/",
+      "fil": "GA: flap+reduce; RP: d+you→/dʒə/"
+    },
+    "gloss": {
+      "en": "what do you want?",
+      "ja": "何が欲しいの？",
+      "zh": "你想要什么？",
+      "ko": "뭘 원해?"
+    },
+    "carriers": [
+      "So, {P} for dinner?",
+      "Tell me, {P}?",
+      "{P} from the shop?",
+      "{P} to drink?"
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs047",
+    "w": "how are you doing",
+    "ipa": "/ˈhaʊwɝjəˈduɪŋ/",
+    "rp_ipa": "/ˈhaʊəjəˈduːɪŋ/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "/w/ glide how-are; you→/jə/",
+      "ja": "/w/ 渡り音 how-are; you→/jə/",
+      "fil": "/w/ glide how-are; you→/jə/"
+    },
+    "gloss": {
+      "en": "how are you doing?",
+      "ja": "調子はどう？",
+      "zh": "你好吗？",
+      "ko": "어떻게 지내?"
+    },
+    "carriers": [
+      "Hi, {P} today?",
+      "{P} these days?",
+      "So, {P}?",
+      "Hey, {P}?"
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs048",
+    "w": "come and see",
+    "ipa": "/ˈkʌmənˈsi/",
+    "rp_ipa": "/ˈkʌmənˈsiː/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "and→/ən/ weak, links both sides",
+      "ja": "and→/ən/ 弱形、両側へ連結",
+      "fil": "and→/ən/ mahina, umuugnay sa magkabilang panig"
+    },
+    "gloss": {
+      "en": "come and see",
+      "ja": "見に来て",
+      "zh": "来看看",
+      "ko": "와서 봐"
+    },
+    "carriers": [
+      "Please {P} for yourself.",
+      "{P} what I made.",
+      "{P} the new place.",
+      "Won't you {P}?"
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "cs049",
+    "w": "pick up on it",
+    "ipa": "/ˌpɪˈkʌpɑˈnɪt/",
+    "rp_ipa": "/ˌpɪˈkʌpɒˈnɪt/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "three links: pic-ku-po-nit",
+      "ja": "三重連結 pic-ku-po-nit",
+      "fil": "tatlong pag-uugnay: pic-ku-po-nit"
+    },
+    "gloss": {
+      "en": "pick up on it",
+      "ja": "それに気づく",
+      "zh": "察觉到",
+      "ko": "알아채다"
+    },
+    "carriers": [
+      "She'll {P} quickly.",
+      "Did you {P}?",
+      "I failed to {P}.",
+      "Try to {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "id": "cs050",
+    "w": "an awful lot of it",
+    "ipa": "/əˈnɔfəˈlɑɾəvɪt/",
+    "rp_ipa": "/əˈnɔːfəˈlɒtəvɪt/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "chained links + GA flap + of→/əv/",
+      "ja": "連鎖連結 + GAフラップ + of→/əv/",
+      "fil": "sunod-sunod na pag-uugnay + GA flap + of→/əv/"
+    },
+    "gloss": {
+      "en": "an awful lot of it",
+      "ja": "それのものすごい量",
+      "zh": "好大一部分",
+      "ko": "그것의 엄청난 양"
+    },
+    "carriers": [
+      "There was {P}.",
+      "We saw {P}.",
+      "He ate {P}.",
+      "I learned {P}."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs051",
+    "w": "get it over with",
+    "ipa": "/ˌɡɛˈɾɪˈɾoʊvɝwɪθ/",
+    "rp_ipa": "/ˌɡeˈtɪˈtəʊvəwɪθ/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "GA double flap; over-with link",
+      "ja": "GAは t を二重フラップ; over-with 連結",
+      "fil": "GA double flap; over-with pag-uugnay"
+    },
+    "gloss": {
+      "en": "get it over with",
+      "ja": "さっさと終わらせる",
+      "zh": "把它做完",
+      "ko": "끝내 버리다"
+    },
+    "carriers": [
+      "Let's just {P}.",
+      "I want to {P}.",
+      "Please {P}.",
+      "We'll {P} now."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs052",
+    "w": "all of a sudden",
+    "ipa": "/ˈɔləvəˈsʌdən/",
+    "rp_ipa": "/ˈɔːləvəˈsʌdən/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "all-of-a all link; of→/əv/",
+      "ja": "all-of-a 連結; of→/əv/",
+      "fil": "all-of-a buong pag-uugnay; of→/əv/"
+    },
+    "gloss": {
+      "en": "all of a sudden",
+      "ja": "突然",
+      "zh": "突然",
+      "ko": "갑자기"
+    },
+    "carriers": [
+      "{P}, it started to rain.",
+      "{P}, she left.",
+      "Then, {P}, it stopped.",
+      "{P}, everyone cheered."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "cs053",
+    "w": "did you eat yet",
+    "ipa": "/ˈdɪdʒuˈwiˈtʃɛt/",
+    "rp_ipa": "/ˈdɪdʒuˈwiːˈtʃet/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d+you→/dʒ/, t+yet→/tʃ/",
+      "ja": "d+you→/dʒ/、t+yet→/tʃ/",
+      "fil": "d+you→/dʒ/, t+yet→/tʃ/"
+    },
+    "gloss": {
+      "en": "did you eat yet?",
+      "ja": "もう食べた？",
+      "zh": "你吃了吗？",
+      "ko": "밥 먹었어?"
+    },
+    "carriers": [
+      "Hey, {P}?",
+      "{P}, or are you hungry?",
+      "So, {P}?",
+      "{P}, friend?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "notation_composite"
+  },
+  {
+    "id": "cs054",
+    "w": "would you like some",
+    "ipa": "/ˈwʊdʒuˈlaɪksəm/",
+    "rp_ipa": "/ˈwʊdʒuˈlaɪksəm/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d+you→/dʒ/; some→/səm/",
+      "ja": "d+you→/dʒ/; some→/səm/",
+      "fil": "d+you→/dʒ/; some→/səm/"
+    },
+    "gloss": {
+      "en": "would you like some?",
+      "ja": "いかがですか？",
+      "zh": "你想要一些吗？",
+      "ko": "좀 드릴까요?"
+    },
+    "carriers": [
+      "{P} tea?",
+      "{P} more?",
+      "Excuse me, {P}?",
+      "{P} cake?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs055",
+    "w": "nice to meet you",
+    "ipa": "/ˈnaɪstuˈmiˈtʃu/",
+    "rp_ipa": "/ˈnaɪstuˈmiːˈtʃu/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "meet+you → t+y → /tʃ/",
+      "ja": "meet+you の t+y → /tʃ/",
+      "fil": "sa meet+you, t+y → /tʃ/"
+    },
+    "gloss": {
+      "en": "nice to meet you",
+      "ja": "はじめまして",
+      "zh": "很高兴见到你",
+      "ko": "만나서 반가워요"
+    },
+    "carriers": [
+      "Hello, {P}.",
+      "{P}, finally!",
+      "It's {P}.",
+      "{P}, sir."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "cs056",
+    "w": "can't you see",
+    "ipa": "/ˈkæntʃuˈsi/",
+    "rp_ipa": "/ˈkɑːntʃuˈsiː/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t+you→/tʃ/",
+      "ja": "t+you→/tʃ/(同化)",
+      "fil": "t+you→/tʃ/ (asimilasyon)"
+    },
+    "gloss": {
+      "en": "can't you see?",
+      "ja": "わからないの？",
+      "zh": "你看不出来吗？",
+      "ko": "안 보여?"
+    },
+    "carriers": [
+      "{P} the problem?",
+      "{P} it clearly?",
+      "But {P}?",
+      "Really, {P}?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "trap_bath"
+  },
+  {
+    "id": "cs057",
+    "w": "ten past nine",
+    "ipa": "/ˈtɛmˈpæsˈnaɪn/",
+    "rp_ipa": "/ˈtemˈpɑːsˈnaɪn/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n→/m/ before p; t elided in past",
+      "ja": "p の前で n→/m/; past の t 脱落",
+      "fil": "bago ang p, n→/m/; kinakaltas ang t sa past"
+    },
+    "gloss": {
+      "en": "ten past nine",
+      "ja": "9時10分",
+      "zh": "九点十分",
+      "ko": "9시 10분"
+    },
+    "carriers": [
+      "It's {P}.",
+      "The train leaves at {P}.",
+      "We meet at {P}.",
+      "It's already {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "trap_bath"
+  },
+  {
+    "id": "cs058",
+    "w": "green park",
+    "ipa": "/ˈɡrimˈpɑrk/",
+    "rp_ipa": "/ˈɡriːmˈpɑːk/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n→/m/ before p",
+      "ja": "p の前で n→/m/",
+      "fil": "bago ang p, n→/m/"
+    },
+    "gloss": {
+      "en": "Green Park",
+      "ja": "グリーンパーク",
+      "zh": "绿色公园",
+      "ko": "그린 파크"
+    },
+    "carriers": [
+      "We walked through {P}.",
+      "{P} is lovely.",
+      "Meet me at {P}.",
+      "{P} has a pond."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "cs059",
+    "w": "won't you come in",
+    "ipa": "/ˈwoʊntʃuˈkʌmɪn/",
+    "rp_ipa": "/ˈwəʊntʃuˈkʌmɪn/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t+you→/tʃ/; come-in link",
+      "ja": "t+you→/tʃ/; come-in 連結",
+      "fil": "t+you→/tʃ/; come-in pag-uugnay"
+    },
+    "gloss": {
+      "en": "won't you come in?",
+      "ja": "入りませんか？",
+      "zh": "你不进来吗？",
+      "ko": "들어오지 않을래요?"
+    },
+    "carriers": [
+      "{P}?",
+      "Please, {P}?",
+      "{P} for tea?",
+      "Oh, {P}?"
+    ],
+    "cefr": "B1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs060",
+    "w": "this year",
+    "ipa": "/ˈðɪʃɪr/",
+    "rp_ipa": "/ˈðɪʃɪə/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "s+y → /ʃ/",
+      "ja": "s+y → /ʃ/(同化)",
+      "fil": "s+y → /ʃ/ (asimilasyon)"
+    },
+    "gloss": {
+      "en": "this year",
+      "ja": "今年",
+      "zh": "今年",
+      "ko": "올해"
+    },
+    "carriers": [
+      "I'll travel {P}.",
+      "{P} is busy.",
+      "We met {P}.",
+      "Maybe {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "square_near_cure"
+  },
+  {
+    "id": "cs061",
+    "w": "miss you",
+    "ipa": "/ˈmɪʃu/",
+    "rp_ipa": "/ˈmɪʃu/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "s+y → /ʃ/",
+      "ja": "s+y → /ʃ/(同化)",
+      "fil": "s+y → /ʃ/ (asimilasyon)"
+    },
+    "gloss": {
+      "en": "miss you",
+      "ja": "会いたい",
+      "zh": "想你",
+      "ko": "보고 싶어"
+    },
+    "carriers": [
+      "I {P} already.",
+      "We'll {P}.",
+      "I really {P}.",
+      "They {P} too."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs062",
+    "w": "I don't know",
+    "ipa": "/ˌaɪdoʊˈnoʊ/",
+    "rp_ipa": "/ˌaɪdəʊˈnəʊ/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "don't→/doʊ/, t dropped before n",
+      "ja": "n の前で don't の t 脱落",
+      "fil": "bago ang n, kinakaltas ang t sa don't"
+    },
+    "gloss": {
+      "en": "I don't know",
+      "ja": "わからない",
+      "zh": "我不知道",
+      "ko": "몰라요"
+    },
+    "carriers": [
+      "Honestly, {P}.",
+      "{P} the answer.",
+      "Well, {P}.",
+      "Sorry, {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs063",
+    "w": "what's the matter",
+    "ipa": "/ˈwʌtsðəˈmæɾɝ/",
+    "rp_ipa": "/ˈwɒtsðəˈmætə/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "the→/ðə/; GA flap on matter",
+      "ja": "the→/ðə/; GAは matter を flap",
+      "fil": "the→/ðə/; sa GA, flap ang matter"
+    },
+    "gloss": {
+      "en": "what's the matter?",
+      "ja": "どうしたの？",
+      "zh": "怎么了？",
+      "ko": "무슨 일이야?"
+    },
+    "carriers": [
+      "{P}?",
+      "Tell me, {P}?",
+      "So, {P}?",
+      "Hey, {P}?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs064",
+    "w": "a couple of days",
+    "ipa": "/əˈkʌpələˈdeɪz/",
+    "rp_ipa": "/əˈkʌpələˈdeɪz/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/ə/ (v dropped before consonant)",
+      "ja": "of→/ə/(子音前で v 脱落)",
+      "fil": "of→/ə/ (bago katinig, kinakaltas ang v)"
+    },
+    "gloss": {
+      "en": "a couple of days",
+      "ja": "2、3日",
+      "zh": "几天",
+      "ko": "이삼 일"
+    },
+    "carriers": [
+      "It took {P}.",
+      "Give it {P}.",
+      "Wait {P}.",
+      "In {P}, we'll know."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs065",
+    "w": "fish and chips",
+    "ipa": "/ˈfɪʃənˈtʃɪps/",
+    "rp_ipa": "/ˈfɪʃənˈtʃɪps/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "and→/ən/ (d dropped)",
+      "ja": "and→/ən/(d 脱落)",
+      "fil": "and→/ən/ (kinakaltas ang d)"
+    },
+    "gloss": {
+      "en": "fish and chips",
+      "ja": "フィッシュ&チップス",
+      "zh": "炸鱼薯条",
+      "ko": "피시 앤 칩스"
+    },
+    "carriers": [
+      "We had {P}.",
+      "I love {P}.",
+      "Order {P}.",
+      "{P}, please."
+    ],
+    "cefr": "B2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs066",
+    "w": "bread and butter",
+    "ipa": "/ˈbrɛɾənˈbʌɾɝ/",
+    "rp_ipa": "/ˈbredənˈbʌtə/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "and→/ən/; GA flaps both t/d",
+      "ja": "and→/ən/; GAは t/d をフラップ",
+      "fil": "and→/ən/; sa GA, parehong t/d ay flap"
+    },
+    "gloss": {
+      "en": "bread and butter",
+      "ja": "バターを塗ったパン",
+      "zh": "黄油面包",
+      "ko": "버터 바른 빵"
+    },
+    "carriers": [
+      "She likes {P}.",
+      "We had {P}.",
+      "Just {P}, please.",
+      "I made {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs067",
+    "w": "you and me",
+    "ipa": "/ˈjuənˈmi/",
+    "rp_ipa": "/ˈjuːənˈmiː/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "and→/ən/ (d dropped)",
+      "ja": "and→/ən/(d 脱落)",
+      "fil": "and→/ən/ (kinakaltas ang d)"
+    },
+    "gloss": {
+      "en": "you and me",
+      "ja": "君と僕",
+      "zh": "你和我",
+      "ko": "너와 나"
+    },
+    "carriers": [
+      "It's just {P}.",
+      "{P} forever.",
+      "Between {P}, it's fine.",
+      "{P} against the world."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "cs068",
+    "w": "I should have known",
+    "ipa": "/ˌaɪʃʊɾəvˈnoʊn/",
+    "rp_ipa": "/ˌaɪʃʊdəvˈnəʊn/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "have→/əv/ weak; GA flap on should",
+      "ja": "have→/əv/ 弱形; GAは should を flap",
+      "fil": "have→/əv/ mahina; sa GA, flap ang should"
+    },
+    "gloss": {
+      "en": "I should have known",
+      "ja": "気づくべきだった",
+      "zh": "我早该知道",
+      "ko": "알았어야 했는데"
+    },
+    "carriers": [
+      "{P} better.",
+      "{P} it would fail.",
+      "Honestly, {P}.",
+      "Well, {P}."
+    ],
+    "cefr": "B2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs069",
+    "w": "a piece of cake",
+    "ipa": "/əˈpisəˈkeɪk/",
+    "rp_ipa": "/əˈpiːsəˈkeɪk/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/ə/ before consonant",
+      "ja": "子音前で of→/ə/",
+      "fil": "bago katinig, of→/ə/"
+    },
+    "gloss": {
+      "en": "a piece of cake (easy)",
+      "ja": "朝飯前",
+      "zh": "小菜一碟",
+      "ko": "식은 죽 먹기"
+    },
+    "carriers": [
+      "It's {P}.",
+      "That test was {P}.",
+      "Easy — {P}.",
+      "Truly {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "cs070",
+    "w": "out of the question",
+    "ipa": "/ˈaʊɾəvðəˈkwɛstʃən/",
+    "rp_ipa": "/ˈaʊtəvðəˈkwestʃən/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "out-of link; the→/ðə/; GA flap",
+      "ja": "out-of 連結; the→/ðə/; GAフラップ",
+      "fil": "out-of pag-uugnay; the→/ðə/; GA flap"
+    },
+    "gloss": {
+      "en": "out of the question",
+      "ja": "論外だ",
+      "zh": "不可能",
+      "ko": "말도 안 돼"
+    },
+    "carriers": [
+      "That's {P}.",
+      "It's totally {P}.",
+      "Sorry, it's {P}.",
+      "Quitting is {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs071",
+    "w": "on it",
+    "ipa": "/ˈɑnɪt/",
+    "rp_ipa": "/ˈɒnɪt/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n→it link",
+      "ja": "n→it 連結",
+      "fil": "n→it pag-uugnay"
+    },
+    "gloss": {
+      "en": "on it",
+      "ja": "その上に",
+      "zh": "在上面",
+      "ko": "그 위에"
+    },
+    "carriers": [
+      "I left my keys {P}.",
+      "There's a stain {P}.",
+      "Put your name {P}.",
+      "Don't step {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "id": "cs072",
+    "w": "in it",
+    "ipa": "/ˈɪnɪt/",
+    "rp_ipa": "/ˈɪnɪt/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n→it link",
+      "ja": "n→it 連結",
+      "fil": "n→it pag-uugnay"
+    },
+    "gloss": {
+      "en": "in it",
+      "ja": "その中に",
+      "zh": "在里面",
+      "ko": "그 안에"
+    },
+    "carriers": [
+      "There's something {P}.",
+      "Look what's {P}.",
+      "Nothing is {P}.",
+      "Keep the money {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs073",
+    "w": "get up",
+    "ipa": "/ˌɡɛˈɾʌp/",
+    "rp_ipa": "/ˌɡeˈtʌp/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t→up link; GA flap",
+      "ja": "t→up 連結; GAフラップ",
+      "fil": "t→up pag-uugnay; GA flap"
+    },
+    "gloss": {
+      "en": "get up",
+      "ja": "起きる",
+      "zh": "起床",
+      "ko": "일어나다"
+    },
+    "carriers": [
+      "I {P} early today.",
+      "Please {P} now.",
+      "We need to {P}.",
+      "Time to {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs074",
+    "w": "sit down",
+    "ipa": "/ˌsɪtˈdaʊn/",
+    "rp_ipa": "/ˌsɪtˈdaʊn/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t→d link",
+      "ja": "t→d 連結",
+      "fil": "t→d pag-uugnay"
+    },
+    "gloss": {
+      "en": "sit down",
+      "ja": "座る",
+      "zh": "坐下",
+      "ko": "앉다"
+    },
+    "carriers": [
+      "Please {P} here.",
+      "Come in and {P}.",
+      "Let's {P} together.",
+      "He told me to {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs075",
+    "w": "hold on",
+    "ipa": "/ˌhoʊlˈdɑn/",
+    "rp_ipa": "/ˌhəʊlˈdɒn/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d→on link",
+      "ja": "d→on 連結",
+      "fil": "d→on pag-uugnay"
+    },
+    "gloss": {
+      "en": "hold on",
+      "ja": "待って",
+      "zh": "等等",
+      "ko": "기다려"
+    },
+    "carriers": [
+      "{P}, I'm coming.",
+      "Please {P} a second.",
+      "{P} tight!",
+      "Just {P} for me."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "id": "cs076",
+    "w": "turn it on",
+    "ipa": "/ˈtɝnɪˈɾɑn/",
+    "rp_ipa": "/ˈtɜːnɪˈtɒn/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "two links; GA flap",
+      "ja": "二重連結; GAフラップ",
+      "fil": "dalawahang pag-uugnay; GA flap"
+    },
+    "gloss": {
+      "en": "turn it on",
+      "ja": "つける",
+      "zh": "打开",
+      "ko": "켜다"
+    },
+    "carriers": [
+      "Can you {P}?",
+      "Please {P} so we can see.",
+      "I'll {P} for you.",
+      "{P} when it gets dark."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs077",
+    "w": "eat it",
+    "ipa": "/ˈiɾɪt/",
+    "rp_ipa": "/ˈiːtɪt/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t→it link; GA flap",
+      "ja": "t→it 連結; GAフラップ",
+      "fil": "t→it pag-uugnay; GA flap"
+    },
+    "gloss": {
+      "en": "eat it",
+      "ja": "それを食べる",
+      "zh": "吃掉它",
+      "ko": "그것을 먹다"
+    },
+    "carriers": [
+      "Go ahead and {P}.",
+      "Please {P} while it's hot.",
+      "I'll {P} later.",
+      "Don't {P} too fast."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs078",
+    "w": "read it",
+    "ipa": "/ˈriɾɪt/",
+    "rp_ipa": "/ˈriːdɪt/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d→it link; GA flap",
+      "ja": "d→it 連結; GAフラップ",
+      "fil": "d→it pag-uugnay; GA flap"
+    },
+    "gloss": {
+      "en": "read it",
+      "ja": "それを読む",
+      "zh": "读它",
+      "ko": "그것을 읽다"
+    },
+    "carriers": [
+      "Please {P} aloud.",
+      "I'll {P} tonight.",
+      "Can you {P} for me?",
+      "She'll {P} to the class."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs079",
+    "w": "call us",
+    "ipa": "/ˈkɔləs/",
+    "rp_ipa": "/ˈkɔːləs/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "l→us link; us→/əs/",
+      "ja": "l→us 連結; us→/əs/",
+      "fil": "l→us pag-uugnay; us→/əs/"
+    },
+    "gloss": {
+      "en": "call us",
+      "ja": "私たちに電話して",
+      "zh": "给我们打电话",
+      "ko": "우리에게 전화해"
+    },
+    "carriers": [
+      "Please {P} when you arrive.",
+      "{P} if you need help.",
+      "They'll {P} tomorrow.",
+      "Just {P} anytime."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "cs080",
+    "w": "help us",
+    "ipa": "/ˈhɛlpəs/",
+    "rp_ipa": "/ˈhelpəs/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "p→us link",
+      "ja": "p→us 連結",
+      "fil": "p→us pag-uugnay"
+    },
+    "gloss": {
+      "en": "help us",
+      "ja": "助けて",
+      "zh": "帮我们",
+      "ko": "우리를 도와줘"
+    },
+    "carriers": [
+      "Please {P} move this.",
+      "Can you {P} out?",
+      "They came to {P}.",
+      "{P} carry the boxes."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs081",
+    "w": "had you",
+    "ipa": "/ˈhædʒu/",
+    "rp_ipa": "/ˈhædʒu/",
+    "cs_type": "assimilation",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d+y→/dʒ/",
+      "ja": "d+y→/dʒ/",
+      "fil": "d+y→/dʒ/"
+    },
+    "gloss": {
+      "en": "had you",
+      "ja": "～していましたか",
+      "zh": "你曾...吗",
+      "ko": "너 ~했었니"
+    },
+    "carriers": [
+      "{P} ever been there?",
+      "{P} seen it before?",
+      "{P} finished it already?",
+      "{P} met him once?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs082",
+    "w": "get you",
+    "ipa": "/ˈɡɛtʃu/",
+    "rp_ipa": "/ˈɡetʃu/",
+    "cs_type": "assimilation",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t+y→/tʃ/",
+      "ja": "t+y→/tʃ/",
+      "fil": "t+y→/tʃ/"
+    },
+    "gloss": {
+      "en": "get you",
+      "ja": "あなたを得る",
+      "zh": "找到你",
+      "ko": "너를 잡다"
+    },
+    "carriers": [
+      "I'll {P} a coffee.",
+      "Let me {P} a seat.",
+      "We'll {P} there soon.",
+      "I'll {P} a ticket."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs083",
+    "w": "let you",
+    "ipa": "/ˈlɛtʃu/",
+    "rp_ipa": "/ˈletʃu/",
+    "cs_type": "assimilation",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t+y→/tʃ/",
+      "ja": "t+y→/tʃ/",
+      "fil": "t+y→/tʃ/"
+    },
+    "gloss": {
+      "en": "let you",
+      "ja": "あなたに許す",
+      "zh": "让你",
+      "ko": "너를 허락하다"
+    },
+    "carriers": [
+      "I'll {P} know soon.",
+      "They won't {P} in.",
+      "We'll {P} go early.",
+      "I'll {P} decide."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs084",
+    "w": "told you",
+    "ipa": "/ˈtoʊldʒu/",
+    "rp_ipa": "/ˈtəʊldʒu/",
+    "cs_type": "assimilation",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d+y→/dʒ/",
+      "ja": "d+y→/dʒ/",
+      "fil": "d+y→/dʒ/"
+    },
+    "gloss": {
+      "en": "told you",
+      "ja": "言ったでしょ",
+      "zh": "告诉过你",
+      "ko": "말했잖아"
+    },
+    "carriers": [
+      "I {P} so!",
+      "We {P} the news.",
+      "She {P} the truth.",
+      "I already {P} that."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs085",
+    "w": "ten men",
+    "ipa": "/ˈtɛmˈmɛn/",
+    "rp_ipa": "/ˈtemˈmen/",
+    "cs_type": "assimilation",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n→/m/ before m",
+      "ja": "m の前で n→/m/",
+      "fil": "bago ang m, n→/m/"
+    },
+    "gloss": {
+      "en": "ten men",
+      "ja": "10人の男",
+      "zh": "十个男人",
+      "ko": "열 명의 남자"
+    },
+    "carriers": [
+      "We hired {P}.",
+      "{P} were waiting.",
+      "There were {P}.",
+      "I counted {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs086",
+    "w": "most people",
+    "ipa": "/ˈmoʊsˈpipəl/",
+    "rp_ipa": "/ˈməʊsˈpiːpəl/",
+    "cs_type": "elision",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t dropped (s_p)",
+      "ja": "t 脱落(s_p)",
+      "fil": "t kinakaltas (s_p)"
+    },
+    "gloss": {
+      "en": "most people",
+      "ja": "ほとんどの人",
+      "zh": "大多数人",
+      "ko": "대부분의 사람"
+    },
+    "carriers": [
+      "{P} agree with this.",
+      "{P} like coffee.",
+      "I know {P} who tried it.",
+      "{P} were kind."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs087",
+    "w": "first time",
+    "ipa": "/ˈfɝsˈtaɪm/",
+    "rp_ipa": "/ˈfɜːsˈtaɪm/",
+    "cs_type": "elision",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t dropped (s_t)",
+      "ja": "t 脱落(s_t)",
+      "fil": "t kinakaltas (s_t)"
+    },
+    "gloss": {
+      "en": "first time",
+      "ja": "初めて",
+      "zh": "第一次",
+      "ko": "처음"
+    },
+    "carriers": [
+      "It was my {P} there.",
+      "For the {P}, it worked.",
+      "That's the {P} I've seen it.",
+      "This is the {P} today."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "cs088",
+    "w": "left turn",
+    "ipa": "/ˈlɛfˈtɝn/",
+    "rp_ipa": "/ˈlefˈtɜːn/",
+    "cs_type": "elision",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t dropped (f_t)",
+      "ja": "t 脱落(f_t)",
+      "fil": "t kinakaltas (f_t)"
+    },
+    "gloss": {
+      "en": "left turn",
+      "ja": "左折",
+      "zh": "左转",
+      "ko": "좌회전"
+    },
+    "carriers": [
+      "Make a {P} here.",
+      "Take the {P} ahead.",
+      "A {P} is coming up.",
+      "He made a {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "cs089",
+    "w": "kept quiet",
+    "ipa": "/ˈkɛpˈkwaɪət/",
+    "rp_ipa": "/ˈkepˈkwaɪət/",
+    "cs_type": "elision",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t dropped (p_k)",
+      "ja": "t 脱落(p_k)",
+      "fil": "t kinakaltas (p_k)"
+    },
+    "gloss": {
+      "en": "kept quiet",
+      "ja": "黙っていた",
+      "zh": "保持安静",
+      "ko": "조용히 했다"
+    },
+    "carriers": [
+      "She {P} the whole time.",
+      "We {P} during the show.",
+      "They {P} about it.",
+      "He {P} all evening."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs090",
+    "w": "cold day",
+    "ipa": "/ˈkoʊlˈdeɪ/",
+    "rp_ipa": "/ˈkəʊlˈdeɪ/",
+    "cs_type": "elision",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d dropped (l_d)",
+      "ja": "d 脱落(l_d)",
+      "fil": "d kinakaltas (l_d)"
+    },
+    "gloss": {
+      "en": "cold day",
+      "ja": "寒い日",
+      "zh": "寒冷的一天",
+      "ko": "추운 날"
+    },
+    "carriers": [
+      "It was a {P}.",
+      "We hiked on a {P}.",
+      "What a {P}!",
+      "It's a {P} outside."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs091",
+    "w": "look it up",
+    "ipa": "/ˈlʊkɪˈɾʌp/",
+    "rp_ipa": "/ˈlʊkɪˈtʌp/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "look-it-up links; GA flap",
+      "ja": "look-it-up 連結; GAフラップ",
+      "fil": "look-it-up pag-uugnay; GA flap"
+    },
+    "gloss": {
+      "en": "look it up",
+      "ja": "調べる",
+      "zh": "查一下",
+      "ko": "찾아보다"
+    },
+    "carriers": [
+      "I'll {P} in the dictionary.",
+      "Can you {P}?",
+      "Let me {P}.",
+      "Please {P} online."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs092",
+    "w": "think about it",
+    "ipa": "/ˈθɪŋkəˈbaʊɾɪt/",
+    "rp_ipa": "/ˈθɪŋkəˈbaʊtɪt/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "chained links; GA flap",
+      "ja": "連鎖連結; GAフラップ",
+      "fil": "sunod-sunod na pag-uugnay; GA flap"
+    },
+    "gloss": {
+      "en": "think about it",
+      "ja": "考えてみて",
+      "zh": "想想看",
+      "ko": "생각해 봐"
+    },
+    "carriers": [
+      "I'll {P}.",
+      "Let me {P}.",
+      "Please {P} carefully.",
+      "We should {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs093",
+    "w": "as soon as",
+    "ipa": "/əˈsunəz/",
+    "rp_ipa": "/əˈsuːnəz/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "as→/əz/; n→as link",
+      "ja": "as→/əz/; n→as 連結",
+      "fil": "as→/əz/; n→as pag-uugnay"
+    },
+    "gloss": {
+      "en": "as soon as",
+      "ja": "～するとすぐに",
+      "zh": "一...就",
+      "ko": "~하자마자"
+    },
+    "carriers": [
+      "Call me {P} you arrive.",
+      "I'll come {P} I can.",
+      "Leave {P} possible.",
+      "We'll start {P} ready."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "cs094",
+    "w": "such as",
+    "ipa": "/ˈsʌtʃəz/",
+    "rp_ipa": "/ˈsʌtʃəz/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "as→/əz/ links",
+      "ja": "as→/əz/ 連結",
+      "fil": "as→/əz/ pag-uugnay"
+    },
+    "gloss": {
+      "en": "such as",
+      "ja": "～のような",
+      "zh": "例如",
+      "ko": "~와 같은"
+    },
+    "carriers": [
+      "Bring fruit, {P} apples.",
+      "Pick a color {P} blue.",
+      "Try a sport {P} tennis.",
+      "Use a tool {P} a hammer."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs095",
+    "w": "end up",
+    "ipa": "/ˌɛnˈdʌp/",
+    "rp_ipa": "/ˌenˈdʌp/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d→up link",
+      "ja": "d→up 連結",
+      "fil": "d→up pag-uugnay"
+    },
+    "gloss": {
+      "en": "end up",
+      "ja": "結局～になる",
+      "zh": "最终",
+      "ko": "결국 ~하게 되다"
+    },
+    "carriers": [
+      "We might {P} late.",
+      "You'll {P} tired.",
+      "They {P} happy.",
+      "I always {P} here."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs096",
+    "w": "fill it in",
+    "ipa": "/ˈfɪlɪˈɾɪn/",
+    "rp_ipa": "/ˈfɪlɪˈtɪn/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "fill-it-in links; GA flap",
+      "ja": "fill-it-in 連結; GAフラップ",
+      "fil": "fill-it-in pag-uugnay; GA flap"
+    },
+    "gloss": {
+      "en": "fill it in",
+      "ja": "記入する",
+      "zh": "填写",
+      "ko": "기입하다"
+    },
+    "carriers": [
+      "Please {P} on the form.",
+      "Can you {P}?",
+      "I'll {P} later.",
+      "{P} carefully."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs097",
+    "w": "run out of",
+    "ipa": "/ˈrʌˈnaʊɾəv/",
+    "rp_ipa": "/ˈrʌˈnaʊtəv/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "run-out-of links; of→/əv/",
+      "ja": "run-out-of 連結; of→/əv/",
+      "fil": "run-out-of pag-uugnay; of→/əv/"
+    },
+    "gloss": {
+      "en": "run out of",
+      "ja": "～を切らす",
+      "zh": "用完",
+      "ko": "다 떨어지다"
+    },
+    "carriers": [
+      "We {P} milk.",
+      "Don't {P} time.",
+      "They {P} money.",
+      "I'll {P} ideas soon."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs098",
+    "w": "by and large",
+    "ipa": "/ˈbaɪənˈlɑrdʒ/",
+    "rp_ipa": "/ˈbaɪənˈlɑːdʒ/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "and→/ən/ link",
+      "ja": "and→/ən/ 連結",
+      "fil": "and→/ən/ pag-uugnay"
+    },
+    "gloss": {
+      "en": "by and large",
+      "ja": "概して",
+      "zh": "总的来说",
+      "ko": "대체로"
+    },
+    "carriers": [
+      "{P}, it went well.",
+      "{P}, people agreed.",
+      "It's fine, {P}.",
+      "{P}, we're ready."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "cs099",
+    "w": "aren't you",
+    "ipa": "/ˈɑrntʃu/",
+    "rp_ipa": "/ˈɑːntʃu/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t+y→/tʃ/; RP non-rhotic",
+      "ja": "t+y→/tʃ/; RPは非rhotic",
+      "fil": "t+y→/tʃ/; RP non-rhotic"
+    },
+    "gloss": {
+      "en": "aren't you",
+      "ja": "～ですよね",
+      "zh": "你不是吗",
+      "ko": "너 ~아니니"
+    },
+    "carriers": [
+      "{P} the new student?",
+      "{P} coming too?",
+      "{P} happy now?",
+      "{P} ready yet?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "cs100",
+    "w": "haven't you",
+    "ipa": "/ˈhævəntʃu/",
+    "rp_ipa": "/ˈhævəntʃu/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t+y→/tʃ/",
+      "ja": "t+y→/tʃ/",
+      "fil": "t+y→/tʃ/"
+    },
+    "gloss": {
+      "en": "haven't you",
+      "ja": "～してないの",
+      "zh": "你没...吗",
+      "ko": "너 ~안 했니"
+    },
+    "carriers": [
+      "{P} finished it?",
+      "{P} heard the news?",
+      "{P} seen it?",
+      "{P} been there?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs101",
+    "w": "about you",
+    "ipa": "/əˈbaʊtʃu/",
+    "rp_ipa": "/əˈbaʊtʃu/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t+y→/tʃ/",
+      "ja": "t+y→/tʃ/",
+      "fil": "t+y→/tʃ/"
+    },
+    "gloss": {
+      "en": "about you",
+      "ja": "あなたについて",
+      "zh": "关于你",
+      "ko": "너에 대해"
+    },
+    "carriers": [
+      "It's {P}.",
+      "I heard {P}.",
+      "This is {P}.",
+      "Tell me {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs102",
+    "w": "behind you",
+    "ipa": "/bɪˈhaɪndʒu/",
+    "rp_ipa": "/bɪˈhaɪndʒu/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d+y→/dʒ/",
+      "ja": "d+y→/dʒ/",
+      "fil": "d+y→/dʒ/"
+    },
+    "gloss": {
+      "en": "behind you",
+      "ja": "あなたの後ろに",
+      "zh": "在你后面",
+      "ko": "네 뒤에"
+    },
+    "carriers": [
+      "He's right {P}.",
+      "Look {P}!",
+      "The door is {P}.",
+      "Someone is {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs103",
+    "w": "good cook",
+    "ipa": "/ˈɡʊɡˈkʊk/",
+    "rp_ipa": "/ˈɡʊɡˈkʊk/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d→/ɡ/ before k",
+      "ja": "k の前で d→/ɡ/",
+      "fil": "bago ang k, d→/ɡ/"
+    },
+    "gloss": {
+      "en": "good cook",
+      "ja": "料理上手",
+      "zh": "好厨师",
+      "ko": "요리 잘하는 사람"
+    },
+    "carriers": [
+      "She's a {P}.",
+      "What a {P}!",
+      "He's a {P}.",
+      "Such a {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs104",
+    "w": "that boy",
+    "ipa": "/ˈðæbˈbɔɪ/",
+    "rp_ipa": "/ˈðæbˈbɔɪ/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t→/b/ before b",
+      "ja": "b の前で t→/b/",
+      "fil": "bago ang b, t→/b/"
+    },
+    "gloss": {
+      "en": "that boy",
+      "ja": "あの少年",
+      "zh": "那个男孩",
+      "ko": "저 소년"
+    },
+    "carriers": [
+      "{P} is my cousin.",
+      "I know {P}.",
+      "Tell {P} to wait.",
+      "{P} runs fast."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs105",
+    "w": "one more",
+    "ipa": "/ˈwʌmˈmɔr/",
+    "rp_ipa": "/ˈwʌmˈmɔː/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n→/m/ before m",
+      "ja": "m の前で n→/m/",
+      "fil": "bago ang m, n→/m/"
+    },
+    "gloss": {
+      "en": "one more",
+      "ja": "もう一つ",
+      "zh": "再来一个",
+      "ko": "하나 더"
+    },
+    "carriers": [
+      "Just {P}, please.",
+      "I'll have {P}.",
+      "Give me {P}.",
+      "{P} won't hurt."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "cs106",
+    "w": "brown bag",
+    "ipa": "/ˈbraʊmˈbæɡ/",
+    "rp_ipa": "/ˈbraʊmˈbæɡ/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n→/m/ before b",
+      "ja": "b の前で n→/m/",
+      "fil": "bago ang b, n→/m/"
+    },
+    "gloss": {
+      "en": "brown bag",
+      "ja": "茶色の袋",
+      "zh": "棕色袋子",
+      "ko": "갈색 가방"
+    },
+    "carriers": [
+      "She carried a {P}.",
+      "Pack a {P}.",
+      "The {P} tore.",
+      "Here's a {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs107",
+    "w": "a lot of people",
+    "ipa": "/əˈlɑɾəˈpipəl/",
+    "rp_ipa": "/əˈlɒtəˈpiːpəl/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/ə/ before consonant",
+      "ja": "子音前で of→/ə/",
+      "fil": "bago katinig, of→/ə/"
+    },
+    "gloss": {
+      "en": "a lot of people",
+      "ja": "多くの人",
+      "zh": "很多人",
+      "ko": "많은 사람들"
+    },
+    "carriers": [
+      "{P} came.",
+      "I know {P}.",
+      "{P} agreed.",
+      "There were {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs108",
+    "w": "most of them",
+    "ipa": "/ˈmoʊstəvðəm/",
+    "rp_ipa": "/ˈməʊstəvðəm/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/əv/; them→/ðəm/",
+      "ja": "of→/əv/; them→/ðəm/",
+      "fil": "of→/əv/; them→/ðəm/"
+    },
+    "gloss": {
+      "en": "most of them",
+      "ja": "彼らのほとんど",
+      "zh": "他们大多数",
+      "ko": "그들 대부분"
+    },
+    "carriers": [
+      "{P} agreed.",
+      "I know {P}.",
+      "{P} left early.",
+      "Take {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs109",
+    "w": "hand me that",
+    "ipa": "/ˈhænmiˈðæt/",
+    "rp_ipa": "/ˈhænmiˈðæt/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d dropped (n_m)",
+      "ja": "d 脱落(n_m)",
+      "fil": "d kinakaltas (n_m)"
+    },
+    "gloss": {
+      "en": "hand me that",
+      "ja": "それを取って",
+      "zh": "递给我那个",
+      "ko": "그거 건네줘"
+    },
+    "carriers": [
+      "Please {P}.",
+      "Can you {P}?",
+      "{P}, please.",
+      "Could you {P}?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs110",
+    "w": "grandpa",
+    "ipa": "/ˈɡrænpɑ/",
+    "rp_ipa": "/ˈɡrænpɑː/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d dropped (n_p)",
+      "ja": "d 脱落(n_p)",
+      "fil": "d kinakaltas (n_p)"
+    },
+    "gloss": {
+      "en": "grandpa",
+      "ja": "おじいちゃん",
+      "zh": "爷爷",
+      "ko": "할아버지"
+    },
+    "carriers": [
+      "My {P} is kind.",
+      "{P} told a story.",
+      "I visited {P}.",
+      "{P} is napping."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "cs111",
+    "w": "friendship",
+    "ipa": "/ˈfrɛnʃɪp/",
+    "rp_ipa": "/ˈfrenʃɪp/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d dropped (n_ʃ)",
+      "ja": "d 脱落(n_ʃ)",
+      "fil": "d kinakaltas (n_ʃ)"
+    },
+    "gloss": {
+      "en": "friendship",
+      "ja": "友情",
+      "zh": "友谊",
+      "ko": "우정"
+    },
+    "carriers": [
+      "Their {P} is strong.",
+      "We value {P}.",
+      "{P} matters.",
+      "It's a true {P}."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs112",
+    "w": "blind man",
+    "ipa": "/ˈblaɪnˈmæn/",
+    "rp_ipa": "/ˈblaɪnˈmæn/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d dropped (n_m)",
+      "ja": "d 脱落(n_m)",
+      "fil": "d kinakaltas (n_m)"
+    },
+    "gloss": {
+      "en": "blind man",
+      "ja": "目の不自由な人",
+      "zh": "盲人",
+      "ko": "시각장애인"
+    },
+    "carriers": [
+      "The {P} crossed safely.",
+      "A {P} asked for help.",
+      "A {P} walked by.",
+      "That {P} is brave."
+    ],
+    "cefr": "B2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs113",
+    "w": "ask her",
+    "ipa": "/ˈæskɝ/",
+    "rp_ipa": "/ɑːskə/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "her→/ɝ/(GA)/ə/(RP), h dropped",
+      "ja": "her→/ɝ/(GA)/ə/(RP)、h 脱落",
+      "fil": "her→/ɝ/(GA)/ə/(RP), kinakaltas ang h"
+    },
+    "gloss": {
+      "en": "ask her",
+      "ja": "彼女に尋ねる",
+      "zh": "问她",
+      "ko": "그녀에게 묻다"
+    },
+    "carriers": [
+      "I'll {P} later.",
+      "Please {P} first.",
+      "Let's {P}.",
+      "Can you {P}?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs114",
+    "w": "give it to him",
+    "ipa": "/ˈɡɪvɪtəˈɪm/",
+    "rp_ipa": "/ˈɡɪvɪtəˈɪm/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "to→/tə/; him→/ɪm/",
+      "ja": "to→/tə/; him→/ɪm/",
+      "fil": "to→/tə/; him→/ɪm/"
+    },
+    "gloss": {
+      "en": "give it to him",
+      "ja": "彼にそれを渡す",
+      "zh": "把它给他",
+      "ko": "그에게 그걸 줘"
+    },
+    "carriers": [
+      "Please {P}.",
+      "I'll {P}.",
+      "Can you {P}?",
+      "Let's {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs115",
+    "w": "what are you up to",
+    "ipa": "/ˈwʌɾɝjəˈʌptu/",
+    "rp_ipa": "/ˈwɒtəjəˈʌptu/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "GA flap+links; you→/jə/",
+      "ja": "GAフラップ+連結; you→/jə/",
+      "fil": "GA flap+pag-uugnay; you→/jə/"
+    },
+    "gloss": {
+      "en": "what are you up to?",
+      "ja": "何してるの？",
+      "zh": "你在做什么？",
+      "ko": "뭐 하고 있어?"
+    },
+    "carriers": [
+      "Hey, {P}?",
+      "So, {P} lately?",
+      "{P} this weekend?",
+      "{P} these days?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs116",
+    "w": "give it a go",
+    "ipa": "/ˈɡɪvɪɾəˈɡoʊ/",
+    "rp_ipa": "/ˈɡɪvɪtəˈɡəʊ/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "give-it-a links; GA flap",
+      "ja": "give-it-a 連結; GAフラップ",
+      "fil": "give-it-a pag-uugnay; GA flap"
+    },
+    "gloss": {
+      "en": "give it a go",
+      "ja": "試してみる",
+      "zh": "试一试",
+      "ko": "한번 해 봐"
+    },
+    "carriers": [
+      "Just {P}.",
+      "Why not {P}?",
+      "Let's {P}.",
+      "I'll {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs117",
+    "w": "take it easy",
+    "ipa": "/ˈteɪkɪˈɾizi/",
+    "rp_ipa": "/ˈteɪkɪˈtiːzi/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "take-it-easy links; GA flap",
+      "ja": "take-it-easy 連結; GAフラップ",
+      "fil": "take-it-easy pag-uugnay; GA flap"
+    },
+    "gloss": {
+      "en": "take it easy",
+      "ja": "気楽にね",
+      "zh": "放轻松",
+      "ko": "편하게 해"
+    },
+    "carriers": [
+      "{P}, no rush.",
+      "Please {P}.",
+      "Just {P}.",
+      "{P} this weekend."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs118",
+    "w": "once in a while",
+    "ipa": "/ˈwʌnsɪnəˈwaɪl/",
+    "rp_ipa": "/ˈwʌnsɪnəˈwaɪl/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "once-in-a all link",
+      "ja": "once-in-a 連結",
+      "fil": "once-in-a buong pag-uugnay"
+    },
+    "gloss": {
+      "en": "once in a while",
+      "ja": "たまに",
+      "zh": "偶尔",
+      "ko": "가끔"
+    },
+    "carriers": [
+      "We meet {P}.",
+      "It happens {P}.",
+      "{P}, treat yourself.",
+      "I call her {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs119",
+    "w": "up and down",
+    "ipa": "/ˈʌpənˈdaʊn/",
+    "rp_ipa": "/ˈʌpənˈdaʊn/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "and→/ən/; p→an link",
+      "ja": "and→/ən/; p→an 連結",
+      "fil": "and→/ən/; p→an pag-uugnay"
+    },
+    "gloss": {
+      "en": "up and down",
+      "ja": "上下に",
+      "zh": "上上下下",
+      "ko": "위아래로"
+    },
+    "carriers": [
+      "He paced {P}.",
+      "Prices go {P}.",
+      "The kids ran {P}.",
+      "It moved {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs120",
+    "w": "here and there",
+    "ipa": "/ˈhɪrənˈðɛr/",
+    "rp_ipa": "/ˈhɪərənˈðeə/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "and→/ən/; RP centring diphthongs",
+      "ja": "and→/ən/; RPは中向き二重母音",
+      "fil": "and→/ən/; RP centring diphthongs"
+    },
+    "gloss": {
+      "en": "here and there",
+      "ja": "あちこちに",
+      "zh": "到处",
+      "ko": "여기저기"
+    },
+    "carriers": [
+      "Papers lay {P}.",
+      "We traveled {P}.",
+      "Flowers grew {P}.",
+      "People stood {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs121",
+    "w": "over and over",
+    "ipa": "/ˈoʊvɝənˈoʊvɝ/",
+    "rp_ipa": "/ˈəʊvərənˈəʊvə/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "and→/ən/; RP linking r",
+      "ja": "and→/ən/; RPは linking r",
+      "fil": "and→/ən/; RP linking r"
+    },
+    "gloss": {
+      "en": "over and over",
+      "ja": "何度も",
+      "zh": "一遍又一遍",
+      "ko": "몇 번이고"
+    },
+    "carriers": [
+      "She read it {P}.",
+      "We practiced {P}.",
+      "It played {P}.",
+      "He said it {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs122",
+    "w": "don't you worry",
+    "ipa": "/ˈdoʊntʃuˈwɝi/",
+    "rp_ipa": "/ˈdəʊntʃuˈwʌri/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t+you→/tʃ/",
+      "ja": "t+you→/tʃ/",
+      "fil": "t+you→/tʃ/"
+    },
+    "gloss": {
+      "en": "don't you worry",
+      "ja": "心配しないで",
+      "zh": "你别担心",
+      "ko": "걱정 마"
+    },
+    "carriers": [
+      "{P}, it'll be fine.",
+      "{P} about a thing.",
+      "{P}, I've got this.",
+      "Please {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs123",
+    "w": "what do you think",
+    "ipa": "/ˈwʌɾəjəˈθɪŋk/",
+    "rp_ipa": "/ˈwɒtdʒəˈθɪŋk/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "GA flap+reduce; RP d+you→/dʒə/",
+      "ja": "GAフラップ+弱化; RPは d+you→/dʒə/",
+      "fil": "GA flap+reduce; RP d+you→/dʒə/"
+    },
+    "gloss": {
+      "en": "what do you think?",
+      "ja": "どう思う？",
+      "zh": "你觉得呢？",
+      "ko": "어떻게 생각해?"
+    },
+    "carriers": [
+      "So, {P}?",
+      "{P} of the plan?",
+      "Tell me, {P}?",
+      "Hey, {P}?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs124",
+    "w": "could you tell me",
+    "ipa": "/ˈkʊdʒuˈtɛlmi/",
+    "rp_ipa": "/ˈkʊdʒuˈtelmi/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d+you→/dʒ/",
+      "ja": "d+you→/dʒ/",
+      "fil": "d+you→/dʒ/"
+    },
+    "gloss": {
+      "en": "could you tell me?",
+      "ja": "教えてくれますか？",
+      "zh": "你能告诉我吗？",
+      "ko": "알려 주시겠어요?"
+    },
+    "carriers": [
+      "{P} the way?",
+      "Excuse me, {P} the time?",
+      "{P} your name?",
+      "Please, {P}?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs125",
+    "w": "would you mind closing",
+    "ipa": "/ˈwʊdʒuˈmaɪnˈkloʊzɪŋ/",
+    "rp_ipa": "/ˈwʊdʒuˈmaɪnˈkləʊzɪŋ/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d+you→/dʒ/; mind d elided",
+      "ja": "d+you→/dʒ/; mind の d 脱落",
+      "fil": "d+you→/dʒ/; kinakaltas ang d sa mind"
+    },
+    "gloss": {
+      "en": "would you mind closing",
+      "ja": "閉めていただけますか",
+      "zh": "你介意关一下吗",
+      "ko": "닫아 주시겠어요"
+    },
+    "carriers": [
+      "{P} the window?",
+      "{P} the door?",
+      "Excuse me, {P} it?",
+      "Sorry, {P} that?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs126",
+    "w": "how's your day",
+    "ipa": "/ˈhaʊʒɝˈdeɪ/",
+    "rp_ipa": "/ˈhaʊʒəˈdeɪ/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "z+your→/ʒ/",
+      "ja": "z+your→/ʒ/",
+      "fil": "z+your→/ʒ/"
+    },
+    "gloss": {
+      "en": "how's your day?",
+      "ja": "今日はどう？",
+      "zh": "你今天过得怎样？",
+      "ko": "오늘 어때?"
+    },
+    "carriers": [
+      "So, {P}?",
+      "Hi, {P}?",
+      "Hey, {P} going?",
+      "{P} so far?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs127",
+    "w": "as you wish",
+    "ipa": "/əˈʒuˈwɪʃ/",
+    "rp_ipa": "/əˈʒuˈwɪʃ/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "z+you→/ʒ/",
+      "ja": "z+you→/ʒ/",
+      "fil": "z+you→/ʒ/"
+    },
+    "gloss": {
+      "en": "as you wish",
+      "ja": "お望みのままに",
+      "zh": "如你所愿",
+      "ko": "원하는 대로"
+    },
+    "carriers": [
+      "{P}, sir.",
+      "{P}, then.",
+      "As you like — {P}.",
+      "Fine, {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs128",
+    "w": "press your",
+    "ipa": "/ˈprɛʃɝ/",
+    "rp_ipa": "/ˈpreʃə/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "s+your→/ʃ/",
+      "ja": "s+your→/ʃ/",
+      "fil": "s+your→/ʃ/"
+    },
+    "gloss": {
+      "en": "press your",
+      "ja": "押してください",
+      "zh": "按你的",
+      "ko": "당신의 ~을 누르다"
+    },
+    "carriers": [
+      "{P} card here.",
+      "Please {P} button.",
+      "{P} hand against it.",
+      "{P} key now."
+    ],
+    "cefr": "B2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs129",
+    "w": "I'm going to",
+    "ipa": "/ˈaɪməˈɡʌnə/",
+    "rp_ipa": "/ˈaɪməˈɡʌnə/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "going to→/ɡʌnə/",
+      "ja": "going to→/ɡʌnə/",
+      "fil": "going to→/ɡʌnə/"
+    },
+    "gloss": {
+      "en": "I'm going to (gonna)",
+      "ja": "～するつもり",
+      "zh": "我要",
+      "ko": "~할 거야"
+    },
+    "carriers": [
+      "{P} call her.",
+      "{P} try again.",
+      "I think {P} win.",
+      "{P} leave soon."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs130",
+    "w": "want to go",
+    "ipa": "/ˈwɑnəˈɡoʊ/",
+    "rp_ipa": "/ˈwɒnəˈɡəʊ/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "want to→/wɑnə/",
+      "ja": "want to→/wɒnə/",
+      "fil": "want to→/wɑnə/"
+    },
+    "gloss": {
+      "en": "want to go (wanna)",
+      "ja": "行きたい",
+      "zh": "想去",
+      "ko": "가고 싶어"
+    },
+    "carriers": [
+      "I {P} home.",
+      "Do you {P}?",
+      "We {P} now.",
+      "They {P} too."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "id": "cs131",
+    "w": "a glass of water",
+    "ipa": "/əˈɡlæsəˈwɔɾɝ/",
+    "rp_ipa": "/əˈɡlɑːsəˈwɔːtə/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/ə/; GA flap on water",
+      "ja": "of→/ə/; GAは water を flap",
+      "fil": "of→/ə/; sa GA, flap ang water"
+    },
+    "gloss": {
+      "en": "a glass of water",
+      "ja": "コップ一杯の水",
+      "zh": "一杯水",
+      "ko": "물 한 잔"
+    },
+    "carriers": [
+      "I'd like {P}.",
+      "She poured {P}.",
+      "{P}, please.",
+      "Bring me {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs132",
+    "w": "cup of coffee",
+    "ipa": "/ˈkʌpəˈkɔfi/",
+    "rp_ipa": "/ˈkʌpəˈkɒfi/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/ə/ before consonant",
+      "ja": "子音前で of→/ə/",
+      "fil": "bago katinig, of→/ə/"
+    },
+    "gloss": {
+      "en": "cup of coffee",
+      "ja": "一杯のコーヒー",
+      "zh": "一杯咖啡",
+      "ko": "커피 한 잔"
+    },
+    "carriers": [
+      "I'd like a {P}.",
+      "A {P}, please.",
+      "She made a {P}.",
+      "Want a {P}?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs133",
+    "w": "the end of the day",
+    "ipa": "/ðiˈɛndəvðəˈdeɪ/",
+    "rp_ipa": "/ðiˈendəvðəˈdeɪ/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/əv/; the→/ðə/",
+      "ja": "of→/əv/; the→/ðə/",
+      "fil": "of→/əv/; the→/ðə/"
+    },
+    "gloss": {
+      "en": "the end of the day",
+      "ja": "結局のところ",
+      "zh": "归根结底",
+      "ko": "결국"
+    },
+    "carriers": [
+      "{P}, we're tired.",
+      "It's quiet {P}.",
+      "{P}, we go home.",
+      "By {P}, it's done."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs134",
+    "w": "sooner or later",
+    "ipa": "/ˈsunɝɝˈleɪɾɝ/",
+    "rp_ipa": "/ˈsuːnərɔːˈleɪtə/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "or→/ɝ/(GA); GA flap later",
+      "ja": "or→/ɝ/(GA); GAは later を flap",
+      "fil": "or→/ɝ/(GA); sa GA, flap ang later"
+    },
+    "gloss": {
+      "en": "sooner or later",
+      "ja": "遅かれ早かれ",
+      "zh": "迟早",
+      "ko": "조만간"
+    },
+    "carriers": [
+      "{P}, you'll learn.",
+      "It'll happen {P}.",
+      "{P}, we all do.",
+      "You'll know {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs135",
+    "w": "now and then",
+    "ipa": "/ˈnaʊənˈðɛn/",
+    "rp_ipa": "/ˈnaʊənˈðen/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "and→/ən/ (d dropped)",
+      "ja": "and→/ən/(d 脱落)",
+      "fil": "and→/ən/ (kinakaltas ang d)"
+    },
+    "gloss": {
+      "en": "now and then",
+      "ja": "時々",
+      "zh": "偶尔",
+      "ko": "이따금"
+    },
+    "carriers": [
+      "We meet {P}.",
+      "It rains {P}.",
+      "{P}, I visit.",
+      "She calls {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs136",
+    "w": "ladies and gentlemen",
+    "ipa": "/ˈleɪdizənˈdʒɛnəlmən/",
+    "rp_ipa": "/ˈleɪdizənˈdʒentəlmən/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "and→/ən/; GA flaps gentle",
+      "ja": "and→/ən/; GAは gentle を flap",
+      "fil": "and→/ən/; sa GA, flap ang gentle"
+    },
+    "gloss": {
+      "en": "ladies and gentlemen",
+      "ja": "皆様",
+      "zh": "女士们先生们",
+      "ko": "신사 숙녀 여러분"
+    },
+    "carriers": [
+      "{P}, welcome.",
+      "{P}, please sit.",
+      "Good evening, {P}.",
+      "{P}, the show begins."
+    ],
+    "cefr": "B2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs137",
+    "w": "I could have gone",
+    "ipa": "/ˌaɪkʊɾəvˈɡɔn/",
+    "rp_ipa": "/ˌaɪkʊdəvˈɡɒn/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "have→/əv/; GA flap could",
+      "ja": "have→/əv/; GAは could を flap",
+      "fil": "have→/əv/; sa GA, flap ang could"
+    },
+    "gloss": {
+      "en": "I could have gone",
+      "ja": "行けたのに",
+      "zh": "我本可以去",
+      "ko": "갈 수 있었는데"
+    },
+    "carriers": [
+      "{P} too.",
+      "{P}, but I stayed.",
+      "Honestly, {P}.",
+      "{P} with you."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs138",
+    "w": "put it on",
+    "ipa": "/ˌpʊɾɪˈɾɑn/",
+    "rp_ipa": "/ˌpʊtɪˈtɒn/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "put-it-on links; GA flap",
+      "ja": "put-it-on 連結; GAフラップ",
+      "fil": "put-it-on pag-uugnay; GA flap"
+    },
+    "gloss": {
+      "en": "put it on",
+      "ja": "着る",
+      "zh": "穿上",
+      "ko": "입다"
+    },
+    "carriers": [
+      "Here's your coat — please {P}.",
+      "It's cold, so {P}.",
+      "Grab your hat and {P}.",
+      "{P} before you leave."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs139",
+    "w": "wake up",
+    "ipa": "/ˌweɪˈkʌp/",
+    "rp_ipa": "/ˌweɪˈkʌp/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "k→up link",
+      "ja": "k→up 連結",
+      "fil": "k→up pag-uugnay"
+    },
+    "gloss": {
+      "en": "wake up",
+      "ja": "目を覚ます",
+      "zh": "醒来",
+      "ko": "깨다"
+    },
+    "carriers": [
+      "I {P} early today.",
+      "Please {P} now.",
+      "Time to {P}.",
+      "We {P} at dawn."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs140",
+    "w": "stand up",
+    "ipa": "/ˌstænˈdʌp/",
+    "rp_ipa": "/ˌstænˈdʌp/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d→up link",
+      "ja": "d→up 連結",
+      "fil": "d→up pag-uugnay"
+    },
+    "gloss": {
+      "en": "stand up",
+      "ja": "立つ",
+      "zh": "站起来",
+      "ko": "일어서다"
+    },
+    "carriers": [
+      "Please {P} now.",
+      "Everyone, {P}.",
+      "Let's {P} together.",
+      "He told me to {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs141",
+    "w": "an egg",
+    "ipa": "/əˈnɛɡ/",
+    "rp_ipa": "/əˈneɡ/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n→egg link",
+      "ja": "n→egg 連結",
+      "fil": "n→egg pag-uugnay"
+    },
+    "gloss": {
+      "en": "an egg",
+      "ja": "卵1つ",
+      "zh": "一个鸡蛋",
+      "ko": "달걀 하나"
+    },
+    "carriers": [
+      "I cooked {P}.",
+      "She wants {P}.",
+      "There's {P} left.",
+      "He dropped {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs142",
+    "w": "his eyes",
+    "ipa": "/hɪˈzaɪz/",
+    "rp_ipa": "/hɪˈzaɪz/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "z→eyes link",
+      "ja": "z→eyes 連結",
+      "fil": "z→eyes pag-uugnay"
+    },
+    "gloss": {
+      "en": "his eyes",
+      "ja": "彼の目",
+      "zh": "他的眼睛",
+      "ko": "그의 눈"
+    },
+    "carriers": [
+      "I love {P}.",
+      "{P} are blue.",
+      "Look at {P}.",
+      "{P} were closed."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs143",
+    "w": "this one",
+    "ipa": "/ˈðɪsˌwʌn/",
+    "rp_ipa": "/ˈðɪsˌwʌn/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "s→one link",
+      "ja": "s→one 連結",
+      "fil": "s→one pag-uugnay"
+    },
+    "gloss": {
+      "en": "this one",
+      "ja": "これ",
+      "zh": "这个",
+      "ko": "이거"
+    },
+    "carriers": [
+      "I'll take {P}.",
+      "{P} is mine.",
+      "Try {P} instead.",
+      "{P} looks better."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs144",
+    "w": "send you",
+    "ipa": "/ˈsɛndʒu/",
+    "rp_ipa": "/ˈsendʒu/",
+    "cs_type": "assimilation",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d+y→/dʒ/",
+      "ja": "d+y→/dʒ/",
+      "fil": "d+y→/dʒ/"
+    },
+    "gloss": {
+      "en": "send you",
+      "ja": "あなたに送る",
+      "zh": "发给你",
+      "ko": "너에게 보내다"
+    },
+    "carriers": [
+      "I'll {P} the file.",
+      "We'll {P} a copy.",
+      "They'll {P} the form.",
+      "Let me {P} it."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs145",
+    "w": "meet you",
+    "ipa": "/ˈmiˈtʃu/",
+    "rp_ipa": "/ˈmiːˈtʃu/",
+    "cs_type": "assimilation",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t+y→/tʃ/",
+      "ja": "t+y→/tʃ/",
+      "fil": "t+y→/tʃ/"
+    },
+    "gloss": {
+      "en": "meet you",
+      "ja": "あなたに会う",
+      "zh": "见到你",
+      "ko": "너를 만나다"
+    },
+    "carriers": [
+      "Nice to {P}.",
+      "I'll {P} there.",
+      "We'll {P} soon.",
+      "Glad to {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "cs146",
+    "w": "ten cups",
+    "ipa": "/ˈtɛŋˈkʌps/",
+    "rp_ipa": "/ˈteŋˈkʌps/",
+    "cs_type": "assimilation",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n→/ŋ/ before k",
+      "ja": "k の前で n→/ŋ/",
+      "fil": "bago ang k, n→/ŋ/"
+    },
+    "gloss": {
+      "en": "ten cups",
+      "ja": "10個のカップ",
+      "zh": "十个杯子",
+      "ko": "열 개의 컵"
+    },
+    "carriers": [
+      "We need {P}.",
+      "There are {P}.",
+      "Buy {P}.",
+      "I counted {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs147",
+    "w": "green car",
+    "ipa": "/ˈɡriŋˈkɑr/",
+    "rp_ipa": "/ˈɡriːŋˈkɑː/",
+    "cs_type": "assimilation",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n→/ŋ/ before k",
+      "ja": "k の前で n→/ŋ/",
+      "fil": "bago ang k, n→/ŋ/"
+    },
+    "gloss": {
+      "en": "green car",
+      "ja": "緑の車",
+      "zh": "绿色的车",
+      "ko": "초록색 차"
+    },
+    "carriers": [
+      "A {P} drove by.",
+      "The {P} is mine.",
+      "I want a {P}.",
+      "That {P} is fast."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "cs148",
+    "w": "soft drink",
+    "ipa": "/ˈsɔfˈdrɪŋk/",
+    "rp_ipa": "/ˈsɒfˈdrɪŋk/",
+    "cs_type": "elision",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t dropped (f_d)",
+      "ja": "t 脱落(f_d)",
+      "fil": "t kinakaltas (f_d)"
+    },
+    "gloss": {
+      "en": "soft drink",
+      "ja": "清涼飲料",
+      "zh": "软饮料",
+      "ko": "탄산음료"
+    },
+    "carriers": [
+      "I'll have a {P}.",
+      "Order a {P}.",
+      "A {P}, please.",
+      "He drank a {P}."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs149",
+    "w": "hot dog",
+    "ipa": "/ˈhɑˈdɔɡ/",
+    "rp_ipa": "/ˈhɒˈdɒɡ/",
+    "cs_type": "elision",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t dropped (t_d)",
+      "ja": "t 脱落(t_d)",
+      "fil": "t kinakaltas (t_d)"
+    },
+    "gloss": {
+      "en": "hot dog",
+      "ja": "ホットドッグ",
+      "zh": "热狗",
+      "ko": "핫도그"
+    },
+    "carriers": [
+      "I'd like a {P}.",
+      "He ate a {P}.",
+      "A {P}, please.",
+      "She grilled a {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs150",
+    "w": "wild bird",
+    "ipa": "/ˈwaɪlˈbɝd/",
+    "rp_ipa": "/ˈwaɪlˈbɜːd/",
+    "cs_type": "elision",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d dropped (l_b)",
+      "ja": "d 脱落(l_b)",
+      "fil": "d kinakaltas (l_b)"
+    },
+    "gloss": {
+      "en": "wild bird",
+      "ja": "野鳥",
+      "zh": "野鸟",
+      "ko": "들새"
+    },
+    "carriers": [
+      "A {P} flew past.",
+      "We saw a {P}.",
+      "The {P} sang.",
+      "That {P} is rare."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "cs151",
+    "w": "grand prize",
+    "ipa": "/ˈɡrænˈpraɪz/",
+    "rp_ipa": "/ˈɡrænˈpraɪz/",
+    "cs_type": "elision",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d dropped (n_p)",
+      "ja": "d 脱落(n_p)",
+      "fil": "d kinakaltas (n_p)"
+    },
+    "gloss": {
+      "en": "grand prize",
+      "ja": "大賞",
+      "zh": "大奖",
+      "ko": "대상"
+    },
+    "carriers": [
+      "She won the {P}.",
+      "He took the {P}.",
+      "The {P} went to her.",
+      "They claimed the {P}."
+    ],
+    "cefr": "B2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs152",
+    "w": "at the end of",
+    "ipa": "/ətðiˈɛndəv/",
+    "rp_ipa": "/ətðiˈendəv/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "end-of link; of→/əv/",
+      "ja": "end-of 連結; of→/əv/",
+      "fil": "end-of pag-uugnay; of→/əv/"
+    },
+    "gloss": {
+      "en": "at the end of",
+      "ja": "～の終わりに",
+      "zh": "在...的末尾",
+      "ko": "~의 끝에"
+    },
+    "carriers": [
+      "{P} the day, we rest.",
+      "It's {P} the street.",
+      "Wait {P} the line.",
+      "{P} the month, we pay."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs153",
+    "w": "turn it off",
+    "ipa": "/ˈtɝnɪˈɾɔf/",
+    "rp_ipa": "/ˈtɜːnɪˈtɒf/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "turn-it-off links; GA flap",
+      "ja": "turn-it-off 連結; GAフラップ",
+      "fil": "turn-it-off pag-uugnay; GA flap"
+    },
+    "gloss": {
+      "en": "turn it off",
+      "ja": "消す",
+      "zh": "关掉它",
+      "ko": "그것을 끄다"
+    },
+    "carriers": [
+      "Please {P}.",
+      "Can you {P}?",
+      "I'll {P}.",
+      "{P} before bed."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs154",
+    "w": "works of art",
+    "ipa": "/ˈwɝksəˈvɑrt/",
+    "rp_ipa": "/ˈwɜːksəˈvɑːt/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/əv/ links into art",
+      "ja": "of→/əv/ が art へ連結",
+      "fil": "of→/əv/ umuugnay sa art"
+    },
+    "gloss": {
+      "en": "works of art",
+      "ja": "芸術作品",
+      "zh": "艺术品",
+      "ko": "예술 작품"
+    },
+    "carriers": [
+      "These are {P}.",
+      "We admired the {P}.",
+      "Such {P}!",
+      "Famous {P} hang here."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "cs155",
+    "w": "none of us",
+    "ipa": "/ˈnʌnəˈvʌs/",
+    "rp_ipa": "/ˈnʌnəˈvʌs/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/əv/; v→us link",
+      "ja": "of→/əv/; v→us 連結",
+      "fil": "of→/əv/; v→us pag-uugnay"
+    },
+    "gloss": {
+      "en": "none of us",
+      "ja": "私たちの誰も～ない",
+      "zh": "我们都不",
+      "ko": "우리 중 누구도"
+    },
+    "carriers": [
+      "{P} knew.",
+      "{P} agreed.",
+      "It surprised {P}.",
+      "{P} were ready."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs156",
+    "w": "can you",
+    "ipa": "/ˈkæɲu/",
+    "rp_ipa": "/ˈkæɲu/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n+y→/ɲ/ palatalised",
+      "ja": "n+y→/ɲ/ 硬口蓋化",
+      "fil": "n+y→/ɲ/ palatalised"
+    },
+    "gloss": {
+      "en": "can you",
+      "ja": "～できますか",
+      "zh": "你能...吗",
+      "ko": "~할 수 있니"
+    },
+    "carriers": [
+      "{P} hear me?",
+      "{P} help?",
+      "{P} swim?",
+      "{P} see it?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs157",
+    "w": "when you",
+    "ipa": "/ˈwɛɲu/",
+    "rp_ipa": "/ˈweɲu/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n+y→/ɲ/",
+      "ja": "n+y→/ɲ/",
+      "fil": "n+y→/ɲ/"
+    },
+    "gloss": {
+      "en": "when you",
+      "ja": "あなたが～するとき",
+      "zh": "当你...时",
+      "ko": "네가 ~할 때"
+    },
+    "carriers": [
+      "Call me {P} arrive.",
+      "I'll wait {P} finish.",
+      "Smile {P} can.",
+      "Leave {P} like."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs158",
+    "w": "hot potato",
+    "ipa": "/ˈhɑpːəˈteɪɾoʊ/",
+    "rp_ipa": "/ˈhɒpːəˈteɪtəʊ/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t→/p/ before p",
+      "ja": "p の前で t→/p/",
+      "fil": "bago ang p, t→/p/"
+    },
+    "gloss": {
+      "en": "hot potato",
+      "ja": "厄介な問題",
+      "zh": "烫手山芋",
+      "ko": "뜨거운 감자"
+    },
+    "carriers": [
+      "It's a {P}.",
+      "That topic is a {P}.",
+      "A real {P}!",
+      "He dropped the {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs159",
+    "w": "sweet girl",
+    "ipa": "/ˈswiɡˈɡɝl/",
+    "rp_ipa": "/ˈswiːɡˈɡɜːl/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t→/ɡ/ before g",
+      "ja": "g の前で t→/ɡ/",
+      "fil": "bago ang g, t→/ɡ/"
+    },
+    "gloss": {
+      "en": "sweet girl",
+      "ja": "かわいい子",
+      "zh": "甜美的女孩",
+      "ko": "착한 소녀"
+    },
+    "carriers": [
+      "She's a {P}.",
+      "What a {P}!",
+      "Such a {P}.",
+      "He met a {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "cs160",
+    "w": "kept going",
+    "ipa": "/ˈkɛpˈɡoʊɪŋ/",
+    "rp_ipa": "/ˈkepˈɡəʊɪŋ/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t dropped (p_ɡ)",
+      "ja": "t 脱落(p_ɡ)",
+      "fil": "t kinakaltas (p_ɡ)"
+    },
+    "gloss": {
+      "en": "kept going",
+      "ja": "続けた",
+      "zh": "继续",
+      "ko": "계속 갔다"
+    },
+    "carriers": [
+      "We {P} anyway.",
+      "They {P} all night.",
+      "She {P} despite it.",
+      "He {P} for hours."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs161",
+    "w": "looked back",
+    "ipa": "/ˈlʊkˈbæk/",
+    "rp_ipa": "/ˈlʊkˈbæk/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t dropped (k_b)",
+      "ja": "t 脱落(k_b)",
+      "fil": "t kinakaltas (k_b)"
+    },
+    "gloss": {
+      "en": "looked back",
+      "ja": "振り返った",
+      "zh": "回头看",
+      "ko": "돌아봤다"
+    },
+    "carriers": [
+      "She {P} once.",
+      "We {P} at the door.",
+      "He {P} sadly.",
+      "They {P} together."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs162",
+    "w": "round table",
+    "ipa": "/ˈraʊnˈteɪbəl/",
+    "rp_ipa": "/ˈraʊnˈteɪbəl/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d dropped (n_t)",
+      "ja": "d 脱落(n_t)",
+      "fil": "d kinakaltas (n_t)"
+    },
+    "gloss": {
+      "en": "round table",
+      "ja": "円卓",
+      "zh": "圆桌",
+      "ko": "원탁"
+    },
+    "carriers": [
+      "We sat at a {P}.",
+      "The {P} is full.",
+      "Buy a {P}.",
+      "A {P} fits everyone."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs163",
+    "w": "find them",
+    "ipa": "/ˈfaɪnðəm/",
+    "rp_ipa": "/ˈfaɪnðəm/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d dropped; them→/ðəm/",
+      "ja": "d 脱落; them→/ðəm/",
+      "fil": "d kinakaltas; them→/ðəm/"
+    },
+    "gloss": {
+      "en": "find them",
+      "ja": "彼らを見つける",
+      "zh": "找到他们",
+      "ko": "그들을 찾다"
+    },
+    "carriers": [
+      "I'll {P} soon.",
+      "Please {P}.",
+      "Can you {P}?",
+      "Let's {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs164",
+    "w": "as a matter of fact",
+    "ipa": "/əzəˈmæɾɝəˈfækt/",
+    "rp_ipa": "/əzəˈmætərəˈfækt/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "chained; GA flap; RP linking r",
+      "ja": "連鎖; GAフラップ; RP linking r",
+      "fil": "sunod-sunod; GA flap; RP linking r"
+    },
+    "gloss": {
+      "en": "as a matter of fact",
+      "ja": "実のところ",
+      "zh": "事实上",
+      "ko": "사실은"
+    },
+    "carriers": [
+      "{P}, I agree.",
+      "{P}, it's true.",
+      "Well, {P}.",
+      "{P}, she called."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs165",
+    "w": "a friend of mine",
+    "ipa": "/əˈfrɛndəˈvmaɪn/",
+    "rp_ipa": "/əˈfrendəˈvmaɪn/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/əv/ links",
+      "ja": "of→/əv/ 連結",
+      "fil": "of→/əv/ pag-uugnay"
+    },
+    "gloss": {
+      "en": "a friend of mine",
+      "ja": "私の友人",
+      "zh": "我的一个朋友",
+      "ko": "내 친구"
+    },
+    "carriers": [
+      "He's {P}.",
+      "She's {P}.",
+      "That's {P}.",
+      "Meet {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs166",
+    "w": "in and out",
+    "ipa": "/ˈɪnəˈnaʊt/",
+    "rp_ipa": "/ˈɪnəˈnaʊt/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "and→/ən/; n→out link",
+      "ja": "and→/ən/; n→out 連結",
+      "fil": "and→/ən/; n→out pag-uugnay"
+    },
+    "gloss": {
+      "en": "in and out",
+      "ja": "出たり入ったり",
+      "zh": "进进出出",
+      "ko": "들락날락"
+    },
+    "carriers": [
+      "He went {P}.",
+      "People moved {P}.",
+      "It breathes {P}.",
+      "She ran {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs167",
+    "w": "little by little",
+    "ipa": "/ˈlɪɾəlbaɪˈlɪɾəl/",
+    "rp_ipa": "/ˈlɪtəlbaɪˈlɪtəl/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "GA flaps both t",
+      "ja": "GAは両方の t を flap",
+      "fil": "sa GA, parehong t ay flap"
+    },
+    "gloss": {
+      "en": "little by little",
+      "ja": "少しずつ",
+      "zh": "一点一点地",
+      "ko": "조금씩"
+    },
+    "carriers": [
+      "We improve {P}.",
+      "It grows {P}.",
+      "{P}, we learn.",
+      "Save {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs168",
+    "w": "not yet",
+    "ipa": "/ˈnɑˈtʃɛt/",
+    "rp_ipa": "/ˈnɒˈtʃet/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t+yet→/tʃ/",
+      "ja": "t+yet→/tʃ/",
+      "fil": "t+yet→/tʃ/"
+    },
+    "gloss": {
+      "en": "not yet",
+      "ja": "まだだ",
+      "zh": "还没",
+      "ko": "아직"
+    },
+    "carriers": [
+      "{P}, sorry.",
+      "It's {P} done.",
+      "No, {P}.",
+      "{P}, but soon."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "id": "cs169",
+    "w": "last year",
+    "ipa": "/ˈlæsˈtʃɪr/",
+    "rp_ipa": "/ˈlɑːsˈtʃɪə/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t+year→/tʃ/; (t retained, palatalised)",
+      "ja": "t+year→/tʃ/(硬口蓋化)",
+      "fil": "t+year→/tʃ/ (palatalised, t panatili)"
+    },
+    "gloss": {
+      "en": "last year",
+      "ja": "去年",
+      "zh": "去年",
+      "ko": "작년"
+    },
+    "carriers": [
+      "I visited {P}.",
+      "{P} was hard.",
+      "We met {P}.",
+      "It rained a lot {P}."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs170",
+    "w": "would you believe",
+    "ipa": "/ˈwʊdʒubɪˈliv/",
+    "rp_ipa": "/ˈwʊdʒubɪˈliːv/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d+you→/dʒ/",
+      "ja": "d+you→/dʒ/",
+      "fil": "d+you→/dʒ/"
+    },
+    "gloss": {
+      "en": "would you believe",
+      "ja": "信じられる？",
+      "zh": "你相信吗",
+      "ko": "믿어지니"
+    },
+    "carriers": [
+      "{P} it?",
+      "{P} the news?",
+      "Honestly, {P}?",
+      "{P} that?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "cs171",
+    "w": "did you know",
+    "ipa": "/ˈdɪdʒuˈnoʊ/",
+    "rp_ipa": "/ˈdɪdʒuˈnəʊ/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d+you→/dʒ/",
+      "ja": "d+you→/dʒ/",
+      "fil": "d+you→/dʒ/"
+    },
+    "gloss": {
+      "en": "did you know",
+      "ja": "知ってた？",
+      "zh": "你知道吗",
+      "ko": "알고 있었어?"
+    },
+    "carriers": [
+      "{P} the answer?",
+      "{P} about it?",
+      "Hey, {P}?",
+      "{P} the truth?"
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs172",
+    "w": "the best of both",
+    "ipa": "/ðəˈbɛsəvˈboʊθ/",
+    "rp_ipa": "/ðəˈbesəvˈbəʊθ/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "best t dropped; of→/əv/",
+      "ja": "best の t 脱落; of→/əv/",
+      "fil": "t kinakaltas sa best; of→/əv/"
+    },
+    "gloss": {
+      "en": "the best of both",
+      "ja": "両方のいいとこ取り",
+      "zh": "两全其美",
+      "ko": "둘 다의 장점"
+    },
+    "carriers": [
+      "We got {P} worlds.",
+      "It's {P}.",
+      "Enjoy {P}.",
+      "That's {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs173",
+    "w": "a matter of time",
+    "ipa": "/əˈmæɾɝəˈtaɪm/",
+    "rp_ipa": "/əˈmætərəˈtaɪm/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/ə/; GA flap matter",
+      "ja": "of→/ə/; GAは matter を flap",
+      "fil": "of→/ə/; sa GA, flap ang matter"
+    },
+    "gloss": {
+      "en": "a matter of time",
+      "ja": "時間の問題",
+      "zh": "时间问题",
+      "ko": "시간 문제"
+    },
+    "carriers": [
+      "It's {P}.",
+      "Just {P}.",
+      "Only {P}.",
+      "It's only {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs174",
+    "w": "plenty of room",
+    "ipa": "/ˈplɛnɾiəˈrum/",
+    "rp_ipa": "/ˈplentiəˈruːm/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/ə/; GA flap plenty",
+      "ja": "of→/ə/; GAは plenty を flap",
+      "fil": "of→/ə/; sa GA, flap ang plenty"
+    },
+    "gloss": {
+      "en": "plenty of room",
+      "ja": "十分な余地",
+      "zh": "很多空间",
+      "ko": "충분한 공간"
+    },
+    "carriers": [
+      "There's {P}.",
+      "We have {P}.",
+      "{P} here.",
+      "It has {P}."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs175",
+    "w": "the rest of them",
+    "ipa": "/ðəˈrɛstəvðəm/",
+    "rp_ipa": "/ðəˈrestəvðəm/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/əv/; them→/ðəm/",
+      "ja": "of→/əv/; them→/ðəm/",
+      "fil": "of→/əv/; them→/ðəm/"
+    },
+    "gloss": {
+      "en": "the rest of them",
+      "ja": "残りの彼ら",
+      "zh": "其余的",
+      "ko": "나머지"
+    },
+    "carriers": [
+      "Take {P}.",
+      "{P} agreed.",
+      "Where are {P}?",
+      "{P} stayed."
+    ],
+    "cefr": "B2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs176",
+    "w": "first and foremost",
+    "ipa": "/ˈfɝstənˈfɔrmoʊst/",
+    "rp_ipa": "/ˈfɜːstənˈfɔːməʊst/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "and→/ən/ (d dropped)",
+      "ja": "and→/ən/(d 脱落)",
+      "fil": "and→/ən/ (kinakaltas ang d)"
+    },
+    "gloss": {
+      "en": "first and foremost",
+      "ja": "何よりもまず",
+      "zh": "首先",
+      "ko": "무엇보다도"
+    },
+    "carriers": [
+      "{P}, be safe.",
+      "{P}, we plan.",
+      "Above all, {P}.",
+      "{P}, stay calm."
+    ],
+    "cefr": "B2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs177",
+    "w": "hands and knees",
+    "ipa": "/ˈhænzənˈniz/",
+    "rp_ipa": "/ˈhænzənˈniːz/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "and→/ən/; silent k",
+      "ja": "and→/ən/; k は黙字",
+      "fil": "and→/ən/; tahimik na k"
+    },
+    "gloss": {
+      "en": "hands and knees",
+      "ja": "四つん這い",
+      "zh": "手脚并用",
+      "ko": "엎드려"
+    },
+    "carriers": [
+      "He was on {P}.",
+      "We scrubbed on {P}.",
+      "She crawled on {P}.",
+      "On {P}, they searched."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "cs178",
+    "w": "at all",
+    "ipa": "/əˈtɔl/",
+    "rp_ipa": "/əˈtɔːl/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t→all link",
+      "ja": "t→all 連結",
+      "fil": "t→all pag-uugnay"
+    },
+    "gloss": {
+      "en": "at all",
+      "ja": "全く",
+      "zh": "完全",
+      "ko": "전혀"
+    },
+    "carriers": [
+      "It's not hard {P}.",
+      "I don't mind {P}.",
+      "Nothing {P}.",
+      "Is it cold {P}?"
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "cs179",
+    "w": "big apple",
+    "ipa": "/ˈbɪɡˈæpəl/",
+    "rp_ipa": "/ˈbɪɡˈæpəl/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "ɡ→apple link",
+      "ja": "ɡ→apple 連結",
+      "fil": "ɡ→apple pag-uugnay"
+    },
+    "gloss": {
+      "en": "big apple",
+      "ja": "大きなリンゴ",
+      "zh": "大苹果",
+      "ko": "큰 사과"
+    },
+    "carriers": [
+      "I bought a {P}.",
+      "She ate a {P}.",
+      "That's a {P}!",
+      "Here's a {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs180",
+    "w": "warm up",
+    "ipa": "/ˈwɔrˈmʌp/",
+    "rp_ipa": "/ˈwɔːˈmʌp/",
+    "cs_type": "linking",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "m→up link",
+      "ja": "m→up 連結",
+      "fil": "m→up pag-uugnay"
+    },
+    "gloss": {
+      "en": "warm up",
+      "ja": "準備運動する",
+      "zh": "热身",
+      "ko": "준비운동하다"
+    },
+    "carriers": [
+      "Let's {P} first.",
+      "Please {P} before the run.",
+      "We need to {P}.",
+      "Time to {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "cs181",
+    "w": "hard times",
+    "ipa": "/ˈhɑrˈtaɪmz/",
+    "rp_ipa": "/ˈhɑːˈtaɪmz/",
+    "cs_type": "elision",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d dropped (r_t); RP non-rhotic",
+      "ja": "d 脱落(r_t); RP非rhotic",
+      "fil": "d kinakaltas (r_t); RP non-rhotic"
+    },
+    "gloss": {
+      "en": "hard times",
+      "ja": "苦しい時",
+      "zh": "艰难时期",
+      "ko": "힘든 시기"
+    },
+    "carriers": [
+      "We went through {P}.",
+      "Those were {P}.",
+      "They faced {P}.",
+      "Through {P}, we coped."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "cs182",
+    "w": "blind spot",
+    "ipa": "/ˈblaɪnˈspɑt/",
+    "rp_ipa": "/ˈblaɪnˈspɒt/",
+    "cs_type": "elision",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "d dropped (n_s)",
+      "ja": "d 脱落(n_s)",
+      "fil": "d kinakaltas (n_s)"
+    },
+    "gloss": {
+      "en": "blind spot",
+      "ja": "死角",
+      "zh": "盲点",
+      "ko": "사각지대"
+    },
+    "carriers": [
+      "That's a {P}.",
+      "Watch the {P}.",
+      "He has a {P}.",
+      "There's a {P} here."
+    ],
+    "cefr": "B2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "id": "cs183",
+    "w": "end of story",
+    "ipa": "/ˈɛndəvˈstɔri/",
+    "rp_ipa": "/ˈendəvˈstɔːri/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "end-of link; of→/əv/",
+      "ja": "end-of 連結; of→/əv/",
+      "fil": "end-of pag-uugnay; of→/əv/"
+    },
+    "gloss": {
+      "en": "end of story",
+      "ja": "それで終わり",
+      "zh": "就这样",
+      "ko": "끝"
+    },
+    "carriers": [
+      "That's it, {P}.",
+      "It failed, {P}.",
+      "{P}, no more.",
+      "We lost, {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "notation_composite"
+  },
+  {
+    "id": "cs184",
+    "w": "one another",
+    "ipa": "/ˈwʌnəˈnʌðɝ/",
+    "rp_ipa": "/ˈwʌnəˈnʌðə/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "one-an-other links",
+      "ja": "one-an-other 連結",
+      "fil": "one-an-other pag-uugnay"
+    },
+    "gloss": {
+      "en": "one another",
+      "ja": "お互いに",
+      "zh": "彼此",
+      "ko": "서로"
+    },
+    "carriers": [
+      "They help {P}.",
+      "We support {P}.",
+      "Love {P}.",
+      "They met {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs185",
+    "w": "set you up",
+    "ipa": "/ˈsɛtʃuˈwʌp/",
+    "rp_ipa": "/ˈsetʃuˈwʌp/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t+you→/tʃ/; you-up /w/ glide",
+      "ja": "t+you→/tʃ/; you-up に/w/渡り音",
+      "fil": "t+you→/tʃ/; sa you-up /w/ glide"
+    },
+    "gloss": {
+      "en": "set you up",
+      "ja": "用意してあげる",
+      "zh": "为你安排",
+      "ko": "준비해 주다"
+    },
+    "carriers": [
+      "I'll {P} with a date.",
+      "We'll {P}.",
+      "Let me {P}.",
+      "They'll {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs186",
+    "w": "between you and me",
+    "ipa": "/bɪˈtwiɲuənˈmi/",
+    "rp_ipa": "/bɪˈtwiːɲuənˈmiː/",
+    "cs_type": "assimilation",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n+you→/ɲ/; and→/ən/",
+      "ja": "n+you→/ɲ/; and→/ən/",
+      "fil": "n+you→/ɲ/; and→/ən/"
+    },
+    "gloss": {
+      "en": "between you and me",
+      "ja": "ここだけの話",
+      "zh": "你我之间",
+      "ko": "우리끼리 얘긴데"
+    },
+    "carriers": [
+      "{P}, it's a secret.",
+      "{P}, I'm worried.",
+      "{P}, this stays here.",
+      "Just {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "cs187",
+    "w": "won't be long",
+    "ipa": "/ˈwoʊnbiˈlɔŋ/",
+    "rp_ipa": "/ˈwəʊnbiˈlɒŋ/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t dropped before b",
+      "ja": "b の前で t 脱落",
+      "fil": "bago ang b, kinakaltas ang t"
+    },
+    "gloss": {
+      "en": "won't be long",
+      "ja": "すぐ戻る",
+      "zh": "不会太久",
+      "ko": "금방이야"
+    },
+    "carriers": [
+      "{P}, I promise.",
+      "It {P}.",
+      "Don't worry, {P}.",
+      "I {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs188",
+    "w": "most of all",
+    "ipa": "/ˈmoʊstəˈvɔl/",
+    "rp_ipa": "/ˈməʊstəˈvɔːl/",
+    "cs_type": "elision",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/əv/ links into all",
+      "ja": "of→/əv/ が all へ連結",
+      "fil": "of→/əv/ umuugnay sa all"
+    },
+    "gloss": {
+      "en": "most of all",
+      "ja": "とりわけ",
+      "zh": "最重要的是",
+      "ko": "무엇보다"
+    },
+    "carriers": [
+      "{P}, be kind.",
+      "I love it {P}.",
+      "{P}, stay safe.",
+      "Above all, {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs189",
+    "w": "what's up with you",
+    "ipa": "/ˈwʌtsˈʌpwɪˈtʃu/",
+    "rp_ipa": "/ˈwɒtsˈʌpwɪˈtʃu/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "with+you→/tʃ/; what's-up link",
+      "ja": "with+you→/tʃ/; what's-up 連結",
+      "fil": "with+you→/tʃ/; what's-up pag-uugnay"
+    },
+    "gloss": {
+      "en": "what's up with you?",
+      "ja": "どうしたの？",
+      "zh": "你怎么了？",
+      "ko": "무슨 일이야?"
+    },
+    "carriers": [
+      "Hey, {P}?",
+      "So, {P}?",
+      "{P} today?",
+      "{P}, friend?"
+    ],
+    "cefr": "B1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs190",
+    "w": "I'll let you know",
+    "ipa": "/ˈaɪlˈlɛtʃuˈnoʊ/",
+    "rp_ipa": "/ˈaɪlˈletʃuˈnəʊ/",
+    "cs_type": "assimilation",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "t+you→/tʃ/",
+      "ja": "t+you→/tʃ/",
+      "fil": "t+you→/tʃ/"
+    },
+    "gloss": {
+      "en": "I'll let you know",
+      "ja": "知らせるね",
+      "zh": "我会告诉你",
+      "ko": "알려 줄게"
+    },
+    "carriers": [
+      "{P} soon.",
+      "{P} the result.",
+      "Don't worry, {P}.",
+      "{P} tomorrow."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "id": "cs191",
+    "w": "see you around",
+    "ipa": "/ˈsijuˈwəˈraʊnd/",
+    "rp_ipa": "/ˈsiːjuˈwəˈraʊnd/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "you-around /w/ glide",
+      "ja": "you-around に/w/渡り音",
+      "fil": "sa you-around /w/ glide"
+    },
+    "gloss": {
+      "en": "see you around",
+      "ja": "またね",
+      "zh": "回头见",
+      "ko": "또 봐"
+    },
+    "carriers": [
+      "{P}!",
+      "{P}, then.",
+      "Okay, {P}.",
+      "Bye, {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "id": "cs192",
+    "w": "for the time being",
+    "ipa": "/fɝðəˈtaɪmˈbiɪŋ/",
+    "rp_ipa": "/fəðəˈtaɪmˈbiːɪŋ/",
+    "cs_type": "linking",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "for→/fɚ/; the→/ðə/",
+      "ja": "for→/fɚ/; the→/ðə/",
+      "fil": "for→/fɚ/; the→/ðə/"
+    },
+    "gloss": {
+      "en": "for the time being",
+      "ja": "当面の間",
+      "zh": "暂时",
+      "ko": "당분간"
+    },
+    "carriers": [
+      "{P}, we'll wait.",
+      "It works {P}.",
+      "{P}, stay put.",
+      "Use this {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs193",
+    "w": "a number of things",
+    "ipa": "/əˈnʌmbɝəˈθɪŋz/",
+    "rp_ipa": "/əˈnʌmbərəˈθɪŋz/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/ə/; RP linking r",
+      "ja": "of→/ə/; RP linking r",
+      "fil": "of→/ə/; RP linking r"
+    },
+    "gloss": {
+      "en": "a number of things",
+      "ja": "いくつかのこと",
+      "zh": "一些事情",
+      "ko": "여러 가지"
+    },
+    "carriers": [
+      "There are {P}.",
+      "I have {P} to do.",
+      "We discussed {P}.",
+      "{P} went wrong."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs194",
+    "w": "at the end of the day",
+    "ipa": "/ətðiˈɛndəvðəˈdeɪ/",
+    "rp_ipa": "/ətðiˈendəvðəˈdeɪ/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/əv/; the→/ðə/ ×2",
+      "ja": "of→/əv/; the→/ðə/ ×2",
+      "fil": "of→/əv/; the→/ðə/ ×2"
+    },
+    "gloss": {
+      "en": "at the end of the day",
+      "ja": "結局のところ",
+      "zh": "归根结底",
+      "ko": "결국에는"
+    },
+    "carriers": [
+      "{P}, we rest.",
+      "{P}, it's fine.",
+      "By {P}, we're tired.",
+      "{P}, what matters is health."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "id": "cs195",
+    "w": "none of your business",
+    "ipa": "/ˈnʌnəˈvjɔrˈbɪznəs/",
+    "rp_ipa": "/ˈnʌnəˈvjɔːˈbɪznəs/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/əv/; your→/jɔr/",
+      "ja": "of→/əv/; your→/jɔr/",
+      "fil": "of→/əv/; your→/jɔr/"
+    },
+    "gloss": {
+      "en": "none of your business",
+      "ja": "余計なお世話だ",
+      "zh": "不关你的事",
+      "ko": "네 알 바 아냐"
+    },
+    "carriers": [
+      "That's {P}.",
+      "It's {P}.",
+      "Frankly, {P}.",
+      "Sorry, {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "id": "cs196",
+    "w": "speak of the devil",
+    "ipa": "/ˈspikəvðəˈdɛvəl/",
+    "rp_ipa": "/ˈspiːkəvðəˈdevəl/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "of→/əv/; the→/ðə/",
+      "ja": "of→/əv/; the→/ðə/",
+      "fil": "of→/əv/; the→/ðə/"
+    },
+    "gloss": {
+      "en": "speak of the devil",
+      "ja": "噂をすれば",
+      "zh": "说曹操曹操到",
+      "ko": "호랑이도 제 말 하면 온다"
+    },
+    "carriers": [
+      "{P}!",
+      "Well, {P}.",
+      "Oh, {P}.",
+      "And {P}, here he is."
+    ],
+    "cefr": "B2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "notation_composite"
+  },
+  {
+    "id": "cs197",
+    "w": "the other side",
+    "ipa": "/ðiˈʌðɝˈsaɪd/",
+    "rp_ipa": "/ðiˈʌðəˈsaɪd/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "the→/ði/ before vowel",
+      "ja": "母音前で the→/ði/",
+      "fil": "bago ang patinig, the→/ði/"
+    },
+    "gloss": {
+      "en": "the other side",
+      "ja": "反対側",
+      "zh": "另一边",
+      "ko": "반대편"
+    },
+    "carriers": [
+      "It's on {P}.",
+      "Cross to {P}.",
+      "{P} is quieter.",
+      "Look at {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs198",
+    "w": "more or less",
+    "ipa": "/ˈmɔrɝˈlɛs/",
+    "rp_ipa": "/ˈmɔːrɔːˈles/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "or→/ɝ/(GA); RP linking r",
+      "ja": "or→/ɝ/(GA); RP linking r",
+      "fil": "or→/ɝ/(GA); RP linking r"
+    },
+    "gloss": {
+      "en": "more or less",
+      "ja": "多かれ少なかれ",
+      "zh": "差不多",
+      "ko": "대충"
+    },
+    "carriers": [
+      "It's {P} done.",
+      "{P}, I agree.",
+      "That's {P} right.",
+      "We're {P} ready."
+    ],
+    "cefr": "B1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs199",
+    "w": "get rid of it",
+    "ipa": "/ˌɡɛˈrɪɾəvɪt/",
+    "rp_ipa": "/ˌɡeˈrɪdəvɪt/",
+    "cs_type": "elision",
+    "level": 3,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "rid-of-it link; GA flap",
+      "ja": "rid-of-it 連結; GAフラップ",
+      "fil": "rid-of-it pag-uugnay; GA flap"
+    },
+    "gloss": {
+      "en": "get rid of it",
+      "ja": "処分する",
+      "zh": "扔掉它",
+      "ko": "없애 버리다"
+    },
+    "carriers": [
+      "Let's {P}.",
+      "I'll {P}.",
+      "Please {P}.",
+      "We should {P}."
+    ],
+    "cefr": "B2",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "id": "cs200",
+    "w": "thank you",
+    "ipa": "/ˈθæŋkju/",
+    "rp_ipa": "/ˈθæŋkju/",
+    "cs_type": "assimilation",
+    "level": 1,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "n→/ŋ/ before k",
+      "ja": "k の前で n→/ŋ/",
+      "fil": "bago ang k, n→/ŋ/"
+    },
+    "gloss": {
+      "en": "thank you",
+      "ja": "ありがとう",
+      "zh": "谢谢",
+      "ko": "고마워"
+    },
+    "carriers": [
+      "{P} so much.",
+      "{P} for everything.",
+      "{P}, that's kind.",
+      "I just want to say {P}."
+    ],
+    "cefr": "A2",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "id": "cs201",
+    "w": "see you later",
+    "ipa": "/ˈsijuˈleɪɾɝ/",
+    "rp_ipa": "/ˈsiːjuˈleɪtə/",
+    "cs_type": "linking",
+    "level": 2,
+    "src": "connected_speech",
+    "cs_rule": {
+      "en": "see-you /j/; GA flap later",
+      "ja": "see-you に/j/; GAは later を flap",
+      "fil": "sa see-you /j/; sa GA, flap ang later"
+    },
+    "gloss": {
+      "en": "see you later",
+      "ja": "またあとで",
+      "zh": "回头见",
+      "ko": "나중에 봐"
+    },
+    "carriers": [
+      "{P}, take care.",
+      "{P}!",
+      "Bye, {P}.",
+      "Okay, {P}."
+    ],
+    "cefr": "A1",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  }
+]

@@ -70,3 +70,13 @@ export async function getItemsByCefr(level: CefrLevel): Promise<LearningItem[]> 
 export async function getAllItems(): Promise<LearningItem[]> {
   return db.items.toArray()
 }
+
+export async function getInsightById(id: string): Promise<Insight | undefined> {
+  return db.insights.get(id)
+}
+
+export async function getSurfacesByIds(ids: string[]): Promise<string[]> {
+  if (ids.length === 0) return []
+  const items = await db.items.bulkGet(ids)
+  return items.filter((item): item is LearningItem => Boolean(item)).map((item) => item.surface)
+}

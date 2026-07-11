@@ -30,7 +30,8 @@
     "modeADesc": "Read a short passage and infer the highlighted expression from context.",
     "modeBLabel": "Mode B",
     "modeBDesc": "Use the Japanese translation, fill the blanks mentally, then reveal the answer.",
-    "modeCNote": "Mode C (writing review) is out of scope for this release."
+    "modeCNote": "Mode C (writing review) is out of scope for this release.",
+    "hold": "Hold"
   },
   "browse": {
     "title": "CEFR wordbook",
@@ -60,7 +61,7 @@
     "examples": "Examples",
     "confusables": "Confusables",
     "noConfusables": "No confusables listed",
-    "commonErrors": "Common errors (JA)",
+    "commonErrors": "Common errors",
     "relatedWords": "Related words",
     "synonyms": "Synonyms",
     "antonyms": "Antonyms",
@@ -72,10 +73,29 @@
     "difference": "Key difference:",
     "usage": "Usage:",
     "none": "None",
+    "unset": "(unset)",
     "category": "Category",
     "frequency": "Frequency rank",
     "semanticField": "Semantic field",
     "skillFocus": "Skill focus"
+  },
+  "ipa": {
+    "tabsLabel": "Pronunciation",
+    "careful": "Careful",
+    "connected": "Connected"
+  },
+  "insight": {
+    "title": "Insight",
+    "show": "💡 View etymology / insight",
+    "hide": "Hide insight",
+    "related": "Related",
+    "type": {
+      "morphology": "Morphology",
+      "metaphor": "Metaphor",
+      "cultural": "Cultural",
+      "cognate": "Cognate",
+      "coreImage": "Core image"
+    }
   },
   "checkmarks": {
     "learningHistory": "Learning history",
@@ -162,6 +182,10 @@
       "high": "High",
       "medium": "Medium",
       "low": "Low"
+    },
+    "skillFocus": {
+      "receptive_only": "Receptive only",
+      "receptive_and_productive": "Receptive + Productive"
     }
   }
 }

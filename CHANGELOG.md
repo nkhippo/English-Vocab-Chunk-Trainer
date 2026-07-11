@@ -4,11 +4,14 @@
 
 ### Added
 
+- Insight 公式サンプル 3 件（プレースホルダー同 ID 上書き）
+- `doc/handoff/v6-insight-official-merge-handoff-report.md`
 - カテゴリパイロット 10 件マージ（word/idiom/binomial/compound/other ×2）→ **合計 21 件**
 - `doc/handoff/v6-pilot10-merge-handoff-report.md`
 
 ### Changed
 
+- `data/current/items.json` schema **1.2.2**（Insight 公式差し替えの Dexie 再同期）
 - ホーム文言を 21 件表記に更新
 
 ### Added (earlier same day)

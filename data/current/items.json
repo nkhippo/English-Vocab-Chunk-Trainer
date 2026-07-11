@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.2.1",
-  "generated_at": "2026-07-11T03:20:02.478Z",
+  "schema_version": "1.2.2",
+  "generated_at": "2026-07-11T03:49:51Z",
   "cefr_levels_included": [
     "A1",
     "A2"
@@ -4292,36 +4292,33 @@
       "id": "insight_catch_a_cold_metaphor",
       "target_id": "catch_a_cold",
       "type": "metaphor",
-      "content_ja": "【サンプル】catch a cold の catch は「捕まえる」イメージ。病気を「つかまえてしまう」という比喩で、日本語の「風邪をひく」と発想が近い。",
-      "content_en": "[Sample] In catch a cold, catch keeps the image of grabbing something — you 'catch' the illness.",
-      "related_items": [
-        "take_a_shower",
-        "get_up_early"
-      ],
-      "claude_generated": true
+      "content_ja": "「なぜ風邪を『catch(捕まえる)』のか?」\n\n英語の catch は「動くものを捕らえる」が基本イメージ。ボールを catch する、電車を catch するように、目に見えない病気の元を「掴んでしまう」感覚が背景にあります。\n\n古い時代、病気は空気中に漂う何かによって広がると考えられていました。その考えの名残が今も残り、風邪は catch a cold、インフルエンザは catch the flu、熱は catch a fever と表現されます。\n\n一方、have a cold は「既に風邪をひいている状態」、get a cold は「風邪をひくという結果」を表します。catch は「感染の瞬間」に焦点があります。\n\n**覚え方**: 病気=飛んでくるボール、それを catch(掴んでしまう)、と結び付ける。",
+      "content_en": "\"Why do we 'catch' a cold?\"\n\nThe English verb 'catch' has a basic image of grabbing something in motion. You catch a ball, catch a train, and — in the same way — you catch something invisible that spreads through the air.\n\nHistorically, illnesses were thought to travel through the air. That old idea remains in modern English: catch a cold, catch the flu, catch a fever.\n\nCompare: 'have a cold' (already sick), 'get a cold' (become sick), and 'catch a cold' (the moment of infection).\n\n**Memory tip**: Picture the illness as a flying ball, and you accidentally catch it.",
+      "related_items": [],
+      "claude_generated": true,
+      "validated_at": "2026-07-10T22:30:00.000Z"
     },
     {
       "id": "insight_take_a_picture_core",
       "target_id": "take_a_picture",
       "type": "core_image",
-      "content_ja": "【サンプル】take a picture の take は「取る」ではなく「（写真を）撮る」固定表現。日本語の「写真を撮る」に対応し、*make a picture は不自然。",
-      "content_en": "[Sample] take a picture is a fixed collocation; make a picture sounds unnatural.",
+      "content_ja": "「なぜ写真を『take(取る)』のか?」\n\n英語の take は「手を伸ばして、自分のものとして取り込む」が根本イメージ。写真を撮ることは、目の前の光景を一瞬「切り取って」自分のものにする行為として捉えられています。\n\n同じ発想で: take a photo(写真を撮る)、take a shot(スナップを撮る)、take a video(動画を撮る)、take a selfie(自撮り)。\n\n一方、paint a picture(絵の具で描く)や draw a picture(描く)は、無から作り出す行為で「make・create」の系統です。写真は「光景を取り込む」ため take が選ばれます。\n\n**覚え方**: シャッターを押す瞬間は「その景色を自分のものにする」瞬間、それが take。同じ発想で take a shower(シャワーを浴びる=時間を自分のものにする)も理解できます。",
+      "content_en": "\"Why do we 'take' a picture?\"\n\nThe core meaning of 'take' is 'reach out and make something yours'. Taking a photo is seen as capturing a moment and making it your own possession.\n\nSimilar patterns: take a photo, take a shot, take a video, take a selfie.\n\nBy contrast, 'paint a picture' or 'draw a picture' use verbs of creation (making something from nothing). A photo is not created but 'taken' from what is already there.\n\n**Memory tip**: When you press the shutter, you are 'taking' the scene into your camera. The same image applies to 'take a shower' — making the shower time your own.",
       "related_items": [
         "take_a_shower"
       ],
-      "claude_generated": true
+      "claude_generated": true,
+      "validated_at": "2026-07-10T22:30:00.000Z"
     },
     {
       "id": "insight_have_breakfast_cultural",
       "target_id": "have_breakfast",
       "type": "cultural",
-      "content_ja": "【サンプル】have breakfast は食事を「持つ」ではなく「食べる・とる」意味の have。英米では食事名とセットで使う基本表現。",
-      "content_en": "[Sample] have breakfast uses have in the meal-taking sense, not possession.",
-      "related_items": [
-        "go_shopping",
-        "do_homework"
-      ],
-      "claude_generated": true
+      "content_ja": "「なぜ朝食を『have(持つ)』のか?」\n\n英語の have は「所有する」が基本ですが、「行為・経験を持つ」という意味にも広がります。have breakfast は「朝食を食べる」だけでなく「朝食という時間・場を経験する」というニュアンスを含みます。\n\n英語話者にとって食事は単なる eat(食べる)ではなく、その場に居合わせる社会的な行為です。だから朝も昼も夜も have breakfast / have lunch / have dinner。飲み物も have coffee / have tea。\n\n同じ発想で: have a shower(シャワーを浴びる=経験する)、have a rest(休憩する=経験する)、have a look(見る=行為を持つ)。\n\n日本語の「朝食を食べる」は動作に注目していますが、英語の have breakfast は「食事という場・時間を持つ」という体験全体を表しています。\n\n**覚え方**: eat は口の動き、have は食卓の時間全体。",
+      "content_en": "\"Why do we 'have' breakfast?\"\n\n'Have' basically means to own something, but it also extends to 'experiencing' an action or event. 'Have breakfast' is not just about eating — it captures the whole morning meal experience.\n\nFor English speakers, meals are social occasions. So we have breakfast, have lunch, have dinner. Drinks too: have coffee, have tea.\n\nSimilar patterns: have a shower, have a rest, have a look. Each treats the action as an event you experience.\n\nJapanese '朝食を食べる' focuses on the action of eating. English 'have breakfast' focuses on the meal as a whole experience.\n\n**Memory tip**: 'eat' is what your mouth does; 'have' is the time you spend at the table.",
+      "related_items": [],
+      "claude_generated": true,
+      "validated_at": "2026-07-10T22:30:00.000Z"
     }
   ]
 }

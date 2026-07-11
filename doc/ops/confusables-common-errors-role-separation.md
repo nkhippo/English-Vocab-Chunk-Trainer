@@ -4,7 +4,7 @@
 本ガイドラインの作成: Claude Opus 4.7  
 用途: 
 - 既存 items の修正判断基準
-- 将来の量産テンプレート改訂(`chat-generation-template-a2.md`)への反映
+- 将来の量産テンプレート改訂(`doc/ops/chat-generation-template-a2-v2.md`)への反映
 - Cursor / Claude Desktop での生成品質担保
 
 ---
@@ -153,9 +153,9 @@ v7 実装後の実機評価で、Naoya から「混同しやすい語 と 日本
 
 ## 4. 量産テンプレート改訂への反映
 
-`chat-generation-template-a2.md` の該当セクションを以下のように改訂する予定(次回改訂タイミング):
+**反映済み(2026-07-11)**: `doc/ops/chat-generation-template-a2-v2.md` §9 および `doc/ops/chat-generation-workflow-v2.md` に本ガイドラインの役割分離ルールを組み込み済み。
 
-### 改訂案: 生成指示文
+以下は v2 テンプレートに取り込まれた改訂案の要約:
 
 ```markdown
 ### confusables(混同しやすい語)の生成指示
@@ -224,6 +224,6 @@ v7 実装後の実機評価で、Naoya から「混同しやすい語 と 日本
 
 1. **Cursor**: `confusables_common_errors_fix_patches.json` をマージ(11 items の該当 2 フィールドを差し替え)
 2. **Naoya**: 実機で修正後の go_shopping / catch_a_cold などを確認、重複感が解消されているか判定
-3. **設計チャット(私)**: 次のターン以降で `chat-generation-template-a2.md` の量産テンプレートに本ガイドラインを反映(§4 の改訂案を組み込む)
+3. **設計チャット(私)**: 量産テンプレート v2 へ本ガイドラインを反映 → **完了**(`doc/ops/chat-generation-template-a2-v2.md`)
 
 これで、A2 量産開始時には confusables / common_errors_ja の役割分離が担保された状態になる。

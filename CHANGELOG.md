@@ -4,6 +4,9 @@
 
 ### Added
 
+- A2 chat 生成テンプレート / 運用ガイド **v2**（schema 1.2.4・役割分離・contexts）
+- `pnpm run verify:contexts`（contexts インデックス検証）
+- `doc/handoff/chat-generation-template-v2-handoff-report.md`
 - confusables / common_errors 役割分離パッチ（11 items）+ ガイドライン
 - `doc/handoff/confusables-role-separation-handoff-report.md`
 - v8: Mode A/B モバイル最適化（confusables / related_uses / 学習履歴表示）

@@ -8,6 +8,19 @@
 
 スキーマ正本: `doc/spec/learning-data-schema.json`（旧称 `data-schema.json`）。
 
+### Chat 内 Opus による A2 量産（現行推奨）
+
+GAS パイプラインに加え、設計チャット方式の量産を使う場合:
+
+| 用途 | パス |
+|---|---|
+| Claude 添付テンプレート | `doc/ops/chat-generation-template-a2-v2.md` |
+| Naoya 運用手順 | `doc/ops/chat-generation-workflow-v2.md` |
+| contexts 検証 | `pnpm run verify:contexts -- data/staging/A2_collocation_batchN.json` |
+| 役割分離 | `doc/ops/confusables-common-errors-role-separation.md` |
+
+バッチ JSON は `data/staging/` に保存し、カテゴリ完了後に `pnpm run merge` → `pnpm validate`。
+
 ### データの置き場（一本化）
 
 - **正本**: `data/current/`（Git 管理）。CLI（seed / merge / validate）もここを読む。

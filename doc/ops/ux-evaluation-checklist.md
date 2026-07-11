@@ -227,8 +227,9 @@ MVP は自己申告(思い出せたかどうかは自分で判断)ですが、Ph
 ## 次のアクションフロー
 
 判定 A の場合:
-→ 設計チャットに戻り「量産 GO」と報告  
-→ `chat-generation-template-a2.md` を使って新チャットで A2 collocation 量産開始
+→ 設計チャットに戻り「量産 GO」と報告
+→ `doc/ops/chat-generation-template-a2-v2.md` を使って新チャットで A2 collocation 量産開始
+→ 手順は `doc/ops/chat-generation-workflow-v2.md`
 
 判定 B / C / D の場合:
 → 設計チャットに戻り、上記チェックボックスの記入内容を報告  

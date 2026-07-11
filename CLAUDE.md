@@ -51,6 +51,7 @@ pnpm run generate:enrichment -- --input=data/staging/A2_validated.json
 pnpm run generate:examples -- --input=data/staging/A2_validated_enriched.json
 pnpm run merge -- --new=data/staging/A2_final.json --into=data/current/items.json
 pnpm run validate
+pnpm run verify:contexts -- data/staging/A2_collocation_batchN.json
 ```
 
 ## データ運用時の注意

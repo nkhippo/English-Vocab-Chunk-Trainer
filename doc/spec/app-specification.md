@@ -37,7 +37,8 @@ v1/v2 を統合し、以下の追加要件を反映した最終仕様:
 - Mode C・SRS・音声再生: **Phase 2+**
 - UX スモークテスト: **合格**（`doc/ops/ux-smoke-test-checklist.md`）
 - confusables / common_errors 役割分離: **11 items 修正済み**（`doc/ops/confusables-common-errors-role-separation.md`）
-- 残: 空 example スロット補充・A2 本生成・量産テンプレートへのガイドライン反映
+- A2 量産テンプレート: **v2 配置済み**（`doc/ops/chat-generation-template-a2-v2.md` / `chat-generation-workflow-v2.md`）
+- 残: 空 example スロット補充・A2 collocation 本生成（9/〜500）
 
 ---
 

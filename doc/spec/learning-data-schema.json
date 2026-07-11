@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://github.com/nkhippo/English-Vocab-Chunk-Trainer/schema/v1",
   "title": "Vocab & Chunk Trainer Data Schema",
-  "description": "Authoritative schema for LearningItem and Insight. Version 1.2.4 (2026-07-11): dataset content patch for confusables/common_errors role separation (no structural change from 1.2.3). Prior 1.2.3: nuance_contrast_ja; example_en/ja; hypernyms/hyponyms removed. See doc/ops/confusables-common-errors-role-separation.md.",
-  "version": "1.2.4",
+  "description": "Authoritative schema for LearningItem and Insight. Version 1.2.5 (2026-07-11): filled example_en/ja on synonyms/antonyms/related_uses for 18 items (132 slots; no structural change from 1.2.4). Prior: confusables/common_errors role separation; nuance_contrast_ja; hypernyms/hyponyms removed. See doc/handoff/synonym-examples-fill-handoff-report.md.",
+  "version": "1.2.5",
   "definitions": {
     "cefrLevel": {
       "type": "string",

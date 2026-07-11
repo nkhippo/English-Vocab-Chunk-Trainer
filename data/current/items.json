@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.2.4",
-  "generated_at": "2026-07-11T06:00:00.000Z",
+  "schema_version": "1.2.5",
+  "generated_at": "2026-07-11T08:00:00.000Z",
   "cefr_levels_included": [
     "A1",
     "A2"
@@ -119,39 +119,39 @@
       "cefr_level": "A2",
       "meta": {
         "validated_by_user": true,
-        "schema_version": "1.2.4",
-        "updated_at": "2026-07-11T06:00:00.000Z"
+        "schema_version": "1.2.5",
+        "updated_at": "2026-07-11T08:00:00.000Z"
       },
       "synonyms": [
         {
           "item": "take a photo",
           "nuance_contrast_ja": "意味はほぼ同じで、日常会話でよく使われる",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "She took a photo of the beautiful sunset yesterday.",
+          "example_ja": "彼女は昨日、美しい夕日の写真を撮った。"
         },
         {
           "item": "snap a picture",
           "nuance_contrast_ja": "素早くさっと撮るニュアンス。カジュアル",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Can you snap a picture of us with the mountain behind?",
+          "example_ja": "後ろの山と一緒に、私たちの写真をパシャッと撮ってくれない?"
         },
         {
           "item": "shoot a picture",
           "nuance_contrast_ja": "やや専門的で、写真家やビデオ撮影でも使う",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The photographer shot a picture of the model in the studio.",
+          "example_ja": "そのカメラマンはスタジオでモデルの写真を撮影した。"
         },
         {
           "item": "get a picture",
           "nuance_contrast_ja": "「1枚もらう・撮ってもらう」感覚で口語的",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Let me get a picture of you before you leave.",
+          "example_ja": "帰る前に、あなたの写真を1枚撮らせて。"
         },
         {
           "item": "capture an image",
           "nuance_contrast_ja": "やや文語的・技術的な表現",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The camera captured an image of the bird in flight.",
+          "example_ja": "そのカメラは飛んでいる鳥の姿を捉えた。"
         }
       ],
       "antonyms": [],
@@ -183,38 +183,38 @@
           "form": "take a selfie",
           "meaning_ja": "自撮りをする",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The friends took a selfie together at the concert.",
+          "example_ja": "友達はコンサートで一緒に自撮りをした。"
         },
         {
           "form": "take a photo",
           "meaning_ja": "写真を撮る",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Let's take a photo before we say goodbye.",
+          "example_ja": "さよならを言う前に写真を撮ろう。"
         },
         {
           "form": "picture-perfect",
           "meaning_ja": "完璧な、絵に描いたような",
           "type": "metaphor",
           "metaphor_ja": "写真のように美しい様子を表す",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The beach on that sunny day was picture-perfect.",
+          "example_ja": "その晴れた日のビーチは、絵に描いたように完璧だった。"
         },
         {
           "form": "get the picture",
           "meaning_ja": "状況を理解する",
           "type": "metaphor",
           "metaphor_ja": "頭の中に絵として浮かぶ=わかる",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "OK, I get the picture — you don't want to come.",
+          "example_ja": "わかった、状況は理解した。君は来たくないんだね。"
         },
         {
           "form": "picture book",
           "meaning_ja": "絵本",
           "type": "compound",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "My little sister loves reading a picture book before bed.",
+          "example_ja": "妹は寝る前に絵本を読むのが大好きだ。"
         }
       ],
       "common_errors_ja": [
@@ -399,29 +399,29 @@
       "cefr_level": "A2",
       "meta": {
         "validated_by_user": true,
-        "schema_version": "1.2.4",
-        "updated_at": "2026-07-11T06:00:00.000Z"
+        "schema_version": "1.2.5",
+        "updated_at": "2026-07-11T08:00:00.000Z"
       },
       "synonyms": [
         {
           "item": "eat breakfast",
           "nuance_contrast_ja": "より直接的に「食べる」動作を表す。意味はほぼ同じ。",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I always eat breakfast before I go to school.",
+          "example_ja": "私は学校に行く前にいつも朝食を食べる。"
         },
         {
           "item": "take breakfast",
           "nuance_contrast_ja": "やや古風・フォーマルな言い方。日常会話では稀。",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "British people sometimes say they take breakfast at eight.",
+          "example_ja": "イギリス人は「8時に朝食を取る」と言うことがある。"
         }
       ],
       "antonyms": [
         {
           "item": "skip breakfast",
           "nuance_contrast_ja": "朝食を抜くこと。食べないことを意味する。",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "You shouldn't skip breakfast — it's important for your health.",
+          "example_ja": "朝食を抜くべきではない。健康にとって大切だ。"
         }
       ],
       "confusables": [
@@ -452,36 +452,36 @@
           "form": "have lunch",
           "meaning_ja": "昼食を食べる",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "We usually have lunch at noon in the office.",
+          "example_ja": "私たちはたいてい正午に事務所で昼食を食べる。"
         },
         {
           "form": "have dinner",
           "meaning_ja": "夕食を食べる",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Our family has dinner together every Sunday.",
+          "example_ja": "うちの家族は毎週日曜日に一緒に夕食を食べる。"
         },
         {
           "form": "have a big breakfast",
           "meaning_ja": "たっぷり朝食を食べる",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Before the marathon, he had a big breakfast.",
+          "example_ja": "マラソンの前に、彼はしっかりと朝食を食べた。"
         },
         {
           "form": "breakfast in bed",
           "meaning_ja": "ベッドで食べる朝食",
           "type": "compound",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "On her birthday, he brought her breakfast in bed.",
+          "example_ja": "彼女の誕生日に、彼はベッドに朝食を持ってきてくれた。"
         },
         {
           "form": "have breakfast together",
           "meaning_ja": "一緒に朝食を食べる",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Let's have breakfast together this weekend.",
+          "example_ja": "今週末、一緒に朝食を食べようよ。"
         }
       ],
       "common_errors_ja": [
@@ -666,47 +666,47 @@
       "cefr_level": "A2",
       "meta": {
         "validated_by_user": true,
-        "schema_version": "1.2.4",
-        "updated_at": "2026-07-11T06:00:00.000Z"
+        "schema_version": "1.2.5",
+        "updated_at": "2026-07-11T08:00:00.000Z"
       },
       "synonyms": [
         {
           "item": "do one's assignment",
           "nuance_contrast_ja": "「assignment」は学校から与えられた特定の課題を指し、ややフォーマル。",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The students did their assignment before the class.",
+          "example_ja": "生徒たちは授業の前に課題をこなした。"
         },
         {
           "item": "complete homework",
           "nuance_contrast_ja": "「complete」は「終わらせる」という完了の意味が強い。",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "She completed her homework in one hour.",
+          "example_ja": "彼女は1時間で宿題を仕上げた。"
         },
         {
           "item": "finish homework",
           "nuance_contrast_ja": "宿題を「終える」という完了に焦点。",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I need to finish my homework before dinner.",
+          "example_ja": "夕食の前に宿題を終わらせなくてはいけない。"
         },
         {
           "item": "study",
           "nuance_contrast_ja": "「勉強する」全般を指し、宿題に限らない。",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I have to study for a math test tomorrow.",
+          "example_ja": "明日の数学のテストのために勉強しなくてはいけない。"
         }
       ],
       "antonyms": [
         {
           "item": "skip homework",
           "nuance_contrast_ja": "宿題をやらずに飛ばすこと。",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Don't skip homework — you'll fail the test.",
+          "example_ja": "宿題を飛ばさないで。テストで落ちるよ。"
         },
         {
           "item": "play",
           "nuance_contrast_ja": "勉強せずに遊ぶこと。",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Kids like to play in the park after school.",
+          "example_ja": "子供たちは放課後に公園で遊ぶのが好きだ。"
         }
       ],
       "confusables": [
@@ -738,36 +738,36 @@
           "meaning_ja": "(比喩) 事前によく調べて準備する",
           "type": "metaphor",
           "metaphor_ja": "宿題をきちんとやるように、下調べを済ませておくイメージ。",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "He always does his homework at the kitchen table.",
+          "example_ja": "彼はいつも台所のテーブルで宿題をする。"
         },
         {
           "form": "homework assignment",
           "meaning_ja": "宿題の課題",
           "type": "compound",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The teacher gave us a big homework assignment.",
+          "example_ja": "先生は私たちに大きな宿題を出した。"
         },
         {
           "form": "hand in homework",
           "meaning_ja": "宿題を提出する",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Please hand in your homework by Friday.",
+          "example_ja": "金曜日までに宿題を提出してください。"
         },
         {
           "form": "check homework",
           "meaning_ja": "宿題を確認する・採点する",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "My father checks my homework every night.",
+          "example_ja": "父は毎晩、私の宿題をチェックする。"
         },
         {
           "form": "forget one's homework",
           "meaning_ja": "宿題を忘れる",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I forgot my homework at home again.",
+          "example_ja": "また家に宿題を忘れてしまった。"
         }
       ],
       "common_errors_ja": [
@@ -951,41 +951,41 @@
       "cefr_level": "A2",
       "meta": {
         "validated_by_user": true,
-        "schema_version": "1.2.4",
-        "updated_at": "2026-07-11T06:00:00.000Z"
+        "schema_version": "1.2.5",
+        "updated_at": "2026-07-11T08:00:00.000Z"
       },
       "synonyms": [
         {
           "item": "come down with a cold",
           "nuance_contrast_ja": "風邪をひき始める、発症するというニュアンスが強い",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I think I'm coming down with a cold — my throat hurts.",
+          "example_ja": "風邪をひきかけてる気がする。喉が痛いんだ。"
         },
         {
           "item": "get a cold",
           "nuance_contrast_ja": "より口語的でカジュアルな表現",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "He got a cold last week from his brother.",
+          "example_ja": "彼は先週、弟から風邪をもらった。"
         },
         {
           "item": "have a cold",
           "nuance_contrast_ja": "すでに風邪をひいている状態を表す",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "She has a cold, so she is staying home today.",
+          "example_ja": "彼女は風邪をひいているので、今日は家にいます。"
         }
       ],
       "antonyms": [
         {
           "item": "recover from a cold",
           "nuance_contrast_ja": "風邪から回復するという反対の動作",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "It takes about a week to recover from a cold.",
+          "example_ja": "風邪から回復するには1週間ほどかかる。"
         },
         {
           "item": "get over a cold",
           "nuance_contrast_ja": "風邪を治すという意味で対照的",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "He finally got over his cold after ten days.",
+          "example_ja": "彼は10日後にやっと風邪を治した。"
         }
       ],
       "confusables": [
@@ -1023,37 +1023,37 @@
           "form": "catch a fever",
           "meaning_ja": "熱を出す",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The baby caught a fever last night.",
+          "example_ja": "赤ちゃんは昨夜、熱を出した。"
         },
         {
           "form": "catch the flu",
           "meaning_ja": "インフルエンザにかかる",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Many students caught the flu at school.",
+          "example_ja": "多くの生徒が学校でインフルエンザにかかった。"
         },
         {
           "form": "come down with something",
           "meaning_ja": "(病気に)かかる",
           "type": "phrasal_verb",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I feel like I'm coming down with something.",
+          "example_ja": "何かの病気にかかりそうな気がする。"
         },
         {
           "form": "a bad cold",
           "meaning_ja": "ひどい風邪",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "She has a bad cold and needs to rest.",
+          "example_ja": "彼女はひどい風邪をひいていて、休む必要がある。"
         },
         {
           "form": "catch one's death (of cold)",
           "meaning_ja": "ひどい風邪をひく(比喩表現)",
           "type": "metaphor",
           "metaphor_ja": "風邪で死ぬほど体調を崩すという誇張表現",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Don't go out with wet hair — you'll catch your death of cold!",
+          "example_ja": "髪が濡れたまま外に出ないで。ひどい風邪をひいちゃうよ!"
         }
       ],
       "common_errors_ja": [
@@ -1243,35 +1243,35 @@
       "cefr_level": "A2",
       "meta": {
         "validated_by_user": true,
-        "schema_version": "1.2.4",
-        "updated_at": "2026-07-11T06:00:00.000Z"
+        "schema_version": "1.2.5",
+        "updated_at": "2026-07-11T08:00:00.000Z"
       },
       "synonyms": [
         {
           "item": "have a shower",
           "nuance_contrast_ja": "イギリス英語でよく使われる。意味はほぼ同じ。",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I usually have a shower before I go to bed.",
+          "example_ja": "私はたいてい寝る前にシャワーを浴びる。"
         },
         {
           "item": "shower",
           "nuance_contrast_ja": "動詞1語で「シャワーを浴びる」。よりカジュアルで短い表現。",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "He showered quickly after his morning run.",
+          "example_ja": "彼は朝のランニングの後、素早くシャワーを浴びた。"
         },
         {
           "item": "wash up",
           "nuance_contrast_ja": "体や手を軽く洗う意味。シャワー全体を指すとは限らない。",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The kids washed up before dinner.",
+          "example_ja": "子供たちは夕食の前に手や顔を洗った。"
         }
       ],
       "antonyms": [
         {
           "item": "take a bath",
           "nuance_contrast_ja": "浴槽につかる入浴。シャワーとは方法が違う。",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "After a long day, I love to take a bath.",
+          "example_ja": "長い一日の後は、お風呂に入るのが大好きだ。"
         }
       ],
       "confusables": [
@@ -1302,38 +1302,38 @@
           "form": "take a quick shower",
           "meaning_ja": "さっとシャワーを浴びる",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I only have five minutes to take a quick shower.",
+          "example_ja": "サッとシャワーを浴びる時間が5分しかない。"
         },
         {
           "form": "take a hot shower",
           "meaning_ja": "熱いシャワーを浴びる",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Nothing beats a hot shower on a cold morning.",
+          "example_ja": "寒い朝の熱いシャワーに勝るものはない。"
         },
         {
           "form": "take a cold shower",
           "meaning_ja": "冷たいシャワーを浴びる",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Some athletes take a cold shower after training.",
+          "example_ja": "アスリートの中には、練習の後に冷たいシャワーを浴びる人もいる。"
         },
         {
           "form": "baby shower",
           "meaning_ja": "出産祝いのパーティー",
           "type": "compound",
           "metaphor_ja": "贈り物を「浴びせる」ことから。",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "We're going to a baby shower for my sister this weekend.",
+          "example_ja": "今週末、姉のためのベビーシャワーに行きます。"
         },
         {
           "form": "shower someone with gifts",
           "meaning_ja": "人に贈り物をたくさん与える",
           "type": "metaphor",
           "metaphor_ja": "シャワーのように降り注ぐイメージ。",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The kids showered their grandmother with gifts on her birthday.",
+          "example_ja": "子供たちは祖母の誕生日にたくさんのプレゼントを贈った。"
         }
       ],
       "common_errors_ja": [
@@ -1516,29 +1516,29 @@
       "cefr_level": "A2",
       "meta": {
         "validated_by_user": true,
-        "schema_version": "1.2.4",
-        "updated_at": "2026-07-11T06:00:00.000Z"
+        "schema_version": "1.2.5",
+        "updated_at": "2026-07-11T08:00:00.000Z"
       },
       "synonyms": [
         {
           "item": "do the shopping",
           "nuance_contrast_ja": "日常の必需品の買い物というニュアンスが強い",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "My mother does the shopping every Saturday morning.",
+          "example_ja": "母は毎週土曜の朝、日用品の買い物をする。"
         },
         {
           "item": "go to the store",
           "nuance_contrast_ja": "特定の店に行くことを指し、目的がより具体的",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I need to go to the store to buy some bread.",
+          "example_ja": "パンを買いにお店に行かなくてはいけない。"
         }
       ],
       "antonyms": [
         {
           "item": "stay home",
           "nuance_contrast_ja": "外出せず家にいることで、買い物とは反対の行動",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I'd rather stay home than go shopping today.",
+          "example_ja": "今日は買い物に行くより家にいたい。"
         }
       ],
       "confusables": [
@@ -1569,29 +1569,29 @@
           "form": "go swimming",
           "meaning_ja": "泳ぎに行く",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "We go swimming at the pool every Sunday.",
+          "example_ja": "私たちは毎週日曜日にプールに泳ぎに行く。"
         },
         {
           "form": "go fishing",
           "meaning_ja": "釣りに行く",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "My grandfather goes fishing every weekend.",
+          "example_ja": "祖父は毎週末、釣りに出かける。"
         },
         {
           "form": "go window shopping",
           "meaning_ja": "ウィンドウショッピングをする(見るだけの買い物)",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Let's go window shopping at the mall this afternoon.",
+          "example_ja": "今日の午後、モールでウィンドウショッピングをしよう。"
         },
         {
           "form": "go grocery shopping",
           "meaning_ja": "食料品の買い物に行く",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I go grocery shopping once a week.",
+          "example_ja": "私は週に1回、食料品の買い物に行く。"
         }
       ],
       "common_errors_ja": [
@@ -1780,47 +1780,47 @@
       "cefr_level": "A2",
       "meta": {
         "validated_by_user": true,
-        "schema_version": "1.2.0",
-        "updated_at": "2026-07-10T14:57:16.798Z"
+        "schema_version": "1.2.5",
+        "updated_at": "2026-07-11T08:00:00.000Z"
       },
       "synonyms": [
         {
           "item": "wake up early",
           "nuance_contrast_ja": "「目を覚ます」動作に焦点。起き上がるとは限らない",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I need to wake up early tomorrow for the meeting.",
+          "example_ja": "明日は会議のために早く起きなくてはいけない。"
         },
         {
           "item": "rise early",
           "nuance_contrast_ja": "やや文語的で硬い表現",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Farmers usually rise early to feed the animals.",
+          "example_ja": "農家の人はたいてい早起きして動物にえさをあげる。"
         },
         {
           "item": "get up at dawn",
           "nuance_contrast_ja": "夜明けという具体的な時間を強調",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "During the summer, we sometimes get up at dawn to see the sunrise.",
+          "example_ja": "夏の間、私たちは時々日の出を見るために夜明けに起きる。"
         }
       ],
       "antonyms": [
         {
           "item": "get up late",
           "nuance_contrast_ja": "遅く起きること",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "On weekends, I like to get up late and relax.",
+          "example_ja": "週末は遅く起きてゆっくりするのが好きだ。"
         },
         {
           "item": "sleep in",
           "nuance_contrast_ja": "いつもより長く寝ていること",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Let me sleep in — it's Sunday!",
+          "example_ja": "寝坊させて、日曜日なんだから!"
         },
         {
           "item": "stay in bed",
           "nuance_contrast_ja": "起き上がらずベッドにいること",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "It's so cold, I want to stay in bed all day.",
+          "example_ja": "とても寒いから、一日中ベッドにいたい。"
         }
       ],
       "confusables": [
@@ -1850,37 +1850,37 @@
           "form": "get up late",
           "meaning_ja": "遅く起きる",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "He got up late and missed his morning class.",
+          "example_ja": "彼は遅く起きて午前中の授業を逃した。"
         },
         {
           "form": "get up at six",
           "meaning_ja": "6時に起きる",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I have to get up at six every weekday morning.",
+          "example_ja": "平日は毎朝6時に起きなくてはいけない。"
         },
         {
           "form": "get out of bed",
           "meaning_ja": "ベッドから出る",
           "type": "phrasal_verb",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I couldn't get out of bed this morning — I was so tired.",
+          "example_ja": "今朝はベッドから起き上がれなかった。とても疲れていた。"
         },
         {
           "form": "early bird",
           "meaning_ja": "早起きする人",
           "type": "metaphor",
           "metaphor_ja": "早く来る鳥にたとえる",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "My father is an early bird — he wakes up at five.",
+          "example_ja": "父は早起きだ。5時に起きる。"
         },
         {
           "form": "wake up early",
           "meaning_ja": "早く目を覚ます",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "She wakes up early to go running before work.",
+          "example_ja": "彼女は仕事の前に走るために早起きする。"
         }
       ],
       "common_errors_ja": [
@@ -2074,35 +2074,35 @@
       "cefr_level": "A2",
       "meta": {
         "validated_by_user": true,
-        "schema_version": "1.2.4",
-        "updated_at": "2026-07-11T06:00:00.000Z"
+        "schema_version": "1.2.5",
+        "updated_at": "2026-07-11T08:00:00.000Z"
       },
       "synonyms": [
         {
           "item": "hear music",
           "nuance_contrast_ja": "「hear」は自然に耳に入ることを指し、意識して聴く「listen」とは異なる",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I can hear music from the party next door.",
+          "example_ja": "隣のパーティーから音楽が聞こえてくる。"
         },
         {
           "item": "enjoy music",
           "nuance_contrast_ja": "音楽を楽しむという感情面を強調する表現",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "She really enjoys jazz music.",
+          "example_ja": "彼女は本当にジャズ音楽が好きだ。"
         },
         {
           "item": "play music",
           "nuance_contrast_ja": "再生する、または演奏することを意味し、聴く行為とは違う",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "He plays music on his guitar every evening.",
+          "example_ja": "彼は毎晩ギターで音楽を演奏する。"
         }
       ],
       "antonyms": [
         {
           "item": "ignore music",
           "nuance_contrast_ja": "音楽に注意を向けない、無視することを表す",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I try to ignore the loud music from upstairs.",
+          "example_ja": "上の階からのうるさい音楽を無視しようとしている。"
         }
       ],
       "confusables": [
@@ -2133,30 +2133,30 @@
           "form": "listen to the radio",
           "meaning_ja": "ラジオを聴く",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "My grandfather still listens to the radio every morning.",
+          "example_ja": "祖父は今でも毎朝ラジオを聴いている。"
         },
         {
           "form": "listen to a song",
           "meaning_ja": "歌を聴く",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I always listen to this song when I feel sad.",
+          "example_ja": "悲しい時はいつもこの歌を聴く。"
         },
         {
           "form": "listen up",
           "meaning_ja": "よく聞いて（注意を促す）",
           "type": "phrasal_verb",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Everyone, listen up! I have an important announcement.",
+          "example_ja": "みんな、注目! 大事なお知らせがある。"
         },
         {
           "form": "music to my ears",
           "meaning_ja": "とても嬉しい知らせ（比喩）",
           "type": "metaphor",
           "metaphor_ja": "耳に心地よい音楽のように嬉しい情報",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Your good news is music to my ears!",
+          "example_ja": "君のいいニュースはまさに耳に心地よい音楽のようだ!"
         }
       ],
       "common_errors_ja": [
@@ -2372,28 +2372,28 @@
         {
           "item": "in fact",
           "nuance_contrast_ja": "より書き言葉寄りで formal",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "In fact, we've never been to Paris.",
+          "example_ja": "実は、私たちはパリに行ったことがない。"
         },
         {
           "item": "really",
           "nuance_contrast_ja": "強調のニュアンスが強く、事実の訂正には弱い",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Do you really want to go?",
+          "example_ja": "本当に行きたいの?"
         },
         {
           "item": "in reality",
           "nuance_contrast_ja": "対比・訂正を明示する formal 表現",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "It looks easy, but in reality it takes years of practice.",
+          "example_ja": "簡単に見えるが、実際には何年もの練習が必要だ。"
         }
       ],
       "antonyms": [
         {
           "item": "supposedly",
           "nuance_contrast_ja": "「実は違う」に対し「そう言われている(が実は違うかも)」",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "He is supposedly rich, but no one knows for sure.",
+          "example_ja": "彼はお金持ちだと言われているが、確かなことは誰も知らない。"
         }
       ],
       "confusables": [
@@ -2410,15 +2410,15 @@
           "form": "in actuality",
           "meaning_ja": "実際には(formal)",
           "type": "other",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "In actuality, the plan was very different from what we heard.",
+          "example_ja": "実際には、その計画は私たちが聞いていたものとは大きく違っていた。"
         },
         {
           "form": "actual",
           "meaning_ja": "実際の・本当の(形容詞)",
           "type": "other",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "What was the actual cost of the trip?",
+          "example_ja": "その旅行の実際の費用はいくらだったの?"
         }
       ],
       "common_errors_ja": [
@@ -2440,8 +2440,9 @@
       ],
       "meta": {
         "validated_by_user": false,
-        "schema_version": "1.2.1",
-        "source": "claude_generated"
+        "schema_version": "1.2.5",
+        "source": "claude_generated",
+        "updated_at": "2026-07-11T08:00:00.000Z"
       }
     },
     {
@@ -2485,28 +2486,28 @@
         {
           "item": "nevertheless",
           "nuance_contrast_ja": "より formal で「それにもかかわらず」の対比を強調",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The task was hard; nevertheless, they finished it.",
+          "example_ja": "その仕事は大変だったが、それでも彼らはやり遂げた。"
         },
         {
           "item": "yet",
           "nuance_contrast_ja": "文中や文頭で使い、より短くリズミカル",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "He is young, yet very wise.",
+          "example_ja": "彼は若いが、とても賢い。"
         },
         {
           "item": "but",
           "nuance_contrast_ja": "口語・書き言葉両方で使え、however より informal",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I want to go, but I have too much work.",
+          "example_ja": "行きたいけど、仕事が多すぎる。"
         }
       ],
       "antonyms": [
         {
           "item": "therefore",
           "nuance_contrast_ja": "「したがって」と結論を導く逆の役割",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "It's raining; therefore, we should stay inside.",
+          "example_ja": "雨が降っているので、家の中にいるべきだ。"
         }
       ],
       "confusables": [
@@ -2537,15 +2538,15 @@
           "form": "however much",
           "meaning_ja": "どれほど〜でも",
           "type": "other",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "However much you try, you can't please everyone.",
+          "example_ja": "どれだけ頑張っても、みんなを喜ばせることはできない。"
         },
         {
           "form": "however difficult",
           "meaning_ja": "どんなに難しくても",
           "type": "other",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "However difficult the test is, I will do my best.",
+          "example_ja": "テストがどれほど難しくても、最善を尽くす。"
         }
       ],
       "common_errors_ja": [
@@ -2567,9 +2568,9 @@
       ],
       "meta": {
         "validated_by_user": false,
-        "schema_version": "1.2.4",
+        "schema_version": "1.2.5",
         "source": "claude_generated",
-        "updated_at": "2026-07-11T06:00:00.000Z"
+        "updated_at": "2026-07-11T08:00:00.000Z"
       }
     },
     {
@@ -2613,28 +2614,28 @@
         {
           "item": "easy as pie",
           "nuance_contrast_ja": "同じ「とても簡単」の意味、informal",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Making pancakes is easy as pie.",
+          "example_ja": "パンケーキを作るのは朝飯前だ。"
         },
         {
           "item": "a walk in the park",
           "nuance_contrast_ja": "「散歩のように楽」というイメージ、neutral 寄り",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "For her, running a marathon is a walk in the park.",
+          "example_ja": "彼女にとって、マラソンを走ることなど朝飯前だ。"
         },
         {
           "item": "no big deal",
           "nuance_contrast_ja": "「大したことない」で困難のなさを表す、informal",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Don't worry, it's no big deal.",
+          "example_ja": "心配しないで、大したことじゃないよ。"
         }
       ],
       "antonyms": [
         {
           "item": "a tough job",
           "nuance_contrast_ja": "「大変な仕事」",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Teaching young children is a tough job.",
+          "example_ja": "小さな子供たちに教えるのは大変な仕事だ。"
         }
       ],
       "confusables": [
@@ -2651,15 +2652,15 @@
           "form": "easy as pie",
           "meaning_ja": "朝飯前(同義イディオム)",
           "type": "metaphor",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Learning the new song was easy as pie for her.",
+          "example_ja": "新しい歌を覚えるのは、彼女には朝飯前だった。"
         },
         {
           "form": "a piece of pie",
           "meaning_ja": "パイ一切れ(literal)",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I ate a piece of pie after dinner.",
+          "example_ja": "夕食の後にパイを一切れ食べた。"
         }
       ],
       "common_errors_ja": [
@@ -2676,8 +2677,9 @@
       ],
       "meta": {
         "validated_by_user": false,
-        "schema_version": "1.2.1",
-        "source": "claude_generated"
+        "schema_version": "1.2.5",
+        "source": "claude_generated",
+        "updated_at": "2026-07-11T08:00:00.000Z"
       },
       "contexts": [
         {
@@ -2838,34 +2840,34 @@
         {
           "item": "not feeling well",
           "nuance_contrast_ja": "より一般的、literal な表現",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I'm not feeling well today, so I'll stay home.",
+          "example_ja": "今日は体調が悪いので、家にいます。"
         },
         {
           "item": "feeling sick",
           "nuance_contrast_ja": "はっきりと「病気」のニュアンス",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The child was feeling sick after eating too much candy.",
+          "example_ja": "その子はキャンディを食べすぎて気分が悪くなっていた。"
         },
         {
           "item": "run down",
           "nuance_contrast_ja": "疲労による体調不良を含意",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "You look run down — you need some rest.",
+          "example_ja": "疲れきっているように見える。休んだほうがいい。"
         }
       ],
       "antonyms": [
         {
           "item": "in good shape",
           "nuance_contrast_ja": "体調・状態が良い",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "After training, he's in good shape for the game.",
+          "example_ja": "練習の後、彼は試合に向けて絶好調だ。"
         },
         {
           "item": "on top of the world",
           "nuance_contrast_ja": "とても元気(informal)",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "After the good news, she felt on top of the world.",
+          "example_ja": "いいニュースを聞いた後、彼女は最高の気分だった。"
         }
       ],
       "confusables": [
@@ -2889,15 +2891,15 @@
           "form": "feel under the weather",
           "meaning_ja": "体調がすぐれないと感じる",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I've been feeling under the weather all week.",
+          "example_ja": "今週ずっと体調がすぐれない。"
         },
         {
           "form": "come down with something",
           "meaning_ja": "(病気に)かかる",
           "type": "phrasal_verb",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I think I'm coming down with something — my head hurts.",
+          "example_ja": "何かの病気にかかりそうな気がする。頭が痛い。"
         }
       ],
       "common_errors_ja": [
@@ -2914,8 +2916,9 @@
       ],
       "meta": {
         "validated_by_user": false,
-        "schema_version": "1.2.1",
-        "source": "claude_generated"
+        "schema_version": "1.2.5",
+        "source": "claude_generated",
+        "updated_at": "2026-07-11T08:00:00.000Z"
       },
       "contexts": [
         {
@@ -3083,28 +3086,28 @@
         {
           "item": "clear-cut",
           "nuance_contrast_ja": "「はっきりしている」の意味により近い、形容詞",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The rules are clear-cut, so there's no confusion.",
+          "example_ja": "そのルールは明確なので、混乱はない。"
         },
         {
           "item": "in writing",
           "nuance_contrast_ja": "「文書化された」の意味では代替できる",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The company keeps everything in writing to avoid mistakes.",
+          "example_ja": "その会社は誤りを避けるために全てを書面に残している。"
         }
       ],
       "antonyms": [
         {
           "item": "in color",
           "nuance_contrast_ja": "「カラーで」(写真・映像の話)",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The movie was originally filmed in color.",
+          "example_ja": "その映画はもともとカラーで撮影された。"
         },
         {
           "item": "gray area",
           "nuance_contrast_ja": "「はっきりしない領域」(比喩的な意味)",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "This decision falls into a gray area of the law.",
+          "example_ja": "この判断は法律のグレーゾーンに入る。"
         }
       ],
       "confusables": [
@@ -3135,16 +3138,16 @@
           "form": "black and white photo",
           "meaning_ja": "白黒写真",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "My grandmother has many black and white photos from the 1950s.",
+          "example_ja": "祖母は1950年代の白黒写真をたくさん持っている。"
         },
         {
           "form": "put it in black and white",
           "meaning_ja": "文書化する",
           "type": "metaphor",
           "metaphor_ja": "紙(白)にインク(黒)で書く = 記録として明確にする",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Let's put it in black and white so there's no misunderstanding.",
+          "example_ja": "誤解のないように、文書化しておこう。"
         }
       ],
       "common_errors_ja": [
@@ -3166,9 +3169,9 @@
       ],
       "meta": {
         "validated_by_user": false,
-        "schema_version": "1.2.4",
+        "schema_version": "1.2.5",
         "source": "claude_generated",
-        "updated_at": "2026-07-11T06:00:00.000Z"
+        "updated_at": "2026-07-11T08:00:00.000Z"
       },
       "contexts": [
         {
@@ -3337,34 +3340,34 @@
         {
           "item": "all the time",
           "nuance_contrast_ja": "より informal、日常表現",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "My little brother watches TV all the time.",
+          "example_ja": "うちの弟は四六時中テレビを見ている。"
         },
         {
           "item": "around the clock",
           "nuance_contrast_ja": "「24時間ぶっ通しで」で強調が強い",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The hospital works around the clock to help patients.",
+          "example_ja": "その病院は患者を助けるために24時間体制で稼働している。"
         },
         {
           "item": "24/7",
           "nuance_contrast_ja": "informal で「常時」、書き言葉でも使う",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The convenience store is open 24/7.",
+          "example_ja": "そのコンビニは24時間営業だ。"
         }
       ],
       "antonyms": [
         {
           "item": "once in a while",
           "nuance_contrast_ja": "「たまに」で頻度が低い",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "We go out for dinner once in a while.",
+          "example_ja": "たまに外食する。"
         },
         {
           "item": "rarely",
           "nuance_contrast_ja": "「めったに」で頻度が低い(単語)",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I rarely eat fast food.",
+          "example_ja": "私はめったにファストフードを食べない。"
         }
       ],
       "confusables": [
@@ -3388,16 +3391,16 @@
           "form": "day and night shift",
           "meaning_ja": "昼夜勤務",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The factory workers do day and night shifts.",
+          "example_ja": "その工場の労働者は昼夜のシフトで働く。"
         },
         {
           "form": "night and day (different)",
           "meaning_ja": "まったく違う(比喩)",
           "type": "metaphor",
           "metaphor_ja": "昼と夜のように正反対",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The two brothers are like night and day — completely different.",
+          "example_ja": "その2人の兄弟はまるで正反対で、まったく違う。"
         }
       ],
       "common_errors_ja": [
@@ -3414,8 +3417,9 @@
       ],
       "meta": {
         "validated_by_user": false,
-        "schema_version": "1.2.1",
-        "source": "claude_generated"
+        "schema_version": "1.2.5",
+        "source": "claude_generated",
+        "updated_at": "2026-07-11T08:00:00.000Z"
       },
       "contexts": [
         {
@@ -3582,8 +3586,8 @@
         {
           "item": "airfield",
           "nuance_contrast_ja": "より小規模な滑走路施設。airport は旅客対応まで含む",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The small airfield near our town has only two runways.",
+          "example_ja": "私たちの町の近くの小さな飛行場には滑走路が2つしかない。"
         }
       ],
       "antonyms": [],
@@ -3608,22 +3612,22 @@
           "form": "at the airport",
           "meaning_ja": "空港で",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I'll meet you at the airport tomorrow.",
+          "example_ja": "明日、空港で待ち合わせしましょう。"
         },
         {
           "form": "airport shuttle",
           "meaning_ja": "空港送迎バス",
           "type": "compound",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The airport shuttle leaves every thirty minutes.",
+          "example_ja": "空港シャトルは30分ごとに出発する。"
         },
         {
           "form": "leave the airport",
           "meaning_ja": "空港を出る",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "It took an hour to leave the airport in traffic.",
+          "example_ja": "渋滞で空港を出るのに1時間かかった。"
         }
       ],
       "common_errors_ja": [
@@ -3640,8 +3644,9 @@
       ],
       "meta": {
         "validated_by_user": false,
-        "schema_version": "1.2.1",
-        "source": "claude_generated"
+        "schema_version": "1.2.5",
+        "source": "claude_generated",
+        "updated_at": "2026-07-11T08:00:00.000Z"
       },
       "contexts": [
         {
@@ -3785,20 +3790,20 @@
         {
           "item": "sitting room",
           "nuance_contrast_ja": "英国英語で使われることが多い",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "In British homes, it's often called a sitting room.",
+          "example_ja": "イギリスの家庭では、しばしば sitting room と呼ばれる。"
         },
         {
           "item": "lounge",
           "nuance_contrast_ja": "英国英語で「居間」、B2 語彙のため A2 学習者には控えめ",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The hotel guests waited in the lounge for their rooms.",
+          "example_ja": "ホテルの客は部屋の準備を待つ間、ラウンジで過ごした。"
         },
         {
           "item": "family room",
           "nuance_contrast_ja": "アメリカで別の居間を指す場合あり(家族専用)",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Our family room has a big TV and comfortable sofas.",
+          "example_ja": "うちの family room には大きなテレビと座り心地のいいソファーがある。"
         }
       ],
       "antonyms": [],
@@ -3823,15 +3828,15 @@
           "form": "in the living room",
           "meaning_ja": "居間で",
           "type": "collocation",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "The kids are watching TV in the living room.",
+          "example_ja": "子供たちは居間でテレビを見ている。"
         },
         {
           "form": "living room furniture",
           "meaning_ja": "居間の家具",
           "type": "compound",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "We bought new living room furniture last month.",
+          "example_ja": "先月、居間の家具を新しく買った。"
         }
       ],
       "common_errors_ja": [
@@ -3848,8 +3853,9 @@
       ],
       "meta": {
         "validated_by_user": false,
-        "schema_version": "1.2.1",
-        "source": "claude_generated"
+        "schema_version": "1.2.5",
+        "source": "claude_generated",
+        "updated_at": "2026-07-11T08:00:00.000Z"
       },
       "contexts": [
         {
@@ -4017,28 +4023,28 @@
         {
           "item": "certainly",
           "nuance_contrast_ja": "より formal、「確かに」の意味",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Certainly, I can help you with that.",
+          "example_ja": "もちろん、それについてお手伝いできます。"
         },
         {
           "item": "sure",
           "nuance_contrast_ja": "informal、「うん・いいよ」の軽い同意",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Sure, I'll come to your party.",
+          "example_ja": "いいよ、君のパーティー行くよ。"
         },
         {
           "item": "naturally",
           "nuance_contrast_ja": "「当然のこととして」formal 寄り",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Naturally, everyone was surprised by the news.",
+          "example_ja": "当然、みんなそのニュースに驚いた。"
         }
       ],
       "antonyms": [
         {
           "item": "of course not",
           "nuance_contrast_ja": "「もちろん違う」の否定形",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Am I angry? Of course not!",
+          "example_ja": "怒ってるかって? もちろん怒ってないよ!"
         }
       ],
       "confusables": [
@@ -4069,15 +4075,15 @@
           "form": "of course not",
           "meaning_ja": "もちろん違う(否定)",
           "type": "other",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Do you mind if I sit here? Of course not.",
+          "example_ja": "ここに座ってもいい? もちろんどうぞ。"
         },
         {
           "form": "as a matter of course",
           "meaning_ja": "当然のこととして(formal)",
           "type": "other",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "As a matter of course, we check IDs at the door.",
+          "example_ja": "当然のこととして、入り口で身分証を確認します。"
         }
       ],
       "common_errors_ja": [
@@ -4099,9 +4105,9 @@
       ],
       "meta": {
         "validated_by_user": false,
-        "schema_version": "1.2.4",
+        "schema_version": "1.2.5",
         "source": "claude_generated",
-        "updated_at": "2026-07-11T06:00:00.000Z"
+        "updated_at": "2026-07-11T08:00:00.000Z"
       },
       "contexts": [
         {
@@ -4269,20 +4275,20 @@
         {
           "item": "for instance",
           "nuance_contrast_ja": "ほぼ同義、for example よりわずかに formal",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Many fruits are healthy. For instance, apples have many vitamins.",
+          "example_ja": "多くの果物は体にいい。例えば、りんごにはたくさんのビタミンがある。"
         },
         {
           "item": "such as",
           "nuance_contrast_ja": "名詞の直後に付ける形、文の途中で使う",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "I like sports such as tennis and swimming.",
+          "example_ja": "私はテニスや水泳のようなスポーツが好きだ。"
         },
         {
           "item": "e.g.",
           "nuance_contrast_ja": "書き言葉の略記、文中で括弧内などに使う",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Bring warm clothes (e.g., a jacket and a scarf) to the trip.",
+          "example_ja": "旅行には暖かい服(例:ジャケットやマフラー)を持ってきてください。"
         }
       ],
       "antonyms": [],
@@ -4314,15 +4320,15 @@
           "form": "for instance",
           "meaning_ja": "たとえば(同義)",
           "type": "other",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "You could take up a hobby. For instance, painting or reading.",
+          "example_ja": "何か趣味を始めたら? 例えば、絵を描くとか読書とか。"
         },
         {
           "form": "such as",
           "meaning_ja": "〜のような(例示)",
           "type": "other",
-          "example_en": "",
-          "example_ja": ""
+          "example_en": "Cities such as Tokyo and Osaka have great food.",
+          "example_ja": "東京や大阪のような都市には素晴らしい食べ物がある。"
         }
       ],
       "common_errors_ja": [
@@ -4344,9 +4350,9 @@
       ],
       "meta": {
         "validated_by_user": false,
-        "schema_version": "1.2.4",
+        "schema_version": "1.2.5",
         "source": "claude_generated",
-        "updated_at": "2026-07-11T06:00:00.000Z"
+        "updated_at": "2026-07-11T08:00:00.000Z"
       },
       "contexts": [
         {

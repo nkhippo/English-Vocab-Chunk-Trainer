@@ -4,6 +4,8 @@
 
 ### Added
 
+- synonyms / antonyms / related_uses の `example_en` / `example_ja` 132 スロット充填（18 items）
+- `doc/handoff/synonym-examples-fill-handoff-report.md`
 - v9: Mode A UX 簡素化（詳細任意展開・日本語訳トグル）+ 単語帳折衷 UI
 - `src/components/detail-sections/*`（モーダル / Mode A 共有）
 - `DetailToggleButton` / `JaTranslationToggle`
@@ -13,23 +15,20 @@
 - `doc/handoff/chat-generation-template-v2-handoff-report.md`
 - confusables / common_errors 役割分離パッチ（11 items）+ ガイドライン
 - `doc/handoff/confusables-role-separation-handoff-report.md`
-- v8: Mode A/B モバイル最適化（confusables / related_uses / 学習履歴表示）
+- v8: Mode A/B モバイル最適化
 - `doc/handoff/v8-mode-a-redesign-report.md` / `v8-scope-questions.md`
 - v7: `nuance_contrast_ja` + synonym/antonym/related_uses 例文フィールド
 - `pnpm run migrate:v1.2.3`
 - `doc/handoff/v7-refinement-report.md` / `v7-scope-questions.md`
-- Insight 公式サンプル 3 件（プレースホルダー同 ID 上書き）
-- `doc/handoff/v6-insight-official-merge-handoff-report.md`
+- Insight 公式サンプル 3 件
 - カテゴリパイロット 10 件マージ → **合計 21 件**
-- `doc/handoff/v6-pilot10-merge-handoff-report.md`
 
 ### Changed
 
+- `data/current/items.json` schema **1.2.5**（関連語例文充填）
 - Mode A/B: OK/保留削除、次へ常時活性、詳細パネル初期非表示
 - 単語帳詳細: タイル感削減、register ラベル復活、confusable example_en 非表示
-- `data/current/items.json` schema **1.2.4**（11 items の confusables/errors 差し替え）
-- `app-specification.md` → **v3.3**（Mode A/B 文脈型・v8 UI・ロードマップ現状を同期）
-- `learning-data-schema.json` / `repository-structure.md` を v5〜v8 指示の累積に同期
+- `app-specification.md` → **v3.3**
 - ホーム文言を 21 件表記に更新
 
 ### Removed

@@ -25,7 +25,7 @@
 
 | ID | 内容 | 由来 |
 |---|---|---|
-| R1 | synonyms/antonyms/related_uses の空 example（約 132 スロット）補充 | v7 |
+| R1 | synonyms/antonyms/related_uses の空 example（約 132 スロット）補充 | **完了**（2026-07-11・schema 1.2.5） |
 | R2 | confusables / common_errors_ja の役割重複整理・再生成 | **完了**（2026-07-11・schema 1.2.4） |
 | R3 | nuance_contrast_ja 文言品質の見直し | v7/v8 §1 |
 | R4 | GAS enrich 本番デプロイ（保留継続） | v8 §1 |

@@ -1,36 +1,32 @@
 import { Button } from '@/components/ui/Button'
 
 interface AppFooterProps {
-  onPause: () => void
-  pauseLabel: string
   primaryLabel: string
   onPrimary: () => void
   primaryDisabled?: boolean
-  primaryVariant?: 'primary' | 'ghost'
+  className?: string
 }
 
+/** Sticky primary CTA only (pause removed in v8). */
 export function AppFooter({
-  onPause,
-  pauseLabel,
   primaryLabel,
   onPrimary,
   primaryDisabled = false,
-  primaryVariant = 'primary',
+  className = '',
 }: AppFooterProps) {
   return (
-    <footer className="flex h-20 shrink-0 items-center border-t border-border bg-bg-base px-4">
-      <div className="grid w-full grid-cols-[1fr_auto_1fr] items-center">
-        <div />
-        <div className="justify-self-center">
-          <Button variant="ghost" onClick={onPause}>
-            {pauseLabel}
-          </Button>
-        </div>
-        <div className="justify-self-end">
-          <Button variant={primaryVariant} onClick={onPrimary} disabled={primaryDisabled}>
-            {primaryLabel}
-          </Button>
-        </div>
+    <footer
+      className={`flex shrink-0 items-center border-t border-border bg-bg-base px-4 py-3 ${className}`}
+    >
+      <div className="mx-auto w-full max-w-xl">
+        <Button
+          variant="primary"
+          className="min-h-14 w-full rounded-xl px-8 py-4 text-base"
+          onClick={onPrimary}
+          disabled={primaryDisabled}
+        >
+          {primaryLabel}
+        </Button>
       </div>
     </footer>
   )

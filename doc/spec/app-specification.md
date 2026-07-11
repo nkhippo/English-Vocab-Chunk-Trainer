@@ -1,4 +1,4 @@
-# 語彙学習アプリ 最終仕様 v3.1 (統合版)
+# 語彙学習アプリ 最終仕様 v3.2 (統合版)
 
 v1/v2 を統合し、以下の追加要件を反映した最終仕様:
 - PWA(Vite + React + Service Worker + IndexedDB)確定
@@ -12,16 +12,22 @@ v1/v2 を統合し、以下の追加要件を反映した最終仕様:
 
 作業指示書・実装は本ドキュメントを唯一の参照ソースとする。
 
+**v3.2 (2026-07-11) 改訂ノート**: v7 実装フィードバックを反映:
+- `hypernyms` / `hyponyms` フィールドを廃止(A2 学習者にオーバースペック)
+- synonyms / antonyms の `difference_ja` を `nuance_contrast_ja` に変更(対象語との対比を明示)
+- synonyms / antonyms / related_uses に `example_en` / `example_ja` フィールドを追加
+- `schema_version` を 1.2.3 に更新
+
 **v3.1 (2026-07-09) 改訂ノート**: パイロットテスト結果に基づく整合性修正:
 - register 表記を `informal` に統一（旧 `casual` は廃止）
 - item.register を配列型に変更（複数 register 対応 item のブラウズビュー絞り込み対応）
 - collocation_pattern enum を実データに基づき拡張（`V+Ving` / `V+Prep+N` / `V+Adv` を追加）
 
-**実装ステータス (2026-07-09 夜)**:
-- Phase 1 PWA 骨格・ガイド・`/review`・`/browse` 件数表示: **稼働中**（GitHub Pages）
-- `data/current`: **11 件**（スキーマ v1.1.0）
+**実装ステータス (2026-07-11)**:
+- Phase 1 PWA 骨格・ガイド・`/review`・`/browse`・Mode A/B: **稼働中**（GitHub Pages）
+- `data/current`: **21 件**（スキーマ v1.2.3）+ Insight 公式 3
 - 日英 UI: 設定トグル + ガイド二言語。**実装方針**は `doc/ops/i18n-strategy.md`（3 層モデル）
-- Mode A/B/C・SRS・browse 検索詳細: **Phase 2**
+- Mode C・SRS: **Phase 2+**
 - UX スモークテスト: **合格**（`doc/ops/ux-smoke-test-checklist.md`）
 
 ---

@@ -65,8 +65,6 @@
     "relatedWords": "Related words",
     "synonyms": "Synonyms",
     "antonyms": "Antonyms",
-    "hypernyms": "Hypernyms",
-    "hyponyms": "Hyponyms",
     "relatedUses": "Related uses",
     "meta": "Metadata",
     "similarity": "Similarity:",
@@ -77,7 +75,9 @@
     "category": "Category",
     "frequency": "Frequency rank",
     "semanticField": "Semantic field",
-    "skillFocus": "Skill focus"
+    "skillFocus": "Skill focus",
+    "relatedUsesShort": "Related uses",
+    "exampleLabel": "Example"
   },
   "ipa": {
     "tabsLabel": "Pronunciation",

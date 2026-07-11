@@ -65,8 +65,6 @@
     "relatedWords": "関連語",
     "synonyms": "類義語",
     "antonyms": "反意語",
-    "hypernyms": "上位語",
-    "hyponyms": "下位語",
     "relatedUses": "派生・関連する使い方",
     "meta": "メタ情報",
     "similarity": "似ている点:",
@@ -77,7 +75,9 @@
     "category": "カテゴリ",
     "frequency": "頻度ランク",
     "semanticField": "意味分野",
-    "skillFocus": "スキル焦点"
+    "skillFocus": "スキル焦点",
+    "relatedUsesShort": "関連する使い方",
+    "exampleLabel": "例文"
   },
   "ipa": {
     "tabsLabel": "発音表記",

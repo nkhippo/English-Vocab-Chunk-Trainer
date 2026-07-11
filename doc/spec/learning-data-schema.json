@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://github.com/nkhippo/English-Vocab-Chunk-Trainer/schema/v1",
   "title": "Vocab & Chunk Trainer Data Schema",
-  "description": "Authoritative schema for LearningItem and Insight. Version 1.2.0 (2026-07-10): contexts[] for Mode A/B passages. See doc/handoff/full-redesign-handoff-report.md.",
-  "version": "1.2.0",
+  "description": "Authoritative schema for LearningItem and Insight. Version 1.2.3 (2026-07-11): nuance_contrast_ja; example_en/ja on synonyms/antonyms/related_uses; hypernyms/hyponyms removed. See doc/handoff/v7-refinement-report.md.",
+  "version": "1.2.3",
   "definitions": {
     "cefrLevel": {
       "type": "string",

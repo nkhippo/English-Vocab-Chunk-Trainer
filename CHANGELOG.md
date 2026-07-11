@@ -4,6 +4,9 @@
 
 ### Added
 
+- v8: Mode A/B モバイル最適化（confusables / related_uses / 学習履歴表示）
+- `EvalButtons` / `ConfusablesInline` / `RelatedUsesInline` / `TrainCheckmarks` / `useTrainInteractions`
+- `doc/handoff/v8-mode-a-redesign-report.md` / `v8-scope-questions.md`
 - v7: `nuance_contrast_ja` + synonym/antonym/related_uses 例文フィールド
 - `pnpm run migrate:v1.2.3`
 - `doc/handoff/v7-refinement-report.md` / `v7-scope-questions.md`
@@ -14,6 +17,8 @@
 
 ### Changed
 
+- Mode A/B: タイマー・中断・出会い回数・上部 CEFR 削除、× 閉じる追加
+- `app-specification.md` → **v3.2**
 - 詳細モーダル: 類義語・反意語を上位、例文全表示、IPA 語ごとのみ、上位語・下位語削除
 - `data/current/items.json` schema **1.2.3**
 - ホーム文言を 21 件表記に更新
@@ -21,6 +26,7 @@
 ### Removed
 
 - LearningItem の `hypernyms` / `hyponyms`
+- i18n `itemDetail.hypernyms` / `hyponyms`
 - synonym/antonym の `difference_ja` / `difference_en`（`nuance_contrast_ja` へ移行）
 
 ### Added (earlier same day)

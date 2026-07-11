@@ -67,7 +67,7 @@
 - UI コンポーネント（ItemDetailModal / Mode A/B パネル）
 - synonyms / antonyms / related_uses / contexts / Insight
 - GAS デプロイ
-- 量産テンプレート `chat-generation-template-a2.md`（設計チャット側の次アクション）
+- 量産テンプレート `chat-generation-template-a2.md` → **v2 として反映済み**（`doc/ops/chat-generation-template-a2-v2.md`）
 
 ---
 

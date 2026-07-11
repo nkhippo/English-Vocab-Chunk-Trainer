@@ -17,7 +17,7 @@
 | Dexie 再同期用 `schema_version` | **1.2.4 → 1.2.5** |
 | `pnpm validate` | **OK**（既存 warnings のみ） |
 | 単語帳詳細モーダル実機確認 | **OK**（`catch a cold`） |
-| main push → GitHub Pages | **実施** |
+| main push → GitHub Pages | **完了**（`d26c149`・Deploy OK） |
 
 ---
 

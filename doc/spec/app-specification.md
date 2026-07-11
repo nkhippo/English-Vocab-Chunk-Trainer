@@ -120,15 +120,19 @@ LearningItem {
   synonyms: [
     {
       item: "reach a decision",       // 類義語または類義チャンク
-      difference_ja: "reachは合意形成のニュアンス、makeは意思決定",
-      difference_en: "'reach' implies consensus; 'make' implies choosing"
+      nuance_contrast_ja: "make a decision が意思決定そのものを指すのに対し、reach a decision は合意形成のニュアンスが強い",
+      example_en: "After a long meeting, they finally reached a decision.",
+      example_ja: "長い会議の末、彼らはようやく決定に至った。"
     }
   ]
   antonyms: [
-    { item: "postpone a decision", difference_ja: "決断を先送りにする" }
+    {
+      item: "postpone a decision",
+      nuance_contrast_ja: "make a decision が決断するのに対し、postpone a decision は決断を先送りにする",
+      example_en: "They decided to postpone a decision until next week.",
+      example_ja: "彼らは来週まで決定を先送りすることにした。"
+    }
   ]
-  hypernyms: string[]                 // 上位語 ["choose"]
-  hyponyms: string[]                  // 下位語 ["make a final decision", "make a rash decision"]
   
   // 混同しやすい語(コノテーション・レジスターで異なる近義)
   confusables: [
@@ -147,9 +151,17 @@ LearningItem {
       form: "take off",
       meaning_ja: "離陸する / 服を脱ぐ / (人気などが)急上昇する",
       type: "phrasal_verb",
-      metaphor_ja: "上昇のイメージが基本、そこから比喩的拡張"
+      metaphor_ja: "上昇のイメージが基本、そこから比喩的拡張",
+      example_en: "The plane took off on time.",
+      example_ja: "飛行機は定刻どおり離陸した。"
     },
-    { form: "take out", meaning_ja: "取り出す / (レストランで)持ち帰る", type: "phrasal_verb" }
+    {
+      form: "take out",
+      meaning_ja: "取り出す / (レストランで)持ち帰る",
+      type: "phrasal_verb",
+      example_en: "We ordered takeout for dinner.",
+      example_ja: "夕食はテイクアウトを注文した。"
+    }
   ]
   
   // 日本人学習者の典型誤用(L1 干渉)

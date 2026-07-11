@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url'
 import Ajv from 'ajv'
 import addFormats from 'ajv-formats'
 import { readJson } from './utils.ts'
-import type { Dataset, LearningItem } from '../../src/types/learning.ts'
+import type { AntonymEntry, Dataset, LearningItem, SynonymEntry } from '../../src/types/learning.ts'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(__dirname, '../..')
@@ -69,9 +69,34 @@ function checkItemRefs(
   }
 
   for (const syn of item.synonyms ?? []) {
+    const raw = syn as SynonymEntry & { difference_ja?: string }
+    if (!raw.nuance_contrast_ja) {
+      errors.push(`${item.id}: synonym "${raw.item}" missing nuance_contrast_ja`)
+    }
+    if (raw.difference_ja !== undefined) {
+      warnings.push(`${item.id}: synonym "${raw.item}" still has difference_ja (migration incomplete)`)
+    }
     if (ids.has(syn.item)) continue
     if (!/^[a-z0-9_]+$/.test(syn.item)) continue
     warnings.push(`${item.id}: synonym ${syn.item} is not an existing id (plain text OK)`)
+  }
+
+  for (const ant of item.antonyms ?? []) {
+    const raw = ant as AntonymEntry & { difference_ja?: string }
+    if (!raw.nuance_contrast_ja) {
+      errors.push(`${item.id}: antonym "${raw.item}" missing nuance_contrast_ja`)
+    }
+    if (raw.difference_ja !== undefined) {
+      warnings.push(`${item.id}: antonym "${raw.item}" still has difference_ja (migration incomplete)`)
+    }
+  }
+
+  const legacy = item as LearningItem & { hypernyms?: string[]; hyponyms?: string[] }
+  if (legacy.hypernyms !== undefined) {
+    errors.push(`${item.id}: hypernyms is removed in schema v1.2.3`)
+  }
+  if (legacy.hyponyms !== undefined) {
+    errors.push(`${item.id}: hyponyms is removed in schema v1.2.3`)
   }
 }
 

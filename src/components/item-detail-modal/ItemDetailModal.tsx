@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CheckmarkRow } from '@/components/checkmark-row'
 import { InsightCard } from '@/components/insight-card'
@@ -6,8 +6,8 @@ import { IpaTabs } from '@/components/ipa-tabs'
 import { Modal } from '@/components/ui/Modal'
 import { useCheckmark } from '@/lib/checkmarks'
 import { getInsightById, getSurfacesByIds } from '@/lib/db'
-import { labelCategory, labelRegister, labelSkillFocus, metaValue } from '@/lib/i18n/labels'
-import type { Insight, LearningItem, Register } from '@/types/learning'
+import { labelCategory, labelSkillFocus, metaValue } from '@/lib/i18n/labels'
+import type { AntonymEntry, Insight, LearningItem, RelatedUseEntry, SynonymEntry } from '@/types/learning'
 
 interface ItemDetailModalProps {
   item: LearningItem | null
@@ -41,11 +41,6 @@ function AccordionSection({
   )
 }
 
-function defaultRegister(registers: Register[]): Register {
-  if (registers.includes('neutral')) return 'neutral'
-  return registers[0] ?? 'neutral'
-}
-
 function BrowseDetailCheckmarks({ itemId }: { itemId: string }) {
   const { t } = useTranslation()
   const [count, setCount] = useCheckmark('browse', itemId)
@@ -63,26 +58,53 @@ function BrowseDetailCheckmarks({ itemId }: { itemId: string }) {
   )
 }
 
-function hasRelatedWords(item: LearningItem): boolean {
+function shouldShowExample(entry: { example_en?: string; example_ja?: string }): boolean {
+  return Boolean(entry.example_en?.trim()) && Boolean(entry.example_ja?.trim())
+}
+
+function ContrastEntryCard({ entry }: { entry: SynonymEntry | AntonymEntry }) {
   return (
-    (item.synonyms?.length ?? 0) > 0 ||
-    (item.antonyms?.length ?? 0) > 0 ||
-    (item.hypernyms?.length ?? 0) > 0 ||
-    (item.hyponyms?.length ?? 0) > 0
+    <div className="space-y-2 border border-border bg-bg-base p-3">
+      <p className="font-serif text-lg text-text-primary">{entry.item}</p>
+      <p className="font-sans text-sm leading-relaxed text-text-secondary">{entry.nuance_contrast_ja}</p>
+      {shouldShowExample(entry) ? (
+        <div className="space-y-1 border-t border-border pt-2">
+          <p className="font-serif text-sm text-text-primary">{entry.example_en}</p>
+          <p className="font-sans text-sm text-text-secondary">{entry.example_ja}</p>
+        </div>
+      ) : null}
+    </div>
   )
+}
+
+function RelatedUseCard({ use }: { use: RelatedUseEntry }) {
+  return (
+    <div className="space-y-2 border border-border bg-bg-base p-3">
+      <p className="font-serif text-lg text-text-primary">{use.form}</p>
+      <p className="font-sans text-sm text-text-secondary">{use.meaning_ja}</p>
+      {use.metaphor_ja ? <p className="font-sans text-xs text-text-muted">{use.metaphor_ja}</p> : null}
+      {shouldShowExample(use) ? (
+        <div className="space-y-1 border-t border-border pt-2">
+          <p className="font-serif text-sm text-text-primary">{use.example_en}</p>
+          <p className="font-sans text-sm text-text-secondary">{use.example_ja}</p>
+        </div>
+      ) : null}
+    </div>
+  )
+}
+
+function hasRelatedWords(item: LearningItem): boolean {
+  return (item.synonyms?.length ?? 0) > 0 || (item.antonyms?.length ?? 0) > 0
 }
 
 export function ItemDetailModal({ item, open, onClose }: ItemDetailModalProps) {
   const { t } = useTranslation()
-  const registers = useMemo(() => item?.register ?? [], [item])
-  const [activeRegister, setActiveRegister] = useState<Register>('neutral')
   const [insight, setInsight] = useState<Insight | null>(null)
   const [relatedSurfaces, setRelatedSurfaces] = useState<string[]>([])
   const [insightOpen, setInsightOpen] = useState(false)
 
   useEffect(() => {
     if (!open || !item) return
-    setActiveRegister(defaultRegister(item.register))
     setInsightOpen(false)
   }, [open, item])
 
@@ -110,9 +132,7 @@ export function ItemDetailModal({ item, open, onClose }: ItemDetailModalProps) {
 
   if (!open || !item) return null
 
-  const activeExample =
-    item.example_sentences.find((ex) => ex.register === activeRegister) ?? item.example_sentences[0]
-
+  const examples = item.example_sentences ?? []
   const hasConfusables = (item.confusables ?? []).length > 0
   const hasCommonErrors = (item.common_errors_ja ?? []).length > 0
   const hasRelatedUses = (item.related_uses ?? []).length > 0
@@ -152,34 +172,45 @@ export function ItemDetailModal({ item, open, onClose }: ItemDetailModalProps) {
 
         <section className="space-y-3">
           <h3 className="font-serif text-lg text-text-primary">{t('itemDetail.examples')}</h3>
-          {registers.length > 0 ? (
-            <div className="flex flex-wrap gap-2">
-              {registers.map((register) => (
-                <button
-                  key={register}
-                  type="button"
-                  onClick={() => setActiveRegister(register)}
-                  className={`rounded px-4 py-2 font-sans text-sm font-medium ${
-                    activeRegister === register
-                      ? 'bg-accent text-bg-elevated'
-                      : 'border border-border bg-transparent text-text-secondary'
-                  }`}
+          {examples.length > 0 ? (
+            <div className="space-y-3">
+              {examples.map((example) => (
+                <div
+                  key={`${example.register}-${example.en}`}
+                  className="border border-border bg-bg-base p-4"
                 >
-                  {labelRegister(t, register)}
-                </button>
+                  <p className="font-serif text-lg leading-relaxed text-text-primary">{example.en}</p>
+                  <p className="mt-2 font-sans text-base text-text-secondary">{example.ja}</p>
+                </div>
               ))}
-            </div>
-          ) : null}
-          {activeExample ? (
-            <div className="border border-border bg-bg-base p-4">
-              <p className="font-serif text-lg leading-relaxed text-text-primary">{activeExample.en}</p>
-              <p className="mt-2 font-sans text-base text-text-secondary">{activeExample.ja}</p>
-              <p className="mt-2 font-sans text-xs text-text-muted">[{activeExample.surrounding_cefr_ceiling}]</p>
             </div>
           ) : (
             <p className="text-text-muted">{t('itemDetail.none')}</p>
           )}
         </section>
+
+        {showRelatedWords ? (
+          <AccordionSection title={t('itemDetail.relatedWords')} defaultOpen>
+            <div className="space-y-4">
+              {(item.synonyms ?? []).length > 0 ? (
+                <div className="space-y-3">
+                  <p className="font-sans text-sm font-medium text-text-primary">{t('itemDetail.synonyms')}</p>
+                  {(item.synonyms ?? []).map((syn) => (
+                    <ContrastEntryCard key={syn.item} entry={syn} />
+                  ))}
+                </div>
+              ) : null}
+              {(item.antonyms ?? []).length > 0 ? (
+                <div className="space-y-3">
+                  <p className="font-sans text-sm font-medium text-text-primary">{t('itemDetail.antonyms')}</p>
+                  {(item.antonyms ?? []).map((ant) => (
+                    <ContrastEntryCard key={ant.item} entry={ant} />
+                  ))}
+                </div>
+              ) : null}
+            </div>
+          </AccordionSection>
+        ) : null}
 
         {hasConfusables ? (
           <AccordionSection title={t('itemDetail.confusables')} defaultOpen>
@@ -228,55 +259,10 @@ export function ItemDetailModal({ item, open, onClose }: ItemDetailModalProps) {
           </AccordionSection>
         ) : null}
 
-        {showRelatedWords ? (
-          <AccordionSection title={t('itemDetail.relatedWords')} defaultOpen={false}>
-            <div className="space-y-4">
-              {(item.synonyms ?? []).length > 0 ? (
-                <div>
-                  <p className="mb-2 font-sans text-sm font-medium text-text-primary">{t('itemDetail.synonyms')}</p>
-                  {(item.synonyms ?? []).map((syn) => (
-                    <p key={syn.item} className="font-sans text-sm text-text-secondary">
-                      <span className="font-medium text-text-primary">{syn.item}</span> — {syn.difference_ja}
-                    </p>
-                  ))}
-                </div>
-              ) : null}
-              {(item.antonyms ?? []).length > 0 ? (
-                <div>
-                  <p className="mb-2 font-sans text-sm font-medium text-text-primary">{t('itemDetail.antonyms')}</p>
-                  {(item.antonyms ?? []).map((ant) => (
-                    <p key={ant.item} className="font-sans text-sm text-text-secondary">
-                      <span className="font-medium text-text-primary">{ant.item}</span> — {ant.difference_ja}
-                    </p>
-                  ))}
-                </div>
-              ) : null}
-              {(item.hypernyms ?? []).length > 0 ? (
-                <div>
-                  <p className="mb-2 font-sans text-sm font-medium text-text-primary">{t('itemDetail.hypernyms')}</p>
-                  <p className="font-sans text-sm text-text-primary">{(item.hypernyms ?? []).join(', ')}</p>
-                </div>
-              ) : null}
-              {(item.hyponyms ?? []).length > 0 ? (
-                <div>
-                  <p className="mb-2 font-sans text-sm font-medium text-text-primary">{t('itemDetail.hyponyms')}</p>
-                  <p className="font-sans text-sm text-text-primary">{(item.hyponyms ?? []).join(', ')}</p>
-                </div>
-              ) : null}
-            </div>
-          </AccordionSection>
-        ) : null}
-
         {hasRelatedUses ? (
           <AccordionSection title={t('itemDetail.relatedUses')} defaultOpen={false}>
             {(item.related_uses ?? []).map((use) => (
-              <div key={use.form} className="border border-border bg-bg-base p-3">
-                <p className="font-serif text-lg text-text-primary">{use.form}</p>
-                <p className="font-sans text-sm text-text-secondary">{use.meaning_ja}</p>
-                {use.metaphor_ja ? (
-                  <p className="mt-1 font-sans text-xs text-text-muted">{use.metaphor_ja}</p>
-                ) : null}
-              </div>
+              <RelatedUseCard key={use.form} use={use} />
             ))}
           </AccordionSection>
         ) : null}

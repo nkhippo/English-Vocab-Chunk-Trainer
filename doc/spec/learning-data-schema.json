@@ -57,20 +57,40 @@
     },
     "synonymEntry": {
       "type": "object",
-      "required": ["item", "difference_ja"],
+      "required": ["item", "nuance_contrast_ja"],
       "properties": {
         "item": { "type": "string" },
-        "difference_ja": { "type": "string" },
-        "difference_en": { "type": "string" },
-        "register": { "$ref": "#/definitions/register" }
+        "nuance_contrast_ja": {
+          "type": "string",
+          "description": "対象語との対比を明示する説明"
+        },
+        "example_en": {
+          "type": "string",
+          "description": "この類義語自体を使った例文(英語)"
+        },
+        "example_ja": {
+          "type": "string",
+          "description": "example_en の日本語訳"
+        }
       }
     },
     "antonymEntry": {
       "type": "object",
-      "required": ["item", "difference_ja"],
+      "required": ["item", "nuance_contrast_ja"],
       "properties": {
         "item": { "type": "string" },
-        "difference_ja": { "type": "string" }
+        "nuance_contrast_ja": {
+          "type": "string",
+          "description": "対象語との対比を明示する説明"
+        },
+        "example_en": {
+          "type": "string",
+          "description": "この反意語自体を使った例文(英語)"
+        },
+        "example_ja": {
+          "type": "string",
+          "description": "example_en の日本語訳"
+        }
       }
     },
     "confusableEntry": {
@@ -94,7 +114,9 @@
           "type": "string",
           "enum": ["phrasal_verb", "metaphor", "collocation", "compound", "other"]
         },
-        "metaphor_ja": { "type": "string" }
+        "metaphor_ja": { "type": "string" },
+        "example_en": { "type": "string" },
+        "example_ja": { "type": "string" }
       }
     },
     "commonError": {
@@ -266,14 +288,6 @@
           "type": "array",
           "items": { "$ref": "#/definitions/antonymEntry" },
           "maxItems": 5
-        },
-        "hypernyms": {
-          "type": "array",
-          "items": { "type": "string" }
-        },
-        "hyponyms": {
-          "type": "array",
-          "items": { "type": "string" }
         },
         "confusables": {
           "type": "array",

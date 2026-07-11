@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.2.2",
-  "generated_at": "2026-07-11T03:49:51Z",
+  "schema_version": "1.2.3",
+  "generated_at": "2026-07-11T04:30:56.006Z",
   "cefr_levels_included": [
     "A1",
     "A2"
@@ -125,34 +125,36 @@
       "synonyms": [
         {
           "item": "take a photo",
-          "difference_ja": "意味はほぼ同じで、日常会話でよく使われる"
+          "nuance_contrast_ja": "意味はほぼ同じで、日常会話でよく使われる",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "snap a picture",
-          "difference_ja": "素早くさっと撮るニュアンス。カジュアル"
+          "nuance_contrast_ja": "素早くさっと撮るニュアンス。カジュアル",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "shoot a picture",
-          "difference_ja": "やや専門的で、写真家やビデオ撮影でも使う"
+          "nuance_contrast_ja": "やや専門的で、写真家やビデオ撮影でも使う",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "get a picture",
-          "difference_ja": "「1枚もらう・撮ってもらう」感覚で口語的"
+          "nuance_contrast_ja": "「1枚もらう・撮ってもらう」感覚で口語的",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "capture an image",
-          "difference_ja": "やや文語的・技術的な表現"
+          "nuance_contrast_ja": "やや文語的・技術的な表現",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [],
-      "hypernyms": [
-        "record",
-        "photograph"
-      ],
-      "hyponyms": [
-        "take a selfie",
-        "take a group photo"
-      ],
       "confusables": [
         {
           "item": "take a photo",
@@ -187,29 +189,39 @@
         {
           "form": "take a selfie",
           "meaning_ja": "自撮りをする",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "take a photo",
           "meaning_ja": "写真を撮る",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "picture-perfect",
           "meaning_ja": "完璧な、絵に描いたような",
           "type": "metaphor",
-          "metaphor_ja": "写真のように美しい様子を表す"
+          "metaphor_ja": "写真のように美しい様子を表す",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "get the picture",
           "meaning_ja": "状況を理解する",
           "type": "metaphor",
-          "metaphor_ja": "頭の中に絵として浮かぶ=わかる"
+          "metaphor_ja": "頭の中に絵として浮かぶ=わかる",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "picture book",
           "meaning_ja": "絵本",
-          "type": "compound"
+          "type": "compound",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -410,24 +422,25 @@
       "synonyms": [
         {
           "item": "eat breakfast",
-          "difference_ja": "より直接的に「食べる」動作を表す。意味はほぼ同じ。"
+          "nuance_contrast_ja": "より直接的に「食べる」動作を表す。意味はほぼ同じ。",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "take breakfast",
-          "difference_ja": "やや古風・フォーマルな言い方。日常会話では稀。"
+          "nuance_contrast_ja": "やや古風・フォーマルな言い方。日常会話では稀。",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [
         {
           "item": "skip breakfast",
-          "difference_ja": "朝食を抜くこと。食べないことを意味する。"
+          "nuance_contrast_ja": "朝食を抜くこと。食べないことを意味する。",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
-      "hypernyms": [
-        "have a meal",
-        "eat"
-      ],
-      "hyponyms": [],
       "confusables": [
         {
           "item": "make breakfast",
@@ -455,27 +468,37 @@
         {
           "form": "have lunch",
           "meaning_ja": "昼食を食べる",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "have dinner",
           "meaning_ja": "夕食を食べる",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "have a big breakfast",
           "meaning_ja": "たっぷり朝食を食べる",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "breakfast in bed",
           "meaning_ja": "ベッドで食べる朝食",
-          "type": "compound"
+          "type": "compound",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "have breakfast together",
           "meaning_ja": "一緒に朝食を食べる",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -671,38 +694,42 @@
       "synonyms": [
         {
           "item": "do one's assignment",
-          "difference_ja": "「assignment」は学校から与えられた特定の課題を指し、ややフォーマル。"
+          "nuance_contrast_ja": "「assignment」は学校から与えられた特定の課題を指し、ややフォーマル。",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "complete homework",
-          "difference_ja": "「complete」は「終わらせる」という完了の意味が強い。"
+          "nuance_contrast_ja": "「complete」は「終わらせる」という完了の意味が強い。",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "finish homework",
-          "difference_ja": "宿題を「終える」という完了に焦点。"
+          "nuance_contrast_ja": "宿題を「終える」という完了に焦点。",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "study",
-          "difference_ja": "「勉強する」全般を指し、宿題に限らない。"
+          "nuance_contrast_ja": "「勉強する」全般を指し、宿題に限らない。",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [
         {
           "item": "skip homework",
-          "difference_ja": "宿題をやらずに飛ばすこと。"
+          "nuance_contrast_ja": "宿題をやらずに飛ばすこと。",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "play",
-          "difference_ja": "勉強せずに遊ぶこと。"
+          "nuance_contrast_ja": "勉強せずに遊ぶこと。",
+          "example_en": "",
+          "example_ja": ""
         }
-      ],
-      "hypernyms": [
-        "study",
-        "schoolwork"
-      ],
-      "hyponyms": [
-        "do math homework",
-        "do English homework"
       ],
       "confusables": [
         {
@@ -732,27 +759,37 @@
           "form": "do one's homework",
           "meaning_ja": "(比喩) 事前によく調べて準備する",
           "type": "metaphor",
-          "metaphor_ja": "宿題をきちんとやるように、下調べを済ませておくイメージ。"
+          "metaphor_ja": "宿題をきちんとやるように、下調べを済ませておくイメージ。",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "homework assignment",
           "meaning_ja": "宿題の課題",
-          "type": "compound"
+          "type": "compound",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "hand in homework",
           "meaning_ja": "宿題を提出する",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "check homework",
           "meaning_ja": "宿題を確認する・採点する",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "forget one's homework",
           "meaning_ja": "宿題を忘れる",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -947,32 +984,37 @@
       "synonyms": [
         {
           "item": "come down with a cold",
-          "difference_ja": "風邪をひき始める、発症するというニュアンスが強い"
+          "nuance_contrast_ja": "風邪をひき始める、発症するというニュアンスが強い",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "get a cold",
-          "difference_ja": "より口語的でカジュアルな表現"
+          "nuance_contrast_ja": "より口語的でカジュアルな表現",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "have a cold",
-          "difference_ja": "すでに風邪をひいている状態を表す"
+          "nuance_contrast_ja": "すでに風邪をひいている状態を表す",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [
         {
           "item": "recover from a cold",
-          "difference_ja": "風邪から回復するという反対の動作"
+          "nuance_contrast_ja": "風邪から回復するという反対の動作",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "get over a cold",
-          "difference_ja": "風邪を治すという意味で対照的"
+          "nuance_contrast_ja": "風邪を治すという意味で対照的",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
-      "hypernyms": [
-        "become ill",
-        "get sick"
-      ],
-      "hyponyms": [],
       "confusables": [
         {
           "item": "catch cold",
@@ -1007,28 +1049,38 @@
         {
           "form": "catch a fever",
           "meaning_ja": "熱を出す",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "catch the flu",
           "meaning_ja": "インフルエンザにかかる",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "come down with something",
           "meaning_ja": "(病気に)かかる",
-          "type": "phrasal_verb"
+          "type": "phrasal_verb",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "a bad cold",
           "meaning_ja": "ひどい風邪",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "catch one's death (of cold)",
           "meaning_ja": "ひどい風邪をひく(比喩表現)",
           "type": "metaphor",
-          "metaphor_ja": "風邪で死ぬほど体調を崩すという誇張表現"
+          "metaphor_ja": "風邪で死ぬほど体調を崩すという誇張表現",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -1229,31 +1281,30 @@
       "synonyms": [
         {
           "item": "have a shower",
-          "difference_ja": "イギリス英語でよく使われる。意味はほぼ同じ。"
+          "nuance_contrast_ja": "イギリス英語でよく使われる。意味はほぼ同じ。",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "shower",
-          "difference_ja": "動詞1語で「シャワーを浴びる」。よりカジュアルで短い表現。"
+          "nuance_contrast_ja": "動詞1語で「シャワーを浴びる」。よりカジュアルで短い表現。",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "wash up",
-          "difference_ja": "体や手を軽く洗う意味。シャワー全体を指すとは限らない。"
+          "nuance_contrast_ja": "体や手を軽く洗う意味。シャワー全体を指すとは限らない。",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [
         {
           "item": "take a bath",
-          "difference_ja": "浴槽につかる入浴。シャワーとは方法が違う。"
+          "nuance_contrast_ja": "浴槽につかる入浴。シャワーとは方法が違う。",
+          "example_en": "",
+          "example_ja": ""
         }
-      ],
-      "hypernyms": [
-        "wash",
-        "clean oneself"
-      ],
-      "hyponyms": [
-        "take a cold shower",
-        "take a hot shower",
-        "take a quick shower"
       ],
       "confusables": [
         {
@@ -1282,29 +1333,39 @@
         {
           "form": "take a quick shower",
           "meaning_ja": "さっとシャワーを浴びる",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "take a hot shower",
           "meaning_ja": "熱いシャワーを浴びる",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "take a cold shower",
           "meaning_ja": "冷たいシャワーを浴びる",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "baby shower",
           "meaning_ja": "出産祝いのパーティー",
           "type": "compound",
-          "metaphor_ja": "贈り物を「浴びせる」ことから。"
+          "metaphor_ja": "贈り物を「浴びせる」ことから。",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "shower someone with gifts",
           "meaning_ja": "人に贈り物をたくさん与える",
           "type": "metaphor",
-          "metaphor_ja": "シャワーのように降り注ぐイメージ。"
+          "metaphor_ja": "シャワーのように降り注ぐイメージ。",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -1498,27 +1559,24 @@
       "synonyms": [
         {
           "item": "do the shopping",
-          "difference_ja": "日常の必需品の買い物というニュアンスが強い"
+          "nuance_contrast_ja": "日常の必需品の買い物というニュアンスが強い",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "go to the store",
-          "difference_ja": "特定の店に行くことを指し、目的がより具体的"
+          "nuance_contrast_ja": "特定の店に行くことを指し、目的がより具体的",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [
         {
           "item": "stay home",
-          "difference_ja": "外出せず家にいることで、買い物とは反対の行動"
+          "nuance_contrast_ja": "外出せず家にいることで、買い物とは反対の行動",
+          "example_en": "",
+          "example_ja": ""
         }
-      ],
-      "hypernyms": [
-        "shop",
-        "buy things"
-      ],
-      "hyponyms": [
-        "go grocery shopping",
-        "go clothes shopping",
-        "go window shopping"
       ],
       "confusables": [
         {
@@ -1547,22 +1605,30 @@
         {
           "form": "go swimming",
           "meaning_ja": "泳ぎに行く",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "go fishing",
           "meaning_ja": "釣りに行く",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "go window shopping",
           "meaning_ja": "ウィンドウショッピングをする(見るだけの買い物)",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "go grocery shopping",
           "meaning_ja": "食料品の買い物に行く",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -1757,35 +1823,43 @@
       "synonyms": [
         {
           "item": "wake up early",
-          "difference_ja": "「目を覚ます」動作に焦点。起き上がるとは限らない"
+          "nuance_contrast_ja": "「目を覚ます」動作に焦点。起き上がるとは限らない",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "rise early",
-          "difference_ja": "やや文語的で硬い表現"
+          "nuance_contrast_ja": "やや文語的で硬い表現",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "get up at dawn",
-          "difference_ja": "夜明けという具体的な時間を強調"
+          "nuance_contrast_ja": "夜明けという具体的な時間を強調",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [
         {
           "item": "get up late",
-          "difference_ja": "遅く起きること"
+          "nuance_contrast_ja": "遅く起きること",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "sleep in",
-          "difference_ja": "いつもより長く寝ていること"
+          "nuance_contrast_ja": "いつもより長く寝ていること",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "stay in bed",
-          "difference_ja": "起き上がらずベッドにいること"
+          "nuance_contrast_ja": "起き上がらずベッドにいること",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
-      "hypernyms": [
-        "wake up"
-      ],
-      "hyponyms": [],
       "confusables": [
         {
           "item": "wake up early",
@@ -1812,28 +1886,38 @@
         {
           "form": "get up late",
           "meaning_ja": "遅く起きる",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "get up at six",
           "meaning_ja": "6時に起きる",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "get out of bed",
           "meaning_ja": "ベッドから出る",
-          "type": "phrasal_verb"
+          "type": "phrasal_verb",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "early bird",
           "meaning_ja": "早起きする人",
           "type": "metaphor",
-          "metaphor_ja": "早く来る鳥にたとえる"
+          "metaphor_ja": "早く来る鳥にたとえる",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "wake up early",
           "meaning_ja": "早く目を覚ます",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -2033,30 +2117,30 @@
       "synonyms": [
         {
           "item": "hear music",
-          "difference_ja": "「hear」は自然に耳に入ることを指し、意識して聴く「listen」とは異なる"
+          "nuance_contrast_ja": "「hear」は自然に耳に入ることを指し、意識して聴く「listen」とは異なる",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "enjoy music",
-          "difference_ja": "音楽を楽しむという感情面を強調する表現"
+          "nuance_contrast_ja": "音楽を楽しむという感情面を強調する表現",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "play music",
-          "difference_ja": "再生する、または演奏することを意味し、聴く行為とは違う"
+          "nuance_contrast_ja": "再生する、または演奏することを意味し、聴く行為とは違う",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [
         {
           "item": "ignore music",
-          "difference_ja": "音楽に注意を向けない、無視することを表す"
+          "nuance_contrast_ja": "音楽に注意を向けない、無視することを表す",
+          "example_en": "",
+          "example_ja": ""
         }
-      ],
-      "hypernyms": [
-        "listen to something"
-      ],
-      "hyponyms": [
-        "listen to pop music",
-        "listen to classical music",
-        "listen to the radio"
       ],
       "confusables": [
         {
@@ -2085,23 +2169,31 @@
         {
           "form": "listen to the radio",
           "meaning_ja": "ラジオを聴く",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "listen to a song",
           "meaning_ja": "歌を聴く",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "listen up",
           "meaning_ja": "よく聞いて（注意を促す）",
-          "type": "phrasal_verb"
+          "type": "phrasal_verb",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "music to my ears",
           "meaning_ja": "とても嬉しい知らせ（比喩）",
           "type": "metaphor",
-          "metaphor_ja": "耳に心地よい音楽のように嬉しい情報"
+          "metaphor_ja": "耳に心地よい音楽のように嬉しい情報",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -2316,27 +2408,31 @@
       "synonyms": [
         {
           "item": "in fact",
-          "difference_ja": "より書き言葉寄りで formal"
+          "nuance_contrast_ja": "より書き言葉寄りで formal",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "really",
-          "difference_ja": "強調のニュアンスが強く、事実の訂正には弱い"
+          "nuance_contrast_ja": "強調のニュアンスが強く、事実の訂正には弱い",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "in reality",
-          "difference_ja": "対比・訂正を明示する formal 表現"
+          "nuance_contrast_ja": "対比・訂正を明示する formal 表現",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [
         {
           "item": "supposedly",
-          "difference_ja": "「実は違う」に対し「そう言われている(が実は違うかも)」"
+          "nuance_contrast_ja": "「実は違う」に対し「そう言われている(が実は違うかも)」",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
-      "hypernyms": [
-        "in truth"
-      ],
-      "hyponyms": [],
       "confusables": [
         {
           "item": "currently",
@@ -2350,12 +2446,16 @@
         {
           "form": "in actuality",
           "meaning_ja": "実際には(formal)",
-          "type": "other"
+          "type": "other",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "actual",
           "meaning_ja": "実際の・本当の(形容詞)",
-          "type": "other"
+          "type": "other",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -2421,27 +2521,31 @@
       "synonyms": [
         {
           "item": "nevertheless",
-          "difference_ja": "より formal で「それにもかかわらず」の対比を強調"
+          "nuance_contrast_ja": "より formal で「それにもかかわらず」の対比を強調",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "yet",
-          "difference_ja": "文中や文頭で使い、より短くリズミカル"
+          "nuance_contrast_ja": "文中や文頭で使い、より短くリズミカル",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "but",
-          "difference_ja": "口語・書き言葉両方で使え、however より informal"
+          "nuance_contrast_ja": "口語・書き言葉両方で使え、however より informal",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [
         {
           "item": "therefore",
-          "difference_ja": "「したがって」と結論を導く逆の役割"
+          "nuance_contrast_ja": "「したがって」と結論を導く逆の役割",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
-      "hypernyms": [
-        "contrast marker"
-      ],
-      "hyponyms": [],
       "confusables": [
         {
           "item": "but",
@@ -2462,12 +2566,16 @@
         {
           "form": "however much",
           "meaning_ja": "どれほど〜でも",
-          "type": "other"
+          "type": "other",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "however difficult",
           "meaning_ja": "どんなに難しくても",
-          "type": "other"
+          "type": "other",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -2533,27 +2641,31 @@
       "synonyms": [
         {
           "item": "easy as pie",
-          "difference_ja": "同じ「とても簡単」の意味、informal"
+          "nuance_contrast_ja": "同じ「とても簡単」の意味、informal",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "a walk in the park",
-          "difference_ja": "「散歩のように楽」というイメージ、neutral 寄り"
+          "nuance_contrast_ja": "「散歩のように楽」というイメージ、neutral 寄り",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "no big deal",
-          "difference_ja": "「大したことない」で困難のなさを表す、informal"
+          "nuance_contrast_ja": "「大したことない」で困難のなさを表す、informal",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [
         {
           "item": "a tough job",
-          "difference_ja": "「大変な仕事」"
+          "nuance_contrast_ja": "「大変な仕事」",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
-      "hypernyms": [
-        "easy task"
-      ],
-      "hyponyms": [],
       "confusables": [
         {
           "item": "a slice of cake",
@@ -2567,12 +2679,16 @@
         {
           "form": "easy as pie",
           "meaning_ja": "朝飯前(同義イディオム)",
-          "type": "metaphor"
+          "type": "metaphor",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "a piece of pie",
           "meaning_ja": "パイ一切れ(literal)",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -2750,31 +2866,37 @@
       "synonyms": [
         {
           "item": "not feeling well",
-          "difference_ja": "より一般的、literal な表現"
+          "nuance_contrast_ja": "より一般的、literal な表現",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "feeling sick",
-          "difference_ja": "はっきりと「病気」のニュアンス"
+          "nuance_contrast_ja": "はっきりと「病気」のニュアンス",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "run down",
-          "difference_ja": "疲労による体調不良を含意"
+          "nuance_contrast_ja": "疲労による体調不良を含意",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [
         {
           "item": "in good shape",
-          "difference_ja": "体調・状態が良い"
+          "nuance_contrast_ja": "体調・状態が良い",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "on top of the world",
-          "difference_ja": "とても元気(informal)"
+          "nuance_contrast_ja": "とても元気(informal)",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
-      "hypernyms": [
-        "feel ill"
-      ],
-      "hyponyms": [],
       "confusables": [
         {
           "item": "in bad weather",
@@ -2795,12 +2917,16 @@
         {
           "form": "feel under the weather",
           "meaning_ja": "体調がすぐれないと感じる",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "come down with something",
           "meaning_ja": "(病気に)かかる",
-          "type": "phrasal_verb"
+          "type": "phrasal_verb",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -2985,27 +3111,31 @@
       "synonyms": [
         {
           "item": "clear-cut",
-          "difference_ja": "「はっきりしている」の意味により近い、形容詞"
+          "nuance_contrast_ja": "「はっきりしている」の意味により近い、形容詞",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "in writing",
-          "difference_ja": "「文書化された」の意味では代替できる"
+          "nuance_contrast_ja": "「文書化された」の意味では代替できる",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [
         {
           "item": "in color",
-          "difference_ja": "「カラーで」(写真・映像の話)"
+          "nuance_contrast_ja": "「カラーで」(写真・映像の話)",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "gray area",
-          "difference_ja": "「はっきりしない領域」(比喩的な意味)"
+          "nuance_contrast_ja": "「はっきりしない領域」(比喩的な意味)",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
-      "hypernyms": [
-        "color combination"
-      ],
-      "hyponyms": [],
       "confusables": [
         {
           "item": "white and black",
@@ -3019,13 +3149,17 @@
         {
           "form": "black and white photo",
           "meaning_ja": "白黒写真",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "put it in black and white",
           "meaning_ja": "文書化する",
           "type": "metaphor",
-          "metaphor_ja": "紙(白)にインク(黒)で書く = 記録として明確にする"
+          "metaphor_ja": "紙(白)にインク(黒)で書く = 記録として明確にする",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -3211,31 +3345,37 @@
       "synonyms": [
         {
           "item": "all the time",
-          "difference_ja": "より informal、日常表現"
+          "nuance_contrast_ja": "より informal、日常表現",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "around the clock",
-          "difference_ja": "「24時間ぶっ通しで」で強調が強い"
+          "nuance_contrast_ja": "「24時間ぶっ通しで」で強調が強い",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "24/7",
-          "difference_ja": "informal で「常時」、書き言葉でも使う"
+          "nuance_contrast_ja": "informal で「常時」、書き言葉でも使う",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [
         {
           "item": "once in a while",
-          "difference_ja": "「たまに」で頻度が低い"
+          "nuance_contrast_ja": "「たまに」で頻度が低い",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "rarely",
-          "difference_ja": "「めったに」で頻度が低い(単語)"
+          "nuance_contrast_ja": "「めったに」で頻度が低い(単語)",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
-      "hypernyms": [
-        "all the time"
-      ],
-      "hyponyms": [],
       "confusables": [
         {
           "item": "night and day",
@@ -3256,13 +3396,17 @@
         {
           "form": "day and night shift",
           "meaning_ja": "昼夜勤務",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "night and day (different)",
           "meaning_ja": "まったく違う(比喩)",
           "type": "metaphor",
-          "metaphor_ja": "昼と夜のように正反対"
+          "metaphor_ja": "昼と夜のように正反対",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -3446,18 +3590,12 @@
       "synonyms": [
         {
           "item": "airfield",
-          "difference_ja": "より小規模な滑走路施設。airport は旅客対応まで含む"
+          "nuance_contrast_ja": "より小規模な滑走路施設。airport は旅客対応まで含む",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [],
-      "hypernyms": [
-        "transport hub",
-        "place"
-      ],
-      "hyponyms": [
-        "international airport",
-        "domestic airport"
-      ],
       "confusables": [
         {
           "item": "airline",
@@ -3478,17 +3616,23 @@
         {
           "form": "at the airport",
           "meaning_ja": "空港で",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "airport shuttle",
           "meaning_ja": "空港送迎バス",
-          "type": "compound"
+          "type": "compound",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "leave the airport",
           "meaning_ja": "空港を出る",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -3649,23 +3793,24 @@
       "synonyms": [
         {
           "item": "sitting room",
-          "difference_ja": "英国英語で使われることが多い"
+          "nuance_contrast_ja": "英国英語で使われることが多い",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "lounge",
-          "difference_ja": "英国英語で「居間」、B2 語彙のため A2 学習者には控えめ"
+          "nuance_contrast_ja": "英国英語で「居間」、B2 語彙のため A2 学習者には控えめ",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "family room",
-          "difference_ja": "アメリカで別の居間を指す場合あり(家族専用)"
+          "nuance_contrast_ja": "アメリカで別の居間を指す場合あり(家族専用)",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [],
-      "hypernyms": [
-        "room",
-        "part of a house"
-      ],
-      "hyponyms": [],
       "confusables": [
         {
           "item": "dining room",
@@ -3686,12 +3831,16 @@
         {
           "form": "in the living room",
           "meaning_ja": "居間で",
-          "type": "collocation"
+          "type": "collocation",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "living room furniture",
           "meaning_ja": "居間の家具",
-          "type": "compound"
+          "type": "compound",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -3876,27 +4025,31 @@
       "synonyms": [
         {
           "item": "certainly",
-          "difference_ja": "より formal、「確かに」の意味"
+          "nuance_contrast_ja": "より formal、「確かに」の意味",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "sure",
-          "difference_ja": "informal、「うん・いいよ」の軽い同意"
+          "nuance_contrast_ja": "informal、「うん・いいよ」の軽い同意",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "naturally",
-          "difference_ja": "「当然のこととして」formal 寄り"
+          "nuance_contrast_ja": "「当然のこととして」formal 寄り",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [
         {
           "item": "of course not",
-          "difference_ja": "「もちろん違う」の否定形"
+          "nuance_contrast_ja": "「もちろん違う」の否定形",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
-      "hypernyms": [
-        "yes"
-      ],
-      "hyponyms": [],
       "confusables": [
         {
           "item": "in course",
@@ -3917,12 +4070,16 @@
         {
           "form": "of course not",
           "meaning_ja": "もちろん違う(否定)",
-          "type": "other"
+          "type": "other",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "as a matter of course",
           "meaning_ja": "当然のこととして(formal)",
-          "type": "other"
+          "type": "other",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [
@@ -4107,22 +4264,24 @@
       "synonyms": [
         {
           "item": "for instance",
-          "difference_ja": "ほぼ同義、for example よりわずかに formal"
+          "nuance_contrast_ja": "ほぼ同義、for example よりわずかに formal",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "such as",
-          "difference_ja": "名詞の直後に付ける形、文の途中で使う"
+          "nuance_contrast_ja": "名詞の直後に付ける形、文の途中で使う",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "item": "e.g.",
-          "difference_ja": "書き言葉の略記、文中で括弧内などに使う"
+          "nuance_contrast_ja": "書き言葉の略記、文中で括弧内などに使う",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "antonyms": [],
-      "hypernyms": [
-        "illustrative marker"
-      ],
-      "hyponyms": [],
       "confusables": [
         {
           "item": "as example",
@@ -4143,12 +4302,16 @@
         {
           "form": "for instance",
           "meaning_ja": "たとえば(同義)",
-          "type": "other"
+          "type": "other",
+          "example_en": "",
+          "example_ja": ""
         },
         {
           "form": "such as",
           "meaning_ja": "〜のような(例示)",
-          "type": "other"
+          "type": "other",
+          "example_en": "",
+          "example_ja": ""
         }
       ],
       "common_errors_ja": [

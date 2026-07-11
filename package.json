@@ -17,7 +17,8 @@
     "env:sync": "tsx scripts/sync-env.ts",
     "batch:a2-seeds": "tsx scripts/pipeline/batch-a2-seeds.ts",
     "sync:ipa-ept": "tsx scripts/pipeline/sync-ipa-from-ept.ts",
-    "sync:phrase-ipa-ept": "tsx scripts/pipeline/sync-phrase-ipa-from-ept.ts"
+    "sync:phrase-ipa-ept": "tsx scripts/pipeline/sync-phrase-ipa-from-ept.ts",
+    "migrate:v1.2.3": "tsx scripts/pipeline/migrate-schema-v1-2-3.ts"
   },
   "dependencies": {
     "ajv": "^8.17.1",

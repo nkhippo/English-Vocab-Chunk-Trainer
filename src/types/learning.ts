@@ -23,14 +23,16 @@ export interface ExampleSentence {
 
 export interface SynonymEntry {
   item: string
-  difference_ja: string
-  difference_en?: string
-  register?: Register
+  nuance_contrast_ja: string
+  example_en?: string
+  example_ja?: string
 }
 
 export interface AntonymEntry {
   item: string
-  difference_ja: string
+  nuance_contrast_ja: string
+  example_en?: string
+  example_ja?: string
 }
 
 export interface ConfusableEntry {
@@ -46,6 +48,8 @@ export interface RelatedUseEntry {
   meaning_ja: string
   type: 'phrasal_verb' | 'metaphor' | 'collocation' | 'compound' | 'other'
   metaphor_ja?: string
+  example_en?: string
+  example_ja?: string
 }
 
 export interface CommonError {
@@ -99,8 +103,6 @@ export interface LearningItem {
   insight_id?: string | null
   synonyms?: SynonymEntry[]
   antonyms?: AntonymEntry[]
-  hypernyms?: string[]
-  hyponyms?: string[]
   confusables?: ConfusableEntry[]
   related_uses?: RelatedUseEntry[]
   common_errors_ja?: CommonError[]

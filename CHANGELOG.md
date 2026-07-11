@@ -4,15 +4,24 @@
 
 ### Added
 
+- v7: `nuance_contrast_ja` + synonym/antonym/related_uses 例文フィールド
+- `pnpm run migrate:v1.2.3`
+- `doc/handoff/v7-refinement-report.md` / `v7-scope-questions.md`
 - Insight 公式サンプル 3 件（プレースホルダー同 ID 上書き）
 - `doc/handoff/v6-insight-official-merge-handoff-report.md`
-- カテゴリパイロット 10 件マージ（word/idiom/binomial/compound/other ×2）→ **合計 21 件**
+- カテゴリパイロット 10 件マージ → **合計 21 件**
 - `doc/handoff/v6-pilot10-merge-handoff-report.md`
 
 ### Changed
 
-- `data/current/items.json` schema **1.2.2**（Insight 公式差し替えの Dexie 再同期）
+- 詳細モーダル: 類義語・反意語を上位、例文全表示、IPA 語ごとのみ、上位語・下位語削除
+- `data/current/items.json` schema **1.2.3**
 - ホーム文言を 21 件表記に更新
+
+### Removed
+
+- LearningItem の `hypernyms` / `hyponyms`
+- synonym/antonym の `difference_ja` / `difference_en`（`nuance_contrast_ja` へ移行）
 
 ### Added (earlier same day)
 

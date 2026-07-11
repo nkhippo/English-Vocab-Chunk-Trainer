@@ -4,6 +4,15 @@
 
 ### Added
 
+- カテゴリパイロット 10 件マージ（word/idiom/binomial/compound/other ×2）→ **合計 21 件**
+- `doc/handoff/v6-pilot10-merge-handoff-report.md`
+
+### Changed
+
+- ホーム文言を 21 件表記に更新
+
+### Added (earlier same day)
+
 - v6 UI: 詳細モーダル IA（空セクション非表示・skill_focus ラベル・Common Errors 横並び）
 - `IpaTabs`（語ごと / 連結）+ EPT 参照データ `data/reference/ept/`
 - `pnpm run sync:ipa-ept` / `sync:phrase-ipa-ept`
@@ -11,7 +20,7 @@
 - Insight サンプル 3 件（プレースホルダー）
 - `doc/handoff/v6-improvements-report.md` / `v6-scope-questions.md`
 
-### Changed
+### Changed (earlier same day)
 
 - `data/current/items.json` schema **1.2.1**（合成 connected IPA・insight_id）
 - Mode A/B: `word` カテゴリを出題対象から明示除外

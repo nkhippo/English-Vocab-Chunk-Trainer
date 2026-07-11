@@ -1,11 +1,11 @@
 {
   "schema_version": "1.2.1",
-  "generated_at": "2026-07-11T02:47:55.406Z",
+  "generated_at": "2026-07-11T03:20:02.478Z",
   "cefr_levels_included": [
     "A1",
     "A2"
   ],
-  "total_items": 11,
+  "total_items": 21,
   "items": [
     {
       "id": "make_a_decision",
@@ -2265,6 +2265,2023 @@
             }
           ],
           "scene": "sibling_teasing",
+          "register": "informal"
+        }
+      ]
+    },
+    {
+      "id": "actually",
+      "surface": "actually",
+      "category": "word",
+      "cefr_level": "A2",
+      "frequency_rank_in_level": 15,
+      "translations_ja": [
+        "実は",
+        "本当は",
+        "実際に"
+      ],
+      "definition_en": "In reality; used to correct or emphasize something surprising.",
+      "example_sentences": [
+        {
+          "en": "The report actually contains three main findings, not two.",
+          "ja": "その報告書には実際には2つではなく3つの主要な発見が含まれています。",
+          "register": "formal",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "I actually really enjoyed the movie last night.",
+          "ja": "実は、昨夜の映画は本当に楽しかった。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "Wait, are you actually going to the party?",
+          "ja": "え、本当にパーティー行くの?",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ],
+      "semantic_field": [
+        "expression",
+        "clarification"
+      ],
+      "register": [
+        "formal",
+        "neutral",
+        "informal"
+      ],
+      "collocation_pattern": null,
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/ˈækˌtʃuəli/",
+      "synonyms": [
+        {
+          "item": "in fact",
+          "difference_ja": "より書き言葉寄りで formal"
+        },
+        {
+          "item": "really",
+          "difference_ja": "強調のニュアンスが強く、事実の訂正には弱い"
+        },
+        {
+          "item": "in reality",
+          "difference_ja": "対比・訂正を明示する formal 表現"
+        }
+      ],
+      "antonyms": [
+        {
+          "item": "supposedly",
+          "difference_ja": "「実は違う」に対し「そう言われている(が実は違うかも)」"
+        }
+      ],
+      "hypernyms": [
+        "in truth"
+      ],
+      "hyponyms": [],
+      "confusables": [
+        {
+          "item": "currently",
+          "similarity_ja": "副詞で似た位置に置ける",
+          "key_difference_ja": "currently は「現在」、actually は「実は・本当は」",
+          "correct_usage_ja": "「今」の意味なら currently、「実は」の意味なら actually",
+          "example_en": "I am currently reading it, but actually I don't enjoy it."
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "in actuality",
+          "meaning_ja": "実際には(formal)",
+          "type": "other"
+        },
+        {
+          "form": "actual",
+          "meaning_ja": "実際の・本当の(形容詞)",
+          "type": "other"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "I actually agree with him.",
+          "correct": "I agree with him.",
+          "why_ja": "同意を表す場面で actually を付けると「意外にも同意」の含みが出て不自然。単純な同意なら不要"
+        },
+        {
+          "incorrect": "Actually, I go to school every day.",
+          "correct": "I go to school every day.",
+          "why_ja": "単なる事実の描写に actually は不要。「意外性・訂正」がない場面では避ける"
+        },
+        {
+          "incorrect": "He is actually tall.",
+          "correct": "He is very tall.",
+          "why_ja": "強調の意味なら really / very が自然。actually は「予想と違って」のニュアンス"
+        }
+      ],
+      "meta": {
+        "validated_by_user": false,
+        "schema_version": "1.2.1",
+        "source": "claude_generated"
+      }
+    },
+    {
+      "id": "however",
+      "surface": "however",
+      "category": "word",
+      "cefr_level": "A2",
+      "frequency_rank_in_level": 25,
+      "translations_ja": [
+        "しかしながら",
+        "けれども",
+        "とはいえ"
+      ],
+      "definition_en": "But; used to introduce a contrasting idea, mainly in written English.",
+      "example_sentences": [
+        {
+          "en": "The plan looks good. However, it will need approval from the board.",
+          "ja": "その計画は良さそうです。しかしながら、取締役会の承認が必要になるでしょう。",
+          "register": "formal",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "It was raining. However, we still went to the park.",
+          "ja": "雨が降っていました。しかし、私たちはやはり公園に行きました。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ],
+      "semantic_field": [
+        "contrast",
+        "written_english"
+      ],
+      "register": [
+        "formal",
+        "neutral"
+      ],
+      "collocation_pattern": null,
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/ˌhaʊˈɛvɚ/",
+      "synonyms": [
+        {
+          "item": "nevertheless",
+          "difference_ja": "より formal で「それにもかかわらず」の対比を強調"
+        },
+        {
+          "item": "yet",
+          "difference_ja": "文中や文頭で使い、より短くリズミカル"
+        },
+        {
+          "item": "but",
+          "difference_ja": "口語・書き言葉両方で使え、however より informal"
+        }
+      ],
+      "antonyms": [
+        {
+          "item": "therefore",
+          "difference_ja": "「したがって」と結論を導く逆の役割"
+        }
+      ],
+      "hypernyms": [
+        "contrast marker"
+      ],
+      "hyponyms": [],
+      "confusables": [
+        {
+          "item": "but",
+          "similarity_ja": "対比を導く点で同じ",
+          "key_difference_ja": "but は口語で頻出、however は書き言葉や formal な会話で使う",
+          "correct_usage_ja": "文と文をつなぐ書き言葉なら however、話し言葉なら but",
+          "example_en": "The idea sounds simple. However, it is hard to do."
+        },
+        {
+          "item": "though",
+          "similarity_ja": "対比を導ける",
+          "key_difference_ja": "though は文末で「〜だけどね」の informal、however は文頭の formal",
+          "correct_usage_ja": "informal で軽く付け加えるなら though、formal なら however",
+          "example_en": "It's cold today. It'll be warm tomorrow, though."
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "however much",
+          "meaning_ja": "どれほど〜でも",
+          "type": "other"
+        },
+        {
+          "form": "however difficult",
+          "meaning_ja": "どんなに難しくても",
+          "type": "other"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "But however, he was late.",
+          "correct": "However, he was late.",
+          "why_ja": "but と however は両方とも対比を導くので重複。どちらか一方だけ使う"
+        },
+        {
+          "incorrect": "However he tried, he failed.",
+          "correct": "Although he tried, he failed.",
+          "why_ja": "節を導入するときは although。however は独立文の前で使う対比副詞"
+        },
+        {
+          "incorrect": "It was rainy however cold.",
+          "correct": "It was rainy but not cold.",
+          "why_ja": "however を単純な「〜だけど」で使わない。書き言葉の対比副詞として使う"
+        }
+      ],
+      "meta": {
+        "validated_by_user": false,
+        "schema_version": "1.2.1",
+        "source": "claude_generated"
+      }
+    },
+    {
+      "id": "piece_of_cake",
+      "surface": "piece of cake",
+      "category": "idiom",
+      "cefr_level": "A2",
+      "frequency_rank_in_level": 45,
+      "translations_ja": [
+        "朝飯前",
+        "とても簡単なこと"
+      ],
+      "definition_en": "Something that is very easy to do.",
+      "example_sentences": [
+        {
+          "en": "The exam was a piece of cake — I finished in ten minutes.",
+          "ja": "その試験は朝飯前だった。10分で終わったよ。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "Don't worry about the test, it's a piece of cake!",
+          "ja": "テストのこと心配しないで、朝飯前だよ!",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ],
+      "semantic_field": [
+        "difficulty",
+        "informal_expression"
+      ],
+      "register": [
+        "neutral",
+        "informal"
+      ],
+      "collocation_pattern": null,
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/pis ʌv keɪk/",
+      "ipa_connected": "/pisʌvkeɪk/",
+      "synonyms": [
+        {
+          "item": "easy as pie",
+          "difference_ja": "同じ「とても簡単」の意味、informal"
+        },
+        {
+          "item": "a walk in the park",
+          "difference_ja": "「散歩のように楽」というイメージ、neutral 寄り"
+        },
+        {
+          "item": "no big deal",
+          "difference_ja": "「大したことない」で困難のなさを表す、informal"
+        }
+      ],
+      "antonyms": [
+        {
+          "item": "a tough job",
+          "difference_ja": "「大変な仕事」"
+        }
+      ],
+      "hypernyms": [
+        "easy task"
+      ],
+      "hyponyms": [],
+      "confusables": [
+        {
+          "item": "a slice of cake",
+          "similarity_ja": "文字通り「ケーキ一切れ」で語形が似ている",
+          "key_difference_ja": "a slice of cake は実際のケーキ、a piece of cake はイディオムで「簡単」",
+          "correct_usage_ja": "食べ物の話なら slice、簡単さの話なら piece",
+          "example_en": "I'd like a slice of cake for dessert."
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "easy as pie",
+          "meaning_ja": "朝飯前(同義イディオム)",
+          "type": "metaphor"
+        },
+        {
+          "form": "a piece of pie",
+          "meaning_ja": "パイ一切れ(literal)",
+          "type": "collocation"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "The test was piece of cake.",
+          "correct": "The test was a piece of cake.",
+          "why_ja": "冠詞 a が必要。piece of cake の前に必ず a を付ける"
+        },
+        {
+          "incorrect": "It's a cake piece.",
+          "correct": "It's a piece of cake.",
+          "why_ja": "語順が固定。piece of cake の順序は変えられない"
+        }
+      ],
+      "meta": {
+        "validated_by_user": false,
+        "schema_version": "1.2.1",
+        "source": "claude_generated"
+      },
+      "contexts": [
+        {
+          "id": "piece_of_cake_c1",
+          "text_en": "The math test today was a piece of cake. I finished all the questions in twenty minutes and had time to check my answers.",
+          "text_ja": "今日の数学のテストは朝飯前でした。全問を20分で終えて、答えを見直す時間もありました。",
+          "target_span": {
+            "start": 26,
+            "end": 39
+          },
+          "cloze_spans": [
+            {
+              "start": 26,
+              "end": 31,
+              "answer": "piece"
+            },
+            {
+              "start": 35,
+              "end": 39,
+              "answer": "cake"
+            }
+          ],
+          "scene": "school_easy_exam",
+          "register": "neutral"
+        },
+        {
+          "id": "piece_of_cake_c2",
+          "text_en": "Setting up the new software was a piece of cake. The instructions were clear and I did not need help.",
+          "text_ja": "新しいソフトウェアの設定は朝飯前でした。手順が明確で、助けは必要ありませんでした。",
+          "target_span": {
+            "start": 34,
+            "end": 47
+          },
+          "cloze_spans": [
+            {
+              "start": 34,
+              "end": 39,
+              "answer": "piece"
+            },
+            {
+              "start": 43,
+              "end": 47,
+              "answer": "cake"
+            }
+          ],
+          "scene": "workplace_task",
+          "register": "neutral"
+        },
+        {
+          "id": "piece_of_cake_c3",
+          "text_en": "Don't worry, learning to ride a bike is a piece of cake once you get on it a few times!",
+          "text_ja": "心配しないで、自転車の乗り方なんて何回か乗ればすぐだよ!",
+          "target_span": {
+            "start": 42,
+            "end": 55
+          },
+          "cloze_spans": [
+            {
+              "start": 42,
+              "end": 47,
+              "answer": "piece"
+            },
+            {
+              "start": 51,
+              "end": 55,
+              "answer": "cake"
+            }
+          ],
+          "scene": "encouraging_friend",
+          "register": "informal"
+        },
+        {
+          "id": "piece_of_cake_c4",
+          "text_en": "For an experienced chef, making pasta from scratch is a piece of cake. Beginners may need more practice.",
+          "text_ja": "熟練シェフにとって、パスタを一から作ることは朝飯前です。初心者はもっと練習が必要でしょう。",
+          "target_span": {
+            "start": 56,
+            "end": 69
+          },
+          "cloze_spans": [
+            {
+              "start": 56,
+              "end": 61,
+              "answer": "piece"
+            },
+            {
+              "start": 65,
+              "end": 69,
+              "answer": "cake"
+            }
+          ],
+          "scene": "cooking_advice",
+          "register": "neutral"
+        },
+        {
+          "id": "piece_of_cake_c5",
+          "text_en": "You can fix this in five minutes — it's a piece of cake, really!",
+          "text_ja": "5分で直せるよ、本当に朝飯前だから!",
+          "target_span": {
+            "start": 42,
+            "end": 55
+          },
+          "cloze_spans": [
+            {
+              "start": 42,
+              "end": 47,
+              "answer": "piece"
+            },
+            {
+              "start": 51,
+              "end": 55,
+              "answer": "cake"
+            }
+          ],
+          "scene": "casual_help",
+          "register": "informal"
+        }
+      ]
+    },
+    {
+      "id": "under_the_weather",
+      "surface": "under the weather",
+      "category": "idiom",
+      "cefr_level": "A2",
+      "frequency_rank_in_level": 55,
+      "translations_ja": [
+        "体調が悪い",
+        "気分がすぐれない"
+      ],
+      "definition_en": "Feeling slightly ill or unwell.",
+      "example_sentences": [
+        {
+          "en": "I've been under the weather for a few days now.",
+          "ja": "ここ数日、体調がすぐれないんだ。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "Sorry, can't make it tonight — I'm feeling a bit under the weather.",
+          "ja": "ごめん、今夜は行けない。ちょっと体調が悪くて。",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ],
+      "semantic_field": [
+        "health",
+        "informal_expression"
+      ],
+      "register": [
+        "neutral",
+        "informal"
+      ],
+      "collocation_pattern": null,
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/ˈʌndɚ ðə ˈwɛðɚ/",
+      "ipa_connected": "/ˈʌndɚðəˈwɛðɚ/",
+      "synonyms": [
+        {
+          "item": "not feeling well",
+          "difference_ja": "より一般的、literal な表現"
+        },
+        {
+          "item": "feeling sick",
+          "difference_ja": "はっきりと「病気」のニュアンス"
+        },
+        {
+          "item": "run down",
+          "difference_ja": "疲労による体調不良を含意"
+        }
+      ],
+      "antonyms": [
+        {
+          "item": "in good shape",
+          "difference_ja": "体調・状態が良い"
+        },
+        {
+          "item": "on top of the world",
+          "difference_ja": "とても元気(informal)"
+        }
+      ],
+      "hypernyms": [
+        "feel ill"
+      ],
+      "hyponyms": [],
+      "confusables": [
+        {
+          "item": "in bad weather",
+          "similarity_ja": "weather が入っていて紛らわしい",
+          "key_difference_ja": "in bad weather は「悪天候の中で」、under the weather はイディオムで体調不良",
+          "correct_usage_ja": "天気の話なら bad weather、体調の話なら under the weather",
+          "example_en": "We drove home in bad weather last night."
+        },
+        {
+          "item": "have a cold",
+          "similarity_ja": "同じ体調不良を表せる",
+          "key_difference_ja": "have a cold は具体的に風邪、under the weather は漠然と体調悪い",
+          "correct_usage_ja": "症状が明確なら have a cold、漠然としているなら under the weather",
+          "example_en": "I have a cold, so I'll stay home today."
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "feel under the weather",
+          "meaning_ja": "体調がすぐれないと感じる",
+          "type": "collocation"
+        },
+        {
+          "form": "come down with something",
+          "meaning_ja": "(病気に)かかる",
+          "type": "phrasal_verb"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "I am under weather.",
+          "correct": "I am under the weather.",
+          "why_ja": "定冠詞 the が必要。under the weather の形が固定"
+        },
+        {
+          "incorrect": "The weather is under me.",
+          "correct": "I am under the weather.",
+          "why_ja": "主語は必ず人。天気そのものではなく「私の体調」を表すイディオム"
+        }
+      ],
+      "meta": {
+        "validated_by_user": false,
+        "schema_version": "1.2.1",
+        "source": "claude_generated"
+      },
+      "contexts": [
+        {
+          "id": "under_the_weather_c1",
+          "text_en": "I'm feeling a bit under the weather today, so I'll take some rest at home. Hope to see you tomorrow.",
+          "text_ja": "今日はちょっと体調がすぐれないので、家で休みます。明日会えるといいな。",
+          "target_span": {
+            "start": 18,
+            "end": 35
+          },
+          "cloze_spans": [
+            {
+              "start": 18,
+              "end": 23,
+              "answer": "under"
+            },
+            {
+              "start": 28,
+              "end": 35,
+              "answer": "weather"
+            }
+          ],
+          "scene": "sick_message",
+          "register": "neutral"
+        },
+        {
+          "id": "under_the_weather_c2",
+          "text_en": "My grandmother has been under the weather all week. She may need to see a doctor if it does not get better.",
+          "text_ja": "祖母は今週ずっと体調がすぐれません。よくならないなら医者に行く必要があるかもしれません。",
+          "target_span": {
+            "start": 24,
+            "end": 41
+          },
+          "cloze_spans": [
+            {
+              "start": 24,
+              "end": 29,
+              "answer": "under"
+            },
+            {
+              "start": 34,
+              "end": 41,
+              "answer": "weather"
+            }
+          ],
+          "scene": "family_concern",
+          "register": "neutral"
+        },
+        {
+          "id": "under_the_weather_c3",
+          "text_en": "Hey, sorry I can't come to the party tonight — I'm feeling really under the weather.",
+          "text_ja": "ねえ、ごめん今夜のパーティー行けないんだ。すごく体調悪くて。",
+          "target_span": {
+            "start": 66,
+            "end": 83
+          },
+          "cloze_spans": [
+            {
+              "start": 66,
+              "end": 71,
+              "answer": "under"
+            },
+            {
+              "start": 76,
+              "end": 83,
+              "answer": "weather"
+            }
+          ],
+          "scene": "casual_cancel",
+          "register": "informal"
+        },
+        {
+          "id": "under_the_weather_c4",
+          "text_en": "Ms. Tanaka called to say she is under the weather and will not be at work today.",
+          "text_ja": "田中さんから電話があり、体調がすぐれないので今日は出社しないとのことでした。",
+          "target_span": {
+            "start": 32,
+            "end": 49
+          },
+          "cloze_spans": [
+            {
+              "start": 32,
+              "end": 37,
+              "answer": "under"
+            },
+            {
+              "start": 42,
+              "end": 49,
+              "answer": "weather"
+            }
+          ],
+          "scene": "office_report",
+          "register": "formal"
+        },
+        {
+          "id": "under_the_weather_c5",
+          "text_en": "You look really pale — are you under the weather? Maybe you should go home and rest.",
+          "text_ja": "顔色すごく悪いよ。体調悪いの? 家帰って休んだら?",
+          "target_span": {
+            "start": 31,
+            "end": 48
+          },
+          "cloze_spans": [
+            {
+              "start": 31,
+              "end": 36,
+              "answer": "under"
+            },
+            {
+              "start": 41,
+              "end": 48,
+              "answer": "weather"
+            }
+          ],
+          "scene": "friend_worry",
+          "register": "informal"
+        }
+      ]
+    },
+    {
+      "id": "black_and_white",
+      "surface": "black and white",
+      "category": "binomial",
+      "cefr_level": "A2",
+      "frequency_rank_in_level": 30,
+      "translations_ja": [
+        "白黒",
+        "はっきりと区別できる"
+      ],
+      "definition_en": "Only two clear categories with nothing in between; also literally the two colors.",
+      "example_sentences": [
+        {
+          "en": "The company policy is written in black and white for all staff to read.",
+          "ja": "会社の方針は全スタッフが読めるように文書化されています。",
+          "register": "formal",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "Old photos are usually in black and white.",
+          "ja": "古い写真はたいてい白黒です。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "Look, it's not that black and white — there's a lot more to think about.",
+          "ja": "ほら、そんな白黒はっきりする話じゃないよ。もっと考えることがある。",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ],
+      "semantic_field": [
+        "color",
+        "clarity"
+      ],
+      "register": [
+        "formal",
+        "neutral",
+        "informal"
+      ],
+      "collocation_pattern": null,
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/blæk ənd waɪt/",
+      "ipa_connected": "/blækəndwaɪt/",
+      "synonyms": [
+        {
+          "item": "clear-cut",
+          "difference_ja": "「はっきりしている」の意味により近い、形容詞"
+        },
+        {
+          "item": "in writing",
+          "difference_ja": "「文書化された」の意味では代替できる"
+        }
+      ],
+      "antonyms": [
+        {
+          "item": "in color",
+          "difference_ja": "「カラーで」(写真・映像の話)"
+        },
+        {
+          "item": "gray area",
+          "difference_ja": "「はっきりしない領域」(比喩的な意味)"
+        }
+      ],
+      "hypernyms": [
+        "color combination"
+      ],
+      "hyponyms": [],
+      "confusables": [
+        {
+          "item": "white and black",
+          "similarity_ja": "語順が違うだけに見える",
+          "key_difference_ja": "英語では black and white の順序が固定。white and black はほぼ言わない",
+          "correct_usage_ja": "必ず black を先に置く",
+          "example_en": "The dog has black and white spots."
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "black and white photo",
+          "meaning_ja": "白黒写真",
+          "type": "collocation"
+        },
+        {
+          "form": "put it in black and white",
+          "meaning_ja": "文書化する",
+          "type": "metaphor",
+          "metaphor_ja": "紙(白)にインク(黒)で書く = 記録として明確にする"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "The photo is white and black.",
+          "correct": "The photo is black and white.",
+          "why_ja": "英語では black and white の順序が固定。逆順は不自然"
+        },
+        {
+          "incorrect": "It's black or white.",
+          "correct": "It's black and white.",
+          "why_ja": "「白黒明確」の意味では and。or だと「白か黒のどちらか」で意味が変わる"
+        }
+      ],
+      "meta": {
+        "validated_by_user": false,
+        "schema_version": "1.2.1",
+        "source": "claude_generated"
+      },
+      "contexts": [
+        {
+          "id": "black_and_white_c1",
+          "text_en": "The company rules are written in black and white in the employee handbook. Please read them carefully.",
+          "text_ja": "会社の規則は従業員ハンドブックに明文化されています。よくお読みください。",
+          "target_span": {
+            "start": 33,
+            "end": 48
+          },
+          "cloze_spans": [
+            {
+              "start": 33,
+              "end": 38,
+              "answer": "black"
+            },
+            {
+              "start": 43,
+              "end": 48,
+              "answer": "white"
+            }
+          ],
+          "scene": "workplace_rules",
+          "register": "formal"
+        },
+        {
+          "id": "black_and_white_c2",
+          "text_en": "My grandfather has many old family photos from the 1950s. They are all in black and white.",
+          "text_ja": "祖父は1950年代の古い家族写真をたくさん持っています。すべて白黒写真です。",
+          "target_span": {
+            "start": 74,
+            "end": 89
+          },
+          "cloze_spans": [
+            {
+              "start": 74,
+              "end": 79,
+              "answer": "black"
+            },
+            {
+              "start": 84,
+              "end": 89,
+              "answer": "white"
+            }
+          ],
+          "scene": "family_photos",
+          "register": "neutral"
+        },
+        {
+          "id": "black_and_white_c3",
+          "text_en": "Look, the world isn't black and white. There are many gray areas in every situation.",
+          "text_ja": "ほら、世の中って白黒はっきりしてるわけじゃないんだよ。どんな状況にもグレーな部分があるの。",
+          "target_span": {
+            "start": 22,
+            "end": 37
+          },
+          "cloze_spans": [
+            {
+              "start": 22,
+              "end": 27,
+              "answer": "black"
+            },
+            {
+              "start": 32,
+              "end": 37,
+              "answer": "white"
+            }
+          ],
+          "scene": "life_advice_discussion",
+          "register": "informal"
+        },
+        {
+          "id": "black_and_white_c4",
+          "text_en": "The panda in the zoo has beautiful black and white fur. It sat quietly eating bamboo.",
+          "text_ja": "動物園のパンダは美しい白黒の毛皮を持っていました。静かに座って竹を食べていました。",
+          "target_span": {
+            "start": 35,
+            "end": 50
+          },
+          "cloze_spans": [
+            {
+              "start": 35,
+              "end": 40,
+              "answer": "black"
+            },
+            {
+              "start": 45,
+              "end": 50,
+              "answer": "white"
+            }
+          ],
+          "scene": "zoo_visit",
+          "register": "neutral"
+        },
+        {
+          "id": "black_and_white_c5",
+          "text_en": "It's not a black and white issue, dude. You gotta think about both sides.",
+          "text_ja": "白黒はっきりする問題じゃないよ、お前。両方の立場を考えなきゃ。",
+          "target_span": {
+            "start": 11,
+            "end": 26
+          },
+          "cloze_spans": [
+            {
+              "start": 11,
+              "end": 16,
+              "answer": "black"
+            },
+            {
+              "start": 21,
+              "end": 26,
+              "answer": "white"
+            }
+          ],
+          "scene": "casual_debate",
+          "register": "informal"
+        }
+      ]
+    },
+    {
+      "id": "day_and_night",
+      "surface": "day and night",
+      "category": "binomial",
+      "cefr_level": "A2",
+      "frequency_rank_in_level": 40,
+      "translations_ja": [
+        "昼夜",
+        "絶えず",
+        "四六時中"
+      ],
+      "definition_en": "Continuously; without stopping, at all times.",
+      "example_sentences": [
+        {
+          "en": "The hospital operates day and night to serve patients.",
+          "ja": "病院は患者に対応するため昼夜稼働しています。",
+          "register": "formal",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "She worked day and night to finish the project on time.",
+          "ja": "彼女は締め切りに間に合わせるため昼夜働いた。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "My little brother plays video games day and night — it's crazy.",
+          "ja": "うちの弟、四六時中ゲームやってるんだよ。マジで。",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ],
+      "semantic_field": [
+        "time",
+        "duration"
+      ],
+      "register": [
+        "formal",
+        "neutral",
+        "informal"
+      ],
+      "collocation_pattern": null,
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/deɪ ənd naɪt/",
+      "ipa_connected": "/deɪəndnaɪt/",
+      "synonyms": [
+        {
+          "item": "all the time",
+          "difference_ja": "より informal、日常表現"
+        },
+        {
+          "item": "around the clock",
+          "difference_ja": "「24時間ぶっ通しで」で強調が強い"
+        },
+        {
+          "item": "24/7",
+          "difference_ja": "informal で「常時」、書き言葉でも使う"
+        }
+      ],
+      "antonyms": [
+        {
+          "item": "once in a while",
+          "difference_ja": "「たまに」で頻度が低い"
+        },
+        {
+          "item": "rarely",
+          "difference_ja": "「めったに」で頻度が低い(単語)"
+        }
+      ],
+      "hypernyms": [
+        "all the time"
+      ],
+      "hyponyms": [],
+      "confusables": [
+        {
+          "item": "night and day",
+          "similarity_ja": "day and night の逆順",
+          "key_difference_ja": "「昼夜絶えず」の意味では day and night が優勢、night and day はやや古風または特定文脈",
+          "correct_usage_ja": "頻度としては day and night を使う。night and day は比喩「まったく違う」で使う場合も",
+          "example_en": "They studied day and night before the exam."
+        },
+        {
+          "item": "morning and evening",
+          "similarity_ja": "時間の対比",
+          "key_difference_ja": "「朝と夕方」で1日2回のニュアンス、day and night は絶えず",
+          "correct_usage_ja": "特定の時間帯なら morning and evening、絶えずなら day and night",
+          "example_en": "I brush my teeth morning and evening."
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "day and night shift",
+          "meaning_ja": "昼夜勤務",
+          "type": "collocation"
+        },
+        {
+          "form": "night and day (different)",
+          "meaning_ja": "まったく違う(比喩)",
+          "type": "metaphor",
+          "metaphor_ja": "昼と夜のように正反対"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "I study day and nights.",
+          "correct": "I study day and night.",
+          "why_ja": "day も night も単数形が固定。複数形にしない"
+        },
+        {
+          "incorrect": "She works nights and days.",
+          "correct": "She works day and night.",
+          "why_ja": "順序は day → night で固定。逆順や複数形は不自然"
+        }
+      ],
+      "meta": {
+        "validated_by_user": false,
+        "schema_version": "1.2.1",
+        "source": "claude_generated"
+      },
+      "contexts": [
+        {
+          "id": "day_and_night_c1",
+          "text_en": "Our emergency line is open day and night for all citizens. Please call the number below in case of urgent need.",
+          "text_ja": "私たちの緊急ダイヤルは全市民に対して24時間開いています。緊急時は下記の番号にお電話ください。",
+          "target_span": {
+            "start": 27,
+            "end": 40
+          },
+          "cloze_spans": [
+            {
+              "start": 27,
+              "end": 30,
+              "answer": "day"
+            },
+            {
+              "start": 35,
+              "end": 40,
+              "answer": "night"
+            }
+          ],
+          "scene": "public_service_notice",
+          "register": "formal"
+        },
+        {
+          "id": "day_and_night_c2",
+          "text_en": "She worked day and night to finish the science project before the deadline last week.",
+          "text_ja": "彼女は先週の締め切りまでに理科の課題を終わらせるため、昼夜働きました。",
+          "target_span": {
+            "start": 11,
+            "end": 24
+          },
+          "cloze_spans": [
+            {
+              "start": 11,
+              "end": 14,
+              "answer": "day"
+            },
+            {
+              "start": 19,
+              "end": 24,
+              "answer": "night"
+            }
+          ],
+          "scene": "school_project",
+          "register": "neutral"
+        },
+        {
+          "id": "day_and_night_c3",
+          "text_en": "My roommate practices guitar day and night. I can hear it through the wall all the time!",
+          "text_ja": "うちのルームメイト、四六時中ギター練習してるんだよ。壁越しにずっと聞こえるし!",
+          "target_span": {
+            "start": 29,
+            "end": 42
+          },
+          "cloze_spans": [
+            {
+              "start": 29,
+              "end": 32,
+              "answer": "day"
+            },
+            {
+              "start": 37,
+              "end": 42,
+              "answer": "night"
+            }
+          ],
+          "scene": "roommate_complaint",
+          "register": "informal"
+        },
+        {
+          "id": "day_and_night_c4",
+          "text_en": "The nurses at this hospital work in shifts day and night to take care of the patients.",
+          "text_ja": "この病院の看護師は患者のケアのために昼夜シフト勤務をしています。",
+          "target_span": {
+            "start": 43,
+            "end": 56
+          },
+          "cloze_spans": [
+            {
+              "start": 43,
+              "end": 46,
+              "answer": "day"
+            },
+            {
+              "start": 51,
+              "end": 56,
+              "answer": "night"
+            }
+          ],
+          "scene": "hospital_shifts",
+          "register": "neutral"
+        },
+        {
+          "id": "day_and_night_c5",
+          "text_en": "I've been thinking about you day and night. Can we talk soon?",
+          "text_ja": "四六時中君のこと考えてるよ。近いうちに話せる?",
+          "target_span": {
+            "start": 29,
+            "end": 42
+          },
+          "cloze_spans": [
+            {
+              "start": 29,
+              "end": 32,
+              "answer": "day"
+            },
+            {
+              "start": 37,
+              "end": 42,
+              "answer": "night"
+            }
+          ],
+          "scene": "romantic_message",
+          "register": "informal"
+        }
+      ]
+    },
+    {
+      "id": "airport",
+      "surface": "airport",
+      "category": "compound",
+      "cefr_level": "A2",
+      "frequency_rank_in_level": 20,
+      "translations_ja": [
+        "空港"
+      ],
+      "definition_en": "A place where planes take off and land, with buildings for passengers.",
+      "example_sentences": [
+        {
+          "en": "All passengers must arrive at the airport two hours before the flight.",
+          "ja": "全ての乗客はフライトの2時間前に空港に到着する必要があります。",
+          "register": "formal",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "The airport is about thirty minutes from the city by train.",
+          "ja": "空港は電車で街から30分ほどのところにあります。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "Hey, can you pick me up at the airport tomorrow?",
+          "ja": "ねえ、明日空港に迎えに来てくれない?",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ],
+      "semantic_field": [
+        "travel",
+        "transport",
+        "place"
+      ],
+      "register": [
+        "formal",
+        "neutral",
+        "informal"
+      ],
+      "collocation_pattern": null,
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/ˈɛrˌpɔrt/",
+      "synonyms": [
+        {
+          "item": "airfield",
+          "difference_ja": "より小規模な滑走路施設。airport は旅客対応まで含む"
+        }
+      ],
+      "antonyms": [],
+      "hypernyms": [
+        "transport hub",
+        "place"
+      ],
+      "hyponyms": [
+        "international airport",
+        "domestic airport"
+      ],
+      "confusables": [
+        {
+          "item": "airline",
+          "similarity_ja": "同じく air- で始まる旅行関連語",
+          "key_difference_ja": "airline は「航空会社」、airport は「空港(場所)」",
+          "correct_usage_ja": "会社の話なら airline、場所の話なら airport",
+          "example_en": "Which airline are you flying with from the airport?"
+        },
+        {
+          "item": "harbor",
+          "similarity_ja": "移動手段の発着地点で似ている",
+          "key_difference_ja": "harbor は港(船)、airport は空港(飛行機)",
+          "correct_usage_ja": "船なら harbor、飛行機なら airport",
+          "example_en": "The harbor is where ships arrive, not the airport."
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "at the airport",
+          "meaning_ja": "空港で",
+          "type": "collocation"
+        },
+        {
+          "form": "airport shuttle",
+          "meaning_ja": "空港送迎バス",
+          "type": "compound"
+        },
+        {
+          "form": "leave the airport",
+          "meaning_ja": "空港を出る",
+          "type": "collocation"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "I arrived to the airport.",
+          "correct": "I arrived at the airport.",
+          "why_ja": "arrive の後の前置詞は場所なら at。to は使わない"
+        },
+        {
+          "incorrect": "The airplane port is far.",
+          "correct": "The airport is far.",
+          "why_ja": "airport が1語の複合語。airplane port とは言わない"
+        }
+      ],
+      "meta": {
+        "validated_by_user": false,
+        "schema_version": "1.2.1",
+        "source": "claude_generated"
+      },
+      "contexts": [
+        {
+          "id": "airport_c1",
+          "text_en": "All passengers must arrive at the airport at least two hours before their flight. Please check in at the counter first.",
+          "text_ja": "全ての乗客はフライトの少なくとも2時間前に空港に到着してください。まずカウンターでチェックインをお願いします。",
+          "target_span": {
+            "start": 34,
+            "end": 41
+          },
+          "cloze_spans": [
+            {
+              "start": 34,
+              "end": 41,
+              "answer": "airport"
+            }
+          ],
+          "scene": "airport_announcement",
+          "register": "formal"
+        },
+        {
+          "id": "airport_c2",
+          "text_en": "My uncle is flying in from Osaka tomorrow. I need to pick him up at the airport around three in the afternoon.",
+          "text_ja": "叔父さんが明日大阪から飛行機で来ます。午後3時ごろに空港に迎えに行かないといけません。",
+          "target_span": {
+            "start": 72,
+            "end": 79
+          },
+          "cloze_spans": [
+            {
+              "start": 72,
+              "end": 79,
+              "answer": "airport"
+            }
+          ],
+          "scene": "family_pickup",
+          "register": "neutral"
+        },
+        {
+          "id": "airport_c3",
+          "text_en": "Hey, could you drive me to the airport tomorrow morning? My flight leaves at six.",
+          "text_ja": "ねえ、明日の朝空港まで送ってくれない? 6時のフライトなんだ。",
+          "target_span": {
+            "start": 31,
+            "end": 38
+          },
+          "cloze_spans": [
+            {
+              "start": 31,
+              "end": 38,
+              "answer": "airport"
+            }
+          ],
+          "scene": "friend_favor",
+          "register": "informal"
+        },
+        {
+          "id": "airport_c4",
+          "text_en": "The airport is very busy during the holidays. We should leave home early to be safe.",
+          "text_ja": "空港は休暇中はとても混みます。安全のために家を早めに出るべきです。",
+          "target_span": {
+            "start": 4,
+            "end": 11
+          },
+          "cloze_spans": [
+            {
+              "start": 4,
+              "end": 11,
+              "answer": "airport"
+            }
+          ],
+          "scene": "travel_planning",
+          "register": "neutral"
+        },
+        {
+          "id": "airport_c5",
+          "text_en": "I hate saying goodbye at the airport — it always makes me cry!",
+          "text_ja": "空港でのお別れって嫌いなんだ。いつも泣いちゃう!",
+          "target_span": {
+            "start": 29,
+            "end": 36
+          },
+          "cloze_spans": [
+            {
+              "start": 29,
+              "end": 36,
+              "answer": "airport"
+            }
+          ],
+          "scene": "emotional_farewell",
+          "register": "informal"
+        }
+      ]
+    },
+    {
+      "id": "living_room",
+      "surface": "living room",
+      "category": "compound",
+      "cefr_level": "A2",
+      "frequency_rank_in_level": 25,
+      "translations_ja": [
+        "リビング",
+        "居間"
+      ],
+      "definition_en": "A room in a house where family members relax, watch TV, or receive guests.",
+      "example_sentences": [
+        {
+          "en": "Please make yourself comfortable in the living room while I prepare tea.",
+          "ja": "お茶を用意しますので、居間でおくつろぎください。",
+          "register": "formal",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "We spend most evenings in the living room watching movies together.",
+          "ja": "私たちはほとんどの夜、リビングで一緒に映画を見て過ごします。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "Come on into the living room, the game just started!",
+          "ja": "リビングに来なよ、試合始まったばっかりだよ!",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ],
+      "semantic_field": [
+        "home",
+        "room",
+        "family_life"
+      ],
+      "register": [
+        "formal",
+        "neutral",
+        "informal"
+      ],
+      "collocation_pattern": null,
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/ˈlɪvɪŋ rum/",
+      "ipa_connected": "/ˈlɪvɪŋrum/",
+      "synonyms": [
+        {
+          "item": "sitting room",
+          "difference_ja": "英国英語で使われることが多い"
+        },
+        {
+          "item": "lounge",
+          "difference_ja": "英国英語で「居間」、B2 語彙のため A2 学習者には控えめ"
+        },
+        {
+          "item": "family room",
+          "difference_ja": "アメリカで別の居間を指す場合あり(家族専用)"
+        }
+      ],
+      "antonyms": [],
+      "hypernyms": [
+        "room",
+        "part of a house"
+      ],
+      "hyponyms": [],
+      "confusables": [
+        {
+          "item": "dining room",
+          "similarity_ja": "同じく家の room の名前",
+          "key_difference_ja": "dining room は食事する部屋、living room はくつろぐ部屋",
+          "correct_usage_ja": "食事の場面なら dining room、休憩・娯楽なら living room",
+          "example_en": "We eat in the dining room and relax in the living room."
+        },
+        {
+          "item": "bedroom",
+          "similarity_ja": "家の中の部屋で複合語",
+          "key_difference_ja": "bedroom は寝る部屋、living room は起きている時間を過ごす部屋",
+          "correct_usage_ja": "寝る場所なら bedroom、家族の共有スペースなら living room",
+          "example_en": "I sleep in my bedroom and watch TV in the living room."
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "in the living room",
+          "meaning_ja": "居間で",
+          "type": "collocation"
+        },
+        {
+          "form": "living room furniture",
+          "meaning_ja": "居間の家具",
+          "type": "compound"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "The livingroom is big.",
+          "correct": "The living room is big.",
+          "why_ja": "living room は2語で書く。1語の livingroom は誤り"
+        },
+        {
+          "incorrect": "I sit at the living room.",
+          "correct": "I sit in the living room.",
+          "why_ja": "部屋の中を表すときは in。at は「地点」で、部屋の内部には不適切"
+        }
+      ],
+      "meta": {
+        "validated_by_user": false,
+        "schema_version": "1.2.1",
+        "source": "claude_generated"
+      },
+      "contexts": [
+        {
+          "id": "living_room_c1",
+          "text_en": "Please make yourself comfortable in the living room. The tea will be ready in a few minutes.",
+          "text_ja": "居間でどうぞおくつろぎください。お茶はあと数分で用意できます。",
+          "target_span": {
+            "start": 40,
+            "end": 51
+          },
+          "cloze_spans": [
+            {
+              "start": 40,
+              "end": 46,
+              "answer": "living"
+            },
+            {
+              "start": 47,
+              "end": 51,
+              "answer": "room"
+            }
+          ],
+          "scene": "host_guest",
+          "register": "formal"
+        },
+        {
+          "id": "living_room_c2",
+          "text_en": "Every Sunday, my family gathers in the living room to watch old movies together and eat popcorn.",
+          "text_ja": "毎週日曜日、家族は居間に集まって一緒に古い映画を見て、ポップコーンを食べます。",
+          "target_span": {
+            "start": 39,
+            "end": 50
+          },
+          "cloze_spans": [
+            {
+              "start": 39,
+              "end": 45,
+              "answer": "living"
+            },
+            {
+              "start": 46,
+              "end": 50,
+              "answer": "room"
+            }
+          ],
+          "scene": "family_tradition",
+          "register": "neutral"
+        },
+        {
+          "id": "living_room_c3",
+          "text_en": "Come on over! Everyone's in the living room and we just ordered pizza.",
+          "text_ja": "遊びに来なよ! みんなリビングにいて、ちょうどピザ頼んだところ。",
+          "target_span": {
+            "start": 32,
+            "end": 43
+          },
+          "cloze_spans": [
+            {
+              "start": 32,
+              "end": 38,
+              "answer": "living"
+            },
+            {
+              "start": 39,
+              "end": 43,
+              "answer": "room"
+            }
+          ],
+          "scene": "friend_invitation",
+          "register": "informal"
+        },
+        {
+          "id": "living_room_c4",
+          "text_en": "I need to clean the living room before the guests arrive. Can you help me with the vacuum?",
+          "text_ja": "お客さんが来る前に居間を掃除しないと。掃除機かけるの手伝ってくれる?",
+          "target_span": {
+            "start": 20,
+            "end": 31
+          },
+          "cloze_spans": [
+            {
+              "start": 20,
+              "end": 26,
+              "answer": "living"
+            },
+            {
+              "start": 27,
+              "end": 31,
+              "answer": "room"
+            }
+          ],
+          "scene": "household_task",
+          "register": "neutral"
+        },
+        {
+          "id": "living_room_c5",
+          "text_en": "Stop running in the living room! You're going to break something!",
+          "text_ja": "リビングで走らないで! 何か壊しちゃうよ!",
+          "target_span": {
+            "start": 20,
+            "end": 31
+          },
+          "cloze_spans": [
+            {
+              "start": 20,
+              "end": 26,
+              "answer": "living"
+            },
+            {
+              "start": 27,
+              "end": 31,
+              "answer": "room"
+            }
+          ],
+          "scene": "parent_warning",
+          "register": "informal"
+        }
+      ]
+    },
+    {
+      "id": "of_course",
+      "surface": "of course",
+      "category": "other",
+      "cefr_level": "A2",
+      "frequency_rank_in_level": 10,
+      "translations_ja": [
+        "もちろん",
+        "当然"
+      ],
+      "definition_en": "Used to say 'yes' with certainty, or to indicate that something is expected or obvious.",
+      "example_sentences": [
+        {
+          "en": "Of course, all documents must be signed before submission.",
+          "ja": "もちろん、提出前に全ての書類に署名する必要があります。",
+          "register": "formal",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "Of course I remember your birthday — it's next Tuesday.",
+          "ja": "もちろん君の誕生日覚えてるよ。来週火曜日でしょ。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "Of course! Come over anytime you want.",
+          "ja": "もちろん! いつでも来ていいよ。",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ],
+      "semantic_field": [
+        "agreement",
+        "discourse_marker"
+      ],
+      "register": [
+        "formal",
+        "neutral",
+        "informal"
+      ],
+      "collocation_pattern": null,
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/ʌv kɔrs/",
+      "ipa_connected": "/ʌvkɔrs/",
+      "synonyms": [
+        {
+          "item": "certainly",
+          "difference_ja": "より formal、「確かに」の意味"
+        },
+        {
+          "item": "sure",
+          "difference_ja": "informal、「うん・いいよ」の軽い同意"
+        },
+        {
+          "item": "naturally",
+          "difference_ja": "「当然のこととして」formal 寄り"
+        }
+      ],
+      "antonyms": [
+        {
+          "item": "of course not",
+          "difference_ja": "「もちろん違う」の否定形"
+        }
+      ],
+      "hypernyms": [
+        "yes"
+      ],
+      "hyponyms": [],
+      "confusables": [
+        {
+          "item": "in course",
+          "similarity_ja": "of course との語形の混同",
+          "key_difference_ja": "in course は「進行中で」の formal 表現、of course とは意味が違う",
+          "correct_usage_ja": "同意を表すのは of course のみ",
+          "example_en": "Of course I'll help you with your homework."
+        },
+        {
+          "item": "by course",
+          "similarity_ja": "同じく前置詞 + course の形",
+          "key_difference_ja": "by course は英語として不自然、of course が正しい",
+          "correct_usage_ja": "必ず of course",
+          "example_en": "Of course you can borrow my book."
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "of course not",
+          "meaning_ja": "もちろん違う(否定)",
+          "type": "other"
+        },
+        {
+          "form": "as a matter of course",
+          "meaning_ja": "当然のこととして(formal)",
+          "type": "other"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "Of the course, I agree.",
+          "correct": "Of course, I agree.",
+          "why_ja": "of course は定冠詞 the を入れない。固定表現"
+        },
+        {
+          "incorrect": "It is of course true.",
+          "correct": "Of course, it is true. / It is, of course, true.",
+          "why_ja": "文中に挿入する場合はカンマで区切る。裸で挿入すると読みにくい"
+        }
+      ],
+      "meta": {
+        "validated_by_user": false,
+        "schema_version": "1.2.1",
+        "source": "claude_generated"
+      },
+      "contexts": [
+        {
+          "id": "of_course_c1",
+          "text_en": "Of course, our company will fully support the new environmental policy. We share the same values.",
+          "text_ja": "もちろん、当社は新しい環境方針を全面的に支持します。同じ価値観を共有しています。",
+          "target_span": {
+            "start": 0,
+            "end": 9
+          },
+          "cloze_spans": [
+            {
+              "start": 0,
+              "end": 2,
+              "answer": "Of"
+            },
+            {
+              "start": 3,
+              "end": 9,
+              "answer": "course"
+            }
+          ],
+          "scene": "business_agreement",
+          "register": "formal"
+        },
+        {
+          "id": "of_course_c2",
+          "text_en": "Can you help me with the boxes? Of course, I'll be there in a minute.",
+          "text_ja": "この箱運ぶの手伝ってくれる? もちろん、すぐ行くよ。",
+          "target_span": {
+            "start": 32,
+            "end": 41
+          },
+          "cloze_spans": [
+            {
+              "start": 32,
+              "end": 34,
+              "answer": "Of"
+            },
+            {
+              "start": 35,
+              "end": 41,
+              "answer": "course"
+            }
+          ],
+          "scene": "casual_help",
+          "register": "neutral"
+        },
+        {
+          "id": "of_course_c3",
+          "text_en": "Do you want to come to my birthday party? Of course! I wouldn't miss it for anything.",
+          "text_ja": "誕生日パーティー来る? もちろん! 絶対行くよ。",
+          "target_span": {
+            "start": 42,
+            "end": 51
+          },
+          "cloze_spans": [
+            {
+              "start": 42,
+              "end": 44,
+              "answer": "Of"
+            },
+            {
+              "start": 45,
+              "end": 51,
+              "answer": "course"
+            }
+          ],
+          "scene": "party_invitation",
+          "register": "informal"
+        },
+        {
+          "id": "of_course_c4",
+          "text_en": "Of course you can borrow my dictionary. Just bring it back by Friday.",
+          "text_ja": "もちろん辞書貸すよ。金曜日までに返してくれれば。",
+          "target_span": {
+            "start": 0,
+            "end": 9
+          },
+          "cloze_spans": [
+            {
+              "start": 0,
+              "end": 2,
+              "answer": "Of"
+            },
+            {
+              "start": 3,
+              "end": 9,
+              "answer": "course"
+            }
+          ],
+          "scene": "lending_item",
+          "register": "neutral"
+        },
+        {
+          "id": "of_course_c5",
+          "text_en": "Are you gonna eat all that? Of course, I'm starving!",
+          "text_ja": "それ全部食べるの? もちろん、腹ペコなんだから!",
+          "target_span": {
+            "start": 28,
+            "end": 37
+          },
+          "cloze_spans": [
+            {
+              "start": 28,
+              "end": 30,
+              "answer": "Of"
+            },
+            {
+              "start": 31,
+              "end": 37,
+              "answer": "course"
+            }
+          ],
+          "scene": "casual_meal",
+          "register": "informal"
+        }
+      ]
+    },
+    {
+      "id": "for_example",
+      "surface": "for example",
+      "category": "other",
+      "cefr_level": "A2",
+      "frequency_rank_in_level": 12,
+      "translations_ja": [
+        "例えば",
+        "たとえば"
+      ],
+      "definition_en": "Used to introduce a specific case that illustrates a general point.",
+      "example_sentences": [
+        {
+          "en": "Many fruits contain vitamin C. For example, oranges and strawberries are rich in it.",
+          "ja": "多くの果物にはビタミンCが含まれています。例えば、オレンジやいちごには豊富に含まれています。",
+          "register": "formal",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "You can use it in many ways. For example, I use it to make soup.",
+          "ja": "いろんな使い方ができるよ。例えば、私はスープを作るのに使ってる。",
+          "register": "neutral",
+          "surrounding_cefr_ceiling": "A2"
+        },
+        {
+          "en": "There's so much to do here — for example, you can go swimming or ride a bike.",
+          "ja": "ここでできることいっぱいあるよ。たとえば、泳いだり自転車乗ったり。",
+          "register": "informal",
+          "surrounding_cefr_ceiling": "A2"
+        }
+      ],
+      "semantic_field": [
+        "illustration",
+        "discourse_marker"
+      ],
+      "register": [
+        "formal",
+        "neutral",
+        "informal"
+      ],
+      "collocation_pattern": null,
+      "skill_focus": "receptive_and_productive",
+      "ipa_careful": "/fɔr ɪɡˈzæmpəl/",
+      "ipa_connected": "/fɔrɪɡˈzæmpəl/",
+      "synonyms": [
+        {
+          "item": "for instance",
+          "difference_ja": "ほぼ同義、for example よりわずかに formal"
+        },
+        {
+          "item": "such as",
+          "difference_ja": "名詞の直後に付ける形、文の途中で使う"
+        },
+        {
+          "item": "e.g.",
+          "difference_ja": "書き言葉の略記、文中で括弧内などに使う"
+        }
+      ],
+      "antonyms": [],
+      "hypernyms": [
+        "illustrative marker"
+      ],
+      "hyponyms": [],
+      "confusables": [
+        {
+          "item": "as example",
+          "similarity_ja": "example を使った表現で似ている",
+          "key_difference_ja": "英語として不自然、for example が正しい",
+          "correct_usage_ja": "必ず for example",
+          "example_en": "For example, apples and bananas are fruits."
+        },
+        {
+          "item": "such as",
+          "similarity_ja": "例示の意味が同じ",
+          "key_difference_ja": "for example は独立した挿入句、such as は名詞の直後に続く",
+          "correct_usage_ja": "文を分けるなら for example、名詞リストなら such as",
+          "example_en": "Fruits such as apples and bananas are healthy."
+        }
+      ],
+      "related_uses": [
+        {
+          "form": "for instance",
+          "meaning_ja": "たとえば(同義)",
+          "type": "other"
+        },
+        {
+          "form": "such as",
+          "meaning_ja": "〜のような(例示)",
+          "type": "other"
+        }
+      ],
+      "common_errors_ja": [
+        {
+          "incorrect": "For a example, apples are red.",
+          "correct": "For example, apples are red.",
+          "why_ja": "for example に不定冠詞 a は入れない。固定表現"
+        },
+        {
+          "incorrect": "For example fruits such as apples.",
+          "correct": "Fruits, for example apples, are healthy. / Fruits such as apples are healthy.",
+          "why_ja": "for example と such as は同時に使わない。どちらか一方を選ぶ"
+        }
+      ],
+      "meta": {
+        "validated_by_user": false,
+        "schema_version": "1.2.1",
+        "source": "claude_generated"
+      },
+      "contexts": [
+        {
+          "id": "for_example_c1",
+          "text_en": "Many countries have four seasons. For example, Japan has cold winters and hot summers.",
+          "text_ja": "多くの国には四季があります。例えば、日本には寒い冬と暑い夏があります。",
+          "target_span": {
+            "start": 34,
+            "end": 45
+          },
+          "cloze_spans": [
+            {
+              "start": 34,
+              "end": 37,
+              "answer": "For"
+            },
+            {
+              "start": 38,
+              "end": 45,
+              "answer": "example"
+            }
+          ],
+          "scene": "textbook_explanation",
+          "register": "neutral"
+        },
+        {
+          "id": "for_example_c2",
+          "text_en": "There are many ways to save energy at home. For example, turning off lights when leaving a room helps a lot.",
+          "text_ja": "家庭でエネルギーを節約する方法はたくさんあります。例えば、部屋を出るときに電気を消すことは大きな助けになります。",
+          "target_span": {
+            "start": 44,
+            "end": 55
+          },
+          "cloze_spans": [
+            {
+              "start": 44,
+              "end": 47,
+              "answer": "For"
+            },
+            {
+              "start": 48,
+              "end": 55,
+              "answer": "example"
+            }
+          ],
+          "scene": "eco_advice",
+          "register": "formal"
+        },
+        {
+          "id": "for_example_c3",
+          "text_en": "You can use vegetables in so many dishes. For example, I put carrots in almost everything I cook.",
+          "text_ja": "野菜っていろんな料理に使えるよ。例えば、私はほとんどの料理ににんじん入れるんだ。",
+          "target_span": {
+            "start": 42,
+            "end": 53
+          },
+          "cloze_spans": [
+            {
+              "start": 42,
+              "end": 45,
+              "answer": "For"
+            },
+            {
+              "start": 46,
+              "end": 53,
+              "answer": "example"
+            }
+          ],
+          "scene": "cooking_chat",
+          "register": "informal"
+        },
+        {
+          "id": "for_example_c4",
+          "text_en": "The library offers many services. For example, students can borrow up to five books at a time.",
+          "text_ja": "図書館は多くのサービスを提供しています。例えば、学生は一度に5冊まで本を借りることができます。",
+          "target_span": {
+            "start": 34,
+            "end": 45
+          },
+          "cloze_spans": [
+            {
+              "start": 34,
+              "end": 37,
+              "answer": "For"
+            },
+            {
+              "start": 38,
+              "end": 45,
+              "answer": "example"
+            }
+          ],
+          "scene": "library_info",
+          "register": "neutral"
+        },
+        {
+          "id": "for_example_c5",
+          "text_en": "There's tons of stuff to do at the beach! For example, you can go swimming or build sandcastles.",
+          "text_ja": "ビーチでできること山ほどあるよ! 例えば、泳いだり砂のお城作ったり。",
+          "target_span": {
+            "start": 42,
+            "end": 53
+          },
+          "cloze_spans": [
+            {
+              "start": 42,
+              "end": 45,
+              "answer": "For"
+            },
+            {
+              "start": 46,
+              "end": 53,
+              "answer": "example"
+            }
+          ],
+          "scene": "beach_activities",
           "register": "informal"
         }
       ]

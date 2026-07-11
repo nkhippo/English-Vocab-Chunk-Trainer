@@ -17,7 +17,7 @@
   },
   "home": {
     "title": "Welcome",
-    "body": "Try Mode A (read in context), Mode B (cloze recall), and the wordbook with 11 sample items.",
+    "body": "Try Mode A (read in context), Mode B (cloze recall), and the wordbook with 21 sample items.",
     "ctaModeA": "Mode A (read in context)",
     "ctaModeB": "Mode B (cloze)",
     "ctaBrowse": "Open wordbook",

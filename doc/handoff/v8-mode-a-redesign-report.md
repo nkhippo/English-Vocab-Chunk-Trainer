@@ -21,7 +21,9 @@
 | §2 OK/Hold トグル・左スワイプ・キーボード | **完了** |
 | §2 Mode B 対称適用（解答を見る維持） | **完了** |
 | `pnpm validate` / `pnpm build` | **OK** |
-| main push → GitHub Pages | **実施**（本レポート作成時点で push 予定） |
+| 仕様書 | **v3.3**（Mode A/B 文脈型・v8 UI を反映） |
+| `schema_version` / JSON Schema | **1.2.3**（v8 で構造変更なし。説明文のみ同期） |
+| `doc/repository-structure.md` | train ツリー・実装済み/未着手表を同期 |
 
 ---
 

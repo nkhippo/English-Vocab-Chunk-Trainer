@@ -26,10 +26,10 @@
 | ID | 内容 | 由来 |
 |---|---|---|
 | R1 | synonyms/antonyms/related_uses の空 example（約 132 スロット）補充 | v7 |
-| R2 | confusables / common_errors_ja の役割重複整理・再生成 | v7/v8 §1 |
+| R2 | confusables / common_errors_ja の役割重複整理・再生成 | **完了**（2026-07-11・schema 1.2.4） |
 | R3 | nuance_contrast_ja 文言品質の見直し | v7/v8 §1 |
 | R4 | GAS enrich 本番デプロイ（保留継続） | v8 §1 |
-| R5 | A2 本生成（2,430 件） | 長期 |
+| R5 | A2 本生成（2,430 件）+ 量産テンプレへ役割分離ガイドライン反映 | 長期 |
 | R6 | SRS / Mode C / 音声・GA-RP | Phase 2+ |
 
 ---

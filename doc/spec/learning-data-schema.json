@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://github.com/nkhippo/English-Vocab-Chunk-Trainer/schema/v1",
   "title": "Vocab & Chunk Trainer Data Schema",
-  "description": "Authoritative schema for LearningItem and Insight. Version 1.2.3 (2026-07-11): nuance_contrast_ja; example_en/ja on synonyms/antonyms/related_uses; hypernyms/hyponyms removed. See doc/handoff/v7-refinement-report.md.",
-  "version": "1.2.3",
+  "description": "Authoritative schema for LearningItem and Insight. Version 1.2.4 (2026-07-11): dataset content patch for confusables/common_errors role separation (no structural change from 1.2.3). Prior 1.2.3: nuance_contrast_ja; example_en/ja; hypernyms/hyponyms removed. See doc/ops/confusables-common-errors-role-separation.md.",
+  "version": "1.2.4",
   "definitions": {
     "cefrLevel": {
       "type": "string",
@@ -274,7 +274,7 @@
         "ipa_careful": { "type": "string" },
         "ipa_connected": {
           "type": "string",
-          "description": "For phrases (surface contains spaces) this is required; single-word items may omit this"
+          "description": "Connected/linking IPA for phrases. Retained in data; current UI may show ipa_careful only (v7/v8). Single-word items may omit this."
         },
         "audio_ref": { "type": "string" },
         "book_alignment": { "$ref": "#/definitions/bookAlignment" },
@@ -309,9 +309,12 @@
           "items": { "$ref": "#/definitions/context" },
           "minItems": 5,
           "maxItems": 5,
-          "description": "Passages used in Mode A (read) and Mode B (cloze). Exactly 5 per item."
+          "description": "Passages for Mode A (read+highlight) and Mode B (cloze). Exactly 5 when present. Omit for word-category items (excluded from Mode A/B)."
         },
-        "srs_state": { "$ref": "#/definitions/srsState" },
+        "srs_state": {
+          "$ref": "#/definitions/srsState",
+          "description": "Reserved for Phase 2+ SRS. Not populated in current pilot data; learning-history checkmarks use localStorage instead."
+        },
         "meta": {
           "type": "object",
           "properties": {

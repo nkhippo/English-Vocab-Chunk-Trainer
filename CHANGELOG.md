@@ -4,6 +4,8 @@
 
 ### Added
 
+- confusables / common_errors 役割分離パッチ（11 items）+ ガイドライン
+- `doc/handoff/confusables-role-separation-handoff-report.md`
 - v8: Mode A/B モバイル最適化（confusables / related_uses / 学習履歴表示）
 - `EvalButtons` / `ConfusablesInline` / `RelatedUsesInline` / `TrainCheckmarks` / `useTrainInteractions`
 - `doc/handoff/v8-mode-a-redesign-report.md` / `v8-scope-questions.md`
@@ -17,10 +19,11 @@
 
 ### Changed
 
+- `data/current/items.json` schema **1.2.4**（11 items の confusables/errors 差し替え）
+- `app-specification.md` → **v3.3**（Mode A/B 文脈型・v8 UI・ロードマップ現状を同期）
+- `learning-data-schema.json` / `repository-structure.md` を v5〜v8 指示の累積に同期
 - Mode A/B: タイマー・中断・出会い回数・上部 CEFR 削除、× 閉じる追加
-- `app-specification.md` → **v3.2**
 - 詳細モーダル: 類義語・反意語を上位、例文全表示、IPA 語ごとのみ、上位語・下位語削除
-- `data/current/items.json` schema **1.2.3**
 - ホーム文言を 21 件表記に更新
 
 ### Removed

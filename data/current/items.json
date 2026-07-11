@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.2.3",
-  "generated_at": "2026-07-11T04:30:56.006Z",
+  "schema_version": "1.2.4",
+  "generated_at": "2026-07-11T06:00:00.000Z",
   "cefr_levels_included": [
     "A1",
     "A2"
@@ -119,8 +119,8 @@
       "cefr_level": "A2",
       "meta": {
         "validated_by_user": true,
-        "schema_version": "1.2.0",
-        "updated_at": "2026-07-10T14:57:16.793Z"
+        "schema_version": "1.2.4",
+        "updated_at": "2026-07-11T06:00:00.000Z"
       },
       "synonyms": [
         {
@@ -158,31 +158,24 @@
       "confusables": [
         {
           "item": "take a photo",
-          "similarity_ja": "意味がほぼ同じ",
-          "key_difference_ja": "picture より photo の方がやや口語的",
-          "correct_usage_ja": "どちらもA2でよく使うが、混ぜないで統一するとよい",
-          "example_en": "Can you take a photo of us?"
+          "similarity_ja": "写真を撮る意味で同じように使える",
+          "key_difference_ja": "take a picture より take a photo の方が現代口語で頻出、意味は同じ",
+          "correct_usage_ja": "どちらも正しく、場面で使い分ける必要はない",
+          "example_en": "Let me take a photo of the sunset."
         },
         {
-          "item": "make a picture",
-          "similarity_ja": "日本人が誤って言いがち",
-          "key_difference_ja": "英語では make ではなく take を使う",
-          "correct_usage_ja": "「写真を撮る」は必ず take a picture",
-          "example_en": "I took a picture of the cat."
+          "item": "take a shot",
+          "similarity_ja": "写真関連の take 表現で似ている",
+          "key_difference_ja": "take a shot はカジュアルでスナップ的、take a picture はより一般的",
+          "correct_usage_ja": "写真家の話や砕けた会話では take a shot、通常は take a picture",
+          "example_en": "The photographer took a shot of the runners at the finish line."
         },
         {
           "item": "draw a picture",
-          "similarity_ja": "picture を含むコロケーション",
-          "key_difference_ja": "draw は「絵を描く」、take は「写真を撮る」",
-          "correct_usage_ja": "カメラで撮るなら take、鉛筆などで描くなら draw",
-          "example_en": "She drew a picture of her dog."
-        },
-        {
-          "item": "take a look",
-          "similarity_ja": "take + 名詞の形が似ている",
-          "key_difference_ja": "take a look は「見る」の意味",
-          "correct_usage_ja": "「写真を撮る」とは意味が全く違うので注意",
-          "example_en": "Take a look at this photo."
+          "similarity_ja": "picture を使う表現で語形が似ている",
+          "key_difference_ja": "draw a picture は「絵を描く」で行為が違う、take a picture は「写真を撮る」",
+          "correct_usage_ja": "絵を描くなら draw、写真を撮るなら take",
+          "example_en": "The children drew a picture of their family."
         }
       ],
       "related_uses": [
@@ -226,29 +219,19 @@
       ],
       "common_errors_ja": [
         {
-          "incorrect": "make a picture",
-          "correct": "take a picture",
-          "why_ja": "英語では写真を撮るときは take を使う。make は使わない"
+          "incorrect": "I make a picture.",
+          "correct": "I take a picture.",
+          "why_ja": "写真を撮るときは make ではなく take を使う。「絵を作る」感覚で make としがちだが、写真は take"
         },
         {
-          "incorrect": "take a picture to my friend",
-          "correct": "take a picture of my friend",
-          "why_ja": "「〜の写真」は of を使う。to は誤り"
+          "incorrect": "I took picture of the sunset.",
+          "correct": "I took a picture of the sunset.",
+          "why_ja": "通常は不定冠詞 a が必要。数えられる名詞なので a picture が基本形"
         },
         {
-          "incorrect": "take picture",
-          "correct": "take a picture",
-          "why_ja": "可算名詞なので冠詞 a が必要"
-        },
-        {
-          "incorrect": "shoot a picture with me",
-          "correct": "take a picture of me",
-          "why_ja": "「私の写真を撮って」は of me が自然"
-        },
-        {
-          "incorrect": "do a picture",
-          "correct": "take a picture",
-          "why_ja": "動詞は do ではなく take を使う"
+          "incorrect": "I took a picture to my friend.",
+          "correct": "I took a picture of my friend.",
+          "why_ja": "被写体を示すときは to ではなく of を使う"
         }
       ],
       "definition_en": "To use a camera to record an image of someone or something.",
@@ -416,8 +399,8 @@
       "cefr_level": "A2",
       "meta": {
         "validated_by_user": true,
-        "schema_version": "1.2.0",
-        "updated_at": "2026-07-10T14:57:16.798Z"
+        "schema_version": "1.2.4",
+        "updated_at": "2026-07-11T06:00:00.000Z"
       },
       "synonyms": [
         {
@@ -443,25 +426,25 @@
       ],
       "confusables": [
         {
+          "item": "eat breakfast",
+          "similarity_ja": "朝食を食べる意味で同じ",
+          "key_difference_ja": "eat は食べる動作、have は食事全体を経験する広い意味",
+          "correct_usage_ja": "動作を強調するなら eat、朝食の時間全体なら have",
+          "example_en": "I don't have time to eat breakfast today."
+        },
+        {
+          "item": "skip breakfast",
+          "similarity_ja": "朝食に関する対比表現",
+          "key_difference_ja": "have は朝食を取る、skip は朝食を抜く(反対の行動)",
+          "correct_usage_ja": "食べる場合は have、抜く場合は skip",
+          "example_en": "You shouldn't skip breakfast — it's important."
+        },
+        {
           "item": "make breakfast",
-          "similarity_ja": "どちらも朝食に関する動作。",
-          "key_difference_ja": "make は「作る（調理する）」、have は「食べる」。",
-          "correct_usage_ja": "食べる動作なら have breakfast、料理するなら make breakfast。",
-          "example_en": "I make breakfast for my family, then we have breakfast together."
-        },
-        {
-          "item": "have a breakfast",
-          "similarity_ja": "形が似ているが冠詞 a が付いている。",
-          "key_difference_ja": "通常は無冠詞で have breakfast と言う。形容詞が付く場合のみ a を使う。",
-          "correct_usage_ja": "通常は無冠詞。例: have a big breakfast。",
-          "example_en": "I have breakfast at 7. / I had a big breakfast today."
-        },
-        {
-          "item": "have brunch",
-          "similarity_ja": "朝の食事を指す表現。",
-          "key_difference_ja": "brunch は朝食と昼食を兼ねた遅めの食事。",
-          "correct_usage_ja": "朝早めの食事は breakfast、遅めの朝昼兼用は brunch。",
-          "example_en": "On Sundays we have brunch instead of breakfast."
+          "similarity_ja": "朝食に関する表現",
+          "key_difference_ja": "make は朝食を用意する(調理)、have は食べる(消費)",
+          "correct_usage_ja": "作るなら make、食べるなら have",
+          "example_en": "My father makes breakfast for the family on Sundays."
         }
       ],
       "related_uses": [
@@ -503,24 +486,19 @@
       ],
       "common_errors_ja": [
         {
+          "incorrect": "I make breakfast every morning.(食べる意味で)",
+          "correct": "I have breakfast every morning.",
+          "why_ja": "食事を「取る・食べる」意味では have を使う。make は「作る」なので調理の話になる"
+        },
+        {
           "incorrect": "I have a breakfast at 7.",
           "correct": "I have breakfast at 7.",
-          "why_ja": "食事名 breakfast は通常無冠詞で使う。"
+          "why_ja": "食事名の前に不定冠詞 a は付けない(breakfast / lunch / dinner は無冠詞が基本)"
         },
         {
-          "incorrect": "I eat my breakfast every day.",
-          "correct": "I have breakfast every day.",
-          "why_ja": "英語では食事に have を使うのが自然。"
-        },
-        {
-          "incorrect": "I make breakfast every morning (=食べる意味で).",
-          "correct": "I have breakfast every morning.",
-          "why_ja": "make は「作る」、食べる意味では have を使う。"
-        },
-        {
-          "incorrect": "I have the breakfast at home.",
-          "correct": "I have breakfast at home.",
-          "why_ja": "特定の朝食を指す場合以外は無冠詞。"
+          "incorrect": "I eat breakfast to my family.",
+          "correct": "I have breakfast with my family.",
+          "why_ja": "誰かと一緒に食事をとる場合は with を使う。to は不適切"
         }
       ],
       "definition_en": "To eat the first meal of the day, usually in the morning.",
@@ -688,8 +666,8 @@
       "cefr_level": "A2",
       "meta": {
         "validated_by_user": true,
-        "schema_version": "1.2.0",
-        "updated_at": "2026-07-10T14:57:16.798Z"
+        "schema_version": "1.2.4",
+        "updated_at": "2026-07-11T06:00:00.000Z"
       },
       "synonyms": [
         {
@@ -733,25 +711,25 @@
       ],
       "confusables": [
         {
-          "item": "make homework",
-          "similarity_ja": "日本語の「宿題を作る」に引きずられて使いがち。",
-          "key_difference_ja": "英語では宿題には「do」を使い、「make」は使わない。",
-          "correct_usage_ja": "「do homework」が正しい。",
-          "example_en": "I do my homework every evening."
+          "item": "finish homework",
+          "similarity_ja": "宿題に関する表現",
+          "key_difference_ja": "do は宿題を行う行為全体、finish は宿題を終える完了状態",
+          "correct_usage_ja": "取り組みなら do、完了なら finish",
+          "example_en": "I need to finish my homework before dinner."
         },
         {
-          "item": "do housework",
-          "similarity_ja": "「do + work」で似た形。",
-          "key_difference_ja": "「housework」は家事で、勉強の宿題ではない。",
-          "correct_usage_ja": "学校の宿題は「homework」、家事は「housework」。",
-          "example_en": "My mom does housework on weekends."
+          "item": "submit homework",
+          "similarity_ja": "宿題に関する動作",
+          "key_difference_ja": "do は自宅などで解く行為、submit は提出する行為",
+          "correct_usage_ja": "解く場合は do、提出する場合は submit(またはhand in)",
+          "example_en": "Please submit your homework by Friday."
         },
         {
-          "item": "do the homework",
-          "similarity_ja": "冠詞のありなしで迷いやすい。",
-          "key_difference_ja": "一般的な習慣なら無冠詞、特定の宿題を指すなら「the」を付ける。",
-          "correct_usage_ja": "I do my homework. / I did the homework you gave me.",
-          "example_en": "Did you do the homework for today?"
+          "item": "study for a test",
+          "similarity_ja": "学習に関する動作で似ている",
+          "key_difference_ja": "do homework は宿題を解く、study for a test はテスト勉強",
+          "correct_usage_ja": "宿題そのものなら do homework、テスト対策なら study",
+          "example_en": "I have to study for a math test tomorrow."
         }
       ],
       "related_uses": [
@@ -796,22 +774,17 @@
         {
           "incorrect": "I make my homework every day.",
           "correct": "I do my homework every day.",
-          "why_ja": "英語では「homework」に「do」を使う。「make」は不可。"
+          "why_ja": "宿題は make(作る)ではなく do(行う)を使う。「宿題を作る」と直訳する誤り"
         },
         {
-          "incorrect": "I do my homeworks.",
-          "correct": "I do my homework.",
-          "why_ja": "homeworkは不可算名詞なので複数形にしない。"
+          "incorrect": "I did the homework of math.",
+          "correct": "I did my math homework.",
+          "why_ja": "教科を示すときは前置詞 of ではなく、名詞を形容詞的に使う(math homework)"
         },
         {
-          "incorrect": "I did a homework.",
-          "correct": "I did my homework.",
-          "why_ja": "不可算名詞なので「a」は付けず、通常「my/the」を使う。"
-        },
-        {
-          "incorrect": "I do homework to my teacher.",
-          "correct": "I hand in homework to my teacher.",
-          "why_ja": "提出する意味では「hand in」や「give」を使う。"
+          "incorrect": "I do homeworks every night.",
+          "correct": "I do homework every night.",
+          "why_ja": "homework は不可算名詞なので複数形 -s を付けない"
         }
       ],
       "definition_en": "To complete school assignments given by a teacher, usually at home.",
@@ -978,8 +951,8 @@
       "cefr_level": "A2",
       "meta": {
         "validated_by_user": true,
-        "schema_version": "1.2.0",
-        "updated_at": "2026-07-10T14:57:16.798Z"
+        "schema_version": "1.2.4",
+        "updated_at": "2026-07-11T06:00:00.000Z"
       },
       "synonyms": [
         {
@@ -1017,32 +990,32 @@
       ],
       "confusables": [
         {
-          "item": "catch cold",
-          "similarity_ja": "a なしでも使われることがあり紛らわしい",
-          "key_difference_ja": "catch cold は古風・文語的、通常は a を付ける",
-          "correct_usage_ja": "日常会話では catch a cold を使う",
-          "example_en": "I caught a cold last week."
+          "item": "have a cold",
+          "similarity_ja": "風邪の話で似ている",
+          "key_difference_ja": "catch は感染の瞬間(なった時)、have は既にひいている状態",
+          "correct_usage_ja": "発症の瞬間・過去形で catch、現在ひいている状態は have",
+          "example_en": "I have a cold now, so I'm staying home."
         },
         {
-          "item": "take a cold",
-          "similarity_ja": "直訳すると似ているが誤用",
-          "key_difference_ja": "英語では take a cold とは言わない",
-          "correct_usage_ja": "必ず catch を使う",
-          "example_en": "I caught a cold yesterday."
+          "item": "get a cold",
+          "similarity_ja": "風邪をひく意味でよく似ている",
+          "key_difference_ja": "get はよりカジュアル・口語的、catch は少しフォーマル寄り",
+          "correct_usage_ja": "会話ではどちらも自然、書き言葉では catch がやや無難",
+          "example_en": "I got a cold last weekend and stayed in bed."
         },
         {
           "item": "catch the flu",
-          "similarity_ja": "同じ catch を使う病気の表現",
-          "key_difference_ja": "cold は風邪、flu はインフルエンザ",
-          "correct_usage_ja": "病名によって使い分ける",
-          "example_en": "He caught the flu at school."
+          "similarity_ja": "同じ catch を使う病気表現",
+          "key_difference_ja": "cold は風邪、flu はインフルエンザで別の病気",
+          "correct_usage_ja": "軽い風邪症状なら cold、高熱・全身症状なら flu",
+          "example_en": "He caught the flu at school last week."
         },
         {
           "item": "feel cold",
           "similarity_ja": "cold を含むが意味が違う",
-          "key_difference_ja": "feel cold は「寒く感じる」で病気ではない",
+          "key_difference_ja": "feel cold は「寒く感じる」で体感温度、病気ではない",
           "correct_usage_ja": "体感温度は feel cold、病気は catch a cold",
-          "example_en": "I feel cold in this room."
+          "example_en": "Close the window, I feel cold."
         }
       ],
       "related_uses": [
@@ -1085,29 +1058,24 @@
       ],
       "common_errors_ja": [
         {
-          "incorrect": "I catched a cold.",
-          "correct": "I caught a cold.",
-          "why_ja": "catch の過去形は caught で不規則変化"
+          "incorrect": "I catched a cold yesterday.",
+          "correct": "I caught a cold yesterday.",
+          "why_ja": "catch の過去形は caught で不規則変化。catched は誤り"
         },
         {
-          "incorrect": "I took a cold.",
-          "correct": "I caught a cold.",
-          "why_ja": "英語では take ではなく catch を使う"
+          "incorrect": "I took a cold from my brother.",
+          "correct": "I caught a cold from my brother.",
+          "why_ja": "英語では「風邪をひく」を take で表現しない。必ず catch(または get)を使う"
         },
         {
-          "incorrect": "I catch a cold now.",
-          "correct": "I have a cold now.",
-          "why_ja": "現在の状態は have を使う。catch は発症の瞬間を表す"
-        },
-        {
-          "incorrect": "I caught cold.",
-          "correct": "I caught a cold.",
-          "why_ja": "通常は不定冠詞 a が必要"
+          "incorrect": "I caught cold last week.",
+          "correct": "I caught a cold last week.",
+          "why_ja": "現代英語では不定冠詞 a が必要(catch cold は古風・文語的で日常会話ではまれ)"
         },
         {
           "incorrect": "I caught a cold from the weather.",
           "correct": "I caught a cold because of the cold weather.",
-          "why_ja": "from の後は通常「人・場所」など感染源が来る"
+          "why_ja": "from の後は通常「人・場所」など感染源が来る。天気が原因の場合は because of"
         }
       ],
       "definition_en": "To become infected with a common cold virus and start showing symptoms.",
@@ -1275,8 +1243,8 @@
       "cefr_level": "A2",
       "meta": {
         "validated_by_user": true,
-        "schema_version": "1.2.0",
-        "updated_at": "2026-07-10T14:57:16.798Z"
+        "schema_version": "1.2.4",
+        "updated_at": "2026-07-11T06:00:00.000Z"
       },
       "synonyms": [
         {
@@ -1308,25 +1276,25 @@
       ],
       "confusables": [
         {
-          "item": "take a bath",
-          "similarity_ja": "どちらも体を洗う行為で日常表現。",
-          "key_difference_ja": "bathは浴槽につかる、showerは立って水を浴びる。",
-          "correct_usage_ja": "浴槽ならtake a bath、シャワーならtake a shower。",
-          "example_en": "I take a shower every morning, but I take a bath on weekends."
-        },
-        {
           "item": "have a shower",
-          "similarity_ja": "意味はほぼ同じ。",
-          "key_difference_ja": "haveはイギリス英語、takeはアメリカ英語で好まれる。",
-          "correct_usage_ja": "どちらも正しいが地域で使い分けられる。",
-          "example_en": "She has a shower before breakfast."
+          "similarity_ja": "シャワーを浴びる意味で同じ",
+          "key_difference_ja": "have a shower は英国英語で一般的、take a shower は米国英語で一般的",
+          "correct_usage_ja": "米国英語圏なら take、英国英語圏なら have、どちらも通じる",
+          "example_en": "I usually have a shower before bed."
         },
         {
-          "item": "make a shower",
-          "similarity_ja": "日本人がつい言いがちな誤り。",
-          "key_difference_ja": "makeは使わない。動詞はtakeかhave。",
-          "correct_usage_ja": "take/have a showerを使う。",
-          "example_en": "I take a shower after work."
+          "item": "take a bath",
+          "similarity_ja": "同じ take + 入浴表現",
+          "key_difference_ja": "shower は立ってシャワーを浴びる、bath は浴槽に浸かる",
+          "correct_usage_ja": "浴槽に浸かる場合は bath、シャワーだけなら shower",
+          "example_en": "After a long day, I love to take a bath."
+        },
+        {
+          "item": "get in the shower",
+          "similarity_ja": "シャワーに関する動作",
+          "key_difference_ja": "get in the shower は「シャワーを開始する」、take a shower は「シャワーを浴びる行為全体」",
+          "correct_usage_ja": "行為全体は take、始める瞬間は get in",
+          "example_en": "I'll call you back — I'm about to get in the shower."
         }
       ],
       "related_uses": [
@@ -1370,24 +1338,19 @@
       ],
       "common_errors_ja": [
         {
-          "incorrect": "make a shower",
-          "correct": "take a shower",
-          "why_ja": "動詞はmakeではなくtake(またはhave)を使う。"
+          "incorrect": "I make a shower every morning.",
+          "correct": "I take a shower every morning.",
+          "why_ja": "シャワーを浴びる意味では make ではなく take(または have)を使う"
         },
         {
-          "incorrect": "take shower",
-          "correct": "take a shower",
-          "why_ja": "数えられる名詞なので冠詞aが必要。"
+          "incorrect": "I take a shower bath.",
+          "correct": "I take a shower.",
+          "why_ja": "shower と bath を同時に使うことはない。どちらか一方を選ぶ"
         },
         {
-          "incorrect": "take a shower bath",
-          "correct": "take a shower",
-          "why_ja": "bathを付ける必要はない。"
-        },
-        {
-          "incorrect": "do a shower",
-          "correct": "take a shower",
-          "why_ja": "doは使えない。takeまたはhaveが正しい。"
+          "incorrect": "I took shower after running.",
+          "correct": "I took a shower after running.",
+          "why_ja": "通常は不定冠詞 a が必要(take a shower の a を落とさない)"
         }
       ],
       "definition_en": "To wash your body by standing under running water from a shower.",
@@ -1553,8 +1516,8 @@
       "cefr_level": "A2",
       "meta": {
         "validated_by_user": true,
-        "schema_version": "1.2.0",
-        "updated_at": "2026-07-10T14:57:16.798Z"
+        "schema_version": "1.2.4",
+        "updated_at": "2026-07-11T06:00:00.000Z"
       },
       "synonyms": [
         {
@@ -1580,25 +1543,25 @@
       ],
       "confusables": [
         {
-          "item": "go to shopping",
-          "similarity_ja": "形が似ているが誤用",
-          "key_difference_ja": "正しくは go shopping で to は不要",
-          "correct_usage_ja": "go + 動詞ing の形を使う",
-          "example_en": "I go shopping every weekend."
-        },
-        {
-          "item": "go for shopping",
-          "similarity_ja": "前置詞を入れがちな誤形",
-          "key_difference_ja": "go shopping には前置詞を入れない",
-          "correct_usage_ja": "そのまま go shopping と言う",
-          "example_en": "Let's go shopping tomorrow."
-        },
-        {
-          "item": "do shopping",
+          "item": "do the shopping",
           "similarity_ja": "買い物をする意味で似ている",
-          "key_difference_ja": "通常 do the shopping と the を付ける",
-          "correct_usage_ja": "do the shopping の形で使う",
-          "example_en": "I do the shopping on Sundays."
+          "key_difference_ja": "go shopping は「買い物のために外出する」、do the shopping は「日常の必需品の買い物をこなす」",
+          "correct_usage_ja": "外出行動なら go shopping、日常タスクなら do the shopping",
+          "example_en": "My mother does the shopping every Saturday."
+        },
+        {
+          "item": "go to the store",
+          "similarity_ja": "買い物に関連する外出",
+          "key_difference_ja": "go to the store は特定の店に行くこと、go shopping は「買い物という活動」",
+          "correct_usage_ja": "目的地が明確なら go to the store、活動を伝えるなら go shopping",
+          "example_en": "I need to go to the store to buy some milk."
+        },
+        {
+          "item": "go window shopping",
+          "similarity_ja": "shopping を含む表現",
+          "key_difference_ja": "window shopping は「見るだけで買わない」、shopping は「実際に買う」ことを含む",
+          "correct_usage_ja": "買わないで見るだけなら window shopping、買う場合は shopping",
+          "example_en": "We went window shopping downtown yesterday."
         }
       ],
       "related_uses": [
@@ -1633,24 +1596,24 @@
       ],
       "common_errors_ja": [
         {
-          "incorrect": "I go to shopping.",
-          "correct": "I go shopping.",
-          "why_ja": "go + ing の後に to は入れない"
+          "incorrect": "I go to shopping every Sunday.",
+          "correct": "I go shopping every Sunday.",
+          "why_ja": "go + 動詞ing の形では前置詞 to を入れない(go swimming, go fishing と同じ)"
         },
         {
-          "incorrect": "I go for shopping.",
-          "correct": "I go shopping.",
-          "why_ja": "go shopping の間に前置詞は不要"
+          "incorrect": "Let's go for shopping this weekend.",
+          "correct": "Let's go shopping this weekend.",
+          "why_ja": "go shopping の間に前置詞 for は不要。go + Ving は前置詞なしが基本形"
         },
         {
-          "incorrect": "I went shopped.",
-          "correct": "I went shopping.",
-          "why_ja": "go の後は動詞ing 形を使う"
+          "incorrect": "I went shopped yesterday.",
+          "correct": "I went shopping yesterday.",
+          "why_ja": "go の後は動詞ing 形(現在分詞)を使う。過去形にしない"
         },
         {
           "incorrect": "I go shopping to the mall.",
           "correct": "I go shopping at the mall.",
-          "why_ja": "場所を示すときは at を使うのが自然"
+          "why_ja": "場所を示すときは at を使うのが自然。to だと「モールに向かって買い物する」で不自然"
         }
       ],
       "definition_en": "To go out in order to buy things, especially from shops.",
@@ -2111,8 +2074,8 @@
       "cefr_level": "A2",
       "meta": {
         "validated_by_user": true,
-        "schema_version": "1.2.0",
-        "updated_at": "2026-07-10T14:57:16.798Z"
+        "schema_version": "1.2.4",
+        "updated_at": "2026-07-11T06:00:00.000Z"
       },
       "synonyms": [
         {
@@ -2145,24 +2108,24 @@
       "confusables": [
         {
           "item": "hear music",
-          "similarity_ja": "どちらも音楽と耳に関する表現",
-          "key_difference_ja": "hearは自然に聞こえる、listen toは意識して聴く",
-          "correct_usage_ja": "集中して聴くときはlisten to musicを使う",
-          "example_en": "I listen to music every morning."
+          "similarity_ja": "音楽と動詞の組み合わせ",
+          "key_difference_ja": "hear は「聞こえる」(受動的)、listen は「聴く」(能動的・意識的)",
+          "correct_usage_ja": "意識せず耳に入る場合は hear、集中して聴く場合は listen",
+          "example_en": "I hear music from the next room."
         },
         {
-          "item": "listen music",
-          "similarity_ja": "見た目が似ている誤形",
-          "key_difference_ja": "listenの後には必ずtoが必要",
-          "correct_usage_ja": "listen to musicと必ずtoを入れる",
-          "example_en": "She listens to music on the bus."
+          "item": "play music",
+          "similarity_ja": "音楽関連の動詞",
+          "key_difference_ja": "play music は「音楽を演奏する / 再生する」、listen to music は「聴く」",
+          "correct_usage_ja": "演奏・再生する側なら play、聴く側なら listen to",
+          "example_en": "She plays music on her guitar every evening."
         },
         {
-          "item": "watch music",
-          "similarity_ja": "音楽に関する動作動詞",
-          "key_difference_ja": "watchは視覚、listenは聴覚を表す",
-          "correct_usage_ja": "音楽ビデオならwatch a music video、聴くだけならlisten to music",
-          "example_en": "I watch music videos and listen to music."
+          "item": "enjoy music",
+          "similarity_ja": "音楽を楽しむ表現",
+          "key_difference_ja": "enjoy は感情(楽しむ)、listen to は行為(聴く)",
+          "correct_usage_ja": "感覚を伝えるなら enjoy、動作を伝えるなら listen to",
+          "example_en": "I really enjoy classical music in the evening."
         }
       ],
       "related_uses": [
@@ -2198,19 +2161,19 @@
       ],
       "common_errors_ja": [
         {
-          "incorrect": "I listen music.",
-          "correct": "I listen to music.",
-          "why_ja": "listenは自動詞なので目的語の前にtoが必要"
-        },
-        {
-          "incorrect": "I hear to music every day.",
+          "incorrect": "I listen music every day.",
           "correct": "I listen to music every day.",
-          "why_ja": "hearの後にtoは不要で、意識して聴く意味ならlisten toを使う"
+          "why_ja": "listen は自動詞なので、目的語の前に必ず前置詞 to が必要"
         },
         {
-          "incorrect": "I am listening music now.",
-          "correct": "I am listening to music now.",
-          "why_ja": "進行形でもtoを省略できない"
+          "incorrect": "I hear to music while I study.",
+          "correct": "I listen to music while I study.",
+          "why_ja": "hear には to を付けない。能動的に聴く意味なら listen to を使う"
+        },
+        {
+          "incorrect": "I listen to music of Mozart.",
+          "correct": "I listen to Mozart's music. / I listen to music by Mozart.",
+          "why_ja": "作曲者を示すときは of ではなく所有格 's か前置詞 by を使う"
         }
       ],
       "definition_en": "To pay attention with your ears to music being played.",
@@ -2549,17 +2512,24 @@
       "confusables": [
         {
           "item": "but",
-          "similarity_ja": "対比を導く点で同じ",
-          "key_difference_ja": "but は口語で頻出、however は書き言葉や formal な会話で使う",
-          "correct_usage_ja": "文と文をつなぐ書き言葉なら however、話し言葉なら but",
-          "example_en": "The idea sounds simple. However, it is hard to do."
+          "similarity_ja": "対比を導く意味で同じ",
+          "key_difference_ja": "but は口語・書き言葉両方でカジュアル、however は書き言葉や formal な文脈",
+          "correct_usage_ja": "話し言葉やカジュアルな文章なら but、レポートやビジネス文書なら however",
+          "example_en": "It's raining, but we'll still go out."
         },
         {
           "item": "though",
           "similarity_ja": "対比を導ける",
           "key_difference_ja": "though は文末で「〜だけどね」の informal、however は文頭の formal",
-          "correct_usage_ja": "informal で軽く付け加えるなら though、formal なら however",
-          "example_en": "It's cold today. It'll be warm tomorrow, though."
+          "correct_usage_ja": "口語で軽く付け加えるなら though、書き言葉で対比を示すなら however",
+          "example_en": "It's cold today. It'll warm up tomorrow, though."
+        },
+        {
+          "item": "nevertheless",
+          "similarity_ja": "対比を導く formal な副詞",
+          "key_difference_ja": "nevertheless は「それにもかかわらず」の強い対比、however はより中立的な対比",
+          "correct_usage_ja": "強い予想外なら nevertheless、単純な対比なら however",
+          "example_en": "The task was difficult; nevertheless, they finished on time."
         }
       ],
       "related_uses": [
@@ -2586,19 +2556,20 @@
         },
         {
           "incorrect": "However he tried, he failed.",
-          "correct": "Although he tried, he failed.",
+          "correct": "Although he tried, he failed. / However hard he tried, he failed.",
           "why_ja": "節を導入するときは although。however は独立文の前で使う対比副詞"
         },
         {
           "incorrect": "It was rainy however cold.",
           "correct": "It was rainy but not cold.",
-          "why_ja": "however を単純な「〜だけど」で使わない。書き言葉の対比副詞として使う"
+          "why_ja": "however を単純な「〜だけど」で使わない。文と文の対比副詞として使う"
         }
       ],
       "meta": {
         "validated_by_user": false,
-        "schema_version": "1.2.1",
-        "source": "claude_generated"
+        "schema_version": "1.2.4",
+        "source": "claude_generated",
+        "updated_at": "2026-07-11T06:00:00.000Z"
       }
     },
     {
@@ -3138,11 +3109,25 @@
       ],
       "confusables": [
         {
-          "item": "white and black",
-          "similarity_ja": "語順が違うだけに見える",
-          "key_difference_ja": "英語では black and white の順序が固定。white and black はほぼ言わない",
-          "correct_usage_ja": "必ず black を先に置く",
-          "example_en": "The dog has black and white spots."
+          "item": "black or white",
+          "similarity_ja": "black と white を含む表現",
+          "key_difference_ja": "black and white は「白黒両方(明確)」、black or white は「白か黒のどちらか(選択)」",
+          "correct_usage_ja": "明確・両方を含むなら and、どちらか選ぶなら or",
+          "example_en": "You can order the shirt in black or white."
+        },
+        {
+          "item": "in color",
+          "similarity_ja": "写真・映像の対比",
+          "key_difference_ja": "in color は「カラーで」、in black and white は「白黒で」",
+          "correct_usage_ja": "カラー写真は in color、白黒写真は in black and white",
+          "example_en": "The old movie was filmed in color."
+        },
+        {
+          "item": "gray area",
+          "similarity_ja": "色を使った比喩表現",
+          "key_difference_ja": "gray area は「はっきりしない領域」、black and white は「明確な区別」",
+          "correct_usage_ja": "曖昧な部分は gray area、明確な部分は black and white",
+          "example_en": "There's a gray area in the rules that needs clarification."
         }
       ],
       "related_uses": [
@@ -3166,18 +3151,24 @@
         {
           "incorrect": "The photo is white and black.",
           "correct": "The photo is black and white.",
-          "why_ja": "英語では black and white の順序が固定。逆順は不自然"
+          "why_ja": "英語では black and white の順序が固定。white and black は不自然でほぼ言わない"
         },
         {
-          "incorrect": "It's black or white.",
-          "correct": "It's black and white.",
+          "incorrect": "It's black or white to me.",
+          "correct": "It's black and white to me.",
           "why_ja": "「白黒明確」の意味では and。or だと「白か黒のどちらか」で意味が変わる"
+        },
+        {
+          "incorrect": "I like blacks and whites.",
+          "correct": "I like black and white.",
+          "why_ja": "色を表す形容詞的用法では複数形 -s を付けない"
         }
       ],
       "meta": {
         "validated_by_user": false,
-        "schema_version": "1.2.1",
-        "source": "claude_generated"
+        "schema_version": "1.2.4",
+        "source": "claude_generated",
+        "updated_at": "2026-07-11T06:00:00.000Z"
       },
       "contexts": [
         {
@@ -4052,18 +4043,25 @@
       ],
       "confusables": [
         {
-          "item": "in course",
-          "similarity_ja": "of course との語形の混同",
-          "key_difference_ja": "in course は「進行中で」の formal 表現、of course とは意味が違う",
-          "correct_usage_ja": "同意を表すのは of course のみ",
-          "example_en": "Of course I'll help you with your homework."
+          "item": "of course not",
+          "similarity_ja": "同じ of course を含む対の表現",
+          "key_difference_ja": "of course は「もちろん(肯定)」、of course not は「もちろん違う(否定)」",
+          "correct_usage_ja": "同意なら of course、否定なら of course not",
+          "example_en": "Do you mind? Of course not, go ahead."
         },
         {
-          "item": "by course",
-          "similarity_ja": "同じく前置詞 + course の形",
-          "key_difference_ja": "by course は英語として不自然、of course が正しい",
-          "correct_usage_ja": "必ず of course",
-          "example_en": "Of course you can borrow my book."
+          "item": "certainly",
+          "similarity_ja": "同意を表す表現",
+          "key_difference_ja": "certainly はよりフォーマルで「確かに」、of course は「当然」でカジュアル寄り",
+          "correct_usage_ja": "ビジネスや接客なら certainly、日常なら of course",
+          "example_en": "Certainly, sir, I'll bring that right away."
+        },
+        {
+          "item": "sure",
+          "similarity_ja": "同意を表す表現",
+          "key_difference_ja": "sure はカジュアルで「うん・いいよ」、of course は「もちろん・当然」",
+          "correct_usage_ja": "気軽な返事なら sure、当然性を示すなら of course",
+          "example_en": "Can I borrow your pen? Sure, here you go."
         }
       ],
       "related_uses": [
@@ -4086,18 +4084,24 @@
         {
           "incorrect": "Of the course, I agree.",
           "correct": "Of course, I agree.",
-          "why_ja": "of course は定冠詞 the を入れない。固定表現"
+          "why_ja": "of course は固定表現で、定冠詞 the を入れない"
         },
         {
-          "incorrect": "It is of course true.",
-          "correct": "Of course, it is true. / It is, of course, true.",
-          "why_ja": "文中に挿入する場合はカンマで区切る。裸で挿入すると読みにくい"
+          "incorrect": "By course, you can come.",
+          "correct": "Of course, you can come.",
+          "why_ja": "「もちろん」の意味では必ず of course。by course は英語として不自然"
+        },
+        {
+          "incorrect": "It is of course truely.",
+          "correct": "It is, of course, true. / Of course, it is true.",
+          "why_ja": "文中に挿入する場合はカンマで区切る。副詞 truely も不要"
         }
       ],
       "meta": {
         "validated_by_user": false,
-        "schema_version": "1.2.1",
-        "source": "claude_generated"
+        "schema_version": "1.2.4",
+        "source": "claude_generated",
+        "updated_at": "2026-07-11T06:00:00.000Z"
       },
       "contexts": [
         {
@@ -4284,18 +4288,25 @@
       "antonyms": [],
       "confusables": [
         {
-          "item": "as example",
-          "similarity_ja": "example を使った表現で似ている",
-          "key_difference_ja": "英語として不自然、for example が正しい",
-          "correct_usage_ja": "必ず for example",
-          "example_en": "For example, apples and bananas are fruits."
+          "item": "for instance",
+          "similarity_ja": "例示を導く意味で同じ",
+          "key_difference_ja": "for instance は for example よりわずかにフォーマル、意味はほぼ同じ",
+          "correct_usage_ja": "どちらも使えるが、書き言葉ではやや for instance が上品",
+          "example_en": "There are many options. For instance, you could take the train."
         },
         {
           "item": "such as",
-          "similarity_ja": "例示の意味が同じ",
-          "key_difference_ja": "for example は独立した挿入句、such as は名詞の直後に続く",
+          "similarity_ja": "例を示す表現",
+          "key_difference_ja": "for example は独立した挿入句(文で使う)、such as は名詞の直後に続ける",
           "correct_usage_ja": "文を分けるなら for example、名詞リストなら such as",
           "example_en": "Fruits such as apples and bananas are healthy."
+        },
+        {
+          "item": "e.g.",
+          "similarity_ja": "例示を導くラテン語由来の略記",
+          "key_difference_ja": "e.g. は書き言葉の略記(括弧内などに使う)、for example は文中に自然に使える",
+          "correct_usage_ja": "書き言葉の技術文書などなら e.g.、口語や一般文なら for example",
+          "example_en": "Bring a snack (e.g., cookies or fruit) to the meeting."
         }
       ],
       "related_uses": [
@@ -4318,18 +4329,24 @@
         {
           "incorrect": "For a example, apples are red.",
           "correct": "For example, apples are red.",
-          "why_ja": "for example に不定冠詞 a は入れない。固定表現"
+          "why_ja": "for example は固定表現で、不定冠詞 a を入れない"
         },
         {
-          "incorrect": "For example fruits such as apples.",
+          "incorrect": "As example, apples are red.",
+          "correct": "For example, apples are red.",
+          "why_ja": "「例えば」の意味では必ず for example。as example は英語として不自然"
+        },
+        {
+          "incorrect": "For example fruits such as apples are healthy.",
           "correct": "Fruits, for example apples, are healthy. / Fruits such as apples are healthy.",
-          "why_ja": "for example と such as は同時に使わない。どちらか一方を選ぶ"
+          "why_ja": "for example と such as は同時に使わない。どちらか一方を選び、for example はカンマで区切る"
         }
       ],
       "meta": {
         "validated_by_user": false,
-        "schema_version": "1.2.1",
-        "source": "claude_generated"
+        "schema_version": "1.2.4",
+        "source": "claude_generated",
+        "updated_at": "2026-07-11T06:00:00.000Z"
       },
       "contexts": [
         {

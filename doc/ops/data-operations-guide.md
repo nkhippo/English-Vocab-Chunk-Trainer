@@ -173,7 +173,8 @@ data/
 - 型・enum の妥当性
 
 ### 5.2 参照整合性
-- `synonyms[].item` / `antonyms[].item` / `hypernyms` / `hyponyms` が存在する ID を指すか、または plain 表現か
+- `synonyms[].item` / `antonyms[].item` / `confusables[].item` が存在する ID を指すか、または plain 表現か
+- `confusables` と `common_errors_ja` の役割分離（`doc/ops/confusables-common-errors-role-separation.md`）
 - `insight_id` が実在するか
 - `related_uses[].form` の整合性
 

@@ -1,4 +1,4 @@
-# 語彙学習アプリ 最終仕様 v3.2 (統合版)
+# 語彙学習アプリ 最終仕様 v3.3 (統合版)
 
 v1/v2 を統合し、以下の追加要件を反映した最終仕様:
 - PWA(Vite + React + Service Worker + IndexedDB)確定
@@ -9,8 +9,15 @@ v1/v2 を統合し、以下の追加要件を反映した最終仕様:
 - モード設計と科学的根拠の体系化
 - **意味関係・混同語・派生用法・典型誤用の enrichment フィールド追加**(全て事前計算)
 - **CEFR 単語帳ビュー(参照・閲覧用)追加**
+- **Mode A/B は文脈パッセージ型**(4 択ドリルは採用しない)
 
 作業指示書・実装は本ドキュメントを唯一の参照ソースとする。
+
+**v3.3 (2026-07-11) 改訂ノート**: v5〜v8 実装を仕様に反映:
+- Mode A/B を文脈パッセージ型に確定(`contexts[]`・ハイライト / 穴埋め・OK/保留)
+- Mode A/B UI からタイマー・中断・出会い回数・上部 CEFR バッジを削除(モバイル最適化)
+- サイド/下部パネルに confusables・related_uses・学習履歴(▢表示)を追加
+- IPA UI は語ごと(`ipa_careful`)を主表示。`ipa_connected` はデータに残置(将来 EPT フル引用用)
 
 **v3.2 (2026-07-11) 改訂ノート**: v7 実装フィードバックを反映:
 - `hypernyms` / `hyponyms` フィールドを廃止(A2 学習者にオーバースペック)
@@ -24,11 +31,13 @@ v1/v2 を統合し、以下の追加要件を反映した最終仕様:
 - collocation_pattern enum を実データに基づき拡張（`V+Ving` / `V+Prep+N` / `V+Adv` を追加）
 
 **実装ステータス (2026-07-11)**:
-- Phase 1 PWA 骨格・ガイド・`/review`・`/browse`・Mode A/B: **稼働中**（GitHub Pages）
-- `data/current`: **21 件**（スキーマ v1.2.3）+ Insight 公式 3
+- Phase 1 PWA 骨格・ガイド・`/review`・`/browse`・Mode A/B(文脈型・v8 UI): **稼働中**（GitHub Pages）
+- `data/current`: **21 件**（スキーマ v1.2.4）+ Insight 公式 3
 - 日英 UI: 設定トグル + ガイド二言語。**実装方針**は `doc/ops/i18n-strategy.md`（3 層モデル）
-- Mode C・SRS: **Phase 2+**
+- Mode C・SRS・音声再生: **Phase 2+**
 - UX スモークテスト: **合格**（`doc/ops/ux-smoke-test-checklist.md`）
+- confusables / common_errors 役割分離: **11 items 修正済み**（`doc/ops/confusables-common-errors-role-separation.md`）
+- 残: 空 example スロット補充・A2 本生成・量産テンプレートへのガイドライン反映
 
 ---
 
@@ -109,9 +118,9 @@ LearningItem {
   }
   
   // 発音
-  ipa_careful: string                 // "/meɪk ə dɪˈsɪʒən/" 語ごと
-  ipa_connected: string               // "/meɪk‿ə‿dɪˈsɪʒən/" 連結あり
-  audio_ref: string                   // IPA Trainer の音声キー(該当時)
+  ipa_careful: string                 // "/meɪk ə dɪˈsɪʒən/" 語ごと(現行 UI の主表示)
+  ipa_connected: string               // "/meɪk‿ə‿dɪˈsɪʒən/" 連結。データ残置・UI タブは非表示可
+  audio_ref: string                   // IPA Trainer の音声キー(該当時・再生は Phase 2+)
   
   // 書籍連携
   book_alignment: {
@@ -178,8 +187,22 @@ LearningItem {
       why_ja: "「決定を作る」感覚で make。「する」を do と直訳する干渉に注意"
     }
   ]
+
+  // Mode A/B 用パッセージ(word 以外。存在するときはちょうど 5 件)
+  contexts: [
+    {
+      id: "make_a_decision_c1",
+      text_en: "After thinking for a long time, she finally made a decision.",
+      text_ja: "長い時間考えた末、彼女はようやく決断を下した。",
+      target_span: { start: 42, end: 58 },
+      cloze_spans: [{ start: 42, end: 58, answer: "made a decision" }],
+      scene: "everyday",
+      register: "neutral"
+    }
+    // … c2〜c5
+  ]
   
-  // 進捗管理
+  // 進捗管理(Phase 2+ SRS。現状データでは未使用。学習履歴▢は localStorage の checkmarks)
   srs_state: {
     ease_factor: float,
     next_review_at: timestamp,
@@ -267,13 +290,18 @@ Insight {
 学習アクションを **識別 / 想起 / 運用** の 3 モードに集約する。
 
 #### Mode A: 識別 (Identify) - 受容語彙拡張
-「意味を認識する」ための入力活動。
+「文脈から意味を認識する」ための入力活動。
 
-**具体タスク**:
-- 英語 → 日本語意味の 4 択
-- 日本語 → 英語表現の 4 択
-- 文脈穴埋め(選択式)
-- カテゴリ別特化タスク(例: コロケーションの自然な組み合わせ選択、句動詞の粒子選択)
+**具体タスク(現行実装)**:
+- 短い英語パッセージ(`contexts[]`)を読む
+- 対象チャンクをハイライト表示し、文脈から意味を推測する
+- サイド/下部パネルで surface・IPA(語ごと)・訳・例文・混同語・関連用法・学習履歴を確認
+- **OK / 保留** の自己評価後に次のパッセージへ(左スワイプ / `O`・`H`・Space|Enter 対応)
+- `word` カテゴリは contexts を持たないため Mode A 出題対象外
+
+**UI 方針(v8)**:
+- モバイル優先の縦スクロール。タイマー・中断・出会い回数・上部 CEFR バッジは置かない
+- 閉じるはヘッダー ×、またはハンバーガーからホームへ
 
 **鍛えられるもの**:
 - 受容語彙(passive vocabulary)
@@ -281,16 +309,17 @@ Insight {
 
 **科学的根拠**:
 - **テスト効果**(Testing Effect; Roediger & Karpicke, 2006): 再認テストという「思い出す行為」自体が記憶を強化する。
-- **必要努力仮説の低負荷版**: 選択式でも「候補から選ぶ」時の弁別作業が定着に寄与。
+- **必要努力仮説の低負荷版**: 文脈からの弁別作業が定着に寄与。
 - **頻度効果**(Ellis, 2002): 高頻度接触が語彙定着の基本条件で、識別モードは接触回数を最大化できる。
 
 #### Mode B: 想起 (Recall) - 発信語彙定着
 「自分で引き出す」ための出力活動。
 
-**具体タスク**:
-- 日本語文脈 → 英語入力(タイピング)
-- 穴埋め産出(選択肢なし)
-- カテゴリ別: 動詞+名詞のペア入力(コロケーション)、粒子選択なしの句動詞入力
+**具体タスク(現行実装)**:
+- 上部に日本語訳全文、下部に穴埋め英文(`cloze_spans`)を表示
+- 「解答を見る」で対象をハイライト表示し、Mode A と同系の詳細パネルを展開
+- **OK / 保留** の自己評価後に次へ(Mode A と同じ操作系)
+- タイピング入力は未実装(Phase 2+ の拡張候補)
 
 **鍛えられるもの**:
 - 発信語彙(active vocabulary)
@@ -298,7 +327,7 @@ Insight {
 
 **科学的根拠**:
 - **想起練習**(Retrieval Practice; Karpicke & Blunt, 2011): 単に再読するより、想起する行為の方が長期記憶への転移が大きい(実験で 50% 以上の差)。
-- **望ましい困難**(Desirable Difficulties; Bjork, 1994): 適度に難しい想起は短期成績を下げるが長期定着を高める。選択肢なし想起はこれに該当。
+- **望ましい困難**(Desirable Difficulties; Bjork, 1994): 適度に難しい想起は短期成績を下げるが長期定着を高める。穴埋め想起はこれに該当。
 - **産出効果**(Production Effect; MacLeod et al., 2010): 声に出す・書くことで記憶が強化される。
 
 #### Mode C: 運用 (Apply) - 実運用力
@@ -323,21 +352,28 @@ Insight {
 コアモードに横断的に提供される機能。
 
 #### IPA / 音声
-- 学習項目カード上で IPA を常時表示(単語は phonemic IPA、フレーズは careful + connected の 2 種)
-- タップで音声再生(IPA Trainer の GAS TTS 資産を利用)
-- Mode A/B の実行中に発音を確認できる導線
+- 学習項目カード上で IPA を表示。**現行 UI は語ごと(`ipa_careful`)を主表示**
+- `ipa_connected`(連結)はデータに残置。UI タブは v7 で削除(将来 EPT フル引用時に復活可)
+- タップで音声再生(IPA Trainer の GAS TTS 資産を利用)は **未実装(Phase 2+)**
+- Mode A/B の実行中に発音表記を確認できる導線(サイド/下部パネル)
 
 **根拠**: 音韻ループ(Baddeley の作動記憶モデル)を活用し、subvocalization(内的発音)を通じて記憶を強化。発音が不明確な語は長期定着しない。
 
 #### Insight(語源・由来)
 - 初回学習時は非表示(認知負荷回避)
-- **想起失敗時**に自動で提示(記憶の手がかりを追加)
-- 「探索モード」で自由閲覧可能
+- 単語帳詳細では任意展開
+- Mode A/B で **保留** 後、`insight_id` がある項目は約 2 秒後に InsightCard をフェードイン
+- 「探索モード」での自由閲覧は将来拡張
 
 **根拠**: 認知負荷理論(Cognitive Load Theory; Sweller)- 新規学習時に語源まで見せると本質的学習(germane load)を圧迫する。定着直前に手がかりを追加するのが最適。
 
+#### 学習履歴(チェックマーク ▢×3)
+- browse / mode_a / mode_b 別に localStorage で保持(`vct_checkmarks_v1`)
+- 単語帳詳細では操作可能。Mode A/B パネルでは **表示のみ**(操作可否は判断待ち)
+- `srs_state` とは独立。SRS 実装時に関係を整理する
+
 #### SRS(間隔反復)
-- Mode A/B の結果に応じて自動スケジューリング
+- Mode A/B の結果に応じて自動スケジューリング(**未実装・Phase 2+**)
 - 苦手項目は短間隔、定着項目は長間隔
 - Mode C の産出結果も SRS 判定に加味
 
@@ -370,7 +406,7 @@ Insight {
 |---|:-:|:-:|:-:|---|
 | 単語 | ◎ | ○ | △ | 高頻度語のみ Mode C 対応 |
 | コロケーション | ○ | ◎ | ◎ | 産出訓練の中核 |
-| 句動詞 | ◎ | ◎ | ○ | 粒子選択タスクを Mode A で特化 |
+| 句動詞 | ◎ | ◎ | ○ | 現行は文脈パッセージ。粒子選択特化は将来拡張 |
 | イディオム | ◎ | △ | △ | 受容中心、Speaking 想定の一部のみ産出 |
 | 二項表現 | ○ | ○ | × | 短時間ドリル向け |
 | 複合語 | ◎ | △ | × | 綴りの正誤を Mode A で扱う |
@@ -514,26 +550,26 @@ v2 の 12,800 件に、A1 レベルのフレーズを追加した最終見立て
 - データベーススキーマの詳細設計(JSON Schema)
 - Cursor 指示書 v1 の作成
 
-### Phase 1: データ構築(2〜4 週)
-- A1 + A2 レベル全カテゴリの seed 生成(Claude API)
+### Phase 1: データ構築 + PWA 骨格(進行中)
+- A1 + A2 レベル全カテゴリの seed 生成(Claude API) — **パイロット 21 件まで完了、本生成未着手**
 - **各項目の enrichment(意味関係・混同語・派生用法・典型誤用)を並行生成**
 - 貴殿の週末 12〜15 時間での検証・承認
-- 約 2,670 件のデータベース完成
-- IPA Trainer からの IPA データ移植
+- 約 2,670 件のデータベース完成(目標)
+- IPA Trainer / EPT からの IPA データ移植(部分完了)
 
-### Phase 2: MVP 実装(4〜6 週)
-- PWA 骨格
-- Mode A(識別)全カテゴリ対応
-- Mode B(想起)全カテゴリ対応
-- **CEFR 単語帳ビュー(フィルタ・検索・詳細画面)**
-- 基本 SRS
-- 日英 UI 切り替え、ガイドモーダル
-- Basic 2400 連携タグ表示
+### Phase 2: MVP 実装(大部分完了・残りあり)
+- PWA 骨格 — **完了**
+- Mode A(文脈識別) / Mode B(穴埋め想起) — **完了**(v5〜v8)
+- **CEFR 単語帳ビュー(フィルタ・詳細モーダル)** — **完了**(検索は限定的)
+- 基本 SRS — **未着手**
+- 日英 UI 切り替え、ガイドモーダル — **完了**
+- Basic 2400 連携タグ表示 — **データフィールドのみ、UI は限定的**
+- 音声再生・GA/RP — **未着手**
 
 ### Phase 3: 拡張(継続的)
 - Mode C(運用 + Claude 添削)実装
 - B1 レベルデータ追加(3 ヶ月後)
-- Insight カード拡充
+- Insight カード拡充(現状サンプル 3 件)
 - B2 レベルデータ追加(6 ヶ月後)
 - C1 レベルデータ追加(12 ヶ月後)
 
@@ -552,10 +588,10 @@ v2 の 12,800 件に、A1 レベルのフレーズを追加した最終見立て
 
 ## 11. 次のアクション
 
-1. **本仕様のレビュー**: 誤解・抜けの確認
-2. **リポジトリ作成**: `nkhippo/English-Vocab-Chunk-Trainer`（完了）
-3. **データベーススキーマ(JSON Schema)の詳細設計**: 本仕様の §3 を実装レベルまで落とす
-4. **Cursor 指示書 v1 の作成**: Phase 1(データ構築)の workflow を Cursor に渡せる形にする
-5. **A1 + A2 seed リストの生成試行**: Claude API で 100 件生成し、貴殿の検証コストを実測
+1. **空 example スロット補充** / confusables・common_errors 役割整理(設計チャット)
+2. **A2 本生成**(約 2,430 件)の再開判断
+3. Mode A/B 学習履歴▢の操作可否判断(`doc/handoff/v8-scope-questions.md`)
+4. Mode C / SRS / 音声の Phase 2+ 着手判断
+5. GAS enrich 本番デプロイのタイミング判断(現状保留)
 
 まず 1(仕様レビュー)を経て、2〜3 に進むのが順序として自然です。

@@ -62,7 +62,7 @@ pnpm run validate
 
 ## Cursor 作業時の三大品質基準
 
-1. **上流ドキュメント品質**: 仕様書 v3（`doc/spec/app-specification.md`）を唯一のソースとする
+1. **上流ドキュメント品質**: 仕様書 v3.3（`doc/spec/app-specification.md`）を唯一のソースとする
 2. **Cursor 指示書品質**: 変更時は理由を PR / コミットメッセージに記述する
 3. **運用ドキュメント更新**: データ増加・スキーマ変更時は `doc/ops/data-operations-guide.md` と `doc/repository-structure.md` を更新する
 

@@ -1,14 +1,22 @@
+---
+id: pj-2026-07-08-d33f
+aliases:
+- pj-2026-07-08-d33f
+title: Vocab & Chunk Trainer
+created: '2026-07-08'
+---
+
 # Vocab & Chunk Trainer
 
 CEFR に沿った語彙・チャンク訓練用 PWA。Basic 2400 完走後に IELTS 7.0（C1 下位）相当の語彙・チャンク運用力を段階的に構築する。
 
 - リポジトリ: https://github.com/nkhippo/English-Vocab-Chunk-Trainer
-- 仕様の正本: [`doc/spec/app-specification.md`](doc/spec/app-specification.md)
-- Phase 1 指示書: [`doc/instructions/cursor-instruction-phase1.md`](doc/instructions/cursor-instruction-phase1.md)
-- 構成表: [`doc/repository-structure.md`](doc/repository-structure.md)
-- Phase 1 作業報告（差分・残課題）: [`doc/handoff/phase1-handoff-report.md`](doc/handoff/phase1-handoff-report.md)
-- Step 1〜3 作業報告: [`doc/handoff/step1-3-handoff-report.md`](doc/handoff/step1-3-handoff-report.md)
-- パイロットテスト報告: [`doc/handoff/pilot-test-handoff-report.md`](doc/handoff/pilot-test-handoff-report.md)
+- 仕様の正本: [[pj-2026-07-08-1036|`doc/spec/app-specification.md`]]
+- Phase 1 指示書: [[pj-2026-07-08-c16d|`doc/instructions/cursor-instruction-phase1.md`]]
+- 構成表: [[pj-2026-07-08-8240|`doc/repository-structure.md`]]
+- Phase 1 作業報告（差分・残課題）: [[pj-2026-07-08-48dc|`doc/handoff/phase1-handoff-report.md`]]
+- Step 1〜3 作業報告: [[pj-2026-07-09-5f9e|`doc/handoff/step1-3-handoff-report.md`]]
+- パイロットテスト報告: [[pj-2026-07-09-f896|`doc/handoff/pilot-test-handoff-report.md`]]
 
 ## Phase 1 の範囲
 
@@ -54,7 +62,7 @@ pnpm run env:sync
 
 ## GAS
 
-手順と稼働 URL は [`gas/README.md`](gas/README.md)。Script Properties に `ANTHROPIC_API_KEY` を設定する（設定済み）。
+手順と稼働 URL は [[pj-2026-07-08-944f|`gas/README.md`]]。Script Properties に `ANTHROPIC_API_KEY` を設定する（設定済み）。
 
 現行 Web App:
 

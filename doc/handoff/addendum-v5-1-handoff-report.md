@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-10-d73b
+aliases:
+- pj-2026-07-10-d73b
+title: 追加指示 v5.1 作業報告（公式 contexts マージ + Mode B 下線）
+created: '2026-07-10'
+---
+
 # 追加指示 v5.1 作業報告（公式 contexts マージ + Mode B 下線）
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  

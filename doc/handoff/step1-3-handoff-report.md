@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-09-5f9e
+aliases:
+- pj-2026-07-09-5f9e
+title: Step 1〜3 作業ハンドオフレポート
+created: '2026-07-09'
+---
+
 # Step 1〜3 作業ハンドオフレポート
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  

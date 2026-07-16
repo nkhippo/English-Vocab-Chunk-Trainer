@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-09-f896
+aliases:
+- pj-2026-07-09-f896
+title: パイロットテスト作業報告
+created: '2026-07-09'
+---
+
 # パイロットテスト作業報告
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  

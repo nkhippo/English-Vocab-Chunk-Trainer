@@ -1,0 +1,124 @@
+rewrite CHANGELOG.md (md=0 wiki=0 fm=0)
+rewrite CLAUDE.md (md=0 wiki=0 fm=0)
+rewrite README.md (md=7 wiki=0 fm=0)
+rewrite data/reference/ept/README.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/addendum-v5-1-handoff-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/chat-generation-template-v2-handoff-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/checkmark-feature-handoff-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/confusables-role-separation-handoff-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/full-redesign-handoff-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/mvp-ui-handoff-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/phase1-handoff-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/pilot-retry-handoff-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/pilot-test-handoff-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/pilot-v3-handoff-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/pilot-v4-handoff-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/step1-3-handoff-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/synonym-examples-fill-handoff-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/ui-align-question-trainer-handoff-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/v6-improvements-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/v6-insight-official-merge-handoff-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/v6-pilot10-merge-handoff-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/v6-scope-questions.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/v7-refinement-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/v7-scope-questions.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/v8-mode-a-redesign-report.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/v8-scope-questions.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/v9-scope-questions.md (md=0 wiki=0 fm=0)
+rewrite doc/handoff/v9-ux-simplification-report.md (md=0 wiki=0 fm=0)
+rewrite doc/instructions/cursor-instruction-phase1.md (md=0 wiki=0 fm=0)
+rewrite doc/ops/chat-generation-template-a2-v2.md (md=0 wiki=0 fm=0)
+rewrite doc/ops/chat-generation-workflow-v2.md (md=0 wiki=0 fm=0)
+rewrite doc/ops/claude-api-gas-design.md (md=0 wiki=0 fm=0)
+rewrite doc/ops/confusables-common-errors-role-separation.md (md=0 wiki=0 fm=0)
+rewrite doc/ops/data-operations-guide.md (md=0 wiki=0 fm=0)
+rewrite doc/ops/i18n-strategy.md (md=0 wiki=0 fm=0)
+rewrite doc/ops/ux-evaluation-checklist.md (md=0 wiki=0 fm=0)
+rewrite doc/ops/ux-smoke-test-checklist.md (md=0 wiki=0 fm=0)
+rewrite doc/repository-structure.md (md=0 wiki=0 fm=0)
+rewrite doc/spec/app-specification.md (md=0 wiki=0 fm=0)
+rewrite gas/README.md (md=0 wiki=0 fm=0)
+rewrite gas/prompts/README.md (md=0 wiki=0 fm=0)
+dry-run totals: {'markdown_link': 7, 'wikilink': 0, 'frontmatter': 0}; broken=0
+=== CHANGELOG.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== CLAUDE.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== README.md ===
+changes: md_link=7 wikilink=0 frontmatter=0
+=== data/reference/ept/README.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/addendum-v5-1-handoff-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/chat-generation-template-v2-handoff-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/checkmark-feature-handoff-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/confusables-role-separation-handoff-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/full-redesign-handoff-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/mvp-ui-handoff-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/phase1-handoff-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/pilot-retry-handoff-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/pilot-test-handoff-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/pilot-v3-handoff-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/pilot-v4-handoff-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/step1-3-handoff-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/synonym-examples-fill-handoff-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/ui-align-question-trainer-handoff-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/v6-improvements-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/v6-insight-official-merge-handoff-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/v6-pilot10-merge-handoff-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/v6-scope-questions.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/v7-refinement-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/v7-scope-questions.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/v8-mode-a-redesign-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/v8-scope-questions.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/v9-scope-questions.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/handoff/v9-ux-simplification-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/instructions/cursor-instruction-phase1.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/ops/chat-generation-template-a2-v2.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/ops/chat-generation-workflow-v2.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/ops/claude-api-gas-design.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/ops/confusables-common-errors-role-separation.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/ops/data-operations-guide.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/ops/i18n-strategy.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/ops/ux-evaluation-checklist.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/ops/ux-smoke-test-checklist.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/repository-structure.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== doc/spec/app-specification.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== gas/README.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== gas/prompts/README.md ===
+changes: md_link=0 wikilink=0 frontmatter=0

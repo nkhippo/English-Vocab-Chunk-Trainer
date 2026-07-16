@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-08-8240
+aliases:
+- pj-2026-07-08-8240
+title: リポジトリ構成表
+created: '2026-07-08'
+---
+
 # リポジトリ構成表
 
 English Vocab Chunk Trainer のフォルダ・ファイル配置の**正本**。  

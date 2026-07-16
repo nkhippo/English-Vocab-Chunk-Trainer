@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-11-5bc7
+aliases:
+- pj-2026-07-11-5bc7
+title: v8 スコープ外・判断待ち事項
+created: '2026-07-11'
+---
 # v8 スコープ外・判断待ち事項
 
 指示書: `cursor_instruction_v8_mode_a_redesign.md`  

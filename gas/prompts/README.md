@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-08-7d96
+aliases:
+- pj-2026-07-08-7d96
+title: Prompt templates for GAS + Claude
+created: '2026-07-08'
+---
 # Prompt templates for GAS + Claude
 
 These mirror `doc/ops/claude-api-gas-design.md`.

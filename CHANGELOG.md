@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-09-b475
+aliases:
+- pj-2026-07-09-b475
+title: Changelog
+created: '2026-07-09'
+---
 # Changelog
 
 ## [Unreleased] — 2026-07-11

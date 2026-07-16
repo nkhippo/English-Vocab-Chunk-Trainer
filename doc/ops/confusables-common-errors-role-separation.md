@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-11-67bf
+aliases:
+- pj-2026-07-11-67bf
+title: confusables と common_errors_ja の役割分離ガイドライン
+created: '2026-07-11'
+---
 # confusables と common_errors_ja の役割分離ガイドライン
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  

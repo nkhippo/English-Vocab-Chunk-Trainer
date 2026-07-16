@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-08-54a0
+aliases:
+- pj-2026-07-08-54a0
+title: データ運用手順書 (Data Operations Guide)
+created: '2026-07-08'
+---
 # データ運用手順書 (Data Operations Guide)
 
 `english-vocab-chunk-trainer`（GitHub: `nkhippo/English-Vocab-Chunk-Trainer`）のデータベースを段階的に拡張・保守する運用手順を記述する。データが A2 → B1 → B2 → C1 と拡張されるたび、Basic 2400 の学習が進行するたびに、本手順に沿って更新を行う。

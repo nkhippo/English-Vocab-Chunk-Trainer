@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-08-944f
+aliases:
+- pj-2026-07-08-944f
+title: Google Apps Script (Claude API proxy)
+created: '2026-07-08'
+---
 # Google Apps Script (Claude API proxy)
 
 Implements the endpoints described in `doc/ops/claude-api-gas-design.md`.

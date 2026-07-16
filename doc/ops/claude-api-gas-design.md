@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-08-5953
+aliases:
+- pj-2026-07-08-5953
+title: Claude API via GAS 設計書
+created: '2026-07-08'
+---
 # Claude API via GAS 設計書
 
 `vocab-chunk-trainer` から Claude API を呼び出す際は、貴殿の既存 GAS 資産(IPA Trainer / Structure Trainer のパターン)に倣い、必ず **GAS(Google Apps Script)を経由**する。API キーをフロントエンドに露出させず、レート制御・キャッシュ・課金管理を一元化する。

@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-08-3614
+aliases:
+- pj-2026-07-08-3614
+title: CLAUDE.md — Vocab & Chunk Trainer
+created: '2026-07-08'
+---
 # CLAUDE.md — Vocab & Chunk Trainer
 
 ## 概要

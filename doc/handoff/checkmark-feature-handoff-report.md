@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-10-fb49
+aliases:
+- pj-2026-07-10-fb49
+title: チェックマーク機能 作業報告
+created: '2026-07-10'
+---
 # チェックマーク機能 作業報告
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  

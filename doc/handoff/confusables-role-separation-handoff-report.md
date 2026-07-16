@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-11-845c
+aliases:
+- pj-2026-07-11-845c
+title: confusables / common_errors 役割分離 作業報告
+created: '2026-07-11'
+---
 # confusables / common_errors 役割分離 作業報告
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  

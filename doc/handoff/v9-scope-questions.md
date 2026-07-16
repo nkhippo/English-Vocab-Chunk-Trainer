@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-11-6d66
+aliases:
+- pj-2026-07-11-6d66
+title: v9 スコープ外・判断待ち事項
+created: '2026-07-11'
+---
 # v9 スコープ外・判断待ち事項
 
 指示書: `cursor_instruction_v9_ux_simplification.md`  

@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-11-499e
+aliases:
+- pj-2026-07-11-499e
+title: v6 §5.3 カテゴリパイロット 10 件マージ報告
+created: '2026-07-11'
+---
 # v6 §5.3 カテゴリパイロット 10 件マージ報告
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  

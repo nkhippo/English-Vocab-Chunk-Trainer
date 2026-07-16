@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-11-2ca4
+aliases:
+- pj-2026-07-11-2ca4
+title: EPT reference data (read-only)
+created: '2026-07-11'
+---
 # EPT reference data (read-only)
 
 Copied from `nkhippo/English-Pronunciation-Trainer` for IPA sync scripts.

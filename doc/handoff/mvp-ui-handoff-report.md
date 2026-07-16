@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-10-9273
+aliases:
+- pj-2026-07-10-9273
+title: MVP UI 作業報告（情報充足度判断用）
+created: '2026-07-10'
+---
 # MVP UI 作業報告（情報充足度判断用）
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  

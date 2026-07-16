@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-11-d60f
+aliases:
+- pj-2026-07-11-d60f
+title: Chat 生成テンプレート v2 取り込み 作業報告
+created: '2026-07-11'
+---
 # Chat 生成テンプレート v2 取り込み 作業報告
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  

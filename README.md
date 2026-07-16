@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-08-d33f
+aliases:
+- pj-2026-07-08-d33f
+title: Vocab & Chunk Trainer
+created: '2026-07-08'
+---
 # Vocab & Chunk Trainer
 
 CEFR に沿った語彙・チャンク訓練用 PWA。Basic 2400 完走後に IELTS 7.0（C1 下位）相当の語彙・チャンク運用力を段階的に構築する。

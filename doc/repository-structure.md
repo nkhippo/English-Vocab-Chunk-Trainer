@@ -5,6 +5,7 @@ aliases:
 title: リポジトリ構成表
 created: '2026-07-08'
 ---
+
 # リポジトリ構成表
 
 English Vocab Chunk Trainer のフォルダ・ファイル配置の**正本**。  

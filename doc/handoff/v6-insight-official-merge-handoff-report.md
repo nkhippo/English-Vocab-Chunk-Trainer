@@ -5,6 +5,7 @@ aliases:
 title: Insight 公式サンプル 3 件マージ報告
 created: '2026-07-11'
 ---
+
 # Insight 公式サンプル 3 件マージ報告
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  

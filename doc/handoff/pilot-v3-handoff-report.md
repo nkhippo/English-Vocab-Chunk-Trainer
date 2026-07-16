@@ -5,6 +5,7 @@ aliases:
 title: パイロット v3 作業報告（validate-cefr 精度改善）
 created: '2026-07-09'
 ---
+
 # パイロット v3 作業報告（validate-cefr 精度改善）
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  

@@ -5,6 +5,7 @@ aliases:
 title: UI 寄せ作業報告（疑問文トレーナー準拠）
 created: '2026-07-10'
 ---
+
 # UI 寄せ作業報告（疑問文トレーナー準拠）
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  

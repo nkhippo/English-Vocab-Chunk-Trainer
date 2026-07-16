@@ -5,6 +5,7 @@ aliases:
 title: Prompt templates for GAS + Claude
 created: '2026-07-08'
 ---
+
 # Prompt templates for GAS + Claude
 
 These mirror `doc/ops/claude-api-gas-design.md`.

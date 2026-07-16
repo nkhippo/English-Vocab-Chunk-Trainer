@@ -5,6 +5,7 @@ aliases:
 title: v8 Mode A/B モバイル最適化 作業報告
 created: '2026-07-11'
 ---
+
 # v8 Mode A/B モバイル最適化 作業報告
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  

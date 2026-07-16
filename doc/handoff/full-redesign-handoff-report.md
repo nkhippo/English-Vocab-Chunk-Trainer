@@ -5,6 +5,7 @@ aliases:
 title: 全面刷新（ERT トーン + Mode A/B 再設計）作業報告
 created: '2026-07-10'
 ---
+
 # 全面刷新（ERT トーン + Mode A/B 再設計）作業報告
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  

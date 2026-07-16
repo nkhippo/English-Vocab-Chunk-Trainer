@@ -5,6 +5,7 @@ aliases:
 title: パイロット v4 作業報告（scene-config + 禁止語リスト + validate 明示リスト化）
 created: '2026-07-09'
 ---
+
 # パイロット v4 作業報告（scene-config + 禁止語リスト + validate 明示リスト化）
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  

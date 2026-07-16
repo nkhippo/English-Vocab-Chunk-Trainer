@@ -5,6 +5,7 @@ aliases:
 title: Cursor 作業指示書 v1 - Phase 1
 created: '2026-07-08'
 ---
+
 # Cursor 作業指示書 v1 - Phase 1
 
 対象リポジトリ: `nkhippo/English-Vocab-Chunk-Trainer`（指示書原文の `nkhipko/vocab-chunk-trainer` から実リポジトリ名に置換）

@@ -5,6 +5,7 @@ aliases:
 title: synonyms / antonyms / related_uses 例文補充 作業報告
 created: '2026-07-11'
 ---
+
 # synonyms / antonyms / related_uses 例文補充 作業報告
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  

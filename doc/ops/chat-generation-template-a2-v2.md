@@ -5,6 +5,7 @@ aliases:
 title: English Vocab Chunk Trainer データ生成テンプレート v2 (A2 collocation 量産用)
 created: '2026-07-11'
 ---
+
 # English Vocab Chunk Trainer データ生成テンプレート v2 (A2 collocation 量産用)
 
 **このファイルは新しい Claude チャットの冒頭に添付します。**  

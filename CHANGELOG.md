@@ -5,6 +5,7 @@ aliases:
 title: Changelog
 created: '2026-07-09'
 ---
+
 # Changelog
 
 ## [Unreleased] — 2026-07-11

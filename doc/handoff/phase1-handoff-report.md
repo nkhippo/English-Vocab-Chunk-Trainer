@@ -5,6 +5,7 @@ aliases:
 title: Phase 1 作業結果ハンドオフレポート
 created: '2026-07-08'
 ---
+
 # Phase 1 作業結果ハンドオフレポート
 
 対象リポジトリ: [`nkhippo/English-Vocab-Chunk-Trainer`](https://github.com/nkhippo/English-Vocab-Chunk-Trainer)  

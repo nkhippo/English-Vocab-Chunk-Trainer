@@ -5,6 +5,7 @@ aliases:
 title: パイロット再実行（v2）作業報告
 created: '2026-07-09'
 ---
+
 # パイロット再実行（v2）作業報告
 
 対象: `nkhippo/English-Vocab-Chunk-Trainer`  
